@@ -14,8 +14,8 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     shortDescription:
       "Warm, graceful, and perfect for a celebration that leans classic, elegant, and picture-ready.",
     longDescription:
-      "A beautiful fit for birthdays that want a royal welcome, gentle storybook pacing, and polished photo moments from start to finish.",
-    tags: ["Royal welcome", "Coronation charm", "Photo favorite"],
+      "A beautiful fit for birthdays that want a royal welcome, sweet storybook pacing, and polished photo moments from start to finish.",
+    tags: ["Royal welcome", "Classic fairytale", "Photo favorite"],
     mainMediaId: "princessRoseMain",
     insetMediaId: "princessRosePortrait",
     featured: true,
@@ -25,9 +25,9 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "snowfall-princess",
     category: "Princess",
     shortDescription:
-      "A sparkling option for children who love magical songs, glowing smiles, and a cool-toned winter fairytale feel.",
+      "A sparkling choice for children who love winter wonder, bright smiles, and magical singalong energy.",
     longDescription:
-      "Ideal for children who want glittering wonder, expressive moments, and a celebration that feels bright, joyful, and instantly recognizable.",
+      "Ideal for children who light up around glittering magic, expressive moments, and a celebration that feels joyful, graceful, and instantly recognizable.",
     tags: ["Sparkle moments", "Big reactions", "Dreamy tone"],
     mainMediaId: "princessSnowMain",
     insetMediaId: "princessSnowPortrait",
@@ -40,7 +40,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     shortDescription:
       "Golden, playful, and full of warm-hearted storybook energy for children who love adventurous princess magic.",
     longDescription:
-      "Wonderful for celebrations that want soft humor, glowing visuals, and a character who feels curious, kind, and memorable.",
+      "Wonderful for birthdays that want glowing visuals, gentle humor, and a princess who feels curious, kind, and beautifully memorable.",
     tags: ["Golden glow", "Playful heart", "Storybook favorite"],
     mainMediaId: "princessTowerMain",
     insetMediaId: "princessTowerPortrait",
@@ -51,9 +51,9 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "skyline-hero",
     category: "Hero",
     shortDescription:
-      "Fast-paced, confident, and ideal for kids who want a party that feels active from start to finish.",
+      "Fast-paced, confident, and ideal for kids who want a party that feels active from the very first entrance.",
     longDescription:
-      "Built for birthdays that want a bold arrival, playful hero training, and energy that stays organized instead of chaotic. The pacing keeps big reactions while still feeling premium for parents in the room.",
+      "Built for birthdays that want a bold arrival, playful hero training, and celebration energy that stays exciting without tipping into chaos.",
     tags: ["Hero training", "Action energy", "Arrival wow-factor"],
     mainMediaId: "heroSkylineMain",
     insetMediaId: "heroSkylinePortrait",
@@ -64,9 +64,9 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "shield-captain",
     category: "Hero",
     shortDescription:
-      "A courageous, team-focused hero vibe that works beautifully for mission-style celebrations.",
+      "A courageous, team-first hero vibe that works beautifully for mission-style celebrations.",
     longDescription:
-      "Wonderful for parties that want teamwork challenges, confident leadership energy, and photo moments that still feel heroic rather than rough. Parents get a clear story arc from arrival to celebration peak.",
+      "Wonderful for parties that want teamwork challenges, leadership energy, and heroic photo moments that still feel polished for the grown-ups in the room.",
     tags: ["Team moments", "Leadership feel", "Strong pacing"],
     mainMediaId: "heroCaptainMain",
     insetMediaId: "heroCaptainPortrait",
@@ -79,7 +79,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     shortDescription:
       "Lightning-fast fun for kids who want motion, sound effects, and a celebration that feels like a victory lap.",
     longDescription:
-      "A kinetic pick for active guest lists: quick games, call-and-response energy, and memorable moments that feel exciting without losing the polished brand tone families expect from A Living Fairytale.",
+      "A kinetic pick for active guest lists: quick games, playful call-and-response energy, and memorable moments that feel exciting without losing the premium brand tone.",
     tags: ["Motion-forward", "Big laughs", "Victory moments"],
     mainMediaId: "heroVoltMain",
     insetMediaId: "heroVoltPortrait",
@@ -92,7 +92,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     shortDescription:
       "Playful, instantly recognizable, and a joyful pick for younger guests and big group smiles.",
     longDescription:
-      "A warm pick for mixed ages: approachable interaction, easy crowd energy, and photo moments that feel happy instead of hectic. Great when you want recognizable fun without a complex storyline.",
+      "A warm choice for mixed ages: approachable interaction, easy crowd energy, and photo moments that feel happy instead of hectic.",
     tags: ["Big hugs", "Simple fun", "Photo magnet"],
     mainMediaId: "partyMascotIcon",
     featured: true,
@@ -102,10 +102,10 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "pink-castle-bounce-house",
     category: "Rental",
     shortDescription:
-      "A ready-to-grow rental category with playful visual energy and clear room for future inventory expansion.",
+      "Bright, cheerful, and an easy way to make the party feel bigger the moment guests arrive.",
     longDescription:
-      "Adds instant visual impact and keeps younger guests happily busy. Pairs naturally with character visits when you want a fuller party footprint and a clear focal point in the yard or venue.",
-    tags: ["Party extra", "Visual impact", "Expansion ready"],
+      "Adds instant visual impact and keeps younger guests happily busy. It pairs naturally with character visits when you want the celebration to feel fuller from the first look.",
+    tags: ["Party extra", "Visual impact", "Easy add-on"],
     mainMediaId: "rentalBounceMain",
     featured: true,
   },
@@ -117,11 +117,11 @@ const packageCatalog: ReadonlyArray<PackageRecord> = [
     name: "Mini Visit",
     duration: "30 minutes",
     description:
-      "A quick burst of character magic for birthdays that need a big moment without a longer schedule.",
+      "A quick burst of character magic for families who want a memorable entrance, cake moment, and beautiful photos without a longer activity block.",
     highlights: [
-      "Best for cake moments, photos, and a memorable entrance",
-      "Great when families want character sparkle without a full activity block",
-      "Easy add-on starting point for future upsells",
+      "Wonderful for smaller celebrations or shorter schedules",
+      "Perfect for cake, singing, hugs, and keepsake photos",
+      "Easy to pair with add-ons or rentals",
     ],
   },
   {
@@ -129,11 +129,11 @@ const packageCatalog: ReadonlyArray<PackageRecord> = [
     name: "Storybook Celebration",
     duration: "60 minutes",
     description:
-      "The sweet spot for most families: enough time for interactive moments, photos, and a celebration that feels complete.",
+      "Our most popular pace: enough time for a warm arrival, interactive moments, photos, and a celebration that feels complete.",
     highlights: [
-      "Built for games, storytelling, hero missions, or princess activities",
-      "Balances memorable moments with a clean, parent-friendly timeline",
-      "Strong default recommendation for the final booking flow",
+      "A balanced choice for most birthday parties",
+      "Great for games, storytelling, or hero missions",
+      "Keeps the energy memorable without feeling rushed",
     ],
     featured: true,
   },
@@ -142,11 +142,11 @@ const packageCatalog: ReadonlyArray<PackageRecord> = [
     name: "Signature Fairytale",
     duration: "90 minutes",
     description:
-      "A fuller premium experience for families who want a stronger entrance, more activities, and extra breathing room.",
+      "A fuller premium experience with more time to settle in, create moments, and let the celebration breathe.",
     highlights: [
-      "Ideal for larger parties or layered experiences",
-      "Natural fit for character plus rental combinations later on",
-      "Leaves room for premium add-ons in the expanded site",
+      "Lovely for larger guest lists or layered experiences",
+      "More room for activities, keepsake photos, and a grand arrival",
+      "A beautiful fit when you want the party to feel extra special",
     ],
   },
 ];

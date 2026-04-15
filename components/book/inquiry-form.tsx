@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { useActionState } from "react";
 import { submitPartyInquiry, type InquiryFormState } from "@/app/book/actions";
 import {
@@ -76,7 +77,9 @@ export function InquiryForm({
               {"\u2713"}
             </div>
             <div className="min-w-0 flex-1">
-              <p className="eyebrow border-0 px-0 py-0 shadow-none">Sent</p>
+              <p className="eyebrow border-0 px-0 py-0 shadow-none">
+                {form.sentEyebrow}
+              </p>
               <h2 className="mt-2 text-3xl font-semibold text-midnight sm:text-4xl">
                 {form.successTitle}
               </h2>
@@ -106,17 +109,17 @@ export function InquiryForm({
         {onRequestNew ? (
           <div className="mt-8 flex flex-wrap gap-4">
             <button type="button" onClick={onRequestNew} className="button-primary">
-              Send another inquiry
+              {form.resetLabel}
             </button>
-            <a href="/" className="button-secondary">
-              Back to homepage
-            </a>
+            <Link href="/" className="button-secondary">
+              {form.backHomeLabel}
+            </Link>
           </div>
         ) : (
           <div className="mt-8">
-            <a href="/" className="button-secondary">
-              Back to homepage
-            </a>
+            <Link href="/" className="button-secondary">
+              {form.backHomeLabel}
+            </Link>
           </div>
         )}
       </div>
@@ -147,11 +150,13 @@ export function InquiryForm({
         >
           <p className="font-semibold text-midnight">{state.message}</p>
           {state.errorDetail ? (
-            <p className="section-copy mt-2 text-sm leading-relaxed">{state.errorDetail}</p>
+            <p className="section-copy mt-2 text-sm leading-relaxed">
+              {state.errorDetail}
+            </p>
           ) : null}
           {!isValidationError ? (
             <p className="section-copy mt-3 text-sm leading-relaxed">
-              If this keeps happening, email us with your party date and city—we are happy to help without the form.
+              {form.nonValidationHelp}
             </p>
           ) : null}
         </div>
@@ -212,6 +217,7 @@ function renderField(
   const id = field.name;
   const errId = `${id}-error`;
   const describedBy = err ? errId : undefined;
+  const { form } = bookPageContent;
 
   const label = (
     <label htmlFor={id} className="block text-sm font-bold text-midnight">
@@ -273,7 +279,7 @@ function renderField(
           }}
         >
           <option value="" disabled>
-            Select…
+            {form.selectPlaceholder}
           </option>
           {options.map((opt) => (
             <option key={opt.value} value={opt.value}>

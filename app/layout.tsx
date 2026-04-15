@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteShellContent } from "@/data/site-shell";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -15,9 +16,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "A Living Fairytale",
+    images: [
+      {
+        url: "/A%20living%20fairytale%20logo.png",
+        alt: siteShellContent.brandLogo.alt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/A%20living%20fairytale%20logo.png"],
   },
 };
 

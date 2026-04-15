@@ -1,5 +1,6 @@
 import type { LinkConfig } from "@/data/types";
 import Image from "next/image";
+import { siteShellContent } from "@/data/site-shell";
 
 type HeaderProps = {
   links: ReadonlyArray<{
@@ -13,17 +14,17 @@ type HeaderProps = {
 export function Header({
   links,
   brandHref = "/",
-  cta = { label: "Book the magic", href: "/book" },
+  cta = siteShellContent.headerDefaultCta,
 }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/78 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <a href={brandHref} className="flex items-center gap-3">
           <Image
-            src="/A%20living%20fairytale%20logo.png"
-            alt="A Living Fairytale"
-            width={188}
-            height={72}
+            src={siteShellContent.brandLogo.src}
+            alt={siteShellContent.brandLogo.alt}
+            width={siteShellContent.brandLogo.width}
+            height={siteShellContent.brandLogo.height}
             className="h-auto w-[10.5rem] sm:w-[11.75rem]"
             priority
           />

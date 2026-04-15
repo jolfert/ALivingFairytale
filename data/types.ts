@@ -9,9 +9,11 @@ export type MediaAsset = {
   alt: string;
   width: number;
   height: number;
+  status: "approved" | "placeholder";
   adminLabel: string;
   replaceHint: string;
   aiTags: ReadonlyArray<string>;
+  mappingNote?: string;
 };
 
 export type CharacterCategory =

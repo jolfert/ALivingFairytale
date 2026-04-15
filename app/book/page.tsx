@@ -9,12 +9,12 @@ import { bookPageContent } from "@/data/book-page";
 export const metadata: Metadata = {
   title: "Book a Party",
   description:
-    "Submit a structured party inquiry for princess, hero, mascot, or rental celebrations. Requests are emailed to your team when Resend is configured.",
+    "Share your party details for a princess, hero, mascot, or rental celebration and receive a warm, clear follow-up from A Living Fairytale.",
   alternates: { canonical: "/book" },
   openGraph: {
     title: "Book a Party | A Living Fairytale",
     description:
-      "Calm booking flow: trust details and a structured inquiry form for your celebration.",
+      "A calm booking flow with helpful trust details and a clear inquiry form for your celebration.",
     url: "/book",
   },
 };

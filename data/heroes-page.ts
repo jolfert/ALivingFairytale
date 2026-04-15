@@ -13,13 +13,13 @@ export const heroesPageContent = {
   hero: {
     eyebrow: "Superhero Parties",
     title:
-      "High-impact hero parties with confident arrivals, mission-ready energy, and a premium pace parents trust.",
+      "Bold superhero parties with big entrances, mission moments, and a pace parents can actually enjoy.",
     description:
-      "Superhero celebrations should feel electric for kids and impressively organized for grown-ups: bold character presence, action-forward games, and a tone that stays heroic without tipping into chaos.",
+      "Our hero celebrations are built to feel thrilling for kids and impressively organized for grown-ups: confident character presence, action-forward games, and a party flow that stays exciting without becoming chaotic.",
     highlights: [
-      "Mission-style flow that keeps energy moving on purpose",
-      "Hero arrivals built for big reactions and clean photos",
-      "Parent-friendly structure with clear beats from start to finish",
+      "Mission-style pacing that keeps energy moving on purpose",
+      "Hero arrivals built for big reactions and strong photos",
+      "Clear celebration beats from entrance to final cheer",
     ],
     primaryCta: {
       label: "Pick your hero lineup",
@@ -32,19 +32,20 @@ export const heroesPageContent = {
     mainMedia: getMediaAsset("heroSkylineMain"),
     insetMedia: getMediaAsset("heroCaptainPortrait"),
     panelEyebrow: "Hero path tone",
-    panelTitle: "Bold motion, bright confidence, and celebration energy that still feels polished.",
+    panelTitle:
+      "Big energy, bold motion, and birthday momentum that still feels polished.",
     panelDescription:
-      "The hero path keeps the same premium brand shell while shifting the story toward action, teamwork, and unforgettable birthday momentum.",
+      "The hero path keeps the same premium brand foundation while shifting the mood toward action, teamwork, and unforgettable save-the-day moments.",
     supportingCards: [
       {
         eyebrow: "Arrival energy",
         title: "A heroic entrance that sets the pace",
         description:
-          "The first minute is designed to feel exciting, intentional, and instantly photo-ready.",
+          "The first minute is designed to feel exciting, intentional, and instantly memorable.",
       },
       {
         eyebrow: "Party rhythm",
-        title: "Action-forward games with guardrails",
+        title: "Action-forward games with real guardrails",
         description:
           "Big movement stays structured so the room feels fun, not frantic, for every age in attendance.",
       },
@@ -52,34 +53,38 @@ export const heroesPageContent = {
         eyebrow: "Keepsake feel",
         title: "Moments kids replay in their heads",
         description:
-          "Victory beats, team cheers, and celebratory peaks that feel earned and memorable.",
+          "Victory beats, team cheers, and celebration peaks that feel earned and exciting.",
       },
     ],
   },
   sections: {
     characters: {
       eyebrow: "Featured heroes",
-      title: "Choose the hero energy that matches your child’s favorite kind of save-the-day magic.",
+      title:
+        "Choose the hero energy that matches your child's favorite kind of save-the-day magic.",
       description:
-        "Each hero leans into a different celebration style while staying inside the same premium experience standards and booking structure.",
+        "Each hero brings a different celebration style while staying inside the same premium experience standards and booking flow.",
     },
     experience: {
       eyebrow: "Experience highlights",
-      title: "Superhero parties should feel thrilling, not loud for the sake of loud.",
+      title:
+        "Superhero parties should feel thrilling, not loud just for the sake of loud.",
       description:
-        "High energy is shaped with pacing, clarity, and warmth so parents can relax, take photos, and enjoy the celebration alongside the kids.",
+        "The energy is shaped with pacing, clarity, and warmth so parents can relax, take photos, and enjoy the celebration right along with the kids.",
     },
     packages: {
       eyebrow: "Hero package overview",
-      title: "Same trusted packages—tuned for action-led birthdays and mission-style play.",
+      title:
+        "The same trusted package lineup, tuned for action, teamwork, and birthday bragging rights.",
       description:
-        "Families still compare duration and highlights the same way as other paths, with copy that reflects how hero visits tend to move in the room.",
+        "Families still compare duration and highlights the same way they do elsewhere on the site, with copy that reflects how hero visits move in the room.",
     },
     trust: {
       eyebrow: "Built for real families",
-      title: "Parents should feel the excitement—and still feel completely taken care of.",
+      title:
+        "Parents should feel the excitement and still feel completely taken care of.",
       description:
-        "These are the trust signals we lean on for hero bookings: communication that stays clear, performers who read the room, and a brand tone that never sacrifices polish.",
+        "We lean on clear communication, confident performers, and thoughtful pacing so the hero experience feels just as trustworthy as it does exciting.",
     },
   },
   experienceCards: [
@@ -108,27 +113,31 @@ export const heroesPageContent = {
   trustCards: [
     {
       eyebrow: "Safety-minded fun",
-      title: "Action that stays age-aware and supervised",
+      title: "Action that stays age-aware and thoughtfully guided",
       description:
-        "Energy is high, but choices stay thoughtful for mixed ages, home spaces, and the realities of a birthday crowd.",
+        "The energy runs high, but the choices still respect mixed ages, home spaces, and the realities of a birthday crowd.",
       icon: "\u2713",
     },
     {
       eyebrow: "Communication you can count on",
       title: "Straightforward answers before the big day",
       description:
-        "Expectations, timing, and next steps are written to reduce back-and-forth so booking feels calm, not confusing.",
+        "Expectations, timing, and next steps are explained clearly so booking feels calm, not confusing.",
       icon: "\u2709",
     },
     {
       eyebrow: "Photo-friendly presentation",
       title: "Looks bold on camera without feeling messy",
       description:
-        "Costuming and movement choices are tuned so memories look as good as they felt in the moment.",
+        "Costuming, posing, and movement choices are tuned so the party photographs beautifully while still feeling high-energy.",
       icon: "\u231A",
     },
   ],
-  characters: pickCharacters(["skyline-hero", "shield-captain", "photon-streak"]),
+  characters: pickCharacters([
+    "skyline-hero",
+    "shield-captain",
+    "photon-streak",
+  ]),
   packages: pickPackages([
     "mini-visit",
     "storybook-celebration",
@@ -137,13 +146,13 @@ export const heroesPageContent = {
   cta: {
     eyebrow: "Ready to book the hero party",
     title:
-      "Send the date and let’s build a superhero celebration that feels epic, organized, and completely on-brand.",
+      "Send the date and let's plan a superhero celebration that feels epic, polished, and easy to say yes to.",
     description:
-      "This page hands naturally into booking. When you are ready, the next step is a simple request with the details we need to respond quickly.",
+      "When you are ready, the next step is a simple request with the details we need to respond quickly and point you toward the right fit.",
     notes: [
-      "Best fit for birthdays that want motion-forward fun with a premium host feel",
-      "Works beautifully alongside future add-ons like decor, extras, and travel rules",
-      "Structured content makes updates easy as your roster and packages evolve",
+      "Great for birthdays that want motion-forward fun with a premium host feel",
+      "Easy to tailor with add-ons, travel notes, and celebration details",
+      "Built to keep the excitement high and the planning clear",
     ],
     primaryCta: {
       label: "Continue to booking",

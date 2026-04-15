@@ -7,9 +7,12 @@ const mediaRegistry = {
     alt: "A Living Fairytale castle logo with sparkling ribbon wordmark",
     width: 1536,
     height: 1110,
+    status: "approved",
     adminLabel: "Primary brand logo",
-    replaceHint: "Swap with approved primary logo export while keeping transparent background.",
+    replaceHint:
+      "Swap only if a newer approved transparent logo export is delivered.",
     aiTags: ["brand", "logo", "castle", "sparkle"],
+    mappingNote: "Approved primary site brand mark.",
   },
   partyPrincessIcon: {
     id: "partyPrincessIcon",
@@ -17,9 +20,12 @@ const mediaRegistry = {
     alt: "Princess party icon",
     width: 96,
     height: 96,
+    status: "placeholder",
     adminLabel: "Princess category icon",
-    replaceHint: "Can be replaced with a princess badge or simplified category mark.",
+    replaceHint:
+      "Can be replaced with an approved princess badge or category mark.",
     aiTags: ["princess", "icon", "category"],
+    mappingNote: "Generic category icon, not a character-specific approved image.",
   },
   partyHeroIcon: {
     id: "partyHeroIcon",
@@ -27,9 +33,11 @@ const mediaRegistry = {
     alt: "Hero party icon",
     width: 96,
     height: 96,
+    status: "placeholder",
     adminLabel: "Hero category icon",
-    replaceHint: "Can be replaced with a shield or hero badge asset.",
+    replaceHint: "Can be replaced with an approved hero badge or shield mark.",
     aiTags: ["hero", "icon", "category"],
+    mappingNote: "Generic category icon, not a character-specific approved image.",
   },
   partyMascotIcon: {
     id: "partyMascotIcon",
@@ -37,9 +45,12 @@ const mediaRegistry = {
     alt: "Mascot party icon",
     width: 96,
     height: 96,
+    status: "placeholder",
     adminLabel: "Mascot category icon",
-    replaceHint: "Can be replaced with a mascot face or playful category mark.",
+    replaceHint:
+      "Can be replaced with an approved mascot badge or simplified character mark.",
     aiTags: ["mascot", "icon", "category"],
+    mappingNote: "Generic category icon, not a performer photo.",
   },
   partyRentalIcon: {
     id: "partyRentalIcon",
@@ -47,9 +58,12 @@ const mediaRegistry = {
     alt: "Rental party icon",
     width: 96,
     height: 96,
+    status: "placeholder",
     adminLabel: "Rental category icon",
-    replaceHint: "Can be replaced with bounce house or rental inventory iconography.",
+    replaceHint:
+      "Can be replaced with approved bounce house or rental inventory iconography.",
     aiTags: ["rental", "icon", "category"],
+    mappingNote: "Generic rental icon, not inventory photography.",
   },
   princessRoseMain: {
     id: "princessRoseMain",
@@ -57,9 +71,13 @@ const mediaRegistry = {
     alt: "Rose-inspired princess standing in a glowing ballroom scene",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Rose princess main scene",
-    replaceHint: "Best replaced with a wide action photo showing entrance or interaction.",
+    replaceHint:
+      "Best replaced with an approved action photo showing arrival or guest interaction.",
     aiTags: ["princess", "rose", "ballroom", "action"],
+    mappingNote:
+      "Intended for the rose/classic princess listing until approved photography is provided.",
   },
   princessRosePortrait: {
     id: "princessRosePortrait",
@@ -67,9 +85,13 @@ const mediaRegistry = {
     alt: "Rose-inspired princess portrait",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Rose princess portrait",
-    replaceHint: "Best replaced with a clean vertical portrait or close-up smile shot.",
+    replaceHint:
+      "Best replaced with a clean approved vertical portrait or close-up smile shot.",
     aiTags: ["princess", "rose", "portrait"],
+    mappingNote:
+      "Inset portrait for the rose/classic princess listing until final media arrives.",
   },
   princessSnowMain: {
     id: "princessSnowMain",
@@ -77,9 +99,13 @@ const mediaRegistry = {
     alt: "Snow-inspired princess in a sparkling winter scene",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Snow princess main scene",
-    replaceHint: "Best replaced with a bright action photo and visible movement.",
+    replaceHint:
+      "Best replaced with a bright approved action photo and visible movement.",
     aiTags: ["princess", "snow", "sparkle", "action"],
+    mappingNote:
+      "Intended for the snow/ice princess listing until approved photography is provided.",
   },
   princessSnowPortrait: {
     id: "princessSnowPortrait",
@@ -87,9 +113,12 @@ const mediaRegistry = {
     alt: "Snow-inspired princess portrait",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Snow princess portrait",
-    replaceHint: "Best replaced with a polished vertical portrait.",
+    replaceHint: "Best replaced with an approved polished vertical portrait.",
     aiTags: ["princess", "snow", "portrait"],
+    mappingNote:
+      "Inset portrait for the snow/ice princess listing until final media arrives.",
   },
   princessTowerMain: {
     id: "princessTowerMain",
@@ -97,9 +126,13 @@ const mediaRegistry = {
     alt: "Lantern-inspired princess in a glowing garden scene",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Tower princess main scene",
-    replaceHint: "Best replaced with a wide image showing color, movement, and environment.",
+    replaceHint:
+      "Best replaced with an approved wide image showing color, movement, and environment.",
     aiTags: ["princess", "lantern", "garden", "action"],
+    mappingNote:
+      "Intended for the tower/lantern princess listing until approved photography is provided.",
   },
   princessTowerPortrait: {
     id: "princessTowerPortrait",
@@ -107,9 +140,13 @@ const mediaRegistry = {
     alt: "Lantern-inspired princess portrait",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Tower princess portrait",
-    replaceHint: "Best replaced with a soft, vertical portrait that reads clearly at small sizes.",
+    replaceHint:
+      "Best replaced with an approved soft vertical portrait that reads clearly at small sizes.",
     aiTags: ["princess", "lantern", "portrait"],
+    mappingNote:
+      "Inset portrait for the tower/lantern princess listing until final media arrives.",
   },
   heroSkylineMain: {
     id: "heroSkylineMain",
@@ -117,9 +154,13 @@ const mediaRegistry = {
     alt: "Stylized hero silhouette with city skyline and upward light beam",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Hero skyline main scene",
-    replaceHint: "Swap for a wide action photo: arrival, training moment, or bold hero pose.",
+    replaceHint:
+      "Swap for an approved wide action photo: arrival, training moment, or bold hero pose.",
     aiTags: ["hero", "skyline", "action", "party"],
+    mappingNote:
+      "Mapped to Skyline Hero until approved hero photography is available.",
   },
   heroSkylinePortrait: {
     id: "heroSkylinePortrait",
@@ -127,9 +168,13 @@ const mediaRegistry = {
     alt: "Hero portrait with cape and confident stance",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Hero skyline portrait",
-    replaceHint: "Replace with a tight vertical portrait that reads well in the inset frame.",
+    replaceHint:
+      "Replace with an approved tight vertical portrait that reads well in the inset frame.",
     aiTags: ["hero", "portrait", "cape"],
+    mappingNote:
+      "Inset portrait for Skyline Hero until final media arrives.",
   },
   heroCaptainMain: {
     id: "heroCaptainMain",
@@ -137,9 +182,13 @@ const mediaRegistry = {
     alt: "Hero with large shield motif and stadium-light energy",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Shield captain main scene",
-    replaceHint: "Swap for photography that emphasizes teamwork, courage, and celebration energy.",
+    replaceHint:
+      "Swap for approved photography that emphasizes teamwork, courage, and celebration energy.",
     aiTags: ["hero", "shield", "team", "party"],
+    mappingNote:
+      "Mapped to Shield Captain until approved hero photography is available.",
   },
   heroCaptainPortrait: {
     id: "heroCaptainPortrait",
@@ -147,9 +196,13 @@ const mediaRegistry = {
     alt: "Shield emblem portrait framing heroic celebration",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Shield captain portrait",
-    replaceHint: "Replace with a clean emblem-style portrait or close-up prop moment.",
+    replaceHint:
+      "Replace with an approved clean portrait or close-up prop moment.",
     aiTags: ["hero", "shield", "portrait"],
+    mappingNote:
+      "Inset portrait for Shield Captain until final media arrives.",
   },
   heroVoltMain: {
     id: "heroVoltMain",
@@ -157,9 +210,13 @@ const mediaRegistry = {
     alt: "High-speed hero silhouette with motion streaks and electric accents",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Photon hero main scene",
-    replaceHint: "Swap for kinetic photography: running, jumping, or a burst of motion blur.",
+    replaceHint:
+      "Swap for approved kinetic photography: running, jumping, or motion blur.",
     aiTags: ["hero", "speed", "energy", "party"],
+    mappingNote:
+      "Mapped to Photon Streak until approved hero photography is available.",
   },
   heroVoltPortrait: {
     id: "heroVoltPortrait",
@@ -167,9 +224,13 @@ const mediaRegistry = {
     alt: "Hero portrait with motion-forward stance",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Photon hero portrait",
-    replaceHint: "Replace with a vertical portrait that still feels fast and fun.",
+    replaceHint:
+      "Replace with an approved vertical portrait that still feels fast and fun.",
     aiTags: ["hero", "speed", "portrait"],
+    mappingNote:
+      "Inset portrait for Photon Streak until final media arrives.",
   },
   mascotPartyMain: {
     id: "mascotPartyMain",
@@ -177,9 +238,13 @@ const mediaRegistry = {
     alt: "Bright playful party scene with warm shapes and confetti-like accents",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Mascot category main scene",
-    replaceHint: "Replace with a photo of your mascot performer or a lively group moment.",
+    replaceHint:
+      "Replace with an approved mascot performer photo or lively group moment.",
     aiTags: ["mascot", "party", "playful", "color"],
+    mappingNote:
+      "General mascot hero visual until approved mascot photography is available.",
   },
   rentalSparkInset: {
     id: "rentalSparkInset",
@@ -187,9 +252,12 @@ const mediaRegistry = {
     alt: "Soft illustration suggesting bounce house and outdoor party extras",
     width: 320,
     height: 400,
+    status: "placeholder",
     adminLabel: "Rental inset visual",
-    replaceHint: "Swap for a clean rental product shot or setup photo.",
+    replaceHint: "Swap for an approved rental product shot or setup photo.",
     aiTags: ["rental", "bounce", "inset"],
+    mappingNote:
+      "General rental inset until approved inventory photography is available.",
   },
   rentalBounceMain: {
     id: "rentalBounceMain",
@@ -197,9 +265,12 @@ const mediaRegistry = {
     alt: "Playful bounce house illustration in brand colors",
     width: 720,
     height: 860,
+    status: "placeholder",
     adminLabel: "Bounce house main visual",
-    replaceHint: "Replace with your real rental inventory photography.",
+    replaceHint: "Replace with approved real rental inventory photography.",
     aiTags: ["rental", "bounce", "party"],
+    mappingNote:
+      "Mapped to Pink Castle Bounce House until approved inventory photography is available.",
   },
 } satisfies Record<string, MediaAsset>;
 

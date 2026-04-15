@@ -5,10 +5,10 @@ import {
 
 export const partyTypeOptions = [
   { value: "princess", label: "Princess party" },
-  { value: "hero", label: "Hero / superhero party" },
-  { value: "mascot", label: "Mascot / costume character" },
-  { value: "rental", label: "Rental add-on" },
-  { value: "combined", label: "Character + rental (combined)" },
+  { value: "hero", label: "Superhero party" },
+  { value: "mascot", label: "Mascot visit" },
+  { value: "rental", label: "Rental only" },
+  { value: "combined", label: "Character + rental" },
   { value: "unsure", label: "Not sure yet" },
 ] as const;
 
@@ -59,11 +59,12 @@ export const inquiryFormFields = [
   },
   {
     name: "preferredCharacter",
-    label: "Preferred character or rental",
+    label: "Preferred character, mascot, or rental",
     kind: "text",
     required: true,
     width: "full",
-    placeholder: "e.g., Storybook Mouse, bounce house, or open to ideas",
+    placeholder:
+      "For example: Snowfall Princess, Skyline Hero, Storybook Mouse, or pink bounce house",
     autoComplete: "off",
   },
   {
@@ -88,7 +89,7 @@ export const inquiryFormFields = [
     kind: "text",
     required: true,
     width: "half",
-    placeholder: "e.g., 4 or turning 5",
+    placeholder: "For example: 4 or turning 5",
     autoComplete: "off",
   },
   {
@@ -99,7 +100,8 @@ export const inquiryFormFields = [
     width: "full",
     rows: 3,
     maxLength: INQUIRY_ADDRESS_MAX_LENGTH,
-    placeholder: "Street, city, and any gate or building notes we should know",
+    placeholder:
+      "Street, city, and any gate, suite, or parking notes we should know",
     autoComplete: "street-address",
   },
   {
@@ -110,7 +112,8 @@ export const inquiryFormFields = [
     width: "full",
     rows: 4,
     maxLength: INQUIRY_NOTES_MAX_LENGTH,
-    placeholder: "Allergies, parking, surprise timing, or other helpful context",
+    placeholder:
+      "Tell us about surprise timing, favorite characters, allergies, setup notes, or anything else that would help",
     autoComplete: "off",
   },
 ] as const;

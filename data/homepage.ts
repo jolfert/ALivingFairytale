@@ -1,5 +1,5 @@
-import { getMediaAsset } from "@/data/media";
 import { packages, pickCharacters } from "@/data/catalog";
+import { getMediaAsset } from "@/data/media";
 
 export const homepageContent = {
   navigation: [
@@ -12,95 +12,99 @@ export const homepageContent = {
     { label: "Book", href: "/book" },
   ],
   hero: {
-    eyebrow: "Princess wonder, hero cheers, and unforgettable birthday magic",
-    title: "Where dream parties feel effortless to book and impossible to forget.",
+    eyebrow: "Princesses, heroes, mascots, and birthday magic worth remembering",
+    title:
+      "The party booking site that feels magical for kids and reassuring for parents.",
     description:
-      "A Living Fairytale brings polished princess visits, high-energy hero moments, mascot fun, and party-ready add-ons into one premium, parent-friendly experience.",
+      "A Living Fairytale creates polished character experiences and playful party extras that turn birthdays into beautiful memories without making the planning feel complicated.",
     highlights: [
       "Real performers who stay in character",
-      "Warm communication from inquiry to arrival",
-      "Princess, hero, mascot, and rental options",
+      "Warm communication before and after booking",
+      "Princess, hero, mascot, and rental options in one place",
     ],
     primaryCta: {
       label: "Explore the magic",
       href: "#paths",
     },
     secondaryCta: {
-      label: "Start a booking request",
+      label: "Start your booking request",
       href: "/book",
     },
     stats: [
       {
         value: "3 paths",
-        label: "Princess, hero, and mascot-led celebrations under one polished brand.",
+        label: "Princess, superhero, and mascot or rental celebrations under one polished brand.",
       },
       {
-        value: "1 flow",
-        label: "Families should never feel lost between categories, packages, and next steps.",
+        value: "Fast follow-up",
+        label: "Parents get a clear reply from a real person, not a maze of automated confusion.",
       },
       {
-        value: "Zero guesswork",
-        label: "The homepage is written to answer questions before parents need to ask them.",
+        value: "Picture-ready",
+        label: "Every experience is shaped to feel memorable in the room and beautiful in photos.",
       },
     ],
     brandMedia: getMediaAsset("siteLogo"),
     showcase: {
-      eyebrow: "Featured atmosphere",
+      eyebrow: "A peek at the feeling",
       princessLabel: "Princess",
-      princessDescription: "Elegant arrivals, sparkling photos, story-led wonder.",
+      princessDescription:
+        "Graceful arrivals, storybook smiles, and sweet interactive magic.",
       heroLabel: "Hero",
       heroDescription:
-        "High-energy missions with a polished, parent-friendly tone.",
-      planningEyebrow: "Booking should feel this calm",
-      planningTitle: "Pick your party path, compare packages, send the date.",
+        "Big entrances, mission moments, and confident celebration energy.",
+      planningEyebrow: "Easy from the first click",
+      planningTitle: "Choose your path, choose your package, tell us your date.",
       planningDescription:
-        "The next round can turn this into the full booking page, but the homepage already guides families toward the right next step.",
-      reassuranceEyebrow: "Good fit for the homepage",
-      reassuranceTitle: "Enchanting for children, reassuring for parents.",
+        "We keep the first step simple so you can feel excited about the party instead of overwhelmed by the planning.",
+      reassuranceEyebrow: "What families feel",
+      reassuranceTitle:
+        "Whimsical for children. Clear, warm, and polished for grown-ups.",
       supportCards: [
         {
-          title: "Princesses, heroes, mascots",
+          title: "Moments worth photographing",
           description:
-            "Clear categories without breaking the premium brand.",
+            "From the entrance to the hugs, the experience is designed to look as lovely as it feels.",
         },
         {
-          title: "Booking flow ready to grow",
+          title: "Guidance without pressure",
           description:
-            "The structure is set up for a future form, CRM, or email handoff.",
+            "If you are choosing between packages, themes, or characters, we help you find the right fit with confidence.",
         },
       ],
     },
   },
   sections: {
     whyUs: {
-      eyebrow: "Why parents keep choosing us",
-      title: "The magic feels big for children and easy for grown-ups.",
+      eyebrow: "Why parents choose us",
+      title:
+        "The celebration feels special long before the character arrives.",
       description:
-        "Every part of the experience is designed to reduce stress: warm communication, polished performers, and party options that make it simple to pick the right fit.",
+        "Families book with us because the magic feels polished from the beginning: clear communication, thoughtful pacing, and experiences that truly feel made for birthdays.",
     },
     paths: {
       eyebrow: "Choose your kind of magic",
-      title: "One premium brand, three beautifully different party paths.",
+      title: "One premium brand with three clear ways to celebrate.",
       description:
-        "Princess celebrations stay dreamy and elegant, hero events feel bold and high-energy, and mascots plus rentals keep the fun bright and effortless.",
+        "Princess celebrations stay dreamy and elegant, hero events feel bold and high-energy, and mascots plus rentals keep the fun bright, easy, and crowd-pleasing.",
     },
     featured: {
-      eyebrow: "Featured party types",
-      title: "Every booking starts with a character kids cannot stop talking about.",
+      eyebrow: "Featured favorites",
+      title: "Start with the character they are already talking about.",
       description:
-        "The homepage is built around standout experiences first, so future princess, hero, mascot, and rental pages can all plug into the same polished content model.",
+        "Every path begins with a memorable face, a recognizable feeling, and the kind of entrance kids keep replaying after the candles are blown out.",
     },
     packages: {
-      eyebrow: "Simple package overview",
-      title: "Easy to understand now, easy to expand into full pricing later.",
+      eyebrow: "Package overview",
+      title: "Choose the pacing that fits your day.",
       description:
-        "For the first launch, the focus is on clarity instead of fake precision. Families can quickly compare the shape of each experience, then confirm details during inquiry.",
+        "Whether you want a quick magical visit or a fuller story-led celebration, the package lineup keeps the choice clear and the next step easy.",
     },
     trust: {
-      eyebrow: "Trust built right into the layout",
-      title: "This section is ready for approved reviews without forcing fake testimonials today.",
+      eyebrow: "Why parents feel comfortable saying yes",
+      title: "Trust starts with clear expectations and warm communication.",
       description:
-        "Until final review copy is gathered, the homepage still earns confidence through clear promises, warm service language, and a booking flow that feels cared for.",
+        "We keep the magic high and the process simple with thoughtful performers, polished presentation, and a booking flow that is easy to follow.",
     },
   },
   partyPaths: [
@@ -108,9 +112,9 @@ export const homepageContent = {
       eyebrow: "Princess Parties",
       title: "Storybook elegance with sparkle in every detail.",
       description:
-        "For the family who wants royal arrivals, graceful pacing, beautiful photos, and a celebration that feels polished from the very first wave.",
+        "For families who want royal arrivals, graceful pacing, lovely photos, and a celebration that feels polished from the very first wave.",
       href: "/princess",
-      ctaLabel: "See princess-inspired highlights",
+      ctaLabel: "See princess party favorites",
       tags: ["Elegant arrivals", "Dreamy activities", "Soft sparkle"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,241,248,0.98))]",
@@ -120,7 +124,7 @@ export const homepageContent = {
       eyebrow: "Hero Parties",
       title: "Bold energy without losing the premium feel.",
       description:
-        "Built for exciting entrances, memorable missions, and action-forward pacing that still feels thoughtful, warm, and easy for parents to trust.",
+        "Built for exciting entrances, memorable missions, and action-forward fun that still feels thoughtful, warm, and easy for parents to trust.",
       href: "/heroes",
       ctaLabel: "Explore superhero parties",
       tags: ["Strong entrances", "Mission moments", "Big kid excitement"],
@@ -130,9 +134,9 @@ export const homepageContent = {
     },
     {
       eyebrow: "Mascots & Rentals",
-      title: "Bright, playful fun that still looks beautifully on-brand.",
+      title: "Bright, playful fun that still feels beautifully put together.",
       description:
-        "Perfect for families who want lovable character moments, easy add-ons, or celebration extras that make the whole event feel bigger.",
+        "Perfect for families who want lovable mascot moments, easy party extras, or cheerful add-ons that make the whole celebration feel bigger.",
       href: "/mascots",
       ctaLabel: "See mascots and rentals",
       tags: ["Crowd-pleasing", "Easy add-ons", "Flexible fun"],
@@ -145,25 +149,25 @@ export const homepageContent = {
     {
       title: "Parent-first planning",
       description:
-        "The copy, calls to action, and next steps are written to make decisions feel lighter instead of louder.",
+        "The site is written to answer the questions parents actually have, so booking feels lighter instead of louder.",
       icon: "\u2661",
     },
     {
       title: "Performers with presence",
       description:
-        "Every experience is framed around a memorable entrance, polished pacing, and moments that feel worthy of the photos.",
+        "Every package is built around memorable arrivals, polished pacing, and moments that feel worthy of the photos.",
       icon: "\u2726",
     },
     {
-      title: "Clear package language",
+      title: "Clear package choices",
       description:
-        "Families can compare experience sizes quickly now, while the codebase stays ready for more detailed pricing later.",
+        "Families can compare experience sizes quickly and feel confident about what happens next.",
       icon: "\u263C",
     },
     {
-      title: "Brand consistency",
+      title: "One consistent brand",
       description:
-        "Princesses, heroes, mascots, and rentals all live inside the same elevated visual system instead of feeling stitched together.",
+        "Princesses, heroes, mascots, and rentals all feel like part of the same premium celebration company.",
       icon: "\u2301",
     },
   ],
@@ -176,59 +180,60 @@ export const homepageContent = {
   packages,
   testimonials: [
     {
-      note: "Review-ready section",
-      title: "Structured for real testimonials later",
+      note: "Easy communication",
+      title: "You know what happens next",
       description:
-        "The layout already supports approved review copy, star ratings, or platform imports without needing a redesign once the final testimonials are collected.",
+        "From the first inquiry to the follow-up, the process is designed to feel calm, clear, and personal.",
     },
     {
-      note: "Trust message",
-      title: "Confidence comes from clarity, not clutter",
+      note: "Beautiful memories",
+      title: "The party feels magical in the room and lovely in photos",
       description:
-        "Instead of stuffing the homepage with filler, the page earns trust through calm structure, strong hierarchy, and copy that answers the questions parents actually have.",
+        "The pacing, presentation, and character moments are shaped to create smiles that look just as good as they feel.",
     },
     {
-      note: "Launch-friendly",
-      title: "No fake social proof needed",
+      note: "Premium without stiffness",
+      title: "Warm service with a polished finish",
       description:
-        "This first version stays honest: the space is ready for future reviews while protecting the premium feel of the launch site right now.",
+        "Families get the excitement children want and the reassurance parents appreciate, all inside one elevated brand experience.",
     },
   ],
   finalCta: {
-    eyebrow: "Ready to book beautifully",
-    title: "The next step should feel warm, clear, and exciting.",
+    eyebrow: "Ready when you are",
+    title:
+      "Tell us a little about the party, and we will help you make it magical.",
     description:
-      "When you are ready, our booking page gathers the details we need in one calm flow—trust notes on the left, structured inquiry on the right—so your first reply stays focused and friendly.",
+      "Our booking page keeps the next step simple, warm, and clear. Share the basics, and we will guide you toward the right package, character, and celebration flow for your date.",
     steps: [
       {
         step: "1",
         title: "Choose your party style",
-        description: "Princess, hero, mascot, or a package with rentals.",
+        description: "Princess, hero, mascot, rental, or a mix that fits your day.",
       },
       {
         step: "2",
-        title: "Pick your ideal package",
-        description: "Start simple now and expand the experience later.",
+        title: "Pick the package that feels right",
+        description: "Choose the pacing that works best for your child and guest list.",
       },
       {
         step: "3",
-        title: "Send your date and notes",
-        description: "We can confirm details, availability, and travel next.",
+        title: "Share the date and details",
+        description: "Tell us the basics, plus anything special you want us to know.",
       },
       {
         step: "4",
-        title: "Get a polished reply",
-        description: "Warm, clear communication should feel part of the service.",
+        title: "Watch for our reply",
+        description: "We follow up with a warm, focused response and the next clear step.",
       },
     ],
-    previewEyebrow: "Booking page",
-    previewTitle: "Split layout, soft reassurance, zero chaos.",
+    previewEyebrow: "Booking made simple",
+    previewTitle: "Clear expectations, thoughtful questions, and a calm next step.",
     previewDescription:
-      "The live booking page pairs reassurance and expectations on the left with a structured inquiry form on the right—same premium tone as the rest of the site.",
+      "The booking page pairs helpful reassurance with a structured inquiry form so families can send what matters without feeling buried in fields.",
     notes: [
-      "Inquiries are emailed to your team (Resend) with optional parent confirmation",
-      "Honeypot and rate limiting help keep the public form sane without friction for real families",
-      "Princess, hero, mascot, and package paths all lead to the same clear next step",
+      "A real person reviews every inquiry",
+      "One form covers princess, hero, mascot, and rental requests",
+      "Special requests, timing notes, and location details can all be included up front",
     ],
     primaryCta: {
       label: "Open the booking page",

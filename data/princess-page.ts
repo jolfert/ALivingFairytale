@@ -1,4 +1,4 @@
-import { pickPackages, getCharactersByCategory } from "@/data/catalog";
+import { getCharactersByCategory, pickPackages } from "@/data/catalog";
 import { getMediaAsset } from "@/data/media";
 
 export const princessPageContent = {
@@ -12,12 +12,12 @@ export const princessPageContent = {
   hero: {
     eyebrow: "Princess Parties",
     title:
-      "Dreamy princess experiences that feel graceful, polished, and joyfully unforgettable.",
+      "Princess parties that feel dreamy, polished, and genuinely magical.",
     description:
-      "Our princess parties are designed to feel magical for children and impressively easy for parents: beautiful arrivals, story-led interaction, and memorable moments that look as lovely in photos as they feel in person.",
+      "From the first royal wave to the last photo, our princess parties are designed to feel beautiful for children and reassuringly well-paced for parents.",
     highlights: [
       "Warm, in-character princess arrivals",
-      "Interactive moments tailored for birthday pacing",
+      "Interactive moments shaped for birthday pacing",
       "Elegant visuals that still feel playful and child-centered",
     ],
     primaryCta: {
@@ -31,70 +31,71 @@ export const princessPageContent = {
     mainMedia: getMediaAsset("princessRoseMain"),
     insetMedia: getMediaAsset("princessSnowPortrait"),
     panelEyebrow: "Princess path tone",
-    panelTitle: "Soft sparkle, polished pacing, and moments worth the photos.",
+    panelTitle: "Soft sparkle, graceful pacing, and moments worth framing.",
     panelDescription:
-      "The princess path keeps the elevated brand feel while leaning sweeter, dreamier, and more storybook from the very first arrival.",
+      "The princess experience leans sweeter and dreamier while keeping the same premium standard families expect from the rest of the brand.",
     supportingCards: [
       {
         eyebrow: "Arrival feel",
         title: "Elegant entrances",
         description:
-          "The energy starts strong without ever feeling chaotic or rushed.",
+          "The magic starts strong without ever feeling rushed or overwhelming.",
       },
       {
         eyebrow: "Parent confidence",
         title: "Beautifully guided flow",
         description:
-          "Activities are shaped to feel smooth for families, not overwhelming.",
+          "Activities are paced to feel easy for families and special for the birthday child.",
       },
       {
         eyebrow: "Keepsake moments",
         title: "Picture-worthy magic",
         description:
-          "The whole page is structured around experiences that look and feel memorable.",
+          "The celebration is shaped around smiles, wonder, and the kind of moments parents love to capture.",
       },
     ],
   },
   sections: {
     characters: {
       eyebrow: "Featured princesses",
-      title: "Choose the princess who feels closest to her favorite kind of magic.",
+      title:
+        "Choose the princess who feels closest to her favorite kind of magic.",
       description:
-        "Each character has her own mood, visual story, and party energy while still fitting inside the same premium experience.",
+        "Each character carries her own mood, color story, and celebration energy while still fitting inside the same polished party experience.",
     },
     experience: {
       eyebrow: "What families can expect",
       title: "Princess parties should feel enchanting, not disorganized.",
       description:
-        "We're shaping this path around the details parents care about most: smooth pacing, lovely photos, and a child experience that feels genuinely special.",
+        "We shape this path around the details parents care about most: smooth pacing, lovely photos, and a birthday child who truly feels seen.",
     },
     packages: {
       eyebrow: "Princess package overview",
       title: "Choose the pacing that fits the celebration you're planning.",
       description:
-        "Package details stay easy to compare now and are ready to evolve into fuller booking options later.",
+        "Whether you want a sweet royal visit or a fuller fairytale experience, each package keeps the choice clear and the next step easy.",
     },
   },
   experienceCards: [
     {
       eyebrow: "For the birthday child",
-      title: "A celebration that feels starring-role special",
+      title: "She feels like the star of the story",
       description:
         "The structure creates real character connection, not just a quick appearance and photo line.",
       icon: "\u2726",
     },
     {
       eyebrow: "For the room",
-      title: "A polished atmosphere from the first moment",
+      title: "A celebration that looks every bit as lovely as it feels",
       description:
-        "Color, pacing, and presentation are all tuned to feel elevated instead of thrown together.",
+        "From the entrance to the keepsake photos, the atmosphere stays sweet, polished, and full of wonder.",
       icon: "\u2661",
     },
     {
       eyebrow: "For the grown-ups",
-      title: "A parent-friendly experience that stays easy to follow",
+      title: "A parent-friendly flow that stays easy to follow",
       description:
-        "Clear package options, thoughtful timing, and a booking flow that can grow into real online booking.",
+        "Clear package choices, thoughtful timing, and warm communication make it easy to relax and enjoy the day.",
       icon: "\u263C",
     },
   ],
@@ -109,11 +110,11 @@ export const princessPageContent = {
     title:
       "Let's create the princess party they keep talking about after the candles are blown out.",
     description:
-      "This page is designed to hand naturally into the future booking flow. For now, it gives parents enough clarity to feel confident saying yes.",
+      "If this feels like the right fit, the next step is simple. Send us the date, the party details, and the princess you have in mind, and we will guide the rest.",
     notes: [
-      "Best fit for birthdays that want beautiful character-led moments",
-      "Easy starting point for future add-ons, travel rules, and calendar tools",
-      "Content and imagery are already structured for cleaner admin updates later",
+      "A lovely fit for birthdays that want beautiful character-led moments",
+      "Easy to pair with add-ons, travel notes, and special requests",
+      "Designed to feel magical for children and calm for parents",
     ],
     primaryCta: {
       label: "Start a princess request",

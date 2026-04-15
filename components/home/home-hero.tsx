@@ -90,7 +90,7 @@ export function HomeHero({ content }: HomeHeroProps) {
             <div className="glass-panel w-fit rounded-[1.5rem] px-4 py-3">
               <Image
                 src={content.brandMedia.src}
-                alt="A Living Fairytale"
+                alt={content.brandMedia.alt}
                 width={content.brandMedia.width}
                 height={content.brandMedia.height}
                 className="h-auto w-[11rem] sm:w-[12.5rem]"

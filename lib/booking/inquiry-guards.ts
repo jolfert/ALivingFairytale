@@ -1,5 +1,5 @@
 /**
- * Honeypot field name — must match the hidden input in `InquiryForm`.
+ * Honeypot field name - must match the hidden input in `InquiryForm`.
  * Bots often fill every text field; humans never see this one.
  */
 export const BOOKING_HONEYPOT_FIELD = "booking_company_website" as const;
