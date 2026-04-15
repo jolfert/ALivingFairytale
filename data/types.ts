@@ -31,6 +31,7 @@ export type CharacterRecord = {
   tags: ReadonlyArray<string>;
   mainMediaId: string;
   insetMediaId?: string;
+  detailHref?: string;
   featured?: boolean;
 };
 
@@ -80,4 +81,31 @@ export type CtaBannerContent = {
   notes: ReadonlyArray<string>;
   primaryCta: LinkConfig;
   secondaryCta?: LinkConfig;
+};
+
+export type CharacterPageContent = {
+  slug: string;
+  navigation: ReadonlyArray<LinkConfig>;
+  hero: CategoryHeroContent;
+  sections: {
+    highlights: {
+      eyebrow: string;
+      title: string;
+      description: string;
+    };
+    related: {
+      eyebrow: string;
+      title: string;
+      description: string;
+    };
+    packages: {
+      eyebrow: string;
+      title: string;
+      description: string;
+    };
+  };
+  highlightCards: ReadonlyArray<InfoCard>;
+  relatedCharacters: ReadonlyArray<string>;
+  packageSlugs: ReadonlyArray<string>;
+  cta: CtaBannerContent;
 };

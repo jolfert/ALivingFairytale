@@ -46,6 +46,13 @@ export const homepageContent = {
     brandMedia: getMediaAsset("siteLogo"),
     showcase: {
       eyebrow: "A peek at the feeling",
+      mainMedia: getMediaAsset("cinderellaMain"),
+      insetMedia: getMediaAsset("elsaPortrait"),
+      storyCardEyebrow: "Party magic in real life",
+      storyCardTitle:
+        "Action shots for the big moment. Costume portraits for the finishing touch.",
+      storyCardText:
+        "The experience is built to feel magical in the room and look beautiful when the photos start rolling.",
       princessLabel: "Princess",
       princessDescription:
         "Graceful arrivals, storybook smiles, and sweet interactive magic.",
@@ -102,7 +109,7 @@ export const homepageContent = {
       eyebrow: "Why parents feel comfortable saying yes",
       title: "Trust starts with clear expectations, warm tone, and zero guesswork.",
       description:
-        "Thoughtful performers, photo-aware pacing, and a booking flow that gathers what we need in one calm pass—so you always know what happens next.",
+        "Thoughtful performers, photo-aware pacing, and a booking flow that gathers what we need in one calm pass so you always know what happens next.",
     },
   },
   partyPaths: [
@@ -170,10 +177,10 @@ export const homepageContent = {
     },
   ],
   featuredCharacters: pickCharacters([
-    "radiant-rose-princess",
-    "snowfall-princess",
-    "skyline-hero",
-    "storybook-mouse",
+    "ariel",
+    "belle",
+    "cinderella",
+    "elsa",
   ]),
   packages,
   testimonials: [

@@ -8,42 +8,143 @@ import type {
 
 const characterCatalog: ReadonlyArray<CharacterRecord> = [
   {
-    name: "Radiant Rose Princess",
-    slug: "radiant-rose-princess",
+    name: "Ariel",
+    slug: "ariel",
     category: "Princess",
     shortDescription:
-      "A beautiful fit for birthdays that want a royal welcome, soft storybook pacing, and polished photo moments.",
+      "Sea-swept charm, bright smiles, and playful wonder for children who love mermaid magic.",
     longDescription:
-      "A beautiful fit for birthdays that want a royal welcome, sweet storybook pacing, and polished photo moments from start to finish.",
-    tags: ["Royal welcome", "Classic fairytale", "Photo favorite"],
-    mainMediaId: "princessRoseMain",
-    insetMediaId: "princessRosePortrait",
+      "A lively, picture-perfect choice for birthdays that want bright color, sweet interaction, and a princess who makes children feel instantly at ease.",
+    tags: ["Mermaid magic", "Bright smiles", "Photo favorite"],
+    mainMediaId: "arielMain",
+    insetMediaId: "arielPortrait",
+    detailHref: "/ariel",
     featured: true,
   },
   {
-    name: "Snowfall Princess",
-    slug: "snowfall-princess",
+    name: "Belle",
+    slug: "belle",
     category: "Princess",
     shortDescription:
-      "A sparkling, classic choice for children who love graceful magic, big reactions, and a celebration that feels full of wonder.",
+      "Warm, elegant, and full of storybook sweetness for birthdays that want a classic princess feel.",
     longDescription:
-      "Ideal for children who light up around glittering magic, expressive moments, and a celebration that feels joyful, graceful, and instantly recognizable.",
-    tags: ["Sparkle moments", "Big reactions", "Dreamy tone"],
-    mainMediaId: "princessSnowMain",
-    insetMediaId: "princessSnowPortrait",
+      "A beautiful fit for birthdays that want a grand entrance, lovely photos, and a princess who feels kind, poised, and genuinely special in the room.",
+    tags: ["Classic fairytale", "Royal welcome", "Golden gown"],
+    mainMediaId: "belleMain",
+    insetMediaId: "bellePortrait",
+    detailHref: "/belle",
     featured: true,
   },
   {
-    name: "Lantern Garden Princess",
-    slug: "lantern-garden-princess",
+    name: "Cinderella",
+    slug: "cinderella",
     category: "Princess",
     shortDescription:
-      "Bright, curious, and full of warmth, she brings glowing energy and playful charm to every celebration.",
+      "Graceful, polished, and full of storybook sparkle for children who dream in blue.",
     longDescription:
-      "Wonderful for birthdays that want glowing visuals, gentle humor, and a princess who feels curious, kind, and beautifully memorable.",
-    tags: ["Golden glow", "Playful heart", "Storybook favorite"],
-    mainMediaId: "princessTowerMain",
-    insetMediaId: "princessTowerPortrait",
+      "Perfect for elegant birthdays that want magical reactions, sweet activity moments, and the kind of princess photos families frame afterward.",
+    tags: ["Blue gown", "Storybook elegance", "Dreamy photos"],
+    mainMediaId: "cinderellaMain",
+    insetMediaId: "cinderellaPortrait",
+    detailHref: "/cinderella",
+    featured: true,
+  },
+  {
+    name: "Elsa",
+    slug: "elsa",
+    category: "Princess",
+    shortDescription:
+      "An icy favorite with shimmering style, warm interaction, and instant wow-factor the moment she arrives.",
+    longDescription:
+      "A magical choice for children who love snow-day sparkle, singalong energy, and beautiful frozen-inspired party memories.",
+    tags: ["Frozen favorite", "Sparkle magic", "Big reactions"],
+    mainMediaId: "elsaMain",
+    insetMediaId: "elsaPortrait",
+    detailHref: "/elsa",
+    featured: true,
+  },
+  {
+    name: "Jasmine",
+    slug: "jasmine",
+    category: "Princess",
+    shortDescription:
+      "Warm, vibrant, and full of heart for children who love bold color and adventurous princess magic.",
+    longDescription:
+      "Wonderful for birthdays that want bright smiles, warm hugs, and a princess who feels lively, elegant, and unforgettable.",
+    tags: ["Bright color", "Adventure feel", "Warm hugs"],
+    mainMediaId: "jasmineMain",
+    insetMediaId: "jasminePortrait",
+    detailHref: "/jasmine",
+    featured: true,
+  },
+  {
+    name: "Rapunzel",
+    slug: "rapunzel",
+    category: "Princess",
+    shortDescription:
+      "Golden, playful, and full of sunshine for children who love laughter, braids, and storybook adventure.",
+    longDescription:
+      "A lovely fit for birthdays that want lighthearted princess energy, playful moments, and a character children connect with right away.",
+    tags: ["Long braid", "Playful heart", "Golden glow"],
+    mainMediaId: "rapunzelMain",
+    insetMediaId: "rapunzelPortrait",
+    detailHref: "/rapunzel",
+    featured: true,
+  },
+  {
+    name: "Sleeping Beauty",
+    slug: "sleeping-beauty",
+    category: "Princess",
+    shortDescription:
+      "Soft pink elegance, gentle warmth, and a timeless fairytale feeling from first hello to final photo.",
+    longDescription:
+      "Ideal for celebrations that want a graceful princess presence, sweet conversation, and a classic rosy fairytale mood.",
+    tags: ["Pink elegance", "Timeless fairytale", "Gentle warmth"],
+    mainMediaId: "sleepingBeautyMain",
+    insetMediaId: "sleepingBeautyPortrait",
+    detailHref: "/sleeping-beauty",
+    featured: true,
+  },
+  {
+    name: "Snow White",
+    slug: "snow-white",
+    category: "Princess",
+    shortDescription:
+      "A bright, recognizable classic with cheerful energy and storybook charm.",
+    longDescription:
+      "Great for birthdays that want a timeless princess favorite, bold color, and warm interaction that keeps younger guests smiling.",
+    tags: ["Classic favorite", "Bright palette", "Cheerful magic"],
+    mainMediaId: "snowWhiteMain",
+    insetMediaId: "snowWhitePortrait",
+    detailHref: "/snow-white",
+    featured: true,
+  },
+  {
+    name: "Sofia",
+    slug: "sofia",
+    category: "Princess",
+    shortDescription:
+      "Sweet, approachable, and especially lovely for younger guests who want a princess that feels instantly friendly.",
+    longDescription:
+      "A wonderful choice for little ones who light up around purple sparkle, kind smiles, and gentle princess party fun.",
+    tags: ["Younger favorite", "Purple sparkle", "Sweet arrival"],
+    mainMediaId: "sofiaMain",
+    insetMediaId: "sofiaPortrait",
+    detailHref: "/sofia",
+    featured: true,
+  },
+  {
+    name: "Tinker Bell",
+    slug: "tinker-bell",
+    category: "Princess",
+    shortDescription:
+      "Playful fairy energy with bright color, pixie charm, and a little extra sparkle.",
+    longDescription:
+      "Perfect for celebrations that want a lighter fairy feel, a whimsical look, and cheerful character moments children remember.",
+    tags: ["Pixie sparkle", "Fairy fun", "Bright green"],
+    mainMediaId: "tinkerbellMain",
+    insetMediaId: "tinkerbellPortrait",
+    detailHref: "/tinker-bell",
     featured: true,
   },
   {
@@ -200,4 +301,12 @@ export function pickPackages(
   return slugs
     .map((slug) => packageCatalog.find((pkg) => pkg.slug === slug))
     .filter((pkg): pkg is PackageRecord => Boolean(pkg));
+}
+
+export function getCharacterBySlug(slug: string): ResolvedCharacter | undefined {
+  return characters.find((character) => character.slug === slug);
+}
+
+export function getCharactersWithDetailPages(): ReadonlyArray<ResolvedCharacter> {
+  return characters.filter((character) => Boolean(character.detailHref));
 }

@@ -21,6 +21,11 @@ type HeroContent = {
   brandMedia: MediaAsset;
   showcase: {
     eyebrow: string;
+    mainMedia: MediaAsset;
+    insetMedia?: MediaAsset;
+    storyCardEyebrow: string;
+    storyCardTitle: string;
+    storyCardText: string;
     princessLabel: string;
     princessDescription: string;
     heroLabel: string;
@@ -99,16 +104,41 @@ export function HomeHero({ content }: HomeHeroProps) {
 
             <div className="mt-5 grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
               <div className="overflow-hidden rounded-[2rem] border border-line bg-[linear-gradient(160deg,rgba(255,247,252,0.98),rgba(245,237,255,0.95))] p-6">
-                <div className="rounded-[1.75rem] border border-white/60 bg-[radial-gradient(circle_at_18%_18%,rgba(245,102,187,0.24),transparent_24%),radial-gradient(circle_at_84%_16%,rgba(125,100,255,0.28),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,244,250,0.94))] p-6">
+                <div className="rounded-[1.75rem] border border-white/60 bg-[radial-gradient(circle_at_18%_18%,rgba(245,102,187,0.24),transparent_24%),radial-gradient(circle_at_84%_16%,rgba(125,100,255,0.28),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,244,250,0.94))] p-4 sm:p-5">
                   <span className="eyebrow border-0 px-0 py-0 shadow-none">
                     {content.showcase.eyebrow}
                   </span>
-                  <div className="mt-6 flex items-end justify-between gap-4">
-                    <div className="h-48 flex-1 rounded-[1.7rem] bg-[linear-gradient(180deg,#ffcce8_0%,#ffdff1_34%,#fff6fb_100%)] p-5">
-                      <div className="mx-auto h-full w-32 rounded-t-[3rem] rounded-b-[1.6rem] bg-[linear-gradient(180deg,#fff8fc_0%,#f6d9eb_24%,#d89bc0_100%)] shadow-[0_24px_34px_rgba(217,126,174,0.22)]" />
+                  <div className="relative mt-6">
+                    <div className="overflow-hidden rounded-[1.8rem] border border-white/70 bg-white/82">
+                      <Image
+                        src={content.showcase.mainMedia.src}
+                        alt={content.showcase.mainMedia.alt}
+                        width={content.showcase.mainMedia.width}
+                        height={content.showcase.mainMedia.height}
+                        className="h-[18rem] w-full object-cover sm:h-[21rem]"
+                      />
                     </div>
-                    <div className="h-36 w-28 rounded-[1.6rem] bg-[linear-gradient(180deg,#eef4ff_0%,#d7e6ff_55%,#bdd0ff_100%)] p-4 shadow-[0_20px_34px_rgba(113,131,201,0.18)]">
-                      <div className="h-full rounded-[1rem] bg-[linear-gradient(180deg,#fff_0%,#edf3ff_100%)]" />
+                    {content.showcase.insetMedia ? (
+                      <div className="absolute right-3 top-3 w-24 overflow-hidden rounded-[1.3rem] border border-white/90 bg-white shadow-magical sm:right-4 sm:top-4 sm:w-28">
+                        <Image
+                          src={content.showcase.insetMedia.src}
+                          alt={content.showcase.insetMedia.alt}
+                          width={content.showcase.insetMedia.width}
+                          height={content.showcase.insetMedia.height}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    ) : null}
+                    <div className="absolute bottom-3 left-3 max-w-[15rem] rounded-[1.35rem] border border-white/80 bg-white/92 p-4 shadow-magical sm:bottom-4 sm:left-4">
+                      <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-copy-soft">
+                        {content.showcase.storyCardEyebrow}
+                      </p>
+                      <p className="mt-2 text-base font-semibold leading-tight text-midnight">
+                        {content.showcase.storyCardTitle}
+                      </p>
+                      <p className="section-copy mt-2 text-xs leading-relaxed">
+                        {content.showcase.storyCardText}
+                      </p>
                     </div>
                   </div>
                 </div>
