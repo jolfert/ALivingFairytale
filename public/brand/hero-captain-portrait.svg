@@ -1,0 +1,18 @@
+<svg width="320" height="400" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hcpBg" x1="32" y1="24" x2="288" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCE6FF"/>
+    </linearGradient>
+    <linearGradient id="hcpShield" x1="160" y1="96" x2="160" y2="312" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F7FF"/>
+      <stop offset="1" stop-color="#4F6FD6"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="400" rx="36" fill="url(#hcpBg)"/>
+  <circle cx="228" cy="88" r="48" fill="#FFD67B" fill-opacity="0.35"/>
+  <path d="M160 108L248 156V268L160 328L72 268V156L160 108Z" fill="url(#hcpShield)" stroke="#2D1B45" stroke-opacity="0.1" stroke-width="4"/>
+  <path d="M160 156V292" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="6" stroke-linecap="round"/>
+  <path d="M108 224H212" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="224" r="28" fill="#FFD67B" fill-opacity="0.6"/>
+</svg>

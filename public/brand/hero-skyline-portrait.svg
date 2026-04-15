@@ -1,0 +1,19 @@
+<svg width="320" height="400" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hspBg" x1="40" y1="20" x2="280" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FAFF"/>
+      <stop offset="1" stop-color="#D4E2FF"/>
+    </linearGradient>
+    <linearGradient id="hspCape" x1="160" y1="120" x2="160" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3FF"/>
+      <stop offset="1" stop-color="#5A78E0"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="400" rx="36" fill="url(#hspBg)"/>
+  <circle cx="248" cy="96" r="52" fill="#FFD67B" fill-opacity="0.4"/>
+  <path d="M160 96C188 96 210 118 210 146V196C210 210 204 224 194 234L176 252L230 360H90L144 252L126 234C116 224 110 210 110 196V146C110 118 132 96 160 96Z" fill="url(#hspCape)"/>
+  <path d="M142 132C150 116 160 104 160 98C160 104 170 116 178 132L170 158H150L142 132Z" fill="#1E2A55" fill-opacity="0.5"/>
+  <rect x="138" y="72" width="44" height="38" rx="18" fill="#FFE8D6"/>
+  <path d="M146 70C154 58 166 58 174 70" stroke="#1E2A55" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+  <path d="M48 320H272" stroke="#3B5CC8" stroke-width="6" stroke-linecap="round" opacity="0.2"/>
+</svg>

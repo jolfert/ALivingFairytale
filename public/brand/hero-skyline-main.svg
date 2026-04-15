@@ -1,0 +1,35 @@
+<svg width="720" height="860" viewBox="0 0 720 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hsBg" x1="80" y1="40" x2="640" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F8FF"/>
+      <stop offset="0.45" stop-color="#DDE8FF"/>
+      <stop offset="1" stop-color="#C9D6FF"/>
+    </linearGradient>
+    <linearGradient id="hsCape" x1="280" y1="220" x2="460" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3FF"/>
+      <stop offset="0.5" stop-color="#B8C9FF"/>
+      <stop offset="1" stop-color="#4F6FD6"/>
+    </linearGradient>
+    <linearGradient id="hsBeam" x1="360" y1="120" x2="360" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD67B" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#FFD67B" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFD67B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="860" rx="48" fill="url(#hsBg)"/>
+  <circle cx="560" cy="160" r="110" fill="#FFD67B" fill-opacity="0.35"/>
+  <circle cx="160" cy="200" r="96" fill="#FFFFFF" fill-opacity="0.55"/>
+  <path d="M96 640H624V760H96V640Z" fill="#1E2A55" fill-opacity="0.08"/>
+  <path d="M120 640L160 520H200L220 600H260L280 500H320L340 580H380L400 480H440L460 560H500L520 500H560L600 640" stroke="#3B5CC8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <rect x="360" y="520" width="140" height="180" rx="18" fill="#2D3B72" fill-opacity="0.22"/>
+  <rect x="220" y="560" width="120" height="140" rx="16" fill="#2D3B72" fill-opacity="0.18"/>
+  <rect x="480" y="580" width="110" height="120" rx="14" fill="#2D3B72" fill-opacity="0.16"/>
+  <path d="M360 200C398 200 430 232 430 272V340C430 360 422 378 408 392L382 418L452 700H268L338 418L312 392C298 378 290 360 290 340V272C290 232 322 200 360 200Z" fill="url(#hsCape)"/>
+  <path d="M328 248C338 224 352 206 360 198C368 206 382 224 392 248L378 286H342L328 248Z" fill="#1E2A55" fill-opacity="0.55"/>
+  <rect x="322" y="150" width="76" height="64" rx="30" fill="#FFE8D6"/>
+  <path d="M334 148C346 128 374 128 386 148" stroke="#1E2A55" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+  <path d="M360 120V520" stroke="url(#hsBeam)" stroke-width="120" stroke-linecap="round"/>
+  <path d="M140 780H580" stroke="#3B5CC8" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
+  <circle cx="620" cy="320" r="6" fill="#FFD67B"/>
+  <circle cx="96" cy="340" r="5" fill="#7D64FF" fill-opacity="0.55"/>
+</svg>

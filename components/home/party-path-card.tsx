@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { MediaAsset } from "@/data/types";
 
 type PartyPath = {
   title: string;
@@ -8,7 +9,7 @@ type PartyPath = {
   tags: ReadonlyArray<string>;
   eyebrow: string;
   accentClassName: string;
-  image: string;
+  image: MediaAsset;
 };
 
 type PartyPathCardProps = {
@@ -29,7 +30,13 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
             {path.title}
           </h3>
         </div>
-        <Image src={path.image} alt="" width={64} height={64} aria-hidden />
+        <Image
+          src={path.image.src}
+          alt=""
+          width={64}
+          height={64}
+          aria-hidden
+        />
       </div>
 
       <div className="p-6">

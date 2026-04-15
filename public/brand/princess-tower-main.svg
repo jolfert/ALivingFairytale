@@ -1,0 +1,28 @@
+<svg width="720" height="860" viewBox="0 0 720 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="towerBg" x1="58" y1="30" x2="648" y2="822" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7EF"/>
+      <stop offset="0.44" stop-color="#FFE0F4"/>
+      <stop offset="1" stop-color="#F1E0FF"/>
+    </linearGradient>
+    <linearGradient id="towerDress" x1="360" y1="248" x2="360" y2="738" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2B0"/>
+      <stop offset="0.46" stop-color="#F9D260"/>
+      <stop offset="1" stop-color="#D58A35"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="860" rx="48" fill="url(#towerBg)"/>
+  <circle cx="580" cy="156" r="124" fill="#FFF7D0" fill-opacity=".8"/>
+  <circle cx="140" cy="224" r="128" fill="#FFFFFF" fill-opacity=".56"/>
+  <path d="M100 678C166 574 256 516 360 516C464 516 554 574 620 678V792H100V678Z" fill="#FFF8F1" fill-opacity=".82"/>
+  <path d="M362 174C408 174 444 214 444 262V334C444 354 436 374 420 388L396 410L468 702H252L324 410L300 388C284 374 276 354 276 334V262C276 214 316 174 362 174Z" fill="url(#towerDress)"/>
+  <path d="M310 266C324 230 342 202 362 184C382 202 400 230 414 266L394 308H330L310 266Z" fill="#8C4B73"/>
+  <rect x="318" y="112" width="88" height="74" rx="36" fill="#FFEBDD"/>
+  <path d="M560 318L588 286L616 318V410H560V318Z" fill="#E9B4D0" fill-opacity=".82"/>
+  <rect x="576" y="250" width="24" height="40" rx="12" fill="#FFF4C8"/>
+  <circle cx="126" cy="154" r="8" fill="#FFF4C8"/>
+  <circle cx="214" cy="126" r="7" fill="#F3A9D0"/>
+  <circle cx="548" cy="214" r="8" fill="#FFF4C8"/>
+  <path d="M148 726C228 664 300 634 360 634C420 634 492 664 572 726" stroke="#FFF4C8" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <path d="M164 788H556" stroke="#D79BC3" stroke-width="10" stroke-linecap="round" opacity=".62"/>
+</svg>

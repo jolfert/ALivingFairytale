@@ -1,0 +1,20 @@
+<svg width="320" height="400" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hvpBg" x1="36" y1="20" x2="284" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D8E4FF"/>
+    </linearGradient>
+    <linearGradient id="hvpSuit" x1="160" y1="110" x2="160" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F7FF"/>
+      <stop offset="1" stop-color="#5A78E0"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="400" rx="36" fill="url(#hvpBg)"/>
+  <path d="M48 80L88 340" stroke="#FFD67B" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+  <path d="M272 72L232 332" stroke="#7D64FF" stroke-width="7" stroke-linecap="round" opacity="0.25"/>
+  <path d="M160 96C188 96 210 120 210 150V200C210 216 204 232 192 244L170 268L214 360H106L150 268L128 244C116 232 110 216 110 200V150C110 120 132 96 160 96Z" fill="url(#hvpSuit)"/>
+  <path d="M138 142C146 124 158 110 160 106C162 110 174 124 182 142L172 170H148L138 142Z" fill="#1E2A55" fill-opacity="0.5"/>
+  <rect x="134" y="74" width="52" height="44" rx="22" fill="#FFE8D6"/>
+  <path d="M142 72C150 60 170 60 178 72" stroke="#1E2A55" stroke-width="6" stroke-linecap="round" opacity="0.42"/>
+  <path d="M160 248L190 302H130L160 248Z" fill="#FFD67B" fill-opacity="0.5"/>
+</svg>

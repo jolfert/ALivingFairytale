@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { MediaAsset } from "@/data/types";
 
 type HeroContent = {
   eyebrow: string;
@@ -17,6 +18,23 @@ type HeroContent = {
     label: string;
     value: string;
   }>;
+  brandMedia: MediaAsset;
+  showcase: {
+    eyebrow: string;
+    princessLabel: string;
+    princessDescription: string;
+    heroLabel: string;
+    heroDescription: string;
+    planningEyebrow: string;
+    planningTitle: string;
+    planningDescription: string;
+    reassuranceEyebrow: string;
+    reassuranceTitle: string;
+    supportCards: ReadonlyArray<{
+      title: string;
+      description: string;
+    }>;
+  };
 };
 
 type HomeHeroProps = {
@@ -71,10 +89,10 @@ export function HomeHero({ content }: HomeHeroProps) {
           <div className="glass-panel relative rounded-[2.25rem] p-5 sm:p-6">
             <div className="glass-panel w-fit rounded-[1.5rem] px-4 py-3">
               <Image
-                src="/A%20living%20fairytale%20logo.png"
+                src={content.brandMedia.src}
                 alt="A Living Fairytale"
-                width={220}
-                height={84}
+                width={content.brandMedia.width}
+                height={content.brandMedia.height}
                 className="h-auto w-[11rem] sm:w-[12.5rem]"
               />
             </div>
@@ -83,7 +101,7 @@ export function HomeHero({ content }: HomeHeroProps) {
               <div className="overflow-hidden rounded-[2rem] border border-line bg-[linear-gradient(160deg,rgba(255,247,252,0.98),rgba(245,237,255,0.95))] p-6">
                 <div className="rounded-[1.75rem] border border-white/60 bg-[radial-gradient(circle_at_18%_18%,rgba(245,102,187,0.24),transparent_24%),radial-gradient(circle_at_84%_16%,rgba(125,100,255,0.28),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,244,250,0.94))] p-6">
                   <span className="eyebrow border-0 px-0 py-0 shadow-none">
-                    Featured atmosphere
+                    {content.showcase.eyebrow}
                   </span>
                   <div className="mt-6 flex items-end justify-between gap-4">
                     <div className="h-48 flex-1 rounded-[1.7rem] bg-[linear-gradient(180deg,#ffcce8_0%,#ffdff1_34%,#fff6fb_100%)] p-5">
@@ -98,18 +116,18 @@ export function HomeHero({ content }: HomeHeroProps) {
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
                   <div className="soft-panel rounded-[1.5rem] p-4">
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose">
-                      Princess
+                      {content.showcase.princessLabel}
                     </p>
                     <p className="mt-2 text-lg font-semibold text-midnight">
-                      Elegant arrivals, sparkling photos, story-led wonder.
+                      {content.showcase.princessDescription}
                     </p>
                   </div>
                   <div className="rounded-[1.5rem] border border-[rgba(66,86,184,0.12)] bg-[linear-gradient(180deg,rgba(247,250,255,0.98),rgba(232,241,255,0.98))] p-4 shadow-magical">
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-[color:#4665c9]">
-                      Hero
+                      {content.showcase.heroLabel}
                     </p>
                     <p className="mt-2 text-lg font-semibold text-midnight">
-                      High-energy missions with a polished, parent-friendly tone.
+                      {content.showcase.heroDescription}
                     </p>
                   </div>
                 </div>
@@ -118,14 +136,13 @@ export function HomeHero({ content }: HomeHeroProps) {
               <div className="flex flex-col gap-5">
                 <div className="soft-panel rounded-[1.8rem] p-5">
                   <p className="text-sm font-bold uppercase tracking-[0.2em] text-copy-soft">
-                    Booking should feel this calm
+                    {content.showcase.planningEyebrow}
                   </p>
                   <p className="mt-3 text-2xl font-semibold text-midnight">
-                    Pick your party path, compare packages, send the date.
+                    {content.showcase.planningTitle}
                   </p>
                   <p className="section-copy mt-3 text-sm">
-                    The next round can turn this into the full booking page, but
-                    the homepage already guides families toward the right next step.
+                    {content.showcase.planningDescription}
                   </p>
                 </div>
 
@@ -136,32 +153,26 @@ export function HomeHero({ content }: HomeHeroProps) {
                     </div>
                     <div>
                       <p className="text-sm font-bold uppercase tracking-[0.2em] text-copy-soft">
-                        Good fit for the homepage
+                        {content.showcase.reassuranceEyebrow}
                       </p>
                       <p className="mt-1 text-lg font-semibold text-midnight">
-                        Enchanting for children, reassuring for parents.
+                        {content.showcase.reassuranceTitle}
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-                  <div className="glass-panel rounded-[1.6rem] p-4">
-                    <p className="text-sm font-bold text-midnight">
-                      Princesses, heroes, mascots
-                    </p>
-                    <p className="section-copy mt-2 text-sm">
-                      Clear categories without breaking the premium brand.
-                    </p>
-                  </div>
-                  <div className="glass-panel rounded-[1.6rem] p-4">
-                    <p className="text-sm font-bold text-midnight">
-                      Booking flow ready to grow
-                    </p>
-                    <p className="section-copy mt-2 text-sm">
-                      The structure is set up for a future form, CRM, or email handoff.
-                    </p>
-                  </div>
+                  {content.showcase.supportCards.map((card) => (
+                    <div key={card.title} className="glass-panel rounded-[1.6rem] p-4">
+                      <p className="text-sm font-bold text-midnight">
+                        {card.title}
+                      </p>
+                      <p className="section-copy mt-2 text-sm">
+                        {card.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

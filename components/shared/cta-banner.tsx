@@ -1,0 +1,65 @@
+import type { CtaBannerContent } from "@/data/types";
+
+type CtaBannerProps = {
+  content: CtaBannerContent;
+  tone?: "fairytale" | "hero";
+};
+
+const tonePanelClasses = {
+  fairytale:
+    "border-line bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,243,249,0.96))]",
+  hero: "border-[rgba(59,92,200,0.14)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(236,244,255,0.96))]",
+} as const;
+
+const toneBulletClasses = {
+  fairytale: "text-rose",
+  hero: "text-[color:#4665c9]",
+} as const;
+
+export function CtaBanner({
+  content,
+  tone = "fairytale",
+}: CtaBannerProps) {
+  const panelClass = tonePanelClasses[tone];
+  const bulletClass = toneBulletClasses[tone];
+
+  return (
+    <div className="glass-panel grid gap-8 rounded-[2.4rem] p-6 sm:p-8 xl:grid-cols-[1.1fr_.9fr]">
+      <div>
+        <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
+        <h2 className="mt-5 max-w-3xl text-4xl font-semibold text-midnight sm:text-5xl">
+          {content.title}
+        </h2>
+        <p className="section-copy mt-5 max-w-2xl text-base sm:text-lg">
+          {content.description}
+        </p>
+      </div>
+
+      <div
+        className={`rounded-[2rem] border p-6 shadow-magical ${panelClass}`}
+      >
+        <ul className="space-y-4">
+          {content.notes.map((note) => (
+            <li key={note} className="flex items-start gap-3 text-sm text-copy-soft">
+              <span className={`mt-1 ${bulletClass}`} aria-hidden>
+                {"\u25CF"}
+              </span>
+              <span>{note}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <a href={content.primaryCta.href} className="button-primary">
+            {content.primaryCta.label}
+          </a>
+          {content.secondaryCta ? (
+            <a href={content.secondaryCta.href} className="button-secondary">
+              {content.secondaryCta.label}
+            </a>
+          ) : null}
+        </div>
+      </div>
+    </div>
+  );
+}
