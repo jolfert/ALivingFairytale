@@ -1,0 +1,28 @@
+<svg width="720" height="860" viewBox="0 0 720 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mpBg" x1="60" y1="40" x2="660" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF6"/>
+      <stop offset="0.45" stop-color="#FFF4D6"/>
+      <stop offset="1" stop-color="#E8FCEF"/>
+    </linearGradient>
+    <linearGradient id="mpSmile" x1="260" y1="320" x2="460" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9EC"/>
+      <stop offset="1" stop-color="#FFD67B"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="860" rx="48" fill="url(#mpBg)"/>
+  <circle cx="560" cy="160" r="100" fill="#7D64FF" fill-opacity="0.12"/>
+  <circle cx="140" cy="200" r="88" fill="#F566BB" fill-opacity="0.1"/>
+  <circle cx="420" cy="120" r="36" fill="#FFD67B" fill-opacity="0.55"/>
+  <circle cx="200" cy="320" r="22" fill="#FFD67B" fill-opacity="0.5"/>
+  <circle cx="620" cy="380" r="18" fill="#7D64FF" fill-opacity="0.2"/>
+  <path d="M120 700C200 640 280 610 360 610C440 610 520 640 600 700V780H120V700Z" fill="#FFFFFF" fill-opacity="0.65"/>
+  <ellipse cx="360" cy="420" rx="160" ry="140" fill="url(#mpSmile)"/>
+  <circle cx="300" cy="400" r="18" fill="#2D1B45" fill-opacity="0.35"/>
+  <circle cx="420" cy="400" r="18" fill="#2D1B45" fill-opacity="0.35"/>
+  <path d="M280 460C310 500 410 500 440 460" stroke="#2D1B45" stroke-opacity="0.28" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="360" cy="520" rx="120" ry="40" fill="#F566BB" fill-opacity="0.12"/>
+  <path d="M96 780H624" stroke="#41B56F" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 180L180 220H140L160 180Z" fill="#FFD67B" fill-opacity="0.7"/>
+  <path d="M520 240L540 280H500L520 240Z" fill="#7D64FF" fill-opacity="0.35"/>
+</svg>

@@ -2,7 +2,7 @@ import type { PackageRecord } from "@/data/types";
 
 type PackageGridProps = {
   packages: ReadonlyArray<PackageRecord>;
-  tone?: "fairytale" | "hero";
+  tone?: "fairytale" | "hero" | "playful";
 };
 
 const featuredToneClasses = {
@@ -17,6 +17,12 @@ const featuredToneClasses = {
     badge:
       "bg-[linear-gradient(135deg,#ffd67b,#dbe6ff)] text-[color:#1e2a55]",
     bullet: "text-[color:#4665c9]",
+  },
+  playful: {
+    card: "border-[rgba(65,181,111,0.22)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,255,248,0.98))]",
+    badge:
+      "bg-[linear-gradient(135deg,#ffd67b,#e6faef)] text-[color:#1e4d32]",
+    bullet: "text-[color:#2fa066]",
   },
 } as const;
 

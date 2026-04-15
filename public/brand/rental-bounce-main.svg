@@ -1,0 +1,24 @@
+<svg width="720" height="860" viewBox="0 0 720 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rbBg" x1="70" y1="50" x2="650" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFBFD"/>
+      <stop offset="0.5" stop-color="#FFE8F4"/>
+      <stop offset="1" stop-color="#E6F5FF"/>
+    </linearGradient>
+    <linearGradient id="rbCastle" x1="360" y1="420" x2="360" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD6EA"/>
+      <stop offset="1" stop-color="#F566BB"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="860" rx="48" fill="url(#rbBg)"/>
+  <circle cx="580" cy="180" r="110" fill="#FFD67B" fill-opacity="0.35"/>
+  <circle cx="150" cy="240" r="90" fill="#7D64FF" fill-opacity="0.1"/>
+  <ellipse cx="360" cy="720" rx="260" ry="48" fill="#41B56F" fill-opacity="0.08"/>
+  <path d="M360 280L520 380V680H200V380L360 280Z" fill="url(#rbCastle)" fill-opacity="0.65"/>
+  <path d="M280 380H440V520H280V380Z" fill="#FFFFFF" fill-opacity="0.55"/>
+  <rect x="330" y="520" width="60" height="160" rx="12" fill="#FFFFFF" fill-opacity="0.7"/>
+  <path d="M240 380L360 300L480 380" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="320" cy="440" r="16" fill="#FFD67B" fill-opacity="0.7"/>
+  <circle cx="400" cy="440" r="16" fill="#FFD67B" fill-opacity="0.7"/>
+  <path d="M96 780H624" stroke="#F566BB" stroke-opacity="0.2" stroke-width="8" stroke-linecap="round"/>
+</svg>

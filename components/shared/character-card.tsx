@@ -4,7 +4,7 @@ import type { ResolvedCharacter } from "@/data/types";
 type CharacterCardProps = {
   character: ResolvedCharacter;
   variant?: "compact" | "showcase";
-  theme?: "princess" | "hero" | "neutral";
+  theme?: "princess" | "hero" | "neutral" | "playful";
 };
 
 const themeStyles = {
@@ -28,6 +28,13 @@ const themeStyles = {
     media:
       "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,241,255,0.95))]",
     tag: "bg-[rgba(125,100,255,0.08)] text-violet",
+  },
+  playful: {
+    frame:
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,252,240,0.98))]",
+    media:
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(240,255,246,0.92))]",
+    tag: "bg-[rgba(255,214,123,0.22)] text-[color:#1e4d32]",
   },
 } as const;
 

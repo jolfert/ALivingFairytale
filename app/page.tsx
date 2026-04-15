@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FinalCta } from "@/components/home/final-cta";
 import { HomeHero } from "@/components/home/home-hero";
 import { PartyPathCard } from "@/components/home/party-path-card";
@@ -10,6 +11,24 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
 import { homepageContent } from "@/data/homepage";
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "A Living Fairytale | Magical Children's Party Experiences",
+  },
+  description:
+    "Princess parties, hero adventures, mascots, and party-ready rentals under one premium brand—warm communication and a clear path to book.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "A Living Fairytale | Magical Children's Party Experiences",
+    description:
+      "Princess parties, hero adventures, mascots, and memorable birthday magic for families who want polish and ease.",
+    url: "/",
+  },
+};
 
 export default function HomePage() {
   return (

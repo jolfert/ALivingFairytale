@@ -7,7 +7,8 @@ export const heroesPageContent = {
     { label: "Heroes", href: "#top" },
     { label: "Featured", href: "#characters" },
     { label: "Packages", href: "#packages" },
-    { label: "Book", href: "#book-cta" },
+    { label: "Mascots", href: "/mascots" },
+    { label: "Book", href: "/book" },
   ],
   hero: {
     eyebrow: "Superhero Parties",

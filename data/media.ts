@@ -171,6 +171,36 @@ const mediaRegistry = {
     replaceHint: "Replace with a vertical portrait that still feels fast and fun.",
     aiTags: ["hero", "speed", "portrait"],
   },
+  mascotPartyMain: {
+    id: "mascotPartyMain",
+    src: "/brand/mascot-party-main.svg",
+    alt: "Bright playful party scene with warm shapes and confetti-like accents",
+    width: 720,
+    height: 860,
+    adminLabel: "Mascot category main scene",
+    replaceHint: "Replace with a photo of your mascot performer or a lively group moment.",
+    aiTags: ["mascot", "party", "playful", "color"],
+  },
+  rentalSparkInset: {
+    id: "rentalSparkInset",
+    src: "/brand/rental-spark-inset.svg",
+    alt: "Soft illustration suggesting bounce house and outdoor party extras",
+    width: 320,
+    height: 400,
+    adminLabel: "Rental inset visual",
+    replaceHint: "Swap for a clean rental product shot or setup photo.",
+    aiTags: ["rental", "bounce", "inset"],
+  },
+  rentalBounceMain: {
+    id: "rentalBounceMain",
+    src: "/brand/rental-bounce-main.svg",
+    alt: "Playful bounce house illustration in brand colors",
+    width: 720,
+    height: 860,
+    adminLabel: "Bounce house main visual",
+    replaceHint: "Replace with your real rental inventory photography.",
+    aiTags: ["rental", "bounce", "party"],
+  },
 } satisfies Record<string, MediaAsset>;
 
 export type MediaId = keyof typeof mediaRegistry;

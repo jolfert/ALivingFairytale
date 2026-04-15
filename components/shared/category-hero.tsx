@@ -39,8 +39,12 @@ export function CategoryHero({
         <div>
           <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
           <h1
-            className={`mt-6 max-w-4xl text-5xl font-semibold leading-[0.94] text-midnight sm:text-6xl xl:text-7xl ${
-              theme === "hero" ? "text-balance sm:tracking-tight" : ""
+            className={`mt-6 max-w-4xl font-semibold leading-[0.94] text-midnight ${
+              theme === "playful"
+                ? "max-w-3xl text-4xl text-balance sm:text-5xl xl:text-6xl"
+                : `text-5xl sm:text-6xl xl:text-7xl${
+                    theme === "hero" ? " text-balance sm:tracking-tight" : ""
+                  }`
             }`}
           >
             {content.title}
@@ -53,10 +57,12 @@ export function CategoryHero({
             {content.highlights.map((highlight) => (
               <li
                 key={highlight}
-                className={`glass-panel rounded-full px-4 py-3 text-sm text-midnight ${
+                className={`glass-panel px-4 py-3 text-sm text-midnight ${
                   theme === "hero"
-                    ? "border border-[rgba(59,92,200,0.2)] bg-white/92 font-extrabold tracking-tight shadow-[0_12px_28px_rgba(59,92,200,0.1)]"
-                    : "font-semibold"
+                    ? "rounded-full border border-[rgba(59,92,200,0.2)] bg-white/92 font-extrabold tracking-tight shadow-[0_12px_28px_rgba(59,92,200,0.1)]"
+                    : theme === "playful"
+                      ? "rounded-2xl border border-[rgba(255,214,123,0.55)] bg-white/94 font-semibold shadow-[0_10px_26px_rgba(65,181,111,0.08)]"
+                      : "rounded-full font-semibold"
                 }`}
               >
                 {highlight}

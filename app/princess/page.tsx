@@ -11,9 +11,16 @@ import { Header } from "@/components/site/header";
 import { princessPageContent } from "@/data/princess-page";
 
 export const metadata: Metadata = {
-  title: "Princess Parties | A Living Fairytale",
+  title: "Princess Parties",
   description:
     "Elegant princess party experiences with polished arrivals, story-led interaction, and magical birthday moments families can book with confidence.",
+  alternates: { canonical: "/princess" },
+  openGraph: {
+    title: "Princess Parties | A Living Fairytale",
+    description:
+      "Elegant princess party experiences with polished arrivals and story-led magic.",
+    url: "/princess",
+  },
 };
 
 export default function PrincessPage() {

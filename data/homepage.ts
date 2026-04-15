@@ -6,6 +6,7 @@ export const homepageContent = {
     { label: "Home", href: "/" },
     { label: "Princess", href: "/princess" },
     { label: "Heroes", href: "/heroes" },
+    { label: "Mascots", href: "/mascots" },
     { label: "Featured", href: "#featured-experiences" },
     { label: "Packages", href: "#packages" },
     { label: "Book", href: "/book" },
@@ -26,7 +27,7 @@ export const homepageContent = {
     },
     secondaryCta: {
       label: "Start a booking request",
-      href: "#book-preview",
+      href: "/book",
     },
     stats: [
       {
@@ -132,8 +133,8 @@ export const homepageContent = {
       title: "Bright, playful fun that still looks beautifully on-brand.",
       description:
         "Perfect for families who want lovable character moments, easy add-ons, or celebration extras that make the whole event feel bigger.",
-      href: "#featured-experiences",
-      ctaLabel: "See mascot and rental highlights",
+      href: "/mascots",
+      ctaLabel: "See mascots and rentals",
       tags: ["Crowd-pleasing", "Easy add-ons", "Flexible fun"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,255,247,0.98))]",
@@ -197,7 +198,7 @@ export const homepageContent = {
     eyebrow: "Ready to book beautifully",
     title: "The next step should feel warm, clear, and exciting.",
     description:
-      "This homepage is already positioned to hand families into a dedicated booking experience next. For now, the CTA gives them clarity and keeps the premium brand feeling consistent all the way down the page.",
+      "When you are ready, our booking page gathers the details we need in one calm flow—trust notes on the left, structured inquiry on the right—so your first reply stays focused and friendly.",
     steps: [
       {
         step: "1",
@@ -220,21 +221,21 @@ export const homepageContent = {
         description: "Warm, clear communication should feel part of the service.",
       },
     ],
-    previewEyebrow: "Booking page preview",
+    previewEyebrow: "Booking page",
     previewTitle: "Split layout, soft reassurance, zero chaos.",
     previewDescription:
-      "When we build `/book`, the left side can hold response time, service notes, and trust details while the right side becomes a beautiful, production-ready inquiry form.",
+      "The live booking page pairs reassurance and expectations on the left with a structured inquiry form on the right—same premium tone as the rest of the site.",
     notes: [
-      "Booking page design already planned as a split trust-plus-form layout",
-      "Character, package, and category data are typed for future route expansion",
-      "CTA copy is written to feel premium without sounding stiff or generic",
+      "Inquiries are emailed to your team (Resend) with optional parent confirmation",
+      "Honeypot and rate limiting help keep the public form sane without friction for real families",
+      "Princess, hero, mascot, and package paths all lead to the same clear next step",
     ],
     primaryCta: {
-      label: "Start with the homepage",
-      href: "#top",
+      label: "Open the booking page",
+      href: "/book",
     },
     secondaryCta: {
-      label: "Compare packages",
+      label: "Compare packages first",
       href: "#packages",
     },
   },

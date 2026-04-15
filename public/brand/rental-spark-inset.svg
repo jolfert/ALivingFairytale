@@ -1,0 +1,20 @@
+<svg width="320" height="400" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rsiBg" x1="32" y1="24" x2="288" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFEF8"/>
+      <stop offset="1" stop-color="#E6FAF0"/>
+    </linearGradient>
+    <linearGradient id="rsiHouse" x1="160" y1="120" x2="160" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE8F2"/>
+      <stop offset="1" stop-color="#F566BB"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="400" rx="36" fill="url(#rsiBg)"/>
+  <circle cx="240" cy="90" r="44" fill="#FFD67B" fill-opacity="0.45"/>
+  <path d="M160 96L220 150V260H100V150L160 96Z" fill="url(#rsiHouse)" fill-opacity="0.55"/>
+  <path d="M120 260H200V300H120V260Z" fill="#7D64FF" fill-opacity="0.15"/>
+  <rect x="140" y="200" width="40" height="60" rx="8" fill="#FFFFFF" fill-opacity="0.75"/>
+  <circle cx="80" cy="200" r="6" fill="#FFD67B"/>
+  <circle cx="250" cy="220" r="5" fill="#41B56F" fill-opacity="0.5"/>
+  <path d="M48 340H272" stroke="#41B56F" stroke-opacity="0.2" stroke-width="6" stroke-linecap="round"/>
+</svg>

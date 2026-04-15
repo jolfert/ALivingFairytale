@@ -2,13 +2,15 @@ import type { InfoCard } from "@/data/types";
 
 type FeatureCardGridProps = {
   items: ReadonlyArray<InfoCard>;
-  tone?: "fairytale" | "hero";
+  tone?: "fairytale" | "hero" | "playful";
 };
 
 const iconToneClasses = {
   fairytale:
     "bg-[linear-gradient(135deg,rgba(255,214,123,0.92),rgba(245,102,187,0.96))]",
   hero: "bg-[linear-gradient(135deg,rgba(77,104,204,0.95),rgba(125,100,255,0.96))]",
+  playful:
+    "bg-[linear-gradient(135deg,rgba(255,214,123,0.96),rgba(65,181,111,0.88))]",
 } as const;
 
 export function FeatureCardGrid({

@@ -11,9 +11,16 @@ import { Header } from "@/components/site/header";
 import { heroesPageContent } from "@/data/heroes-page";
 
 export const metadata: Metadata = {
-  title: "Superhero Parties | A Living Fairytale",
+  title: "Superhero Parties",
   description:
     "Premium superhero birthday experiences with bold arrivals, mission-style games, and a parent-friendly pace families can book with confidence.",
+  alternates: { canonical: "/heroes" },
+  openGraph: {
+    title: "Superhero Parties | A Living Fairytale",
+    description:
+      "High-energy hero parties with confident arrivals and a premium pace parents trust.",
+    url: "/heroes",
+  },
 };
 
 export default function HeroesPage() {

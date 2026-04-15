@@ -6,7 +6,8 @@ export const princessPageContent = {
     { label: "Home", href: "/" },
     { label: "Characters", href: "#characters" },
     { label: "Packages", href: "#packages" },
-    { label: "Book", href: "#book-cta" },
+    { label: "Mascots", href: "/mascots" },
+    { label: "Book", href: "/book" },
   ],
   hero: {
     eyebrow: "Princess Parties",
@@ -116,7 +117,7 @@ export const princessPageContent = {
     ],
     primaryCta: {
       label: "Start a princess request",
-      href: "/#book-preview",
+      href: "/book",
     },
     secondaryCta: {
       label: "Back to homepage",

@@ -91,6 +91,8 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     category: "Mascot",
     shortDescription:
       "Playful, instantly recognizable, and a joyful pick for younger guests and big group smiles.",
+    longDescription:
+      "A warm pick for mixed ages: approachable interaction, easy crowd energy, and photo moments that feel happy instead of hectic. Great when you want recognizable fun without a complex storyline.",
     tags: ["Big hugs", "Simple fun", "Photo magnet"],
     mainMediaId: "partyMascotIcon",
     featured: true,
@@ -101,8 +103,10 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     category: "Rental",
     shortDescription:
       "A ready-to-grow rental category with playful visual energy and clear room for future inventory expansion.",
+    longDescription:
+      "Adds instant visual impact and keeps younger guests happily busy. Pairs naturally with character visits when you want a fuller party footprint and a clear focal point in the yard or venue.",
     tags: ["Party extra", "Visual impact", "Expansion ready"],
-    mainMediaId: "partyRentalIcon",
+    mainMediaId: "rentalBounceMain",
     featured: true,
   },
 ];
@@ -164,6 +168,20 @@ export function getCharactersByCategory(
   category: CharacterCategory,
 ): ReadonlyArray<ResolvedCharacter> {
   return characters.filter((character) => character.category === category);
+}
+
+export function getCharactersByCategories(
+  categories: ReadonlyArray<CharacterCategory>,
+): ReadonlyArray<ResolvedCharacter> {
+  const list: ResolvedCharacter[] = [];
+  for (const category of categories) {
+    for (const character of characters) {
+      if (character.category === category) {
+        list.push(character);
+      }
+    }
+  }
+  return list;
 }
 
 export function pickCharacters(
