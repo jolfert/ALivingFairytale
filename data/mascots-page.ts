@@ -14,18 +14,18 @@ export const mascotsPageContent = {
     title:
       "Playful mascot visits and party extras that keep the day cheerful and easy.",
     description:
-      "Mascots and rentals add instant smiles, especially for younger guests. This path keeps the experience bright, simple, and easy to plan while still feeling part of the same polished brand.",
+      "Big hugs, bright visuals, and bounce-house wow-factor pair perfectly with our premium hosting standards—so even the simplest celebration still feels cared for, coordinated, and camera-ready.",
     highlights: [
       "Big, friendly fun",
       "Great for mixed ages",
       "Easy to pair with packages",
     ],
     primaryCta: {
-      label: "See mascot and rental ideas",
+      label: "Browse mascots & rentals",
       href: "#showcase",
     },
     secondaryCta: {
-      label: "Compare packages",
+      label: "Review package timing",
       href: "#packages",
     },
     mainMedia: getMediaAsset("mascotPartyMain"),
@@ -137,20 +137,20 @@ export const mascotsPageContent = {
     "signature-fairytale",
   ]),
   bookingNote:
-    "Ready to check a date? Use the booking form and tell us whether you want a mascot visit, a rental, or both so we can reply with the right next step.",
+    "Ready to check a date? Pop into the booking form and note whether you want a mascot visit, a rental, or both—we will tailor the reply with setup timing and the clearest next step.",
   cta: {
     eyebrow: "Plan the cheerful part",
     title:
-      "Send your mascot, rental, or combo request in one simple booking flow.",
+      "Bundle mascots, rentals, and character visits without juggling multiple vendors.",
     description:
-      "You will use the same calm inquiry page as every other party type, so nothing gets lost between categories.",
+      "The same premium inquiry flow covers every party type, so your special requests, arrival windows, and add-ons stay in one thread with our team.",
     notes: [
       "One form for princess, hero, mascot, and rental combinations",
       "Easy space to mention timing, setup questions, and special requests",
       "A real person follows up with the next clear step",
     ],
     primaryCta: {
-      label: "Open the inquiry form",
+      label: "Check availability",
       href: "/book",
     },
     secondaryCta: {

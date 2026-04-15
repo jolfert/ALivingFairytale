@@ -90,11 +90,12 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "storybook-mouse",
     category: "Mascot",
     shortDescription:
-      "Playful, instantly recognizable, and a joyful pick for younger guests and big group smiles.",
+      "Beloved, huggable, and perfect when you want big smiles without a complicated storyline.",
     longDescription:
-      "A warm choice for mixed ages: approachable interaction, easy crowd energy, and photo moments that feel happy instead of hectic.",
-    tags: ["Big hugs", "Simple fun", "Photo magnet"],
-    mainMediaId: "partyMascotIcon",
+      "Ideal for younger guest lists and mixed ages: warm interaction, easy crowd energy, and photo moments that feel joyful instead of hectic.",
+    tags: ["Warm welcomes", "Little-kid magic", "Photo favorite"],
+    mainMediaId: "mascotPartyMain",
+    insetMediaId: "partyMascotIcon",
     featured: true,
   },
   {
@@ -102,11 +103,12 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "pink-castle-bounce-house",
     category: "Rental",
     shortDescription:
-      "Bright, cheerful, and an easy way to make the party feel bigger the moment guests arrive.",
+      "A cheerful focal point that makes the backyard feel like a party the moment families pull up.",
     longDescription:
-      "Adds instant visual impact and keeps younger guests happily busy. It pairs naturally with character visits when you want the celebration to feel fuller from the first look.",
-    tags: ["Party extra", "Visual impact", "Easy add-on"],
+      "Keeps younger guests happily busy and gives parents a clear visual anchor for photos. Pairs naturally with character visits when you want the day to feel fuller without a longer schedule.",
+    tags: ["Wow at arrival", "Kid-powered fun", "Easy add-on"],
     mainMediaId: "rentalBounceMain",
+    insetMediaId: "rentalSparkInset",
     featured: true,
   },
 ];

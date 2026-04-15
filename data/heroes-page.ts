@@ -15,18 +15,18 @@ export const heroesPageContent = {
     title:
       "Bold superhero parties with big entrances, mission moments, and a pace parents can actually enjoy.",
     description:
-      "Our hero celebrations are built to feel thrilling for kids and impressively organized for grown-ups: confident character presence, action-forward games, and a party flow that stays exciting without becoming chaotic.",
+      "High-energy hero visits stay thoughtfully guided: confident performers, teamwork beats that include every guest, and a rhythm that feels epic in the moment yet still photographable for the family album.",
     highlights: [
       "Mission-style pacing that keeps energy moving on purpose",
       "Hero arrivals built for big reactions and strong photos",
       "Clear celebration beats from entrance to final cheer",
     ],
     primaryCta: {
-      label: "Pick your hero lineup",
+      label: "Choose your hero lineup",
       href: "#characters",
     },
     secondaryCta: {
-      label: "Compare packages",
+      label: "See mission-ready packages",
       href: "#packages",
     },
     mainMedia: getMediaAsset("heroSkylineMain"),
@@ -146,16 +146,16 @@ export const heroesPageContent = {
   cta: {
     eyebrow: "Ready to book the hero party",
     title:
-      "Send the date and let's plan a superhero celebration that feels epic, polished, and easy to say yes to.",
+      "Lock in a superhero celebration that feels cinematic for kids and coordinated for adults.",
     description:
-      "When you are ready, the next step is a simple request with the details we need to respond quickly and point you toward the right fit.",
+      "Share your date, location, and the hero energy your child loves. We will confirm availability, outline the visit arc, and make sure every mission moment lands with clarity and care.",
     notes: [
       "Great for birthdays that want motion-forward fun with a premium host feel",
       "Easy to tailor with add-ons, travel notes, and celebration details",
       "Built to keep the excitement high and the planning clear",
     ],
     primaryCta: {
-      label: "Continue to booking",
+      label: "Launch your hero request",
       href: "/book",
     },
     secondaryCta: {

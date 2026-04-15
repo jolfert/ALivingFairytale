@@ -8,22 +8,22 @@ export const bookPageContent = {
   ],
   trustColumn: {
     eyebrow: "Book with confidence",
-    title: "Booking should feel calm, clear, and exciting.",
+    title: "Premium parties deserve a booking experience that feels just as thoughtful.",
     lead:
-      "Share the basics below and we will follow up with the best next step for your celebration. Nothing is charged on this page, and availability is always confirmed by a real person.",
+      "Nothing is charged here—this is simply the warm handoff that lets our team review your date, confirm travel, and craft the right performer pairing before anything is finalized.",
     blocks: [
       {
         title: "What happens next",
         paragraphs: [
-          "We review your date, location, party type, and package selection, then reply with availability and any helpful follow-up questions.",
-          "If your date works, we help you confirm timing, character fit, and any add-ons in plain, friendly language.",
+          "We read every field carefully—date, location, party style, package choice, and the little notes that make your celebration unique—then reply with availability plus any thoughtful questions.",
+          "When the stars align, we walk you through timing, performer fit, and optional add-ons in plain language so you always know what to expect before you say yes.",
         ],
       },
       {
         title: "Response expectations",
         paragraphs: [
-          "We aim to respond to new inquiries within one to two business days. Weekends and peak party dates can sometimes take a little longer.",
-          "If your celebration is coming up soon, mention that in the notes and we will do our best to prioritize fairly.",
+          "Most families hear back within one to two business days. During weekends or peak party seasons we may need a touch more time, but we never leave you guessing.",
+          "Celebration coming up fast? Flag it in the notes and we will triage fairly so you are not left wondering at the eleventh hour.",
         ],
       },
       {
@@ -42,13 +42,13 @@ export const bookPageContent = {
       },
     ],
     footnote:
-      "Every inquiry is reviewed by a real person so your reply can feel thoughtful, accurate, and easy to trust.",
+      "No bots, no templates—just a real planner making sure your first reply feels as magical as the party you are imagining.",
   },
   form: {
     eyebrow: "Party inquiry",
-    title: "Tell us about the party you are planning",
+    title: "Tell us about the celebration you are dreaming up",
     description:
-      "Complete the fields that apply. The required details help us send a focused first reply, and the notes box gives you room for anything special.",
+      "Required fields keep our first reply focused; the notes box is yours for surprises, accessibility needs, driveway quirks, or anything else that helps us plan with care.",
     submitLabel: "Submit inquiry",
     pendingLabel: "Sending your request...",
     sentEyebrow: "Request sent",

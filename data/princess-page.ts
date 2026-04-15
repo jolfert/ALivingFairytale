@@ -14,18 +14,18 @@ export const princessPageContent = {
     title:
       "Princess parties that feel dreamy, polished, and genuinely magical.",
     description:
-      "From the first royal wave to the last photo, our princess parties are designed to feel beautiful for children and reassuringly well-paced for parents.",
+      "From the first royal wave to the last hug, every beat is paced for wide-eyed wonder in the room and calm confidence behind the camera—so parents can soak it in while the birthday child shines.",
     highlights: [
       "Warm, in-character princess arrivals",
       "Interactive moments shaped for birthday pacing",
       "Elegant visuals that still feel playful and child-centered",
     ],
     primaryCta: {
-      label: "Choose your princess",
+      label: "Meet the princesses",
       href: "#characters",
     },
     secondaryCta: {
-      label: "See package options",
+      label: "Compare royal packages",
       href: "#packages",
     },
     mainMedia: getMediaAsset("princessRoseMain"),
@@ -108,16 +108,16 @@ export const princessPageContent = {
   cta: {
     eyebrow: "Ready for a royal booking",
     title:
-      "Let's create the princess party they keep talking about after the candles are blown out.",
+      "Let us craft the princess party they replay in their imagination long after the candles are blown out.",
     description:
-      "If this feels like the right fit, the next step is simple. Send us the date, the party details, and the princess you have in mind, and we will guide the rest.",
+      "Tell us your date, guest-of-honor details, and the princess energy you are dreaming of. We will reply with availability, pacing guidance, and the gentle next steps to make it official.",
     notes: [
       "A lovely fit for birthdays that want beautiful character-led moments",
       "Easy to pair with add-ons, travel notes, and special requests",
       "Designed to feel magical for children and calm for parents",
     ],
     primaryCta: {
-      label: "Start a princess request",
+      label: "Reserve your royal visit",
       href: "/book",
     },
     secondaryCta: {

@@ -14,20 +14,20 @@ export const homepageContent = {
   hero: {
     eyebrow: "Princesses, heroes, mascots, and birthday magic worth remembering",
     title:
-      "The party booking site that feels magical for kids and reassuring for parents.",
+      "Character parties that sparkle for kids—and feel effortless for the grown-ups planning them.",
     description:
-      "A Living Fairytale creates polished character experiences and playful party extras that turn birthdays into beautiful memories without making the planning feel complicated.",
+      "A Living Fairytale brings polished performers, thoughtful pacing, and cheerful add-ons together in one place, so you can book a celebration that photographs beautifully and still feels calm to coordinate.",
     highlights: [
-      "Real performers who stay in character",
-      "Warm communication before and after booking",
-      "Princess, hero, mascot, and rental options in one place",
+      "Performers who arrive ready, in character, and on time",
+      "Warm, human follow-up from inquiry to celebration day",
+      "Princess, hero, mascot, and rental options under one trusted brand",
     ],
     primaryCta: {
-      label: "Explore the magic",
+      label: "Find your party style",
       href: "#paths",
     },
     secondaryCta: {
-      label: "Start your booking request",
+      label: "Request your date",
       href: "/book",
     },
     stats: [
@@ -78,9 +78,9 @@ export const homepageContent = {
     whyUs: {
       eyebrow: "Why parents choose us",
       title:
-        "The celebration feels special long before the character arrives.",
+        "The celebration already feels special before the front door opens.",
       description:
-        "Families book with us because the magic feels polished from the beginning: clear communication, thoughtful pacing, and experiences that truly feel made for birthdays.",
+        "From your first message to the final goodbye wave, we choreograph the details so you can relax, take photos, and stay present for the memories you will want to replay.",
     },
     paths: {
       eyebrow: "Choose your kind of magic",
@@ -102,9 +102,9 @@ export const homepageContent = {
     },
     trust: {
       eyebrow: "Why parents feel comfortable saying yes",
-      title: "Trust starts with clear expectations and warm communication.",
+      title: "Trust starts with clear expectations, warm tone, and zero guesswork.",
       description:
-        "We keep the magic high and the process simple with thoughtful performers, polished presentation, and a booking flow that is easy to follow.",
+        "Thoughtful performers, photo-aware pacing, and a booking flow that gathers what we need in one calm pass—so you always know what happens next.",
     },
   },
   partyPaths: [
@@ -201,9 +201,9 @@ export const homepageContent = {
   finalCta: {
     eyebrow: "Ready when you are",
     title:
-      "Tell us a little about the party, and we will help you make it magical.",
+      "Share a few details and we will help you lock in the right character, package, and flow.",
     description:
-      "Our booking page keeps the next step simple, warm, and clear. Share the basics, and we will guide you toward the right package, character, and celebration flow for your date.",
+      "The booking page is written to feel reassuring, not overwhelming: a short form, plain-language guidance, and a real person on the other side to confirm availability and answer what-if questions.",
     steps: [
       {
         step: "1",

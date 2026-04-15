@@ -1,12 +1,20 @@
 import type { MediaAsset } from "@/data/types";
 
+/**
+ * Brand + character visuals.
+ * The approved castle wordmark is the only raster in-repo today (`siteLogo`).
+ * Princess, hero, mascot, and rental **scene** assets are illustrated SVG decks until
+ * approved performer/inventory photography is exported—then swap each `src` (and
+ * `width` / `height`) to the matching WebP or JPEG under `public/photos/` without
+ * changing component code.
+ */
 const mediaRegistry = {
   siteLogo: {
     id: "siteLogo",
     src: "/A%20living%20fairytale%20logo.png",
     alt: "A Living Fairytale castle logo with sparkling ribbon wordmark",
     width: 1536,
-    height: 1110,
+    height: 1024,
     status: "approved",
     adminLabel: "Primary brand logo",
     replaceHint:
