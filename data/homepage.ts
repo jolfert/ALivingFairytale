@@ -12,23 +12,22 @@ export const homepageContent = {
     { label: "Book", href: "/book" },
   ],
   hero: {
-    eyebrow: "Princesses, heroes, mascots, and birthday magic worth remembering",
-    title:
-      "Character parties that sparkle for kids—and feel effortless for the grown-ups planning them.",
+    eyebrow: "Magical party entertainment for unforgettable celebrations",
+    title: "Make their special day feel like pure magic.",
     description:
-      "A Living Fairytale brings polished performers, thoughtful pacing, and cheerful add-ons together in one place, so you can book a celebration that photographs beautifully and still feels calm to coordinate.",
+      "From enchanting princess visits to action-packed hero appearances and playful mascot fun, A Living Fairytale creates party moments children remember long after the candles are blown out.",
     highlights: [
       "Performers who arrive ready, in character, and on time",
       "Warm, human follow-up from inquiry to celebration day",
       "Princess, hero, mascot, and rental options under one trusted brand",
     ],
     primaryCta: {
-      label: "Find your party style",
-      href: "#paths",
+      label: "Book the magic",
+      href: "/book",
     },
     secondaryCta: {
-      label: "Request your date",
-      href: "/book",
+      label: "Explore party types",
+      href: "#paths",
     },
     stats: [
       {
@@ -76,29 +75,28 @@ export const homepageContent = {
   },
   sections: {
     whyUs: {
-      eyebrow: "Why parents choose us",
-      title:
-        "The celebration already feels special before the front door opens.",
+      eyebrow: "Why families choose us",
+      title: "A party experience that feels magical for kids and easy for parents.",
       description:
-        "From your first message to the final goodbye wave, we choreograph the details so you can relax, take photos, and stay present for the memories you will want to replay.",
+        "We know this is more than just a booking. It's your child's big day. That's why we focus on creating celebrations that feel warm, polished, memorable, and simple to plan.",
     },
     paths: {
-      eyebrow: "Choose your kind of magic",
-      title: "One premium brand with three clear ways to celebrate.",
+      eyebrow: "Choose your party experience",
+      title: "Pick the kind of magic they'll never forget.",
       description:
-        "Princess celebrations stay dreamy and elegant, hero events feel bold and high-energy, and mascots plus rentals keep the fun bright, easy, and crowd-pleasing.",
+        "Whether your child dreams of a royal celebration, an epic hero entrance, or playful mascot fun, we'll help you create a party that feels exciting, polished, and easy from start to finish.",
     },
     featured: {
-      eyebrow: "Featured favorites",
-      title: "Start with the character they are already talking about.",
+      eyebrow: "Featured experiences",
+      title: "Choose the party style that fits your celebration best.",
       description:
-        "Every path begins with a memorable face, a recognizable feeling, and the kind of entrance kids keep replaying after the candles are blown out.",
+        "Every party path carries its own energy, while still feeling polished, special, and easy to book.",
     },
     packages: {
-      eyebrow: "Package overview",
-      title: "Choose the pacing that fits your day.",
+      eyebrow: "Packages made simple",
+      title: "Simple packages. Beautiful memories.",
       description:
-        "Whether you want a quick magical visit or a fuller story-led celebration, the package lineup keeps the choice clear and the next step easy.",
+        "Whether you want a sweet character visit or a fuller interactive experience, we'll help you choose the package that fits your celebration best.",
     },
     trust: {
       eyebrow: "Why parents feel comfortable saying yes",
@@ -110,11 +108,11 @@ export const homepageContent = {
   partyPaths: [
     {
       eyebrow: "Princess Parties",
-      title: "Storybook elegance with sparkle in every detail.",
+      title: "Princess Parties",
       description:
-        "For families who want royal arrivals, graceful pacing, lovely photos, and a celebration that feels polished from the very first wave.",
+        "Graceful entrances, storybook moments, songs, smiles, and beautiful photo opportunities for children who want to feel like royalty.",
       href: "/princess",
-      ctaLabel: "See princess party favorites",
+      ctaLabel: "Choose a princess party",
       tags: ["Elegant arrivals", "Dreamy activities", "Soft sparkle"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,241,248,0.98))]",
@@ -122,11 +120,11 @@ export const homepageContent = {
     },
     {
       eyebrow: "Hero Parties",
-      title: "Bold energy without losing the premium feel.",
+      title: "Hero Parties",
       description:
-        "Built for exciting entrances, memorable missions, and action-forward fun that still feels thoughtful, warm, and easy for parents to trust.",
+        "Big energy, memorable entrances, fun interaction, and birthday excitement for kids who want their celebration to feel bold and unforgettable.",
       href: "/heroes",
-      ctaLabel: "Explore superhero parties",
+      ctaLabel: "Choose a hero party",
       tags: ["Strong entrances", "Mission moments", "Big kid excitement"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(251,253,255,0.98),rgba(234,242,255,0.98))]",
@@ -134,11 +132,11 @@ export const homepageContent = {
     },
     {
       eyebrow: "Mascots & Rentals",
-      title: "Bright, playful fun that still feels beautifully put together.",
+      title: "Mascots & Rentals",
       description:
-        "Perfect for families who want lovable mascot moments, easy party extras, or cheerful add-ons that make the whole celebration feel bigger.",
+        "Playful mascot visits and party add-ons that bring extra color, fun, and excitement to birthdays, school events, and family celebrations.",
       href: "/mascots",
-      ctaLabel: "See mascots and rentals",
+      ctaLabel: "See mascots & rentals",
       tags: ["Crowd-pleasing", "Easy add-ons", "Flexible fun"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,255,247,0.98))]",
@@ -147,27 +145,27 @@ export const homepageContent = {
   ],
   trustPillars: [
     {
-      title: "Parent-first planning",
+      title: "Beautiful first impressions",
       description:
-        "The site is written to answer the questions parents actually have, so booking feels lighter instead of louder.",
+        "From the moment your character arrives, the experience is designed to feel exciting, polished, and photo-worthy.",
       icon: "\u2661",
     },
     {
-      title: "Performers with presence",
+      title: "Warm, child-friendly interaction",
       description:
-        "Every package is built around memorable arrivals, polished pacing, and moments that feel worthy of the photos.",
+        "We shape each experience around the birthday child and their guests so the celebration feels personal, engaging, and joyful.",
       icon: "\u2726",
     },
     {
-      title: "Clear package choices",
+      title: "Simple booking, clear next steps",
       description:
-        "Families can compare experience sizes quickly and feel confident about what happens next.",
+        "Clear package options, an easy inquiry process, and friendly follow-up make planning feel much less stressful.",
       icon: "\u263C",
     },
     {
-      title: "One consistent brand",
+      title: "More than birthday parties",
       description:
-        "Princesses, heroes, mascots, and rentals all feel like part of the same premium celebration company.",
+        "Perfect for birthdays, school events, holiday events, community gatherings, and celebrations that need a little extra magic.",
       icon: "\u2301",
     },
   ],
@@ -199,11 +197,10 @@ export const homepageContent = {
     },
   ],
   finalCta: {
-    eyebrow: "Ready when you are",
-    title:
-      "Share a few details and we will help you lock in the right character, package, and flow.",
+    eyebrow: "Ready to book?",
+    title: "Let's create the party they keep talking about after the day is over.",
     description:
-      "The booking page is written to feel reassuring, not overwhelming: a short form, plain-language guidance, and a real person on the other side to confirm availability and answer what-if questions.",
+      "Tell us a little about your celebration, and we'll help you choose the right party type, package, and character for a day that feels truly special.",
     steps: [
       {
         step: "1",
@@ -236,11 +233,11 @@ export const homepageContent = {
       "Special requests, timing notes, and location details can all be included up front",
     ],
     primaryCta: {
-      label: "Open the booking page",
+      label: "Start your booking",
       href: "/book",
     },
     secondaryCta: {
-      label: "Compare packages first",
+      label: "View party options",
       href: "#packages",
     },
   },

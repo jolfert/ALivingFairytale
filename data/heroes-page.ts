@@ -11,47 +11,47 @@ export const heroesPageContent = {
     { label: "Book", href: "/book" },
   ],
   hero: {
-    eyebrow: "Superhero Parties",
+    eyebrow: "Hero Parties",
     title:
-      "Bold superhero parties with big entrances, mission moments, and a pace parents can actually enjoy.",
+      "Hero parties with big energy, strong entrances, and unforgettable birthday moments.",
     description:
-      "High-energy hero visits stay thoughtfully guided: confident performers, teamwork beats that include every guest, and a rhythm that feels epic in the moment yet still photographable for the family album.",
+      "For children who want their celebration to feel bold, exciting, and larger than life, our hero parties bring action, confidence, and memorable party-day wow.",
     highlights: [
-      "Mission-style pacing that keeps energy moving on purpose",
-      "Hero arrivals built for big reactions and strong photos",
-      "Clear celebration beats from entrance to final cheer",
+      "Big entrance energy kids instantly react to",
+      "Fast-moving interaction that keeps the party lively",
+      "Confident, photo-friendly moments parents love too",
     ],
     primaryCta: {
-      label: "Choose your hero lineup",
+      label: "Choose your hero",
       href: "#characters",
     },
     secondaryCta: {
-      label: "See mission-ready packages",
+      label: "See package options",
       href: "#packages",
     },
     mainMedia: getMediaAsset("heroSkylineMain"),
     insetMedia: getMediaAsset("heroCaptainPortrait"),
     panelEyebrow: "Hero path tone",
     panelTitle:
-      "Big energy, bold motion, and birthday momentum that still feels polished.",
+      "Bold pacing, strong visuals, and birthday energy that lands right away.",
     panelDescription:
-      "The hero path keeps the same premium brand foundation while shifting the mood toward action, teamwork, and unforgettable save-the-day moments.",
+      "This experience keeps the same polished planning and warm communication as the rest of the site, while shifting the mood toward action, confidence, and fun.",
     supportingCards: [
       {
-        eyebrow: "Arrival energy",
-        title: "A heroic entrance that sets the pace",
+        eyebrow: "Arrival Feel",
+        title: "Epic entrance",
         description:
           "The first minute is designed to feel exciting, intentional, and instantly memorable.",
       },
       {
-        eyebrow: "Party rhythm",
-        title: "Action-forward games with real guardrails",
+        eyebrow: "Parent Comfort",
+        title: "Clear, easy pacing",
         description:
           "Big movement stays structured so the room feels fun, not frantic, for every age in attendance.",
       },
       {
-        eyebrow: "Keepsake feel",
-        title: "Moments kids replay in their heads",
+        eyebrow: "Keepsake Moments",
+        title: "Big reaction photos",
         description:
           "Victory beats, team cheers, and celebration peaks that feel earned and exciting.",
       },
@@ -60,24 +60,21 @@ export const heroesPageContent = {
   sections: {
     characters: {
       eyebrow: "Featured heroes",
-      title:
-        "Choose the hero energy that matches your child's favorite kind of save-the-day magic.",
+      title: "Choose the hero that feels closest to their kind of excitement.",
       description:
-        "Each hero brings a different celebration style while staying inside the same premium experience standards and booking flow.",
+        "Each hero brings a slightly different energy, from steady and strong to fast-moving and high-impact, while keeping the same polished celebration structure.",
     },
     experience: {
-      eyebrow: "Experience highlights",
-      title:
-        "Superhero parties should feel thrilling, not loud just for the sake of loud.",
+      eyebrow: "What families can expect",
+      title: "Hero parties should feel exciting without feeling chaotic.",
       description:
-        "The energy is shaped with pacing, clarity, and warmth so parents can relax, take photos, and enjoy the celebration right along with the kids.",
+        "We keep this path bold and energetic while still making sure the structure feels clear, comfortable, and parent-friendly.",
     },
     packages: {
       eyebrow: "Hero package overview",
-      title:
-        "The same trusted package lineup, tuned for action, teamwork, and birthday bragging rights.",
+      title: "Choose the party pace that fits the kind of excitement you want.",
       description:
-        "Families still compare duration and highlights the same way they do elsewhere on the site, with copy that reflects how hero visits move in the room.",
+        "From a shorter hero visit to a fuller action-packed celebration, each package keeps the experience easy to understand and easy to book.",
     },
     trust: {
       eyebrow: "Built for real families",
@@ -90,23 +87,23 @@ export const heroesPageContent = {
   experienceCards: [
     {
       eyebrow: "For the birthday child",
-      title: "Starring-role energy with a real hero arc",
+      title: "A birthday entrance kids actually react to",
       description:
-        "Moments are sequenced so the birthday child feels chosen, cheered on, and celebrated at the center of the mission.",
+        "The arrival moment is built to create that instant 'wow' feeling children remember.",
       icon: "\u2605",
     },
     {
       eyebrow: "For the guest list",
-      title: "Team missions that include everyone",
+      title: "A celebration that feels lively and organized",
       description:
-        "Games are built to pull shy kids in without pressure and keep active kids engaged without turning the room into a free-for-all.",
+        "The pacing keeps the energy up without making the whole party feel rushed or messy.",
       icon: "\u2694",
     },
     {
       eyebrow: "For the grown-ups",
-      title: "Premium hosting that stays easy to follow",
+      title: "Memorable moments parents will want to capture",
       description:
-        "Clear timing, confident facilitation, and a tone that feels heroic for kids and reassuring for adults in the background.",
+        "Strong character visuals and interactive moments help create photos and reactions worth keeping.",
       icon: "\u2726",
     },
   ],
@@ -144,18 +141,17 @@ export const heroesPageContent = {
     "signature-fairytale",
   ]),
   cta: {
-    eyebrow: "Ready to book the hero party",
-    title:
-      "Lock in a superhero celebration that feels cinematic for kids and coordinated for adults.",
+    eyebrow: "Ready for an epic booking?",
+    title: "Let's build the kind of hero party they'll remember long after the gifts are opened.",
     description:
-      "Share your date, location, and the hero energy your child loves. We will confirm availability, outline the visit arc, and make sure every mission moment lands with clarity and care.",
+      "Tell us the date, your party details, and the kind of hero experience you're hoping for, and we'll help you take it from there.",
     notes: [
       "Great for birthdays that want motion-forward fun with a premium host feel",
       "Easy to tailor with add-ons, travel notes, and celebration details",
       "Built to keep the excitement high and the planning clear",
     ],
     primaryCta: {
-      label: "Launch your hero request",
+      label: "Start a hero request",
       href: "/book",
     },
     secondaryCta: {

@@ -12,7 +12,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "radiant-rose-princess",
     category: "Princess",
     shortDescription:
-      "Warm, graceful, and perfect for a celebration that leans classic, elegant, and picture-ready.",
+      "A beautiful fit for birthdays that want a royal welcome, soft storybook pacing, and polished photo moments.",
     longDescription:
       "A beautiful fit for birthdays that want a royal welcome, sweet storybook pacing, and polished photo moments from start to finish.",
     tags: ["Royal welcome", "Classic fairytale", "Photo favorite"],
@@ -25,7 +25,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "snowfall-princess",
     category: "Princess",
     shortDescription:
-      "A sparkling choice for children who love winter wonder, bright smiles, and magical singalong energy.",
+      "A sparkling, classic choice for children who love graceful magic, big reactions, and a celebration that feels full of wonder.",
     longDescription:
       "Ideal for children who light up around glittering magic, expressive moments, and a celebration that feels joyful, graceful, and instantly recognizable.",
     tags: ["Sparkle moments", "Big reactions", "Dreamy tone"],
@@ -38,7 +38,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "lantern-garden-princess",
     category: "Princess",
     shortDescription:
-      "Golden, playful, and full of warm-hearted storybook energy for children who love adventurous princess magic.",
+      "Bright, curious, and full of warmth, she brings glowing energy and playful charm to every celebration.",
     longDescription:
       "Wonderful for birthdays that want glowing visuals, gentle humor, and a princess who feels curious, kind, and beautifully memorable.",
     tags: ["Golden glow", "Playful heart", "Storybook favorite"],
@@ -51,10 +51,10 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "skyline-hero",
     category: "Hero",
     shortDescription:
-      "Fast-paced, confident, and ideal for kids who want a party that feels active from the very first entrance.",
+      "A bold, high-energy hero choice for birthdays that want a confident entrance and unforgettable reactions.",
     longDescription:
-      "Built for birthdays that want a bold arrival, playful hero training, and celebration energy that stays exciting without tipping into chaos.",
-    tags: ["Hero training", "Action energy", "Arrival wow-factor"],
+      "A confident, high-energy character choice for birthdays that want a bold entrance, strong presence, and instantly exciting party photos.",
+    tags: ["Epic arrival", "Action energy", "Birthday favorite"],
     mainMediaId: "heroSkylineMain",
     insetMediaId: "heroSkylinePortrait",
     featured: true,
@@ -64,10 +64,10 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "shield-captain",
     category: "Hero",
     shortDescription:
-      "A courageous, team-first hero vibe that works beautifully for mission-style celebrations.",
+      "Strong, polished, and family-friendly, this hero brings brave energy and memorable party moments.",
     longDescription:
-      "Wonderful for parties that want teamwork challenges, leadership energy, and heroic photo moments that still feel polished for the grown-ups in the room.",
-    tags: ["Team moments", "Leadership feel", "Strong pacing"],
+      "A polished hero pick for children who love brave characters, strong visuals, and a celebration that feels both exciting and family-friendly.",
+    tags: ["Strong presence", "Heroic vibe", "Great reactions"],
     mainMediaId: "heroCaptainMain",
     insetMediaId: "heroCaptainPortrait",
     featured: true,
@@ -77,10 +77,10 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "photon-streak",
     category: "Hero",
     shortDescription:
-      "Lightning-fast fun for kids who want motion, sound effects, and a celebration that feels like a victory lap.",
+      "Fast-moving, lively, and full of excitement, perfect for children who want their celebration to feel instantly epic.",
     longDescription:
-      "A kinetic pick for active guest lists: quick games, playful call-and-response energy, and memorable moments that feel exciting without losing the premium brand tone.",
-    tags: ["Motion-forward", "Big laughs", "Victory moments"],
+      "Fast, fun, and full of momentum, this hero is perfect for kids who want a celebration that feels energetic from the moment the party starts.",
+    tags: ["Fast-paced fun", "Big smiles", "High-energy pick"],
     mainMediaId: "heroVoltMain",
     insetMediaId: "heroVoltPortrait",
     featured: true,
@@ -90,7 +90,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "storybook-mouse",
     category: "Mascot",
     shortDescription:
-      "Beloved, huggable, and perfect when you want big smiles without a complicated storyline.",
+      "A playful, recognizable favorite that brings cheerful smiles and a fun visual surprise to the party.",
     longDescription:
       "Ideal for younger guest lists and mixed ages: warm interaction, easy crowd energy, and photo moments that feel joyful instead of hectic.",
     tags: ["Warm welcomes", "Little-kid magic", "Photo favorite"],
@@ -103,7 +103,7 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "pink-castle-bounce-house",
     category: "Rental",
     shortDescription:
-      "A cheerful focal point that makes the backyard feel like a party the moment families pull up.",
+      "A bright, exciting add-on that gives children extra room to move, play, and keep the energy going.",
     longDescription:
       "Keeps younger guests happily busy and gives parents a clear visual anchor for photos. Pairs naturally with character visits when you want the day to feel fuller without a longer schedule.",
     tags: ["Wow at arrival", "Kid-powered fun", "Easy add-on"],

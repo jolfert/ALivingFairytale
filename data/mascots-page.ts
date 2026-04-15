@@ -11,22 +11,21 @@ export const mascotsPageContent = {
   ],
   hero: {
     eyebrow: "Mascots & Rentals",
-    title:
-      "Playful mascot visits and party extras that keep the day cheerful and easy.",
+    title: "Playful party add-ons that make celebrations feel bigger, brighter, and more fun.",
     description:
-      "Big hugs, bright visuals, and bounce-house wow-factor pair perfectly with our premium hosting standards—so even the simplest celebration still feels cared for, coordinated, and camera-ready.",
+      "From mascot visits to simple rental favorites, this path is perfect for families, schools, and community events that want something cheerful, easy, and memorable.",
     highlights: [
       "Big, friendly fun",
       "Great for mixed ages",
       "Easy to pair with packages",
     ],
     primaryCta: {
-      label: "Browse mascots & rentals",
+      label: "Ask about mascots & rentals",
       href: "#showcase",
     },
     secondaryCta: {
-      label: "Review package timing",
-      href: "#packages",
+      label: "Book your party",
+      href: "/book",
     },
     mainMedia: getMediaAsset("mascotPartyMain"),
     insetMedia: getMediaAsset("rentalSparkInset"),
@@ -58,75 +57,80 @@ export const mascotsPageContent = {
   },
   sections: {
     showcase: {
-      eyebrow: "Showcase",
-      title:
-        "Start with mascot fun, rental impact, or both, then shape the day around your package.",
+      eyebrow: "Mascots and extras",
+      title: "Fun options for celebrations that want a little more movement, color, and excitement.",
       description:
-        "These options are ideal when you want recognizable smiles, easy excitement, and a celebration that feels lively from the first look.",
+        "This page is designed for playful add-ons, simple smiles, and event moments that make the day feel fuller without making it harder to plan.",
     },
     greatFor: {
       eyebrow: "Great for",
-      title: "When a brighter, simpler party beat is the right fit.",
+      title: "A strong fit for all kinds of family-friendly events.",
       description:
         "This path tends to shine for younger guests, mixed ages, and families who want quick clarity with a lot of cheerful payoff.",
     },
     packages: {
-      eyebrow: "Packages and booking",
-      title:
-        "The same package names families see elsewhere, so comparing stays easy.",
+      eyebrow: "Booking note",
+      title: "Simple to ask about. Easy to build into your event.",
       description:
-        "Durations and highlights stay familiar across the site. When you are ready, send us the party details and we will help confirm the best fit.",
+        "Mascot and rental availability can vary depending on the date, event type, and setup needs. Send us your event details and we'll help you understand what fits best.",
     },
     trust: {
-      eyebrow: "Reassurance",
-      title: "What you can expect from us on mascot and rental days.",
+      eyebrow: "Why this path works",
+      title: "Easy fun with clear next steps.",
       description:
         "Playful does not mean disorganized. We like these celebrations to feel easy, cheerful, and clearly guided.",
     },
   },
   greatForCards: [
     {
-      eyebrow: "Ages",
-      title: "Younger birthdays and mixed-age siblings",
+      eyebrow: "Birthdays",
+      title: "Birthday parties",
       description:
-        "A lovely fit when you want recognizable fun that does not depend on a long story arc.",
+        "Add a cheerful surprise that keeps children smiling and gives the celebration a fun extra moment.",
       icon: "\u2665",
     },
     {
-      eyebrow: "Energy",
-      title: "Backyard parties and community spaces",
+      eyebrow: "Schools",
+      title: "School and daycare events",
       description:
-        "Rentals create a focal point and mascots add warmth, together or on their own.",
+        "Perfect for group settings that want a playful visual moment children instantly recognize.",
       icon: "\u2600",
     },
     {
-      eyebrow: "Planning style",
-      title: "Families who want fewer decisions and faster clarity",
+      eyebrow: "Communities",
+      title: "Community celebrations",
       description:
-        "Simple paths, easy language, and a booking form that gathers what we need in one go.",
+        "A simple way to bring more color, character, and energy to public or neighborhood events.",
       icon: "\u2713",
+    },
+    {
+      eyebrow: "Gatherings",
+      title: "Seasonal and family gatherings",
+      description:
+        "A fun option for celebrations that want an easy crowd-pleaser without overcomplicating the day.",
+      icon: "\u2726",
     },
   ],
   trustCards: [
     {
-      eyebrow: "Setup",
-      title: "We respect your space and your schedule",
+      eyebrow: "Flexibility",
+      title: "Playful and flexible",
       description:
-        "Arrival windows and rental timing are discussed clearly so the day feels coordinated, not guessed.",
+        "A great option for families and organizers who want something cheerful, simple, and easy to add to the day.",
       icon: "\u2302",
     },
     {
-      eyebrow: "Hosting",
-      title: "Playful does not mean unmanaged",
+      eyebrow: "Process",
+      title: "Designed to stay easy",
       description:
-        "Mascot moments stay guided so younger guests feel included without parents needing to steer every beat.",
+        "We keep the inquiry process straightforward so you can figure out what works without guesswork.",
       icon: "\u2726",
     },
     {
-      eyebrow: "Communication",
-      title: "You will know what happens next",
+      eyebrow: "Growth",
+      title: "Ready to grow with your event",
       description:
-        "After you submit an inquiry, expect a direct follow-up to align on date, package fit, and any helpful details.",
+        "This part of the site is intentionally flexible, making it easy to add more mascot and rental options over time.",
       icon: "\u2709",
     },
   ],
@@ -137,25 +141,24 @@ export const mascotsPageContent = {
     "signature-fairytale",
   ]),
   bookingNote:
-    "Ready to check a date? Pop into the booking form and note whether you want a mascot visit, a rental, or both—we will tailor the reply with setup timing and the clearest next step.",
+    "Mascot and rental availability can vary depending on the date, event type, and setup needs. Send us your event details and we'll help you understand what fits best.",
   cta: {
-    eyebrow: "Plan the cheerful part",
-    title:
-      "Bundle mascots, rentals, and character visits without juggling multiple vendors.",
+    eyebrow: "Need help choosing?",
+    title: "Tell us about your event and we'll help you find the best fit.",
     description:
-      "The same premium inquiry flow covers every party type, so your special requests, arrival windows, and add-ons stay in one thread with our team.",
+      "If you're not sure which mascot or rental option makes the most sense, send us the details and we'll point you in the right direction.",
     notes: [
       "One form for princess, hero, mascot, and rental combinations",
       "Easy space to mention timing, setup questions, and special requests",
       "A real person follows up with the next clear step",
     ],
     primaryCta: {
-      label: "Check availability",
+      label: "Inquire now",
       href: "/book",
     },
     secondaryCta: {
-      label: "Browse heroes instead",
-      href: "/heroes",
+      label: "Back to homepage",
+      href: "/",
     },
   },
 } as const;

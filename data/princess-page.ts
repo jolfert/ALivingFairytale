@@ -14,18 +14,18 @@ export const princessPageContent = {
     title:
       "Princess parties that feel dreamy, polished, and genuinely magical.",
     description:
-      "From the first royal wave to the last hug, every beat is paced for wide-eyed wonder in the room and calm confidence behind the camera—so parents can soak it in while the birthday child shines.",
+      "From the first royal wave to the last photo, our princess parties are designed to feel beautiful for children and reassuringly well-paced for parents.",
     highlights: [
       "Warm, in-character princess arrivals",
       "Interactive moments shaped for birthday pacing",
       "Elegant visuals that still feel playful and child-centered",
     ],
     primaryCta: {
-      label: "Meet the princesses",
+      label: "Choose your princess",
       href: "#characters",
     },
     secondaryCta: {
-      label: "Compare royal packages",
+      label: "See package options",
       href: "#packages",
     },
     mainMedia: getMediaAsset("princessRoseMain"),
@@ -33,7 +33,7 @@ export const princessPageContent = {
     panelEyebrow: "Princess path tone",
     panelTitle: "Soft sparkle, graceful pacing, and moments worth framing.",
     panelDescription:
-      "The princess experience leans sweeter and dreamier while keeping the same premium standard families expect from the rest of the brand.",
+      "The princess experience leans sweet and dreamy while keeping the same clear structure and family focus found across the rest of the brand.",
     supportingCards: [
       {
         eyebrow: "Arrival feel",
@@ -42,7 +42,7 @@ export const princessPageContent = {
           "The magic starts strong without ever feeling rushed or overwhelming.",
       },
       {
-        eyebrow: "Parent confidence",
+        eyebrow: "Parent Comfort",
         title: "Beautifully guided flow",
         description:
           "Activities are paced to feel easy for families and special for the birthday child.",
@@ -106,18 +106,17 @@ export const princessPageContent = {
     "signature-fairytale",
   ]),
   cta: {
-    eyebrow: "Ready for a royal booking",
-    title:
-      "Let us craft the princess party they replay in their imagination long after the candles are blown out.",
+    eyebrow: "Ready for a royal booking?",
+    title: "Let's create the princess party they keep talking about after the candles are blown out.",
     description:
-      "Tell us your date, guest-of-honor details, and the princess energy you are dreaming of. We will reply with availability, pacing guidance, and the gentle next steps to make it official.",
+      "If this feels like the right fit, the next step is simple. Send us the date, the party details, and the princess you have in mind, and we'll guide the rest.",
     notes: [
       "A lovely fit for birthdays that want beautiful character-led moments",
       "Easy to pair with add-ons, travel notes, and special requests",
       "Designed to feel magical for children and calm for parents",
     ],
     primaryCta: {
-      label: "Reserve your royal visit",
+      label: "Start a princess request",
       href: "/book",
     },
     secondaryCta: {

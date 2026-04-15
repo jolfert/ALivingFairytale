@@ -63,8 +63,7 @@ export const inquiryFormFields = [
     kind: "text",
     required: true,
     width: "full",
-    placeholder:
-      "For example: Snowfall Princess, Skyline Hero, Storybook Mouse, or pink bounce house",
+    placeholder: "Tell us the character you have in mind",
     autoComplete: "off",
   },
   {
@@ -89,7 +88,7 @@ export const inquiryFormFields = [
     kind: "text",
     required: true,
     width: "half",
-    placeholder: "For example: 4 or turning 5",
+    placeholder: "Birthday child's age",
     autoComplete: "off",
   },
   {
@@ -100,8 +99,7 @@ export const inquiryFormFields = [
     width: "full",
     rows: 3,
     maxLength: INQUIRY_ADDRESS_MAX_LENGTH,
-    placeholder:
-      "Street, city, and any gate, suite, or parking notes we should know",
+    placeholder: "Street address, city",
     autoComplete: "street-address",
   },
   {
@@ -113,7 +111,7 @@ export const inquiryFormFields = [
     rows: 4,
     maxLength: INQUIRY_NOTES_MAX_LENGTH,
     placeholder:
-      "Tell us about surprise timing, favorite characters, allergies, setup notes, or anything else that would help",
+      "Theme ideas, number of children, venue notes, travel questions, or anything else you'd like us to know",
     autoComplete: "off",
   },
 ] as const;

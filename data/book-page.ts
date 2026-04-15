@@ -7,58 +7,54 @@ export const bookPageContent = {
     { label: "Book", href: "/book" },
   ],
   trustColumn: {
-    eyebrow: "Book with confidence",
-    title: "Premium parties deserve a booking experience that feels just as thoughtful.",
+    eyebrow: "Book your party",
+    title: "Let's plan something magical.",
     lead:
-      "Nothing is charged here—this is simply the warm handoff that lets our team review your date, confirm travel, and craft the right performer pairing before anything is finalized.",
+      "Tell us a little about your celebration and we'll help you choose the party type, package, and character that fits your child, your theme, and your event.",
     blocks: [
       {
-        title: "What happens next",
+        title: "Clear package options",
         paragraphs: [
-          "We read every field carefully—date, location, party style, package choice, and the little notes that make your celebration unique—then reply with availability plus any thoughtful questions.",
-          "When the stars align, we walk you through timing, performer fit, and optional add-ons in plain language so you always know what to expect before you say yes.",
+          "Simple choices that make it easier to book with confidence.",
         ],
       },
       {
-        title: "Response expectations",
+        title: "Friendly follow-up",
         paragraphs: [
-          "Most families hear back within one to two business days. During weekends or peak party seasons we may need a touch more time, but we never leave you guessing.",
-          "Celebration coming up fast? Flag it in the notes and we will triage fairly so you are not left wondering at the eleventh hour.",
+          "We'll review your inquiry and get back to you with the next steps.",
         ],
       },
       {
-        title: "Service area",
+        title: "Party types for different celebrations",
         paragraphs: [
-          "Travel details are confirmed after we review your address, so we can answer accurately instead of guessing.",
-          "Please include the full event location so our first reply can be as helpful as possible.",
+          "Princesses, heroes, mascots, and rentals all live under one easy booking path.",
         ],
       },
       {
-        title: "Helpful notes",
+        title: "Built to stay parent-friendly",
         paragraphs: [
-          "Things like surprise timing, apartment access, parking, or shared driveways are all useful to include.",
-          "If you are deciding between characters or packages, tell us what you are choosing between and we will gladly guide you.",
+          "A warm, polished process that keeps things easy to understand from the start.",
         ],
       },
     ],
     footnote:
-      "No bots, no templates—just a real planner making sure your first reply feels as magical as the party you are imagining.",
+      "Before you send your inquiry: Weekend dates and popular characters can book up quickly, especially during busy seasons. Sending your request earlier gives you the best chance of securing the experience you want.",
   },
   form: {
     eyebrow: "Party inquiry",
-    title: "Tell us about the celebration you are dreaming up",
+    title: "Book your party",
     description:
-      "Required fields keep our first reply focused; the notes box is yours for surprises, accessibility needs, driveway quirks, or anything else that helps us plan with care.",
-    submitLabel: "Submit inquiry",
+      "Share a few details below and we'll help bring your celebration to life.",
+    submitLabel: "Check availability & start my booking",
     pendingLabel: "Sending your request...",
     sentEyebrow: "Request sent",
-    successTitle: "We received your party request.",
+    successTitle: "Your inquiry has been sent.",
     successIntro:
-      "Thank you for reaching out. We will review your details and follow up at the email address you provided as soon as we can.",
+      "Thank you for reaching out to A Living Fairytale. We've received your party details and will review your request as soon as possible.",
     successBullets: [
-      "Most replies go out within one to two business days.",
-      "If you use Gmail or a similar provider, it is worth checking Promotions or spam just in case our reply lands there.",
-      "If your date is coming up soon, reply to our email and let us know. We will do our best to help quickly.",
+      "We'll check the details you submitted.",
+      "We'll follow up with the next steps.",
+      "If we need anything else, we'll let you know.",
     ] as const,
     successWithParentEmail:
       "We also sent a short confirmation to your email so you have a record of what you submitted.",
@@ -72,7 +68,7 @@ export const bookPageContent = {
     nonValidationHelp:
       "If this keeps happening, email us with your party date and city and we will gladly help without the form.",
     deliveryFailed:
-      "We could not send your inquiry right now. Please try again in a few minutes. If it keeps happening, reach out by email and we will help from there.",
+      "We couldn't send your inquiry just yet. Please review the form and try again. If the issue continues, you can contact us directly and we'll be happy to help.",
     submissionNotAccepted:
       "We could not submit that request. Please wait a moment and try again, or contact us by email with your party details.",
     selectPlaceholder: "Select an option",
