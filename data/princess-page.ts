@@ -1,14 +1,9 @@
 import { getCharactersByCategory, pickPackages } from "@/data/catalog";
 import { getMediaAsset } from "@/data/media";
+import { primaryNavigation } from "@/data/site-shell";
 
 export const princessPageContent = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Characters", href: "#characters" },
-    { label: "Packages", href: "#packages" },
-    { label: "Mascots", href: "/mascots" },
-    { label: "Book", href: "/book" },
-  ],
+  navigation: primaryNavigation,
   hero: {
     eyebrow: "Princess Parties",
     title:

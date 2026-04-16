@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { MediaAsset } from "@/data/types";
 
 type PartyPath = {
@@ -62,13 +63,13 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
           ))}
         </ul>
 
-        <a
+        <Link
           href={path.href}
           className="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-midnight transition group-hover:gap-3"
         >
           {path.ctaLabel}
           <span aria-hidden>{"\u2192"}</span>
-        </a>
+        </Link>
       </div>
     </article>
   );

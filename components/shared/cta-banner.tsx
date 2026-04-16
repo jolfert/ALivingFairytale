@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { CtaBannerContent } from "@/data/types";
 
 type CtaBannerProps = {
@@ -53,13 +54,13 @@ export function CtaBanner({
         </ul>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <a href={content.primaryCta.href} className="button-primary">
+          <Link href={content.primaryCta.href} className="button-primary">
             {content.primaryCta.label}
-          </a>
+          </Link>
           {content.secondaryCta ? (
-            <a href={content.secondaryCta.href} className="button-secondary">
+            <Link href={content.secondaryCta.href} className="button-secondary">
               {content.secondaryCta.label}
-            </a>
+            </Link>
           ) : null}
         </div>
       </div>

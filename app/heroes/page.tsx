@@ -77,15 +77,6 @@ export default function HeroesPage() {
           <PackageGrid packages={heroesPageContent.packages} tone="hero" />
         </PageSection>
 
-        <PageSection className="relative">
-          <SectionHeading
-            eyebrow={heroesPageContent.sections.trust.eyebrow}
-            title={heroesPageContent.sections.trust.title}
-            description={heroesPageContent.sections.trust.description}
-          />
-          <FeatureCardGrid items={heroesPageContent.trustCards} tone="hero" />
-        </PageSection>
-
         <PageSection id="book-cta" className="relative">
           <CtaBanner content={heroesPageContent.cta} tone="hero" />
         </PageSection>

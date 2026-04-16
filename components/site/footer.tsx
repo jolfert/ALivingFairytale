@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { siteShellContent } from "@/data/site-shell";
 
 type FooterProps = {
@@ -31,13 +32,13 @@ export function Footer({ links }: FooterProps) {
             className="flex flex-wrap items-center gap-2"
           >
             {links.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="rounded-full px-4 py-2 text-sm font-semibold text-copy-soft transition hover:bg-white hover:text-midnight"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

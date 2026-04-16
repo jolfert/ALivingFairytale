@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { MediaAsset } from "@/data/types";
 
 type HeroContent = {
@@ -69,12 +70,12 @@ export function HomeHero({ content }: HomeHeroProps) {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href={content.primaryCta.href} className="button-primary">
+            <Link href={content.primaryCta.href} className="button-primary">
               {content.primaryCta.label}
-            </a>
-            <a href={content.secondaryCta.href} className="button-secondary">
+            </Link>
+            <Link href={content.secondaryCta.href} className="button-secondary">
               {content.secondaryCta.label}
-            </a>
+            </Link>
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">

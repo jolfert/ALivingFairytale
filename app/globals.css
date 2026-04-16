@@ -33,6 +33,10 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-padding-top: 6.5rem;
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans-family);

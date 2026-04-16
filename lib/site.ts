@@ -12,5 +12,5 @@ export function getSiteUrl(): string {
   if (vercel) {
     return `https://${vercel.replace(/^https?:\/\//, "")}`;
   }
-  return "http://localhost:3000";
+  return "https://a-living-fairytale.vercel.app";
 }

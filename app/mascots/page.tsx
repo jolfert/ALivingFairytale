@@ -88,18 +88,6 @@ export default function MascotsPage() {
           </p>
         </section>
 
-        <section className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow={mascotsPageContent.sections.trust.eyebrow}
-            title={mascotsPageContent.sections.trust.title}
-            description={mascotsPageContent.sections.trust.description}
-          />
-          <FeatureCardGrid
-            items={mascotsPageContent.trustCards}
-            tone="playful"
-          />
-        </section>
-
         <section
           id="book-cta"
           className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"

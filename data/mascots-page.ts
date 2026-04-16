@@ -1,14 +1,9 @@
 import { getCharactersByCategories, pickPackages } from "@/data/catalog";
 import { getMediaAsset } from "@/data/media";
+import { primaryNavigation } from "@/data/site-shell";
 
 export const mascotsPageContent = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Princess", href: "/princess" },
-    { label: "Heroes", href: "/heroes" },
-    { label: "Mascots", href: "#top" },
-    { label: "Book", href: "/book" },
-  ],
+  navigation: primaryNavigation,
   hero: {
     eyebrow: "Mascots & Rentals",
     title:
@@ -76,12 +71,6 @@ export const mascotsPageContent = {
       description:
         "Mascot and rental availability can vary depending on the date, event type, and setup needs. Send us your event details and we'll help you understand what fits best.",
     },
-    trust: {
-      eyebrow: "Why this path works",
-      title: "Easy fun with clear next steps.",
-      description:
-        "Playful does not mean disorganized. We like these celebrations to feel easy, cheerful, and clearly guided.",
-    },
   },
   greatForCards: [
     {
@@ -111,29 +100,6 @@ export const mascotsPageContent = {
       description:
         "A fun option for celebrations that want an easy crowd-pleaser without overcomplicating the day.",
       icon: "\u2726",
-    },
-  ],
-  trustCards: [
-    {
-      eyebrow: "Flexibility",
-      title: "Playful and flexible",
-      description:
-        "A great option for families and organizers who want something cheerful, simple, and easy to add to the day.",
-      icon: "\u2302",
-    },
-    {
-      eyebrow: "Process",
-      title: "Designed to stay easy",
-      description:
-        "We keep the inquiry process straightforward so you can figure out what works without guesswork.",
-      icon: "\u2726",
-    },
-    {
-      eyebrow: "Growth",
-      title: "Ready to grow with your event",
-      description:
-        "This part of the site is intentionally flexible, making it easy to add more mascot and rental options over time.",
-      icon: "\u2709",
     },
   ],
   showcaseCharacters: getCharactersByCategories(["Mascot", "Rental"]),

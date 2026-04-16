@@ -1,16 +1,9 @@
 import { packages, pickCharacters } from "@/data/catalog";
 import { getMediaAsset } from "@/data/media";
+import { primaryNavigation } from "@/data/site-shell";
 
 export const homepageContent = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Princess", href: "/princess" },
-    { label: "Heroes", href: "/heroes" },
-    { label: "Mascots", href: "/mascots" },
-    { label: "Featured", href: "#featured-experiences" },
-    { label: "Packages", href: "#packages" },
-    { label: "Book", href: "/book" },
-  ],
+  navigation: primaryNavigation,
   hero: {
     eyebrow: "Magical party entertainment for unforgettable celebrations",
     title: "Make their special day feel like pure magic.",
@@ -89,15 +82,15 @@ export const homepageContent = {
     },
     paths: {
       eyebrow: "Choose your party experience",
-      title: "Pick the kind of magic they'll never forget.",
+      title: "Start with the party path that fits your child best.",
       description:
         "Whether your child dreams of a royal celebration, a superhero surprise, or cheerful mascot fun with rentals, we'll help you shape a party that feels polished, memorable, and easy to plan.",
     },
     featured: {
-      eyebrow: "Featured experiences",
-      title: "A few favorites families ask about first.",
+      eyebrow: "Start with the favorites",
+      title: "A quick look at the party types families ask about most.",
       description:
-        "Real photos, real party energy, and a quick way to see how each path feels before you book.",
+        "Just enough to compare the feeling of each path before you head deeper into princesses, heroes, mascots, or rentals.",
     },
     packages: {
       eyebrow: "Packages made simple",
@@ -106,10 +99,10 @@ export const homepageContent = {
         "Whether you want a sweet character visit or a fuller interactive experience, we'll help you choose the package that fits your celebration best.",
     },
     trust: {
-      eyebrow: "Why parents feel comfortable saying yes",
-      title: "Trust starts with clear expectations, warm tone, and zero guesswork.",
+      eyebrow: "Why parents feel comfortable booking",
+      title: "Warm communication, beautiful presentation, and a process that stays easy to follow.",
       description:
-        "Thoughtful performers, photo-aware pacing, and a booking flow that gathers what we need in one calm pass so you always know what happens next.",
+        "Thoughtful performers, photo-aware pacing, and one clear booking path help families move forward without second-guessing the next step.",
     },
   },
   partyPaths: [
@@ -169,42 +162,14 @@ export const homepageContent = {
         "Clear package options, an easy inquiry process, and friendly follow-up make planning feel much less stressful.",
       icon: "\u263C",
     },
-    {
-      title: "More than birthday parties",
-      description:
-        "Perfect for birthdays, school events, holiday events, community gatherings, and celebrations that need a little extra magic.",
-      icon: "\u2301",
-    },
   ],
   featuredCharacters: pickCharacters([
-    "cinderella",
+    "elsa",
     "batman",
     "olaf",
     "pink-castle-bounce-house",
-    "elsa",
-    "spider-man",
   ]),
   packages,
-  testimonials: [
-    {
-      note: "Easy communication",
-      title: "You know what happens next",
-      description:
-        "From the first inquiry to the follow-up, the process is designed to feel calm, clear, and personal.",
-    },
-    {
-      note: "Beautiful memories",
-      title: "The party feels magical in the room and lovely in photos",
-      description:
-        "The pacing, presentation, and character moments are shaped to create smiles that look just as good as they feel.",
-    },
-    {
-      note: "Premium without stiffness",
-      title: "Warm service with a polished finish",
-      description:
-        "Families get the princess sparkle, superhero excitement, and playful add-ons children want, all inside one elevated brand experience.",
-    },
-  ],
   finalCta: {
     eyebrow: "Ready to book?",
     title: "Let's create the party they keep talking about after the day is over.",
@@ -219,16 +184,11 @@ export const homepageContent = {
       },
       {
         step: "2",
-        title: "Pick the package that feels right",
-        description: "Choose the pacing that works best for your child and guest list.",
-      },
-      {
-        step: "3",
         title: "Share the date and details",
         description: "Tell us the basics, plus anything special you want us to know.",
       },
       {
-        step: "4",
+        step: "3",
         title: "Watch for our reply",
         description: "We follow up with a warm, focused response and the next clear step.",
       },
@@ -247,8 +207,8 @@ export const homepageContent = {
       href: "/book",
     },
     secondaryCta: {
-      label: "View party options",
-      href: "#packages",
+      label: "Compare party paths",
+      href: "#paths",
     },
   },
 } as const;

@@ -1,11 +1,7 @@
+import { primaryNavigation } from "@/data/site-shell";
+
 export const bookPageContent = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Princess", href: "/princess" },
-    { label: "Heroes", href: "/heroes" },
-    { label: "Mascots", href: "/mascots" },
-    { label: "Book", href: "/book" },
-  ],
+  navigation: primaryNavigation,
   trustColumn: {
     eyebrow: "Book your party",
     title: "Let's plan something magical, clear, and easy to say yes to.",

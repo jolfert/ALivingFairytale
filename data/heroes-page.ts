@@ -1,15 +1,9 @@
 import { pickCharacters, pickPackages } from "@/data/catalog";
 import { getMediaAsset } from "@/data/media";
+import { primaryNavigation } from "@/data/site-shell";
 
 export const heroesPageContent = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Heroes", href: "#top" },
-    { label: "Featured", href: "#characters" },
-    { label: "Packages", href: "#packages" },
-    { label: "Mascots", href: "/mascots" },
-    { label: "Book", href: "/book" },
-  ],
+  navigation: primaryNavigation,
   hero: {
     eyebrow: "Superhero Parties",
     title:
@@ -77,13 +71,6 @@ export const heroesPageContent = {
       description:
         "From a shorter superhero visit to a fuller action-packed celebration, each package keeps the experience easy to understand and easy to book.",
     },
-    trust: {
-      eyebrow: "Built for real families",
-      title:
-        "Parents should feel the excitement and still feel completely taken care of.",
-      description:
-        "We lean on clear communication, confident performers, and thoughtful pacing so the superhero experience feels just as trustworthy as it does exciting.",
-    },
   },
   experienceCards: [
     {
@@ -106,29 +93,6 @@ export const heroesPageContent = {
       description:
         "Strong character visuals and interactive moments help create photos and reactions worth keeping, not just a quick walk-through appearance.",
       icon: "\u2726",
-    },
-  ],
-  trustCards: [
-    {
-      eyebrow: "Safety-minded fun",
-      title: "Action that stays age-aware and thoughtfully guided",
-      description:
-        "The energy runs high, but the choices still respect mixed ages, home spaces, and the realities of a birthday crowd.",
-      icon: "\u2713",
-    },
-    {
-      eyebrow: "Communication you can count on",
-      title: "Straightforward answers before the big day",
-      description:
-        "Expectations, timing, and next steps are explained clearly so booking feels calm, not confusing.",
-      icon: "\u2709",
-    },
-    {
-      eyebrow: "Photo-friendly presentation",
-      title: "Looks bold on camera without feeling messy",
-      description:
-        "Costuming, posing, and movement choices are tuned so the party photographs beautifully while still feeling high-energy.",
-      icon: "\u231A",
     },
   ],
   characters: pickCharacters(["batman", "spider-man", "hero-team-up"]),
