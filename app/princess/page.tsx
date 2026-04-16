@@ -40,7 +40,7 @@ export default function PrincessPage() {
             title={princessPageContent.sections.characters.title}
             description={princessPageContent.sections.characters.description}
           />
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {princessPageContent.characters.map((character) => (
               <CharacterCard
                 key={character.slug}

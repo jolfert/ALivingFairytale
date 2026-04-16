@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import type { ResolvedCharacter } from "@/data/types";
 
@@ -83,7 +84,9 @@ export function CharacterCard({
       </div>
 
       <div className="p-6">
-        <h3 className="text-3xl font-semibold text-midnight">{character.name}</h3>
+        <h3 className="text-[1.8rem] font-semibold leading-tight text-midnight">
+          {character.name}
+        </h3>
         <p className="section-copy mt-3 text-sm sm:text-base">
           {variant === "showcase" && character.longDescription
             ? character.longDescription
@@ -100,6 +103,14 @@ export function CharacterCard({
             </li>
           ))}
         </ul>
+
+        {character.detailHref ? (
+          <div className="mt-6">
+            <Link href={character.detailHref} className="button-secondary text-sm">
+              See {character.name}
+            </Link>
+          </div>
+        ) : null}
       </div>
     </article>
   );

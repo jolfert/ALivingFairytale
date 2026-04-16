@@ -12,13 +12,13 @@ export const princessPageContent = {
   hero: {
     eyebrow: "Princess Parties",
     title:
-      "Princess parties that feel dreamy, polished, and genuinely magical.",
+      "Choose from a full cast of princess favorites, now with the real photos families already know.",
     description:
-      "From the first royal wave to the last photo, our princess parties are designed to feel beautiful for children and reassuringly well-paced for parents.",
+      "From Ariel and Belle to Cinderella, Elsa, Rapunzel, and more, our princess parties are designed to feel magical for children and reassuringly polished for parents from the first wave to the final photo.",
     highlights: [
-      "Warm, in-character princess arrivals",
-      "Interactive moments shaped for birthday pacing",
-      "Elegant visuals that still feel playful and child-centered",
+      "Real action photos paired with costume portraits",
+      "Each princess now has her own detail page",
+      "Warm arrivals, guided pacing, and beautiful party memories",
     ],
     primaryCta: {
       label: "Choose your princess",
@@ -28,12 +28,12 @@ export const princessPageContent = {
       label: "See package options",
       href: "#packages",
     },
-    mainMedia: getMediaAsset("princessRoseMain"),
-    insetMedia: getMediaAsset("princessSnowPortrait"),
+    mainMedia: getMediaAsset("princessLandingMain"),
+    insetMedia: getMediaAsset("cinderellaBluePortrait"),
     panelEyebrow: "Princess path tone",
-    panelTitle: "Soft sparkle, graceful pacing, and moments worth framing.",
+    panelTitle: "Soft sparkle, graceful pacing, and a princess roster deep enough to fit her real favorite.",
     panelDescription:
-      "The princess experience leans sweet and dreamy while keeping the same clear structure and family focus found across the rest of the brand.",
+      "This path keeps the same premium brand feel while giving families a fuller lineup of recognizable princesses, real photos, and an easy way to click into each character for more detail.",
     supportingCards: [
       {
         eyebrow: "Arrival feel",
@@ -59,9 +59,9 @@ export const princessPageContent = {
     characters: {
       eyebrow: "Featured princesses",
       title:
-        "Choose the princess who feels closest to her favorite kind of magic.",
+        "Choose the princess who feels closest to her favorite kind of magic, then click through for her full page.",
       description:
-        "Each character carries her own mood, color story, and celebration energy while still fitting inside the same polished party experience.",
+        "Every card pairs an action photo with a costume portrait so families can see the party feeling and the exact look at a glance.",
     },
     experience: {
       eyebrow: "What families can expect",
