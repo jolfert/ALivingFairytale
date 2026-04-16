@@ -8,28 +8,41 @@ import type {
 
 const characterCatalog: ReadonlyArray<CharacterRecord> = [
   {
-    name: "Ariel",
+    name: "Ariel - Green",
     slug: "ariel",
     category: "Princess",
     shortDescription:
-      "Sea-swept charm, bright smiles, and playful wonder for children who love mermaid magic.",
+      "A bright mermaid favorite with warm smiles, sea-swept charm, and playful little-girl magic.",
     longDescription:
-      "A lively, picture-perfect choice for birthdays that want bright color, sweet interaction, and a princess who makes children feel instantly at ease.",
-    tags: ["Mermaid magic", "Bright smiles", "Photo favorite"],
+      "A lively princess choice for birthdays that want real child connection, colorful storybook photos, and a character who feels sweet and approachable right away.",
+    tags: ["Mermaid magic", "Bright smiles", "Classic favorite"],
     mainMediaId: "arielMain",
     insetMediaId: "arielPortrait",
     detailHref: "/ariel",
     featured: true,
   },
   {
+    name: "Ariel - Pink",
+    slug: "ariel-pink",
+    category: "Princess",
+    shortDescription:
+      "A softer Little Mermaid look with pink sparkle, sweet waves, and warm party charm.",
+    longDescription:
+      "Perfect for families who love Ariel but want the pink gown version children often remember from their favorite dress-up moments and keepsake photos.",
+    tags: ["Pink gown", "Mermaid favorite", "Soft sparkle"],
+    mainMediaId: "arielPinkMain",
+    insetMediaId: "arielPinkPortrait",
+    detailHref: "/ariel-pink",
+  },
+  {
     name: "Belle",
     slug: "belle",
     category: "Princess",
     shortDescription:
-      "Warm, elegant, and full of storybook sweetness for birthdays that want a classic princess feel.",
+      "Warm, elegant, and full of storybook sweetness for celebrations that want a classic princess feeling.",
     longDescription:
-      "A beautiful fit for birthdays that want a grand entrance, lovely photos, and a princess who feels kind, poised, and genuinely special in the room.",
-    tags: ["Classic fairytale", "Royal welcome", "Golden gown"],
+      "A timeless fit for birthdays that want a grand entrance, lovely golden-gown photos, and a princess presence that feels graceful without ever feeling stiff.",
+    tags: ["Classic fairytale", "Golden gown", "Royal welcome"],
     mainMediaId: "belleMain",
     insetMediaId: "bellePortrait",
     detailHref: "/belle",
@@ -40,37 +53,63 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "cinderella",
     category: "Princess",
     shortDescription:
-      "Graceful, polished, and full of storybook sparkle for children who dream in blue.",
+      "Graceful, polished, and full of blue-gown magic for children who dream in storybook sparkle.",
     longDescription:
-      "Perfect for elegant birthdays that want magical reactions, sweet activity moments, and the kind of princess photos families frame afterward.",
-    tags: ["Blue gown", "Storybook elegance", "Dreamy photos"],
+      "Ideal for elegant birthdays that want a polished arrival, sweet activity moments, and the kind of keepsake photos families frame afterward.",
+    tags: ["Blue gown", "Dreamy photos", "Storybook elegance"],
     mainMediaId: "cinderellaMain",
     insetMediaId: "cinderellaPortrait",
     detailHref: "/cinderella",
     featured: true,
   },
   {
-    name: "Elsa",
-    slug: "elsa",
+    name: "Cinderella - New",
+    slug: "cinderella-new",
     category: "Princess",
     shortDescription:
-      "An icy favorite with shimmering style, warm interaction, and instant wow-factor the moment she arrives.",
+      "A fresh Cinderella look with the same polished fairytale feel and a bright, modern princess silhouette.",
     longDescription:
-      "A magical choice for children who love snow-day sparkle, singalong energy, and beautiful frozen-inspired party memories.",
-    tags: ["Frozen favorite", "Sparkle magic", "Big reactions"],
-    mainMediaId: "elsaMain",
-    insetMediaId: "elsaPortrait",
-    detailHref: "/elsa",
+      "Wonderful for families who love Cinderella and want an alternate costume look that still feels graceful, recognizable, and beautifully photo-ready.",
+    tags: ["Alternate gown", "Blue fairytale", "Photo ready"],
+    mainMediaId: "cinderellaNewMain",
+    insetMediaId: "cinderellaNewPortrait",
+    detailHref: "/cinderella-new",
+  },
+  {
+    name: "Ice Queen",
+    slug: "ice-queen",
+    category: "Princess",
+    shortDescription:
+      "A shimmering winter favorite with icy style, warm interaction, and instant wow the moment she arrives.",
+    longDescription:
+      "A beautiful choice for frozen-themed birthdays that want big reactions, sparkling visuals, and a princess who feels exciting for children and polished for parents.",
+    tags: ["Frozen favorite", "Winter sparkle", "Big reactions"],
+    mainMediaId: "iceQueenMain",
+    insetMediaId: "iceQueenPortrait",
+    detailHref: "/ice-queen",
     featured: true,
+  },
+  {
+    name: "Ice Princess",
+    slug: "ice-princess",
+    category: "Princess",
+    shortDescription:
+      "A gentle frozen favorite with bright energy, sweet smiles, and a softer storybook mood.",
+    longDescription:
+      "Lovely for children who light up around the warmer, more playful side of frozen-themed magic and want a princess who feels easy to connect with right away.",
+    tags: ["Frozen favorite", "Warm smiles", "Playful magic"],
+    mainMediaId: "icePrincessMain",
+    insetMediaId: "icePrincessPortrait",
+    detailHref: "/ice-princess",
   },
   {
     name: "Jasmine",
     slug: "jasmine",
     category: "Princess",
     shortDescription:
-      "Warm, vibrant, and full of heart for children who love bold color and adventurous princess magic.",
+      "Warm, vibrant, and full of heart for children who love adventurous princess magic.",
     longDescription:
-      "Wonderful for birthdays that want bright smiles, warm hugs, and a princess who feels lively, elegant, and unforgettable.",
+      "A beautiful fit for birthdays that want bright color, warm hugs, and a princess who feels bold, kind, and unmistakably memorable in the room.",
     tags: ["Bright color", "Adventure feel", "Warm hugs"],
     mainMediaId: "jasmineMain",
     insetMediaId: "jasminePortrait",
@@ -84,119 +123,185 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     shortDescription:
       "Golden, playful, and full of sunshine for children who love laughter, braids, and storybook adventure.",
     longDescription:
-      "A lovely fit for birthdays that want lighthearted princess energy, playful moments, and a character children connect with right away.",
-    tags: ["Long braid", "Playful heart", "Golden glow"],
+      "A lovely choice for birthdays that want bright personality, playful interaction, and a princess presence children warm up to instantly.",
+    tags: ["Long braid", "Golden glow", "Playful heart"],
     mainMediaId: "rapunzelMain",
     insetMediaId: "rapunzelPortrait",
     detailHref: "/rapunzel",
     featured: true,
   },
   {
-    name: "Sleeping Beauty",
-    slug: "sleeping-beauty",
+    name: "Sleeping Beauty - Pink",
+    slug: "aurora",
     category: "Princess",
     shortDescription:
-      "Soft pink elegance, gentle warmth, and a timeless fairytale feeling from first hello to final photo.",
+      "Soft pink elegance, gentle warmth, and timeless fairytale beauty from first hello to final photo.",
     longDescription:
-      "Ideal for celebrations that want a graceful princess presence, sweet conversation, and a classic rosy fairytale mood.",
-    tags: ["Pink elegance", "Timeless fairytale", "Gentle warmth"],
-    mainMediaId: "sleepingBeautyMain",
-    insetMediaId: "sleepingBeautyPortrait",
-    detailHref: "/sleeping-beauty",
+      "Ideal for celebrations that want a rosy storybook palette, graceful interaction, and a princess presence that feels calm, lovely, and unmistakably royal.",
+    tags: ["Pink fairytale", "Gentle warmth", "Timeless magic"],
+    mainMediaId: "sleepingBeautyPinkMain",
+    insetMediaId: "sleepingBeautyPinkPortrait",
+    detailHref: "/aurora",
     featured: true,
+  },
+  {
+    name: "Sleeping Beauty - Blue",
+    slug: "sleeping-beauty-blue",
+    category: "Princess",
+    shortDescription:
+      "A dreamy blue-gown variation with classic fairytale poise and a calm, polished party feel.",
+    longDescription:
+      "Beautiful for families who love Sleeping Beauty and want the blue version of the gown while keeping the same sweet, photo-friendly fairytale rhythm.",
+    tags: ["Blue gown", "Classic romance", "Lovely photos"],
+    mainMediaId: "sleepingBeautyBlueMain",
+    insetMediaId: "sleepingBeautyBluePortrait",
+    detailHref: "/sleeping-beauty-blue",
   },
   {
     name: "Snow White",
     slug: "snow-white",
     category: "Princess",
     shortDescription:
-      "A bright, recognizable classic with cheerful energy and storybook charm.",
+      "A bright, cheerful classic with bold storybook color and timeless little-girl charm.",
     longDescription:
-      "Great for birthdays that want a timeless princess favorite, bold color, and warm interaction that keeps younger guests smiling.",
+      "A wonderful choice for younger princess fans who love the original classics and a celebration that feels colorful, joyful, and easy to recognize at first glance.",
     tags: ["Classic favorite", "Bright palette", "Cheerful magic"],
     mainMediaId: "snowWhiteMain",
     insetMediaId: "snowWhitePortrait",
     detailHref: "/snow-white",
-    featured: true,
   },
   {
-    name: "Sofia",
-    slug: "sofia",
+    name: "Princess Sofia",
+    slug: "princess-sophia",
     category: "Princess",
     shortDescription:
-      "Sweet, approachable, and especially lovely for younger guests who want a princess that feels instantly friendly.",
+      "Sweet purple sparkle and a younger-princess feel that little guests connect with right away.",
     longDescription:
-      "A wonderful choice for little ones who light up around purple sparkle, kind smiles, and gentle princess party fun.",
-    tags: ["Younger favorite", "Purple sparkle", "Sweet arrival"],
+      "Especially lovely for younger birthdays, shy guests, and families who want a princess option that feels extra approachable from the very first moment.",
+    tags: ["Purple sparkle", "Younger favorite", "Sweet arrival"],
     mainMediaId: "sofiaMain",
     insetMediaId: "sofiaPortrait",
-    detailHref: "/sofia",
+    detailHref: "/princess-sophia",
     featured: true,
   },
   {
-    name: "Tinker Bell",
-    slug: "tinker-bell",
+    name: "Tinkerbelle Fairy",
+    slug: "fairy",
     category: "Princess",
     shortDescription:
-      "Playful fairy energy with bright color, pixie charm, and a little extra sparkle.",
+      "Pixie sparkle, bright green whimsy, and playful fairy magic that lightens the whole room.",
     longDescription:
-      "Perfect for celebrations that want a lighter fairy feel, a whimsical look, and cheerful character moments children remember.",
+      "Perfect for celebrations that want a magical character with a slightly more playful, whimsical feel than a traditional royal princess.",
     tags: ["Pixie sparkle", "Fairy fun", "Bright green"],
-    mainMediaId: "tinkerbellMain",
-    insetMediaId: "tinkerbellPortrait",
-    detailHref: "/tinker-bell",
-    featured: true,
+    mainMediaId: "tinkerbellMainAlt",
+    insetMediaId: "tinkerbellPortraitAlt",
+    detailHref: "/fairy",
+  },
+  {
+    name: "Fancy Nancy",
+    slug: "fancy-nancy",
+    category: "Princess",
+    shortDescription:
+      "A larger-than-life storybook favorite with feathers, tutus, and plenty of extra fancy fun.",
+    longDescription:
+      "A playful pick for celebrations that want something colorful, imaginative, and a little delightfully over-the-top in the best possible way.",
+    tags: ["Storybook favorite", "Extra fancy", "Playful style"],
+    mainMediaId: "fancyNancyMain",
+    insetMediaId: "fancyNancyPortrait",
+    detailHref: "/fancy-nancy",
+  },
+  {
+    name: "Barbie",
+    slug: "barbie",
+    category: "Princess",
+    shortDescription:
+      "Pink, polished, and instantly iconic for birthdays that want classic glam-doll sparkle.",
+    longDescription:
+      "A wonderful fit for children who love dress-up, pink party style, and a celebration that feels bright, elegant, and unmistakably fun.",
+    tags: ["Pink favorite", "Dress-up glam", "Iconic look"],
+    mainMediaId: "barbieMain",
+    insetMediaId: "barbiePortrait",
+    detailHref: "/barbie",
+  },
+  {
+    name: "Ever After High - Apple White",
+    slug: "ever-after-high-apple",
+    category: "Princess",
+    shortDescription:
+      "A bold storybook look with a bright white-and-red palette and a fashion-forward fairytale edge.",
+    longDescription:
+      "Ideal for celebrations that want something a little different from the classic princess lineup while still feeling rooted in a magical storybook world.",
+    tags: ["Storybook fashion", "White and red", "Royal flair"],
+    mainMediaId: "appleWhiteMain",
+    insetMediaId: "appleWhitePortrait",
+    detailHref: "/ever-after-high-apple",
+  },
+  {
+    name: "Prince",
+    slug: "prince",
+    category: "Princess",
+    shortDescription:
+      "A royal companion character with a warm smile, polished costume, and classic happily-ever-after energy.",
+    longDescription:
+      "A charming addition for fairytale-loving celebrations, whether as a standalone character or a thoughtful complement to the princess lineup.",
+    tags: ["Royal companion", "Storybook charm", "Happily ever after"],
+    mainMediaId: "princeMain",
+    insetMediaId: "princePortrait",
+    detailHref: "/prince",
   },
   {
     name: "Batman",
     slug: "batman",
     category: "Hero",
     shortDescription:
-      "A bold superhero favorite for birthdays that want big reactions, brave energy, and memorable photos.",
+      "A bold superhero favorite with a strong entrance, confident energy, and instant wow for the birthday child.",
     longDescription:
-      "A strong fit for children who light up the moment a superhero arrives, with confident interaction and party photos that instantly feel exciting.",
+      "Perfect for children who want their party to feel brave, exciting, and larger than life, with a hero they recognize the second he walks in.",
     tags: ["Big entrance", "Hero favorite", "Action photos"],
     mainMediaId: "batmanMain",
     insetMediaId: "batmanPortrait",
+    detailHref: "/batman",
     featured: true,
   },
   {
-    name: "Spider-Man",
-    slug: "spider-man",
+    name: "Spiderman",
+    slug: "spiderman",
     category: "Hero",
     shortDescription:
-      "Fast, recognizable, and full of instant birthday energy for kids who want the party to feel exciting right away.",
+      "Fast, familiar, and full of superhero energy for kids who want the party to feel exciting right away.",
     longDescription:
-      "Perfect for celebrations that want superhero posing, energetic reactions, and a character children recognize the second he steps into the room.",
-    tags: ["Superhero poses", "Fast energy", "Big smiles"],
+      "A high-recognition hero choice with pose-ready moments, playful action energy, and the kind of entrance children react to immediately.",
+    tags: ["Superhero poses", "Fast energy", "Birthday favorite"],
     mainMediaId: "spidermanMain",
     insetMediaId: "spidermanPortrait",
+    detailHref: "/spiderman",
     featured: true,
   },
   {
-    name: "Hero Team-Up",
-    slug: "hero-team-up",
+    name: "Monster High - Clawdeen Wolf",
+    slug: "monster-high",
     category: "Hero",
     shortDescription:
-      "A flexible hero-party lane for families choosing between favorites or planning a bold comic-book feel.",
+      "A fierce, fashion-forward character with stripes, attitude, and big personality for bold party kids.",
     longDescription:
-      "If your child loves more than one hero or you want the overall superhero feeling first, this option keeps the booking conversation flexible while still feeling polished.",
-    tags: ["Flexible request", "Comic-book feel", "Custom fit"],
-    mainMediaId: "spidermanMain",
-    insetMediaId: "batmanPortrait",
-    featured: true,
+      "A fun fit for celebrations that want something a little edgier, more colorful, and full of character compared to a traditional princess or hero path.",
+    tags: ["Fashion forward", "Bold costume", "Big personality"],
+    mainMediaId: "monsterHighMain",
+    insetMediaId: "monsterHighPortrait",
+    detailHref: "/monster-high",
   },
   {
     name: "Olaf",
     slug: "olaf",
     category: "Mascot",
     shortDescription:
-      "A bright, playful mascot visit that works especially well for younger guests and big instant smiles.",
+      "A bright, cheerful mascot visit that works beautifully for younger guests and instant smiles.",
     longDescription:
-      "A cheerful choice for frozen-themed fun, school events, or parties that want a recognizable mascot moment without turning the whole schedule upside down.",
-    tags: ["Mascot favorite", "Little-kid smiles", "Frozen fun"],
+      "Great for frozen-themed fun, school events, and celebrations that want a playful recognizable character without adding a complicated schedule block.",
+    tags: ["Frozen fun", "Little-kid smiles", "Mascot favorite"],
     mainMediaId: "olafMain",
     insetMediaId: "olafPortrait",
+    detailHref: "/olaf",
     featured: true,
   },
   {
@@ -204,12 +309,13 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "pink-castle-bounce-house",
     category: "Rental",
     shortDescription:
-      "A bright, exciting add-on that gives children extra room to move, play, and keep the energy going.",
+      "A bright, high-impact add-on that gives children extra room to play and keeps the party feeling lively.",
     longDescription:
-      "Keeps younger guests happily busy and gives parents a clear visual anchor for photos. Pairs naturally with character visits when you want the day to feel fuller without a longer schedule.",
+      "An easy way to make the event feel bigger from the minute guests arrive, while giving children a playful space to burn energy between party highlights.",
     tags: ["Wow at arrival", "Kid-powered fun", "Easy add-on"],
     mainMediaId: "rentalBouncePhoto",
     insetMediaId: "rentalTentPhoto",
+    detailHref: "/pink-castle-bounce-house",
     featured: true,
   },
   {
@@ -217,12 +323,13 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     slug: "pink-party-tent",
     category: "Rental",
     shortDescription:
-      "A bright event tent that adds color, coverage, and a playful setup moment to the celebration.",
+      "A bright event tent that adds color, coverage, and a coordinated visual setup to the celebration.",
     longDescription:
-      "Great for larger gatherings or outdoor events that want the setup to feel coordinated, cheerful, and easy to spot from the moment guests arrive.",
+      "Great for outdoor events that want the setup itself to look festive, easy to spot, and clearly matched to the rest of the party styling.",
     tags: ["Outdoor setup", "Bright event look", "Easy add-on"],
     mainMediaId: "rentalTentPhoto",
     insetMediaId: "rentalBouncePhoto",
+    detailHref: "/pink-party-tent",
     featured: true,
   },
 ];
@@ -233,7 +340,7 @@ const packageCatalog: ReadonlyArray<PackageRecord> = [
     name: "Mini Visit",
     duration: "30 minutes",
     description:
-      "A quick burst of character magic for families who want a memorable entrance, cake moment, and beautiful photos without a longer activity block.",
+      "A quick burst of character magic for families who want a memorable entrance, sweet interaction, and beautiful photos without a longer activity block.",
     highlights: [
       "Wonderful for smaller celebrations or shorter schedules",
       "Perfect for cake, singing, hugs, and keepsake photos",

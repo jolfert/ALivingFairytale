@@ -40,7 +40,7 @@ export const homepageContent = {
     showcase: {
       eyebrow: "A peek at the feeling",
       mainMedia: getMediaAsset("cinderellaMain"),
-      insetMedia: getMediaAsset("elsaPortrait"),
+      insetMedia: getMediaAsset("iceQueenPortrait"),
       storyCardEyebrow: "Party magic in real life",
       storyCardTitle:
         "Action shots for the big moment. Costume portraits for the finishing touch.",
@@ -51,7 +51,7 @@ export const homepageContent = {
         "Graceful arrivals, storybook smiles, and sweet interactive magic.",
       heroLabel: "Superhero",
       heroDescription:
-        "Batman, Spider-Man, and superhero-style party energy with bold entrances and big reactions.",
+        "Batman, Spiderman, and superhero-style party energy with bold entrances and big reactions.",
       planningEyebrow: "Easy from the first click",
       planningTitle: "Choose your path, choose your package, tell us your date.",
       planningDescription:
@@ -122,10 +122,10 @@ export const homepageContent = {
       eyebrow: "Superhero Parties",
       title: "Superhero Parties",
       description:
-        "Batman, Spider-Man, and superhero-style visits with big entrances, bold photos, and birthday energy kids instantly respond to.",
+        "Batman, Spiderman, and superhero-style visits with big entrances, bold photos, and birthday energy kids instantly respond to.",
       href: "/heroes",
       ctaLabel: "Choose a superhero party",
-      tags: ["Batman", "Spider-Man", "Action energy"],
+      tags: ["Batman", "Spiderman", "Action energy"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(251,253,255,0.98),rgba(234,242,255,0.98))]",
       image: getMediaAsset("batmanPortrait"),
@@ -164,7 +164,7 @@ export const homepageContent = {
     },
   ],
   featuredCharacters: pickCharacters([
-    "elsa",
+    "ice-queen",
     "batman",
     "olaf",
     "pink-castle-bounce-house",

@@ -9,7 +9,7 @@ export const princessPageContent = {
     title:
       "Choose from a full cast of princess favorites, now with the real photos families already know.",
     description:
-      "From Ariel and Belle to Cinderella, Elsa, Rapunzel, and more, our princess parties are designed to feel magical for children and reassuringly polished for parents from the first wave to the final photo.",
+      "From Ariel and Belle to Cinderella, Ice Queen, Rapunzel, and more, our princess parties are designed to feel magical for children and reassuringly polished for parents from the first wave to the final photo.",
     highlights: [
       "Real action photos paired with costume portraits",
       "Each princess now has her own detail page",

@@ -9,6 +9,8 @@ export type MediaAsset = {
   alt: string;
   width: number;
   height: number;
+  objectFit?: "cover" | "contain";
+  objectPosition?: string;
   status: "approved" | "placeholder";
   adminLabel: string;
   replaceHint: string;
@@ -85,6 +87,7 @@ export type CtaBannerContent = {
 
 export type CharacterPageContent = {
   slug: string;
+  theme: "princess" | "hero" | "playful";
   navigation: ReadonlyArray<LinkConfig>;
   hero: CategoryHeroContent;
   sections: {

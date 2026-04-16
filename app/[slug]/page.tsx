@@ -10,27 +10,23 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
 import {
-  getPrincessCharacterPage,
-  getPrincessCharacterPagePackages,
-  getPrincessCharacterPageRelated,
-  princessDetailSlugs,
+  characterDetailSlugs,
+  getCharacterPageContent,
+  getCharacterPagePackages,
+  getCharacterPageRelated,
 } from "@/data/character-pages";
 
-type CharacterPageProps = {
-  params: {
-    slug: string;
-  };
-};
+type CharacterPageProps = PageProps<"/[slug]">;
 
 export async function generateStaticParams() {
-  return princessDetailSlugs.map((slug) => ({ slug }));
+  return characterDetailSlugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: CharacterPageProps): Promise<Metadata> {
-  const { slug } = params;
-  const content = getPrincessCharacterPage(slug);
+  const { slug } = await params;
+  const content = getCharacterPageContent(slug);
 
   if (!content) {
     return {};
@@ -55,15 +51,15 @@ export async function generateMetadata({
 }
 
 export default async function CharacterPage({ params }: CharacterPageProps) {
-  const { slug } = params;
-  const content = getPrincessCharacterPage(slug);
+  const { slug } = await params;
+  const content = getCharacterPageContent(slug);
 
   if (!content) {
     notFound();
   }
 
-  const relatedCharacters = getPrincessCharacterPageRelated(slug);
-  const packages = getPrincessCharacterPagePackages(slug);
+  const relatedCharacters = getCharacterPageRelated(slug);
+  const packages = getCharacterPagePackages(slug);
 
   return (
     <>
@@ -73,7 +69,7 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
         cta={{ label: `Book ${content.hero.eyebrow}`, href: "/book" }}
       />
       <main id="top" className="relative overflow-x-clip pb-20">
-        <CategoryHero content={content.hero} theme="princess" />
+        <CategoryHero content={content.hero} theme={content.theme} />
 
         <PageSection id="highlights">
           <SectionHeading
@@ -81,7 +77,10 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
             title={content.sections.highlights.title}
             description={content.sections.highlights.description}
           />
-          <FeatureCardGrid items={content.highlightCards} />
+          <FeatureCardGrid
+            items={content.highlightCards}
+            tone={content.theme === "princess" ? "fairytale" : content.theme}
+          />
         </PageSection>
 
         <PageSection id="related">
@@ -90,13 +89,13 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
             title={content.sections.related.title}
             description={content.sections.related.description}
           />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {relatedCharacters.map((character) => (
               <CharacterCard
                 key={character.slug}
                 character={character}
                 variant="compact"
-                theme="princess"
+                theme={content.theme === "playful" ? "playful" : content.theme}
               />
             ))}
           </div>
@@ -108,11 +107,17 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
             title={content.sections.packages.title}
             description={content.sections.packages.description}
           />
-          <PackageGrid packages={packages} />
+          <PackageGrid
+            packages={packages}
+            tone={content.theme === "princess" ? "fairytale" : content.theme}
+          />
         </PageSection>
 
         <PageSection id="book-cta">
-          <CtaBanner content={content.cta} />
+          <CtaBanner
+            content={content.cta}
+            tone={content.theme === "princess" ? "fairytale" : content.theme}
+          />
         </PageSection>
       </main>
       <Footer links={content.navigation} />

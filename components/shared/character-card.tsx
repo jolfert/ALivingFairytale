@@ -49,6 +49,8 @@ export function CharacterCard({
     variant === "compact"
       ? "min-h-[15rem] sm:min-h-[16rem]"
       : "min-h-[20rem] sm:min-h-[22rem]";
+  const mainImageFit = character.mainMedia.objectFit ?? "cover";
+  const insetImageFit = character.insetMedia?.objectFit ?? "cover";
 
   return (
     <article
@@ -66,7 +68,10 @@ export function CharacterCard({
             alt={character.mainMedia.alt}
             width={character.mainMedia.width}
             height={character.mainMedia.height}
-            className="h-full w-full object-cover"
+            className={`h-full w-full ${
+              mainImageFit === "contain" ? "bg-white p-3 object-contain" : "object-cover"
+            }`}
+            style={{ objectPosition: character.mainMedia.objectPosition }}
           />
         </div>
 
@@ -77,7 +82,10 @@ export function CharacterCard({
               alt={character.insetMedia.alt}
               width={character.insetMedia.width}
               height={character.insetMedia.height}
-              className="h-full w-full object-cover"
+              className={`h-full w-full ${
+                insetImageFit === "contain" ? "bg-white p-2 object-contain" : "object-cover"
+              }`}
+              style={{ objectPosition: character.insetMedia.objectPosition }}
             />
           </div>
         ) : null}

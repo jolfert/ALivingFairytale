@@ -19,6 +19,7 @@ type PartyPathCardProps = {
 
 export function PartyPathCard({ path }: PartyPathCardProps) {
   const usesPhotography = path.image.status === "approved";
+  const imageFit = path.image.objectFit ?? "cover";
 
   return (
     <article
@@ -44,7 +45,16 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
             width={usesPhotography ? 80 : 64}
             height={usesPhotography ? 80 : 64}
             aria-hidden
-            className={usesPhotography ? "h-full w-full object-cover" : ""}
+            className={
+              usesPhotography
+                ? `h-full w-full ${
+                    imageFit === "contain"
+                      ? "bg-white p-2 object-contain"
+                      : "object-cover"
+                  }`
+                : ""
+            }
+            style={{ objectPosition: path.image.objectPosition }}
           />
         </div>
       </div>

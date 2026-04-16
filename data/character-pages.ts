@@ -1,10 +1,16 @@
-import { princessPageContent } from "@/data/princess-page";
 import {
   getCharacterBySlug,
+  getCharactersWithDetailPages,
   pickCharacters,
   pickPackages,
 } from "@/data/catalog";
-import type { CharacterPageContent } from "@/data/types";
+import { primaryNavigation } from "@/data/site-shell";
+import type {
+  CharacterCategory,
+  CharacterPageContent,
+  InfoCard,
+  ResolvedCharacter,
+} from "@/data/types";
 
 const sharedPackageSlugs = [
   "mini-visit",
@@ -12,646 +18,403 @@ const sharedPackageSlugs = [
   "signature-fairytale",
 ] as const;
 
-const princessCharacterPages = {
-  ariel: {
-    title: "Ariel parties full of bright smiles, playful wonder, and sea-inspired magic.",
-    description:
-      "Ariel brings warm energy, mermaid sparkle, and an easy child-friendly presence that makes birthdays feel lively from the first hello.",
-    highlights: [
-      "Wonderful for children who love mermaids and bright color",
-      "Sweet one-on-one interaction and photo-friendly moments",
-      "A playful fit for birthdays that want a lively princess feel",
-    ],
-    panelTitle: "A princess page made for mermaid-dream birthdays.",
-    panelDescription:
-      "Families usually choose Ariel when they want a colorful princess look, playful charm, and a character who feels instantly approachable.",
-    supportingCards: [
+const pageThemes: Record<CharacterCategory, CharacterPageContent["theme"]> = {
+  Princess: "princess",
+  Hero: "hero",
+  Mascot: "playful",
+  Rental: "playful",
+};
+
+const categoryCopy = {
+  Princess: {
+    sectionTitle:
+      "She should feel magical in the room and beautiful in the photos.",
+    compareTitle:
+      "Still comparing favorites? Here are a few more beautiful character options.",
+    packageTitle: "Choose the pace that fits the celebration you are planning.",
+    panelEyebrow: "Why families choose her",
+    support: [
       {
         eyebrow: "Party feel",
-        title: "Bright and playful",
+        title: "Dreamy, warm, and photo-friendly",
         description:
-          "A lovely pick when you want the room to feel cheerful, colorful, and full of little smiles.",
+          "The focus stays on child connection, sweet pacing, and the kind of keepsake moments families hope for.",
+      },
+      {
+        eyebrow: "Booking ease",
+        title: "Simple to compare and easy to request",
+        description:
+          "Every character page keeps the same structure so parents can move from maybe to yes without getting lost.",
+      },
+      {
+        eyebrow: "Best fit",
+        title: "Built for real favorite-character birthdays",
+        description:
+          "The page is shaped to help families picture the actual celebration, not just the costume on its own.",
+      },
+    ] as ReadonlyArray<InfoCard>,
+    highlights: [
+      {
+        eyebrow: "For the birthday child",
+        title: "She feels like the star of the story",
+        description:
+          "The experience is paced to create real wonder, not just a quick photo stop.",
+      },
+      {
+        eyebrow: "For the room",
+        title: "The celebration looks every bit as lovely as it feels",
+        description:
+          "From arrival photos to close-up moments, the visual side stays polished and premium.",
+      },
+      {
+        eyebrow: "For parents",
+        title: "The path stays easy to follow",
+        description:
+          "Clear packages, warm communication, and a familiar page structure keep decision-making simple.",
+      },
+    ] as ReadonlyArray<InfoCard>,
+  },
+  Hero: {
+    sectionTitle:
+      "The party should feel bold, exciting, and still easy for parents to follow.",
+    compareTitle:
+      "Need to compare heroes? These are the other action-forward favorites families look at next.",
+    packageTitle:
+      "Choose the amount of time and energy that fits the kind of entrance you want.",
+    panelEyebrow: "Why families book this hero",
+    support: [
+      {
+        eyebrow: "Party feel",
+        title: "Big reactions without chaotic pacing",
+        description:
+          "The energy is high, but the structure stays thoughtful so the room still feels manageable.",
       },
       {
         eyebrow: "Photo moments",
-        title: "Beautiful close-up interaction",
+        title: "Action-ready from the first minute",
         description:
-          "Her action photos tend to shine in the warm one-on-one moments children remember most.",
+          "Strong entrances and recognizable costumes help the big reaction moments happen quickly.",
       },
       {
-        eyebrow: "Good fit",
-        title: "Great for mermaid-loving birthdays",
+        eyebrow: "Best fit",
+        title: "Built for kids who want real hero energy",
         description:
-          "Especially fun for guests who love ocean colors, imaginative play, and a princess who feels lively right away.",
+          "These pages keep the premium brand feel while shifting into bolder, more action-forward storytelling.",
       },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "Her warm, curious energy",
-        description:
-          "Ariel feels playful, friendly, and easy to connect with from the first moment she arrives.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "Lovely photos with real personality",
-        description:
-          "The bright hair, rich costume colors, and close-up child interaction create especially memorable images.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She brings magic without feeling too formal",
-        description:
-          "That balance makes her a great fit for celebrations that want elegance and fun at the same time.",
-      },
-    ],
-    relatedCharacters: ["belle", "jasmine", "rapunzel"],
-  },
-  belle: {
-    title: "Belle parties that feel elegant, warm, and instantly storybook.",
-    description:
-      "Belle is perfect for families who want a classic princess entrance, soft golden visuals, and a celebration that photographs beautifully from beginning to end.",
+    ] as ReadonlyArray<InfoCard>,
     highlights: [
-      "A timeless favorite for classic princess birthdays",
-      "Beautiful yellow gown moments that stand out in photos",
-      "Warm, polished interaction from entrance to goodbye",
-    ],
-    panelTitle: "Classic fairytale beauty with a calm, confident party rhythm.",
-    panelDescription:
-      "Belle works especially well when families want that instantly recognizable royal look while keeping the celebration warm, graceful, and child-centered.",
-    supportingCards: [
       {
-        eyebrow: "Visual impact",
-        title: "A gown that reads beautifully in every photo",
+        eyebrow: "For the birthday child",
+        title: "The entrance lands right away",
         description:
-          "Belle's look adds immediate wow-factor the moment she steps into the party space.",
+          "The first few minutes are built to create that unmistakable superhero-party wow moment.",
       },
       {
-        eyebrow: "Birthday energy",
-        title: "Elegant without feeling stiff",
+        eyebrow: "For the guest list",
+        title: "The room feels energized, not messy",
         description:
-          "Children still get warmth and playfulness, while parents get a polished storybook atmosphere.",
+          "The pace stays lively and interactive without making the whole celebration feel scattered.",
       },
       {
-        eyebrow: "Best for",
-        title: "Families who want a true classic",
+        eyebrow: "For parents",
+        title: "The booking still feels clear and premium",
         description:
-          "A lovely fit when Belle is already the princess your child talks about most.",
+          "Families get the same thoughtful process and polished presentation as every other path on the site.",
       },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "The royal fairytale feeling",
-        description:
-          "Belle creates the kind of princess moment that feels instantly familiar and special at the same time.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A polished look that elevates the whole room",
-        description:
-          "Her action and portrait pairings make it easy to see how well her look carries in party photos.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She suits both intimate and larger celebrations",
-        description:
-          "Belle feels just as lovely in a cozy home visit as she does in a bigger event space.",
-      },
-    ],
-    relatedCharacters: ["cinderella", "sleeping-beauty", "sofia"],
+    ] as ReadonlyArray<InfoCard>,
   },
-  cinderella: {
-    title: "Cinderella parties filled with blue-gown magic, sweet moments, and timeless sparkle.",
-    description:
-      "Cinderella is a beautiful fit for families who want graceful photos, polished interaction, and a princess presence that feels instantly magical.",
-    highlights: [
-      "A classic blue-gown favorite for dreamier celebrations",
-      "Lovely for keepsake photos and sweet storybook moments",
-      "Warm, polished energy that feels special for the birthday child",
-    ],
-    panelTitle: "A princess choice that feels elegant from every angle.",
-    panelDescription:
-      "Cinderella is often the pick when parents want the most classic fairytale silhouette and children want the kind of princess moment that feels iconic.",
-    supportingCards: [
+  Mascot: {
+    sectionTitle:
+      "Mascot visits should feel cheerful, low-friction, and easy to build into the day.",
+    compareTitle:
+      "If you are still deciding, here are the other playful options families look at next.",
+    packageTitle:
+      "Choose the length that fits the event and how you want to use the character moment.",
+    panelEyebrow: "Why this option works",
+    support: [
       {
         eyebrow: "Party feel",
-        title: "Soft sparkle and graceful pacing",
+        title: "Bright, simple, and crowd-friendly",
         description:
-          "Her presence naturally gives the celebration a calmer, more elegant rhythm.",
+          "This path works well when families want instant smiles without a lot of extra explaining.",
       },
       {
-        eyebrow: "Photo moments",
-        title: "Beautiful action and portrait options",
+        eyebrow: "Planning ease",
+        title: "Easy to pair with the rest of the event",
         description:
-          "The real party photo plus the clean costume portrait make her page especially easy to book from.",
+          "Mascot visits slide naturally into birthdays, school events, and mixed-age celebrations.",
       },
       {
-        eyebrow: "Best for",
-        title: "Classic princess birthdays",
+        eyebrow: "Best fit",
+        title: "A good choice when speed and clarity matter",
         description:
-          "Perfect when the dream is a blue gown, a polished entrance, and a celebration that feels truly magical.",
+          "The focus stays on recognizable fun and easy planning instead of a long activity-heavy structure.",
       },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "The true fairytale feel",
-        description:
-          "Cinderella instantly delivers the look and feeling many children picture when they imagine a princess party.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A refined visual style that photographs beautifully",
-        description:
-          "Her costume and interaction style keep the page feeling premium and memorable.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She brings wonder without overcomplicating the party",
-        description:
-          "That makes her an easy yes for parents who want something magical and polished.",
-      },
-    ],
-    relatedCharacters: ["elsa", "belle", "snow-white"],
-  },
-  elsa: {
-    title: "Elsa parties with frozen sparkle, warm smiles, and the big reactions families hope for.",
-    description:
-      "Elsa is one of the clearest wow-factor choices in the lineup, balancing icy visual magic with warm interaction that keeps the experience sweet and child-friendly.",
+    ] as ReadonlyArray<InfoCard>,
     highlights: [
-      "A high-demand favorite for frozen-themed birthdays",
-      "Shimmering visuals and photo-ready party moments",
-      "Warm, reassuring interaction behind the icy glamour",
-    ],
-    panelTitle: "The frozen favorite that still feels warm in the room.",
-    panelDescription:
-      "Families usually choose Elsa when they want immediate excitement, recognizable styling, and a princess children light up around on sight.",
-    supportingCards: [
       {
-        eyebrow: "Visual impact",
-        title: "An instant frozen-party moment",
+        eyebrow: "For the kids",
+        title: "The smiles happen fast",
         description:
-          "Her gown, braid, and icy color palette make the party feel themed the second she arrives.",
+          "Recognizable mascot characters help children react right away, especially in mixed-age rooms.",
       },
       {
-        eyebrow: "Photo moments",
-        title: "Close-up magic with children",
+        eyebrow: "For the schedule",
+        title: "Simple to add without overcomplicating the day",
         description:
-          "Elsa's action photos are especially strong when the party includes face paint, dress-up, and child-to-character connection.",
+          "This keeps the event moving while still adding a memorable visual moment.",
       },
       {
-        eyebrow: "Best for",
-        title: "Birthdays with a frozen obsession",
+        eyebrow: "For parents",
+        title: "Clear expectations and an easy next step",
         description:
-          "If Elsa is the name you hear every day at home, this page is built to make booking her easy.",
+          "The page keeps the details straightforward so you can ask the right questions quickly.",
       },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "The instant recognition",
-        description:
-          "Elsa gets big reactions right away, especially from children already living in a frozen world at home.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A princess page that already shows the real magic",
-        description:
-          "The party image and portrait pairing make it easy to picture the actual celebration, not just a costume.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She feels exciting and polished at the same time",
-        description:
-          "That balance is a big part of why frozen-themed bookings stay so popular.",
-      },
-    ],
-    relatedCharacters: ["cinderella", "ariel", "rapunzel"],
+    ] as ReadonlyArray<InfoCard>,
   },
-  jasmine: {
-    title: "Jasmine parties with bright color, adventurous spirit, and a warm princess welcome.",
-    description:
-      "Jasmine is a beautiful choice for children who want a princess that feels bold, kind, and instantly memorable in person and in photos.",
+  Rental: {
+    sectionTitle:
+      "Rental add-ons should make the day feel bigger without making the planning harder.",
+    compareTitle:
+      "Here are the other cheerful event extras families often compare with this one.",
+    packageTitle:
+      "Choose the setup that works best for your event and how full you want the celebration to feel.",
+    panelEyebrow: "Why families add this",
+    support: [
+      {
+        eyebrow: "Visual payoff",
+        title: "It makes the setup feel complete right away",
+        description:
+          "A strong rental piece helps the event look festive before the first guest even walks in.",
+      },
+      {
+        eyebrow: "Planning ease",
+        title: "Simple to ask about alongside character visits",
+        description:
+          "Families can keep everything in one booking conversation instead of piecing it together from different vendors.",
+      },
+      {
+        eyebrow: "Best fit",
+        title: "A great add-on when you want the party to feel fuller",
+        description:
+          "Rentals help give children extra movement and give the event a clear visual anchor.",
+      },
+    ] as ReadonlyArray<InfoCard>,
     highlights: [
-      "A vibrant pick for children who love adventurous princesses",
-      "Lovely hug moments and child-to-character interaction",
-      "A rich color palette that stands out in party galleries",
-    ],
-    panelTitle: "A princess page with bold color and a genuinely warm feel.",
-    panelDescription:
-      "Jasmine works especially well when families want something elegant but slightly less expected than the most traditional gown-based choices.",
-    supportingCards: [
       {
-        eyebrow: "Visual style",
-        title: "Rich teal and gold details",
+        eyebrow: "For the event",
+        title: "It adds instant visual excitement",
         description:
-          "Her costume brings a very different color story to the page, which helps her stand apart immediately.",
+          "The setup reads as fun and intentional before the party even gets moving.",
       },
       {
-        eyebrow: "Party feel",
-        title: "Warm and welcoming",
+        eyebrow: "For the kids",
+        title: "There is more room for movement and play",
         description:
-          "The strongest Jasmine moments tend to be the close, smile-filled interactions children remember most.",
+          "That helps keep the celebration feeling active between the main party moments.",
       },
       {
-        eyebrow: "Best for",
-        title: "Families wanting something a little different",
+        eyebrow: "For parents",
+        title: "It stays easy to bundle into the same request",
         description:
-          "A great fit if your child loves princesses but gravitates toward brighter, bolder favorites.",
+          "The next step is still one simple inquiry instead of another planning headache.",
       },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "Her adventurous princess energy",
-        description:
-          "Jasmine feels lively and exciting while still reading clearly as a polished princess choice.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "Strong one-on-one connection in photos",
-        description:
-          "Her main image shows the kind of hug and emotional moment parents love seeing in a booking gallery.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She gives the lineup more variety",
-        description:
-          "That makes Jasmine a strong choice when families want a princess party that feels special and slightly different.",
-      },
-    ],
-    relatedCharacters: ["ariel", "rapunzel", "tinker-bell"],
-  },
-  rapunzel: {
-    title: "Rapunzel parties with golden color, playful charm, and sunshine-filled princess energy.",
-    description:
-      "Rapunzel is made for children who love braids, laughter, and a princess page that feels bright, playful, and full of personality.",
-    highlights: [
-      "A favorite for children who love Rapunzel's playful spirit",
-      "Distinctive braid and costume styling that reads instantly",
-      "A warm, lively choice for lighthearted celebrations",
-    ],
-    panelTitle: "A page built for the princess who feels playful from the very first glance.",
-    panelDescription:
-      "Rapunzel tends to shine when families want princess magic with a little more humor, sunshine, and spirited fun woven through it.",
-    supportingCards: [
-      {
-        eyebrow: "Visual style",
-        title: "That instantly recognizable braid",
-        description:
-          "Her look stands out right away and helps children connect the second they see her.",
-      },
-      {
-        eyebrow: "Party feel",
-        title: "Lighthearted and cheerful",
-        description:
-          "Rapunzel's energy leans sweet, playful, and welcoming rather than overly formal.",
-      },
-      {
-        eyebrow: "Best for",
-        title: "Children who want a princess with personality",
-        description:
-          "She is a wonderful fit when your child loves the fun, lively side of princess magic.",
-      },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "Her sunny, curious energy",
-        description:
-          "Rapunzel feels cheerful and animated, which helps children warm up quickly during the visit.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A page that showcases the full costume beautifully",
-        description:
-          "Her main image gives a clear look at the braid, the palette, and the overall character feel.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She keeps the party whimsical without losing polish",
-        description:
-          "That makes Rapunzel a strong bridge between playful fun and premium presentation.",
-      },
-    ],
-    relatedCharacters: ["jasmine", "elsa", "sofia"],
-  },
-  "sleeping-beauty": {
-    title: "Sleeping Beauty parties with soft pink elegance and timeless fairytale warmth.",
-    description:
-      "Sleeping Beauty is perfect for families who want a classic rosy fairytale mood, gentle princess interaction, and a celebration that feels calm and lovely.",
-    highlights: [
-      "A timeless pink-gown favorite for softer celebrations",
-      "Sweet, low-pressure interaction that feels warm and graceful",
-      "Wonderful for birthdays that want a romantic storybook look",
-    ],
-    panelTitle: "The gentle pink princess page for calm, lovely celebration energy.",
-    panelDescription:
-      "Families often choose Sleeping Beauty when they want something elegant and unmistakably royal, but with a softer tone than the bigger wow-factor picks.",
-    supportingCards: [
-      {
-        eyebrow: "Visual style",
-        title: "A classic pink fairytale palette",
-        description:
-          "Her look instantly gives the page that soft storybook romance parents and children both love.",
-      },
-      {
-        eyebrow: "Party feel",
-        title: "Gentle and graceful",
-        description:
-          "Sleeping Beauty tends to create the kind of quiet magical moments that feel especially sweet in person.",
-      },
-      {
-        eyebrow: "Best for",
-        title: "Families who want timeless princess magic",
-        description:
-          "A beautiful option when your child loves a true pink-gown princess moment.",
-      },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "The soft pink princess dream",
-        description:
-          "Her gown and look feel instantly magical for children drawn to the most classic princess styling.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A warm, approachable photo story",
-        description:
-          "The action image shows the kind of gentle one-on-one interaction families trust and remember.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She brings calm beauty to the lineup",
-        description:
-          "That makes her especially lovely for more intimate or softer-toned celebrations.",
-      },
-    ],
-    relatedCharacters: ["belle", "cinderella", "sofia"],
-  },
-  "snow-white": {
-    title: "Snow White parties with cheerful color, classic charm, and bright little-girl magic.",
-    description:
-      "Snow White is a timeless favorite for younger princess fans, bringing bold storybook color and a warm, friendly party presence.",
-    highlights: [
-      "A classic favorite that younger guests recognize quickly",
-      "Bright, storybook colors that read beautifully in photos",
-      "A cheerful fit for parties that want a traditional princess feel",
-    ],
-    panelTitle: "A bright classic princess page with plenty of storybook charm.",
-    panelDescription:
-      "Snow White works especially well when families want one of the most iconic fairytale looks in the lineup and a princess younger children respond to right away.",
-    supportingCards: [
-      {
-        eyebrow: "Visual style",
-        title: "Bold classic princess color",
-        description:
-          "Her red, blue, and yellow palette adds instant fairytale character to any party setting.",
-      },
-      {
-        eyebrow: "Party feel",
-        title: "Cheerful and friendly",
-        description:
-          "Snow White's page leans warm, approachable, and especially lovely for mixed-age guest lists.",
-      },
-      {
-        eyebrow: "Best for",
-        title: "Children who love the original classics",
-        description:
-          "She is a wonderful choice when your child lights up around the most timeless princess stories.",
-      },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "A princess who feels instantly familiar",
-        description:
-          "Snow White brings one of the most recognizable silhouettes in the entire lineup.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "Classic fairytale photos with strong color",
-        description:
-          "Her page looks beautiful in galleries because her costume reads so clearly in both portraits and action shots.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She keeps the party feeling joyful and easy",
-        description:
-          "That simplicity makes Snow White a great fit for many younger-birthday celebrations.",
-      },
-    ],
-    relatedCharacters: ["cinderella", "sleeping-beauty", "sofia"],
-  },
-  sofia: {
-    title: "Sofia parties with sweet purple sparkle and a warm, younger-princess feel.",
-    description:
-      "Sofia is often the perfect choice for little ones who want a princess they recognize right away and feel comfortable around from the start.",
-    highlights: [
-      "A gentle, younger favorite that feels instantly approachable",
-      "Lovely purple styling with soft sparkle and warmth",
-      "A sweet fit for smaller birthdays and early princess fans",
-    ],
-    panelTitle: "A princess page built for the little ones who want their very own princess friend.",
-    panelDescription:
-      "Sofia tends to shine for younger ages, cozy birthday spaces, and families who want a princess choice that feels especially easy to say yes to.",
-    supportingCards: [
-      {
-        eyebrow: "Visual style",
-        title: "Purple sparkle with a child-friendly feel",
-        description:
-          "Her look reads as polished and magical while still feeling especially inviting to younger guests.",
-      },
-      {
-        eyebrow: "Party feel",
-        title: "Sweet and approachable",
-        description:
-          "Sofia creates a welcoming tone that helps shy children warm up more easily.",
-      },
-      {
-        eyebrow: "Best for",
-        title: "Early princess birthdays",
-        description:
-          "A lovely option for children just starting to fall in love with princess parties.",
-      },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "A princess that feels like a friend",
-        description:
-          "Sofia's warm expression and gentle styling make her especially easy for younger children to connect with.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A softer, sweeter booking option",
-        description:
-          "Her page gives families another recognizable character without the bigger, more dramatic look of some other princesses.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She brings a younger-friendly balance to the lineup",
-        description:
-          "That makes Sofia a smart choice for smaller, sweeter, age-appropriate celebrations.",
-      },
-    ],
-    relatedCharacters: ["sleeping-beauty", "belle", "rapunzel"],
-  },
-  "tinker-bell": {
-    title: "Tinker Bell parties with pixie sparkle, playful color, and fairy-sized charm.",
-    description:
-      "Tinker Bell is a whimsical choice for celebrations that want something magical, bright, and just a little more playful than a classic royal look.",
-    highlights: [
-      "A fairy favorite for children who love sparkle and whimsy",
-      "Bright green styling that stands apart in photos",
-      "A playful option that still feels polished and photo-ready",
-    ],
-    panelTitle: "A fairy page full of pixie energy and bright little magical details.",
-    panelDescription:
-      "Tinker Bell is ideal for families who want a softer fairy feel, a fun splash of color, and a character that instantly changes the mood of the party.",
-    supportingCards: [
-      {
-        eyebrow: "Visual style",
-        title: "The page reads brighter and more playful",
-        description:
-          "Her green palette and fairy silhouette add variety and help the lineup feel more complete.",
-      },
-      {
-        eyebrow: "Party feel",
-        title: "Whimsical and lighthearted",
-        description:
-          "Tinker Bell is a lovely fit when you want something magical without leaning fully into a royal tone.",
-      },
-      {
-        eyebrow: "Best for",
-        title: "Children who love fairies and sparkle",
-        description:
-          "A perfect option for guests who want pixie magic, not just a traditional princess gown.",
-      },
-    ],
-    highlightCards: [
-      {
-        eyebrow: "What children love",
-        title: "The fairy look feels instantly fun",
-        description:
-          "Tinker Bell gives the lineup a playful magical option children recognize right away.",
-      },
-      {
-        eyebrow: "What parents love",
-        title: "A different visual mood without losing polish",
-        description:
-          "That variety helps the princess page feel more complete and more useful when families are comparing options.",
-      },
-      {
-        eyebrow: "Why it works",
-        title: "She broadens the lineup beautifully",
-        description:
-          "Tinker Bell adds a fairy path for families who want magic with a lighter, more whimsical feel.",
-      },
-    ],
-    relatedCharacters: ["jasmine", "rapunzel", "ariel"],
+    ] as ReadonlyArray<InfoCard>,
   },
 } as const;
 
-export const princessDetailSlugs = Object.keys(
-  princessCharacterPages,
-) as ReadonlyArray<keyof typeof princessCharacterPages>;
+const relatedOverrides: Partial<Record<string, ReadonlyArray<string>>> = {
+  ariel: ["ariel-pink", "jasmine", "rapunzel"],
+  "ariel-pink": ["ariel", "barbie", "rapunzel"],
+  belle: ["cinderella", "aurora", "princess-sophia"],
+  cinderella: ["cinderella-new", "ice-queen", "snow-white"],
+  "cinderella-new": ["cinderella", "aurora", "princess-sophia"],
+  "ice-queen": ["ice-princess", "cinderella", "princess-sophia"],
+  "ice-princess": ["ice-queen", "princess-sophia", "aurora"],
+  jasmine: ["ariel", "rapunzel", "snow-white"],
+  rapunzel: ["ariel-pink", "jasmine", "barbie"],
+  aurora: ["sleeping-beauty-blue", "belle", "cinderella"],
+  "sleeping-beauty-blue": ["aurora", "cinderella-new", "ice-queen"],
+  "princess-sophia": ["aurora", "ice-princess", "barbie"],
+  fairy: ["ariel", "princess-sophia", "rapunzel"],
+  "fancy-nancy": ["barbie", "ever-after-high-apple", "fairy"],
+  barbie: ["fancy-nancy", "ariel-pink", "ever-after-high-apple"],
+  "ever-after-high-apple": ["barbie", "fancy-nancy", "snow-white"],
+  prince: ["belle", "cinderella", "aurora"],
+  batman: ["spiderman", "monster-high"],
+  spiderman: ["batman", "monster-high"],
+  "monster-high": ["spiderman", "batman"],
+  olaf: ["ice-queen", "ice-princess", "pink-castle-bounce-house"],
+  "pink-castle-bounce-house": ["pink-party-tent", "olaf"],
+  "pink-party-tent": ["pink-castle-bounce-house", "olaf"],
+};
 
-export function getPrincessCharacterPage(
+function getCategoryLabel(character: ResolvedCharacter) {
+  if (character.category === "Rental") {
+    return "party add-on";
+  }
+  if (character.category === "Mascot") {
+    return "mascot visit";
+  }
+  if (character.category === "Hero") {
+    return "hero party";
+  }
+  return "princess party";
+}
+
+function buildHeroTitle(character: ResolvedCharacter) {
+  if (character.category === "Hero") {
+    return `${character.name} parties with a bold entrance, strong photo moments, and the kind of birthday energy kids react to instantly.`;
+  }
+  if (character.category === "Mascot") {
+    return `${character.name} visits that feel playful, recognizable, and easy to fold into the celebration.`;
+  }
+  if (character.category === "Rental") {
+    return `${character.name} setups that make the celebration feel fuller, brighter, and more exciting right away.`;
+  }
+  return `${character.name} parties full of storybook charm, beautiful photos, and real favorite-character magic.`;
+}
+
+function buildHeroDescription(character: ResolvedCharacter) {
+  return character.longDescription ?? character.shortDescription;
+}
+
+function buildHeroHighlights(character: ResolvedCharacter) {
+  return [
+    character.tags[0] ?? "Photo-ready favorite",
+    character.tags[1] ?? "Warm party moments",
+    character.tags[2] ?? "Easy to book",
+  ];
+}
+
+function getRelatedCharacters(character: ResolvedCharacter) {
+  const override = relatedOverrides[character.slug];
+  if (override) {
+    return override;
+  }
+
+  return getCharactersWithDetailPages()
+    .filter(
+      (item) =>
+        item.slug !== character.slug && item.category === character.category,
+    )
+    .slice(0, 3)
+    .map((item) => item.slug);
+}
+
+export const characterDetailSlugs = getCharactersWithDetailPages().map(
+  (character) => character.slug,
+);
+
+export function getCharacterPageContent(
   slug: string,
 ): CharacterPageContent | undefined {
   const character = getCharacterBySlug(slug);
-  if (!character || character.category !== "Princess") {
+  if (!character?.detailHref) {
     return undefined;
   }
 
-  const config = princessCharacterPages[
-    slug as keyof typeof princessCharacterPages
-  ];
-  if (!config) {
-    return undefined;
-  }
+  const categoryTheme = pageThemes[character.category];
+  const copy = categoryCopy[character.category];
+  const relatedCharacters = getRelatedCharacters(character);
+  const categoryLabel = getCategoryLabel(character);
 
   return {
     slug,
-    navigation: princessPageContent.navigation,
+    theme: categoryTheme,
+    navigation: primaryNavigation,
     hero: {
       eyebrow: character.name,
-      title: config.title,
-      description: config.description,
-      highlights: config.highlights,
+      title: buildHeroTitle(character),
+      description: buildHeroDescription(character),
+      highlights: buildHeroHighlights(character),
       primaryCta: {
-        label: `Book ${character.name}`,
+        label:
+          character.category === "Rental"
+            ? `Ask about ${character.name}`
+            : `Book ${character.name}`,
         href: "/book",
       },
       secondaryCta: {
-        label: "See all princesses",
-        href: "/princess#characters",
+        label:
+          character.category === "Hero"
+            ? "See all heroes"
+            : character.category === "Mascot" || character.category === "Rental"
+              ? "See mascots & rentals"
+              : "See all princesses",
+        href:
+          character.category === "Hero"
+            ? "/heroes#characters"
+            : character.category === "Mascot" || character.category === "Rental"
+              ? "/mascots#showcase"
+              : "/princess#characters",
       },
       mainMedia: character.mainMedia,
       insetMedia: character.insetMedia,
-      panelEyebrow: "Why families choose her",
-      panelTitle: config.panelTitle,
-      panelDescription: config.panelDescription,
-      supportingCards: config.supportingCards,
+      panelEyebrow: copy.panelEyebrow,
+      panelTitle: `${character.name} is a ${categoryLabel} that helps families picture the real celebration, not just the costume.`,
+      panelDescription:
+        "This page uses the same premium booking system as the rest of the site, so you can compare favorites, look at the real imagery, and move forward without losing momentum.",
+      supportingCards: copy.support,
     },
     sections: {
       highlights: {
-        eyebrow: "Why this princess works",
-        title: `${character.name} should feel magical in the room and beautiful in the photos.`,
+        eyebrow: "What families can expect",
+        title: copy.sectionTitle,
         description:
-          "These are the details parents usually care about most when they are choosing between princesses for the big day.",
+          "These are the details families usually care about most when they are deciding which character best fits the day.",
       },
       related: {
-        eyebrow: "More princess favorites",
-        title: "Still comparing? Here are a few more beautiful options families love.",
+        eyebrow: "Compare favorites",
+        title: copy.compareTitle,
         description:
-          "Every princess page stays inside the same booking flow, so you can compare favorites without losing momentum.",
+          "Every character page stays inside the same booking flow, so it is easy to compare a few favorites before you submit your request.",
       },
       packages: {
         eyebrow: "Package options",
-        title: `Choose the package that fits your ${character.name} party best.`,
+        title: copy.packageTitle,
         description:
-          "The package structure stays consistent so parents can compare time, pacing, and party feel quickly.",
+          "The package structure stays consistent across the site so families can compare time, pace, and party feel quickly.",
       },
     },
-    highlightCards: config.highlightCards,
-    relatedCharacters: config.relatedCharacters,
+    highlightCards: copy.highlights,
+    relatedCharacters,
     packageSlugs: sharedPackageSlugs,
     cta: {
-      eyebrow: "Ready to book this princess?",
-      title: `Tell us about the party and we will help plan the right ${character.name} experience.`,
+      eyebrow: "Ready to book this one?",
+      title: `Tell us about your ${character.name} ${categoryLabel} and we will help you plan the right fit.`,
       description:
-        "Share the date, the birthday details, and any special notes. We will follow up with availability and the clearest next step.",
+        "Share the date, the party details, and any special notes. We will follow up with availability and the clearest next step.",
       notes: [
-        `Great for families already leaning toward ${character.name}`,
+        `A strong fit for families already leaning toward ${character.name}`,
         "Easy to pair with travel notes, add-ons, and special requests",
-        "One calm booking form covers the full princess lineup",
+        "One calm booking form covers the full character lineup",
       ],
       primaryCta: {
-        label: `Start a ${character.name} request`,
+        label:
+          character.category === "Rental"
+            ? `Ask about ${character.name}`
+            : `Start a ${character.name} request`,
         href: "/book",
       },
       secondaryCta: {
-        label: "Back to princesses",
-        href: "/princess#characters",
+        label: "Back to booking paths",
+        href: "/",
       },
     },
   };
 }
 
-export function getPrincessCharacterPageRelated(slug: string) {
-  const content = getPrincessCharacterPage(slug);
+export function getCharacterPageRelated(slug: string) {
+  const content = getCharacterPageContent(slug);
   if (!content) {
     return [];
   }
   return pickCharacters(content.relatedCharacters);
 }
 
-export function getPrincessCharacterPagePackages(slug: string) {
-  const content = getPrincessCharacterPage(slug);
+export function getCharacterPagePackages(slug: string) {
+  const content = getCharacterPageContent(slug);
   if (!content) {
     return [];
   }

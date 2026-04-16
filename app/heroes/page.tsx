@@ -44,7 +44,7 @@ export default function HeroesPage() {
             title={heroesPageContent.sections.characters.title}
             description={heroesPageContent.sections.characters.description}
           />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {heroesPageContent.characters.map((character) => (
               <CharacterCard
                 key={character.slug}

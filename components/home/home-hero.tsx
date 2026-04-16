@@ -48,6 +48,9 @@ type HomeHeroProps = {
 };
 
 export function HomeHero({ content }: HomeHeroProps) {
+  const mainImageFit = content.showcase.mainMedia.objectFit ?? "cover";
+  const insetImageFit = content.showcase.insetMedia?.objectFit ?? "cover";
+
   return (
     <section className="mx-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 lg:px-8 lg:pb-24 lg:pt-20">
       <div className="grid items-center gap-12 lg:grid-cols-[1.03fr_.97fr]">
@@ -116,7 +119,15 @@ export function HomeHero({ content }: HomeHeroProps) {
                         alt={content.showcase.mainMedia.alt}
                         width={content.showcase.mainMedia.width}
                         height={content.showcase.mainMedia.height}
-                        className="h-[18rem] w-full object-cover sm:h-[21rem]"
+                        className={`h-[18rem] w-full sm:h-[21rem] ${
+                          mainImageFit === "contain"
+                            ? "bg-white p-4 object-contain"
+                            : "object-cover"
+                        }`}
+                        style={{
+                          objectPosition:
+                            content.showcase.mainMedia.objectPosition,
+                        }}
                       />
                     </div>
                     {content.showcase.insetMedia ? (
@@ -126,21 +137,30 @@ export function HomeHero({ content }: HomeHeroProps) {
                           alt={content.showcase.insetMedia.alt}
                           width={content.showcase.insetMedia.width}
                           height={content.showcase.insetMedia.height}
-                          className="h-full w-full object-cover"
+                          className={`h-full w-full ${
+                            insetImageFit === "contain"
+                              ? "bg-white p-2 object-contain"
+                              : "object-cover"
+                          }`}
+                          style={{
+                            objectPosition:
+                              content.showcase.insetMedia.objectPosition,
+                          }}
                         />
                       </div>
                     ) : null}
-                    <div className="absolute bottom-3 left-3 max-w-[15rem] rounded-[1.35rem] border border-white/80 bg-white/92 p-4 shadow-magical sm:bottom-4 sm:left-4">
-                      <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-copy-soft">
-                        {content.showcase.storyCardEyebrow}
-                      </p>
-                      <p className="mt-2 text-base font-semibold leading-tight text-midnight">
-                        {content.showcase.storyCardTitle}
-                      </p>
-                      <p className="section-copy mt-2 text-xs leading-relaxed">
-                        {content.showcase.storyCardText}
-                      </p>
-                    </div>
+                  </div>
+
+                  <div className="mt-4 rounded-[1.35rem] border border-white/80 bg-white/92 p-4 shadow-magical">
+                    <p className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-copy-soft">
+                      {content.showcase.storyCardEyebrow}
+                    </p>
+                    <p className="mt-2 text-base font-semibold leading-tight text-midnight">
+                      {content.showcase.storyCardTitle}
+                    </p>
+                    <p className="section-copy mt-2 text-sm leading-relaxed">
+                      {content.showcase.storyCardText}
+                    </p>
                   </div>
                 </div>
 

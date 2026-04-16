@@ -33,6 +33,8 @@ export function CategoryHero({
   theme = "princess",
 }: CategoryHeroProps) {
   const classes = themeClasses[theme];
+  const mainImageFit = content.mainMedia.objectFit ?? "cover";
+  const insetImageFit = content.insetMedia?.objectFit ?? "cover";
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 lg:px-8 lg:pb-24 lg:pt-18">
@@ -94,7 +96,12 @@ export function CategoryHero({
                 alt={content.mainMedia.alt}
                 width={content.mainMedia.width}
                 height={content.mainMedia.height}
-                className="h-full w-full rounded-[1.6rem] object-cover"
+                className={`h-full w-full rounded-[1.6rem] ${
+                  mainImageFit === "contain"
+                    ? "bg-white p-4 object-contain"
+                    : "object-cover"
+                }`}
+                style={{ objectPosition: content.mainMedia.objectPosition }}
               />
 
               {content.insetMedia ? (
@@ -104,7 +111,12 @@ export function CategoryHero({
                     alt={content.insetMedia.alt}
                     width={content.insetMedia.width}
                     height={content.insetMedia.height}
-                    className="h-full w-full object-cover"
+                    className={`h-full w-full ${
+                      insetImageFit === "contain"
+                        ? "bg-white p-2 object-contain"
+                        : "object-cover"
+                    }`}
+                    style={{ objectPosition: content.insetMedia.objectPosition }}
                   />
                 </div>
               ) : null}

@@ -7,16 +7,16 @@ export const heroesPageContent = {
   hero: {
     eyebrow: "Superhero Parties",
     title:
-      "Superhero parties with bold entrances, real character photos, and the kind of birthday moments kids talk about for weeks.",
+      "Bold character parties with heroes, action favorites, and real photos families can actually book from.",
     description:
-      "For children who want their celebration to feel bold, exciting, and larger than life, our superhero parties bring Batman, Spider-Man, and comic-book energy into a booking flow parents can actually feel good about.",
+      "For children who want the day to feel brave, exciting, and larger than life, this path brings Batman, Spiderman, and adventure-forward favorites into the same polished booking flow parents can actually feel good about.",
     highlights: [
-      "Batman and Spider-Man photos from real past celebrations",
+      "Legacy photos from real past celebrations",
       "Big entrance energy kids instantly react to",
       "Confident, photo-friendly moments parents love too",
     ],
     primaryCta: {
-      label: "Choose your superhero",
+      label: "Choose your character",
       href: "#characters",
     },
     secondaryCta: {
@@ -55,7 +55,7 @@ export const heroesPageContent = {
     characters: {
       eyebrow: "Featured superheroes",
       title:
-        "Choose the superhero energy that feels closest to what they are already imagining.",
+        "Choose the character energy that feels closest to what they are already imagining.",
       description:
         "These featured cards use real photos from the legacy site so families can see the tone, costume look, and birthday energy before they ever submit the form.",
     },
@@ -95,7 +95,7 @@ export const heroesPageContent = {
       icon: "\u2726",
     },
   ],
-  characters: pickCharacters(["batman", "spider-man", "hero-team-up"]),
+  characters: pickCharacters(["batman", "spiderman", "monster-high"]),
   packages: pickPackages([
     "mini-visit",
     "storybook-celebration",
@@ -106,7 +106,7 @@ export const heroesPageContent = {
     title:
       "Let's build the kind of superhero party they'll remember long after the gifts are opened.",
     description:
-      "Tell us the date, your party details, and whether they are hoping for Batman, Spider-Man, or a broader superhero feel, and we'll help you take it from there.",
+      "Tell us the date, your party details, and whether they are hoping for Batman, Spiderman, or one of the bolder character options, and we'll help you take it from there.",
     notes: [
       "Great for birthdays that want motion-forward fun with a premium host feel",
       "Easy to tailor with add-ons, travel notes, and celebration details",
