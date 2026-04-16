@@ -12,7 +12,7 @@ import { mascotsPageContent } from "@/data/mascots-page";
 export const metadata: Metadata = {
   title: "Mascots & Rentals",
   description:
-    "Playful mascot visits and party rentals under one premium brand—simple planning, warm communication, and a clear path to book.",
+    "Playful mascot visits and party rentals under one premium brand, with simple planning, warm communication, and a clear path to book.",
   alternates: { canonical: "/mascots" },
   openGraph: {
     title: "Mascots & Rentals | A Living Fairytale",
@@ -94,7 +94,10 @@ export default function MascotsPage() {
             title={mascotsPageContent.sections.trust.title}
             description={mascotsPageContent.sections.trust.description}
           />
-          <FeatureCardGrid items={mascotsPageContent.trustCards} tone="playful" />
+          <FeatureCardGrid
+            items={mascotsPageContent.trustCards}
+            tone="playful"
+          />
         </section>
 
         <section

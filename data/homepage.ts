@@ -15,11 +15,11 @@ export const homepageContent = {
     eyebrow: "Magical party entertainment for unforgettable celebrations",
     title: "Make their special day feel like pure magic.",
     description:
-      "From enchanting princess visits to action-packed hero appearances and playful mascot fun, A Living Fairytale creates party moments children remember long after the candles are blown out.",
+      "From princess arrivals and superhero entrances to playful mascots and party-ready rentals, A Living Fairytale creates celebrations that feel exciting for children and beautifully easy for parents to book.",
     highlights: [
       "Performers who arrive ready, in character, and on time",
       "Warm, human follow-up from inquiry to celebration day",
-      "Princess, hero, mascot, and rental options under one trusted brand",
+      "Princess, superhero, mascot, and rental options under one trusted brand",
     ],
     primaryCta: {
       label: "Book the magic",
@@ -56,13 +56,13 @@ export const homepageContent = {
       princessLabel: "Princess",
       princessDescription:
         "Graceful arrivals, storybook smiles, and sweet interactive magic.",
-      heroLabel: "Hero",
+      heroLabel: "Superhero",
       heroDescription:
-        "Big entrances, mission moments, and confident celebration energy.",
+        "Batman, Spider-Man, and superhero-style party energy with bold entrances and big reactions.",
       planningEyebrow: "Easy from the first click",
       planningTitle: "Choose your path, choose your package, tell us your date.",
       planningDescription:
-        "We keep the first step simple so you can feel excited about the party instead of overwhelmed by the planning.",
+        "We keep the first step simple so you can move from 'What should we do?' to 'Yes, let's book it' without a maze of follow-up questions.",
       reassuranceEyebrow: "What families feel",
       reassuranceTitle:
         "Whimsical for children. Clear, warm, and polished for grown-ups.",
@@ -91,13 +91,13 @@ export const homepageContent = {
       eyebrow: "Choose your party experience",
       title: "Pick the kind of magic they'll never forget.",
       description:
-        "Whether your child dreams of a royal celebration, an epic hero entrance, or playful mascot fun, we'll help you create a party that feels exciting, polished, and easy from start to finish.",
+        "Whether your child dreams of a royal celebration, a superhero surprise, or cheerful mascot fun with rentals, we'll help you shape a party that feels polished, memorable, and easy to plan.",
     },
     featured: {
       eyebrow: "Featured experiences",
-      title: "Choose the party style that fits your celebration best.",
+      title: "A few favorites families ask about first.",
       description:
-        "Every party path carries its own energy, while still feeling polished, special, and easy to book.",
+        "Real photos, real party energy, and a quick way to see how each path feels before you book.",
     },
     packages: {
       eyebrow: "Packages made simple",
@@ -123,31 +123,31 @@ export const homepageContent = {
       tags: ["Elegant arrivals", "Dreamy activities", "Soft sparkle"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,241,248,0.98))]",
-      image: getMediaAsset("partyPrincessIcon"),
+      image: getMediaAsset("cinderellaBluePortrait"),
     },
     {
-      eyebrow: "Hero Parties",
-      title: "Hero Parties",
+      eyebrow: "Superhero Parties",
+      title: "Superhero Parties",
       description:
-        "Big energy, memorable entrances, fun interaction, and birthday excitement for kids who want their celebration to feel bold and unforgettable.",
+        "Batman, Spider-Man, and superhero-style visits with big entrances, bold photos, and birthday energy kids instantly respond to.",
       href: "/heroes",
-      ctaLabel: "Choose a hero party",
-      tags: ["Strong entrances", "Mission moments", "Big kid excitement"],
+      ctaLabel: "Choose a superhero party",
+      tags: ["Batman", "Spider-Man", "Action energy"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(251,253,255,0.98),rgba(234,242,255,0.98))]",
-      image: getMediaAsset("partyHeroIcon"),
+      image: getMediaAsset("batmanPortrait"),
     },
     {
       eyebrow: "Mascots & Rentals",
       title: "Mascots & Rentals",
       description:
-        "Playful mascot visits and party add-ons that bring extra color, fun, and excitement to birthdays, school events, and family celebrations.",
+        "Olaf mascot fun, pink bounce-house rentals, and cheerful add-ons that make birthdays, school events, and family celebrations feel fuller.",
       href: "/mascots",
       ctaLabel: "See mascots & rentals",
-      tags: ["Crowd-pleasing", "Easy add-ons", "Flexible fun"],
+      tags: ["Olaf", "Pink bounce house", "Easy add-ons"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,255,247,0.98))]",
-      image: getMediaAsset("partyMascotIcon"),
+      image: getMediaAsset("olafPortrait"),
     },
   ],
   trustPillars: [
@@ -177,10 +177,12 @@ export const homepageContent = {
     },
   ],
   featuredCharacters: pickCharacters([
-    "ariel",
-    "belle",
     "cinderella",
+    "batman",
+    "olaf",
+    "pink-castle-bounce-house",
     "elsa",
+    "spider-man",
   ]),
   packages,
   testimonials: [
@@ -200,19 +202,20 @@ export const homepageContent = {
       note: "Premium without stiffness",
       title: "Warm service with a polished finish",
       description:
-        "Families get the excitement children want and the reassurance parents appreciate, all inside one elevated brand experience.",
+        "Families get the princess sparkle, superhero excitement, and playful add-ons children want, all inside one elevated brand experience.",
     },
   ],
   finalCta: {
     eyebrow: "Ready to book?",
     title: "Let's create the party they keep talking about after the day is over.",
     description:
-      "Tell us a little about your celebration, and we'll help you choose the right party type, package, and character for a day that feels truly special.",
+      "Tell us a little about your celebration, and we'll help you choose the right party type, package, character, mascot, or rental for a day that feels truly special.",
     steps: [
       {
         step: "1",
         title: "Choose your party style",
-        description: "Princess, hero, mascot, rental, or a mix that fits your day.",
+        description:
+          "Princess, superhero, mascot, rental, or a mix that fits your day.",
       },
       {
         step: "2",

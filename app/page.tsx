@@ -14,18 +14,17 @@ import { homepageContent } from "@/data/homepage";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "A Living Fairytale | Magical Children's Party Experiences",
+    absolute: "A Living Fairytale | Magical Children's Party Experiences",
   },
   description:
-    "Princess parties, hero adventures, mascots, and party-ready rentals under one premium brand—warm communication and a clear path to book.",
+    "Princess parties, superhero adventures, mascots, and party-ready rentals under one premium brand, with warm communication and a clear path to book.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "A Living Fairytale | Magical Children's Party Experiences",
     description:
-      "Princess parties, hero adventures, mascots, and memorable birthday magic for families who want polish and ease.",
+      "Princess parties, superhero adventures, mascots, and memorable birthday magic for families who want polish and ease.",
     url: "/",
   },
 };
@@ -76,7 +75,7 @@ export default function HomePage() {
                     ? "princess"
                     : character.category === "Hero"
                       ? "hero"
-                      : "neutral"
+                      : "playful"
                 }
               />
             ))}

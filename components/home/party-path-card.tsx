@@ -17,6 +17,8 @@ type PartyPathCardProps = {
 };
 
 export function PartyPathCard({ path }: PartyPathCardProps) {
+  const usesPhotography = path.image.status === "approved";
+
   return (
     <article
       className={`group overflow-hidden rounded-[2rem] border border-line shadow-magical ${path.accentClassName}`}
@@ -30,13 +32,20 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
             {path.title}
           </h3>
         </div>
-        <Image
-          src={path.image.src}
-          alt=""
-          width={64}
-          height={64}
-          aria-hidden
-        />
+        <div
+          className={`overflow-hidden border border-white/80 bg-white/85 shadow-magical ${
+            usesPhotography ? "h-20 w-20 rounded-[1.35rem]" : "rounded-2xl p-2"
+          }`}
+        >
+          <Image
+            src={path.image.src}
+            alt=""
+            width={usesPhotography ? 80 : 64}
+            height={usesPhotography ? 80 : 64}
+            aria-hidden
+            className={usesPhotography ? "h-full w-full object-cover" : ""}
+          />
+        </div>
       </div>
 
       <div className="p-6">

@@ -13,12 +13,12 @@ import { heroesPageContent } from "@/data/heroes-page";
 export const metadata: Metadata = {
   title: "Superhero Parties",
   description:
-    "Premium superhero birthday experiences with bold arrivals, mission-style games, and a parent-friendly pace families can book with confidence.",
+    "Premium superhero birthday experiences with Batman, Spider-Man, bold arrivals, and a parent-friendly pace families can book with confidence.",
   alternates: { canonical: "/heroes" },
   openGraph: {
     title: "Superhero Parties | A Living Fairytale",
     description:
-      "High-energy hero parties with confident arrivals and a premium pace parents trust.",
+      "High-energy superhero parties with confident arrivals and a premium pace parents trust.",
     url: "/heroes",
   },
 };
@@ -29,7 +29,7 @@ export default function HeroesPage() {
       <Header
         links={heroesPageContent.navigation}
         brandHref="/"
-        cta={{ label: "Book a hero party", href: "/book" }}
+        cta={{ label: "Book a superhero party", href: "/book" }}
       />
       <main id="top" className="relative overflow-x-clip pb-20">
         <div
@@ -44,7 +44,7 @@ export default function HeroesPage() {
             title={heroesPageContent.sections.characters.title}
             description={heroesPageContent.sections.characters.description}
           />
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {heroesPageContent.characters.map((character) => (
               <CharacterCard
                 key={character.slug}

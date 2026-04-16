@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | A Living Fairytale",
   },
   description:
-    "Princess parties, hero adventures, mascots, and memorable birthday magic designed to feel enchanting for kids and effortless for parents.",
+    "Princess parties, superhero adventures, mascots, and memorable birthday magic designed to feel enchanting for kids and effortless for parents.",
   openGraph: {
     type: "website",
     locale: "en_US",

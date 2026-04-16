@@ -8,43 +8,43 @@ export const bookPageContent = {
   ],
   trustColumn: {
     eyebrow: "Book your party",
-    title: "Let's plan something magical.",
+    title: "Let's plan something magical, clear, and easy to say yes to.",
     lead:
-      "Tell us a little about your celebration and we'll help you choose the party type, package, and character that fits your child, your theme, and your event.",
+      "Tell us a little about your celebration and we'll help you choose the party type, package, character, mascot, or rental that best fits your child, your theme, and your event.",
     blocks: [
       {
         title: "Clear package options",
         paragraphs: [
-          "Simple choices that make it easier to book with confidence.",
+          "Simple choices that make it easier to book with confidence instead of guessing what comes next.",
         ],
       },
       {
         title: "Friendly follow-up",
         paragraphs: [
-          "We'll review your inquiry and get back to you with the next steps.",
+          "We'll review your inquiry, check the details, and get back to you with the next clear step.",
         ],
       },
       {
-        title: "Party types for different celebrations",
+        title: "One form for every party path",
         paragraphs: [
-          "Princesses, heroes, mascots, and rentals all live under one easy booking path.",
+          "Princesses, superheroes, mascots, and rentals all live under one easy booking path.",
         ],
       },
       {
         title: "Built to stay parent-friendly",
         paragraphs: [
-          "A warm, polished process that keeps things easy to understand from the start.",
+          "A warm, polished process that keeps things easy to understand from the first click to the final reply.",
         ],
       },
     ],
     footnote:
-      "Before you send your inquiry: Weekend dates and popular characters can book up quickly, especially during busy seasons. Sending your request earlier gives you the best chance of securing the experience you want.",
+      "Before you send your inquiry: Weekend dates, favorite princesses, and superhero requests can book quickly, especially during busy seasons. Sending your request early gives you the best chance of securing the experience you want.",
   },
   form: {
     eyebrow: "Party inquiry",
-    title: "Book your party",
+    title: "Tell us what you're planning",
     description:
-      "Share a few details below and we'll help bring your celebration to life.",
+      "Share a few details below and we'll help bring your celebration to life without making the process feel heavy.",
     submitLabel: "Check availability & start my booking",
     pendingLabel: "Sending your request...",
     sentEyebrow: "Request sent",

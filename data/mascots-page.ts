@@ -11,13 +11,14 @@ export const mascotsPageContent = {
   ],
   hero: {
     eyebrow: "Mascots & Rentals",
-    title: "Playful party add-ons that make celebrations feel bigger, brighter, and more fun.",
+    title:
+      "Playful mascot visits and bright rental extras that make celebrations feel bigger, easier, and more fun.",
     description:
-      "From mascot visits to simple rental favorites, this path is perfect for families, schools, and community events that want something cheerful, easy, and memorable.",
+      "From Olaf mascot fun to pink bounce-house and tent rentals, this path is perfect for families, schools, and community events that want something cheerful, easy, and memorable.",
     highlights: [
-      "Big, friendly fun",
+      "Real rental photos from the original site",
       "Great for mixed ages",
-      "Easy to pair with packages",
+      "Easy to pair with character visits",
     ],
     primaryCta: {
       label: "Ask about mascots & rentals",
@@ -27,13 +28,13 @@ export const mascotsPageContent = {
       label: "Book your party",
       href: "/book",
     },
-    mainMedia: getMediaAsset("mascotPartyMain"),
-    insetMedia: getMediaAsset("rentalSparkInset"),
+    mainMedia: getMediaAsset("rentalBouncePhoto"),
+    insetMedia: getMediaAsset("olafPortrait"),
     panelEyebrow: "Mascot path tone",
     panelTitle:
-      "Brighter visuals, simpler storytelling, and a celebration that still feels premium.",
+      "Brighter visuals, simpler storytelling, and party add-ons that still feel polished.",
     panelDescription:
-      "You get the same warm communication and polished planning as every other path, just tuned for playful arrivals, easy smiles, and cheerful add-ons.",
+      "You get the same warm communication and polished planning as every other path, just tuned for playful arrivals, cheerful rentals, and easy add-ons that help the party look fuller right away.",
     supportingCards: [
       {
         eyebrow: "For the room",
@@ -58,9 +59,10 @@ export const mascotsPageContent = {
   sections: {
     showcase: {
       eyebrow: "Mascots and extras",
-      title: "Fun options for celebrations that want a little more movement, color, and excitement.",
+      title:
+        "Fun options for celebrations that want a little more movement, color, and instant visual payoff.",
       description:
-        "This page is designed for playful add-ons, simple smiles, and event moments that make the day feel fuller without making it harder to plan.",
+        "This page is designed for playful add-ons, simple smiles, and event extras that make the day feel fuller without making it harder to plan.",
     },
     greatFor: {
       eyebrow: "Great for",
@@ -86,7 +88,7 @@ export const mascotsPageContent = {
       eyebrow: "Birthdays",
       title: "Birthday parties",
       description:
-        "Add a cheerful surprise that keeps children smiling and gives the celebration a fun extra moment.",
+        "Add a cheerful surprise that keeps children smiling and gives the celebration a fun extra moment without overcomplicating the schedule.",
       icon: "\u2665",
     },
     {
@@ -141,14 +143,14 @@ export const mascotsPageContent = {
     "signature-fairytale",
   ]),
   bookingNote:
-    "Mascot and rental availability can vary depending on the date, event type, and setup needs. Send us your event details and we'll help you understand what fits best.",
+    "Mascot and rental availability can vary depending on the date, setup needs, and how you want to pair them with character appearances. Tell us the basics and we'll help you narrow it down quickly.",
   cta: {
     eyebrow: "Need help choosing?",
     title: "Tell us about your event and we'll help you find the best fit.",
     description:
-      "If you're not sure which mascot or rental option makes the most sense, send us the details and we'll point you in the right direction.",
+      "If you're not sure whether you need a mascot, a bounce house, a tent, or a mix of options, send us the details and we'll point you in the right direction.",
     notes: [
-      "One form for princess, hero, mascot, and rental combinations",
+      "One form for princess, superhero, mascot, and rental combinations",
       "Easy space to mention timing, setup questions, and special requests",
       "A real person follows up with the next clear step",
     ],
