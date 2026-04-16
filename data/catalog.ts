@@ -198,6 +198,19 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     detailHref: "/fairy",
   },
   {
+    name: "Moana",
+    slug: "moana",
+    category: "Princess",
+    shortDescription:
+      "Island adventure energy with bold color and a brave, approachable heart.",
+    longDescription:
+      "A playful choice for birthdays that want tropical color, courageous princess spirit, and a celebration that feels sunny, active, and full of movement.",
+    tags: ["Tropical spirit", "Wayfinder", "Kid connection"],
+    mainMediaId: "moanaMain",
+    insetMediaId: "moanaPortrait",
+    detailHref: "/moana",
+  },
+  {
     name: "Fancy Nancy",
     slug: "fancy-nancy",
     category: "Princess",
@@ -250,6 +263,19 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     detailHref: "/prince",
   },
   {
+    name: "Malificient",
+    slug: "malificient",
+    category: "Princess",
+    shortDescription:
+      "Dark-glam villain energy with commanding presence and theatrical fairytale flair.",
+    longDescription:
+      "A striking fit for families who want a bolder fantasy look than the traditional princess path while still keeping the celebration polished and imaginative.",
+    tags: ["Villain glam", "High drama", "Theatrical"],
+    mainMediaId: "malificientMain",
+    insetMediaId: "malificientPortrait",
+    detailHref: "/malificient",
+  },
+  {
     name: "Batman",
     slug: "batman",
     category: "Hero",
@@ -291,6 +317,45 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     detailHref: "/monster-high",
   },
   {
+    name: "Maui",
+    slug: "maui",
+    category: "Hero",
+    shortDescription:
+      "Larger-than-life personality and playful myth-hero energy for adventurous kids.",
+    longDescription:
+      "A fun choice for celebrations that want a bold character feel, lots of recognition, and a hero path that leans more mythic and high-energy than classic comic-book.",
+    tags: ["Bold presence", "Playful power", "High energy"],
+    mainMediaId: "mauiMain",
+    insetMediaId: "mauiPortrait",
+    detailHref: "/maui",
+  },
+  {
+    name: "Star Wars",
+    slug: "star-wars",
+    category: "Hero",
+    shortDescription:
+      "Galaxy-style sci-fi adventure with instant recognition and action-forward fun.",
+    longDescription:
+      "Great for children who want their celebration to feel fast, cinematic, and a little different from the usual princess or superhero lineup.",
+    tags: ["Galaxy vibe", "Sci-fi", "Action-ready"],
+    mainMediaId: "starWarsMain",
+    insetMediaId: "starWarsPortrait",
+    detailHref: "/star-wars",
+  },
+  {
+    name: "Wonder Woman",
+    slug: "wonder-woman",
+    category: "Hero",
+    shortDescription:
+      "Empowering iconic hero presence with a confident entrance and bold polish.",
+    longDescription:
+      "A strong fit for children who want superhero excitement with a clear, iconic character presence and lots of photo-ready energy.",
+    tags: ["Iconic hero", "Empowering", "Photo-ready"],
+    mainMediaId: "wonderWomanMain",
+    insetMediaId: "wonderWomanPortrait",
+    detailHref: "/wonder-woman",
+  },
+  {
     name: "Olaf",
     slug: "olaf",
     category: "Mascot",
@@ -303,6 +368,19 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
     insetMediaId: "olafPortrait",
     detailHref: "/olaf",
     featured: true,
+  },
+  {
+    name: "Santa",
+    slug: "santa",
+    category: "Mascot",
+    shortDescription:
+      "Classic Santa visit: warm greetings, easy seasonal photos, instant holiday cheer.",
+    longDescription:
+      "Perfect for winter events, community gatherings, and festive celebrations that want a familiar character moment without adding a complicated party timeline.",
+    tags: ["Holiday visit", "Seasonal photos", "Event-friendly"],
+    mainMediaId: "santaMain",
+    insetMediaId: "santaPortrait",
+    detailHref: "/santa",
   },
   {
     name: "Pink Castle Bounce House",

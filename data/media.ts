@@ -975,6 +975,174 @@ const mediaRegistry = {
     aiTags: ["monster high", "clawdeen", "portrait"],
     mappingNote: "Legacy portrait for Clawdeen Wolf.",
   },
+  moanaMain: {
+    id: "moanaMain",
+    src: "/brand/princess-tower-main.svg",
+    alt: "Stylized princess art used as a temporary Moana page visual",
+    width: 720,
+    height: 860,
+    status: "placeholder",
+    adminLabel: "Moana fallback main visual",
+    replaceHint:
+      "Replace with an approved Moana action photo as soon as one is supplied by the owner.",
+    aiTags: ["moana", "placeholder", "princess"],
+    mappingNote:
+      "No confidently matched Moana photo was found in the legacy archive, so this is a structured fallback.",
+  },
+  moanaPortrait: {
+    id: "moanaPortrait",
+    src: "/brand/princess-tower-portrait.svg",
+    alt: "Stylized princess portrait used as a temporary Moana page visual",
+    width: 320,
+    height: 400,
+    status: "placeholder",
+    adminLabel: "Moana fallback portrait",
+    replaceHint:
+      "Replace with an approved Moana portrait once the correct performer image is available.",
+    aiTags: ["moana", "placeholder", "portrait"],
+    mappingNote:
+      "No confidently matched Moana portrait was found in the legacy archive.",
+  },
+  malificientMain: {
+    id: "malificientMain",
+    src: "/brand/princess-snow-main.svg",
+    alt: "Stylized princess art used as a temporary Malificient page visual",
+    width: 720,
+    height: 860,
+    status: "placeholder",
+    adminLabel: "Malificient fallback main visual",
+    replaceHint:
+      "Replace with an approved Malificient action photo if the owner confirms this character remains active.",
+    aiTags: ["malificient", "placeholder", "villain"],
+    mappingNote:
+      "No confidently matched Malificient photo was found in the legacy archive.",
+  },
+  malificientPortrait: {
+    id: "malificientPortrait",
+    src: "/brand/princess-snow-portrait.svg",
+    alt: "Stylized portrait used as a temporary Malificient page visual",
+    width: 320,
+    height: 400,
+    status: "placeholder",
+    adminLabel: "Malificient fallback portrait",
+    replaceHint:
+      "Replace with an approved Malificient portrait once correct media is provided.",
+    aiTags: ["malificient", "placeholder", "portrait"],
+    mappingNote:
+      "No confidently matched Malificient portrait was found in the legacy archive.",
+  },
+  mauiMain: {
+    id: "mauiMain",
+    src: "/brand/hero-captain-main.svg",
+    alt: "Stylized hero art used as a temporary Maui page visual",
+    width: 720,
+    height: 860,
+    status: "placeholder",
+    adminLabel: "Maui fallback main visual",
+    replaceHint:
+      "Replace with an approved Maui performer photo once it is available.",
+    aiTags: ["maui", "placeholder", "hero"],
+    mappingNote:
+      "No confidently matched Maui photo was found in the legacy archive.",
+  },
+  mauiPortrait: {
+    id: "mauiPortrait",
+    src: "/brand/hero-captain-portrait.svg",
+    alt: "Stylized hero portrait used as a temporary Maui page visual",
+    width: 320,
+    height: 400,
+    status: "placeholder",
+    adminLabel: "Maui fallback portrait",
+    replaceHint:
+      "Replace with an approved Maui portrait once the correct performer image is available.",
+    aiTags: ["maui", "placeholder", "portrait"],
+    mappingNote:
+      "No confidently matched Maui portrait was found in the legacy archive.",
+  },
+  starWarsMain: {
+    id: "starWarsMain",
+    src: "/brand/hero-volt-main.svg",
+    alt: "Stylized hero art used as a temporary Star Wars page visual",
+    width: 720,
+    height: 860,
+    status: "placeholder",
+    adminLabel: "Star Wars fallback main visual",
+    replaceHint:
+      "Replace with an approved Star Wars performer photo if this character remains in the active lineup.",
+    aiTags: ["star wars", "placeholder", "hero"],
+    mappingNote:
+      "No confidently matched Star Wars performer photo was found in the legacy archive.",
+  },
+  starWarsPortrait: {
+    id: "starWarsPortrait",
+    src: "/brand/hero-volt-portrait.svg",
+    alt: "Stylized hero portrait used as a temporary Star Wars page visual",
+    width: 320,
+    height: 400,
+    status: "placeholder",
+    adminLabel: "Star Wars fallback portrait",
+    replaceHint:
+      "Replace with an approved Star Wars portrait once correct media is supplied.",
+    aiTags: ["star wars", "placeholder", "portrait"],
+    mappingNote:
+      "No confidently matched Star Wars portrait was found in the legacy archive.",
+  },
+  wonderWomanMain: {
+    id: "wonderWomanMain",
+    src: "/brand/hero-skyline-main.svg",
+    alt: "Stylized hero art used as a temporary Wonder Woman page visual",
+    width: 720,
+    height: 860,
+    status: "placeholder",
+    adminLabel: "Wonder Woman fallback main visual",
+    replaceHint:
+      "Replace with an approved Wonder Woman performer photo once it is available.",
+    aiTags: ["wonder woman", "placeholder", "hero"],
+    mappingNote:
+      "No confidently matched Wonder Woman photo was found in the legacy archive.",
+  },
+  wonderWomanPortrait: {
+    id: "wonderWomanPortrait",
+    src: "/brand/hero-skyline-portrait.svg",
+    alt: "Stylized hero portrait used as a temporary Wonder Woman page visual",
+    width: 320,
+    height: 400,
+    status: "placeholder",
+    adminLabel: "Wonder Woman fallback portrait",
+    replaceHint:
+      "Replace with an approved Wonder Woman portrait once the correct performer image is available.",
+    aiTags: ["wonder woman", "placeholder", "portrait"],
+    mappingNote:
+      "No confidently matched Wonder Woman portrait was found in the legacy archive.",
+  },
+  santaMain: {
+    id: "santaMain",
+    src: "/brand/mascot-party-main.svg",
+    alt: "Playful holiday placeholder art used as a temporary Santa page visual",
+    width: 720,
+    height: 860,
+    status: "placeholder",
+    adminLabel: "Santa fallback main visual",
+    replaceHint:
+      "Replace with an approved Santa performer photo once the owner provides the correct media.",
+    aiTags: ["santa", "placeholder", "holiday"],
+    mappingNote:
+      "No confidently matched Santa photo was found in the legacy archive.",
+  },
+  santaPortrait: {
+    id: "santaPortrait",
+    src: "/brand/party-mascot.svg",
+    alt: "Mascot icon used as a temporary Santa page portrait",
+    width: 96,
+    height: 96,
+    status: "placeholder",
+    adminLabel: "Santa fallback portrait",
+    replaceHint:
+      "Replace with an approved Santa portrait once the correct performer image is available.",
+    aiTags: ["santa", "placeholder", "portrait"],
+    mappingNote:
+      "No confidently matched Santa portrait was found in the legacy archive.",
+  },
 } satisfies Record<string, MediaAsset>;
 
 export type MediaId = keyof typeof mediaRegistry;
