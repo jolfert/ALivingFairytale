@@ -4,9 +4,11 @@ import { CategoryHero } from "@/components/shared/category-hero";
 import { CharacterCard } from "@/components/shared/character-card";
 import { FeatureCardGrid } from "@/components/shared/feature-card-grid";
 import { PackageGrid } from "@/components/shared/package-grid";
+import { PricingGuide } from "@/components/shared/pricing-guide";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
+import { legacyPricingGuide } from "@/data/catalog";
 import { mascotsPageContent } from "@/data/mascots-page";
 
 export const metadata: Metadata = {
@@ -83,6 +85,7 @@ export default function MascotsPage() {
             packages={mascotsPageContent.packages}
             tone="playful"
           />
+          <PricingGuide guide={legacyPricingGuide} tone="playful" />
           <p className="section-copy mx-auto mt-10 max-w-3xl text-center text-base">
             {mascotsPageContent.bookingNote}
           </p>

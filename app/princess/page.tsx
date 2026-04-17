@@ -5,9 +5,11 @@ import { CharacterCard } from "@/components/shared/character-card";
 import { FeatureCardGrid } from "@/components/shared/feature-card-grid";
 import { PackageGrid } from "@/components/shared/package-grid";
 import { PageSection } from "@/components/shared/page-section";
+import { PricingGuide } from "@/components/shared/pricing-guide";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
+import { legacyPricingGuide } from "@/data/catalog";
 import { princessPageContent } from "@/data/princess-page";
 
 export const metadata: Metadata = {
@@ -68,6 +70,7 @@ export default function PrincessPage() {
             description={princessPageContent.sections.packages.description}
           />
           <PackageGrid packages={princessPageContent.packages} />
+          <PricingGuide guide={legacyPricingGuide} />
         </PageSection>
 
         <PageSection id="book-cta">

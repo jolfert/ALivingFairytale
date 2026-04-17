@@ -3,7 +3,8 @@ import { BookTrustColumn } from "@/components/book/book-trust-column";
 import { InquiryFormShell } from "@/components/book/inquiry-form-shell";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
-import { packages } from "@/data/catalog";
+import { PricingGuide } from "@/components/shared/pricing-guide";
+import { legacyPricingGuide, packages } from "@/data/catalog";
 import { bookPageContent } from "@/data/book-page";
 
 export const metadata: Metadata = {
@@ -42,6 +43,9 @@ export default function BookPage() {
           <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-16 xl:items-start">
             <BookTrustColumn />
             <InquiryFormShell packageChoices={packageChoices} />
+          </div>
+          <div className="mt-14">
+            <PricingGuide guide={legacyPricingGuide} />
           </div>
         </div>
       </main>

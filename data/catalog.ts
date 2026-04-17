@@ -3,6 +3,7 @@ import type {
   CharacterCategory,
   CharacterRecord,
   PackageRecord,
+  PricingGuide,
   ResolvedCharacter,
 } from "@/data/types";
 
@@ -415,41 +416,142 @@ const packageCatalog: ReadonlyArray<PackageRecord> = [
   {
     slug: "mini-visit",
     name: "Mini Visit",
-    duration: "30 minutes",
+    duration: "1 Hour",
+    priceFrom: "$200",
+    pricingNote: "Starts at 1 character",
     description:
-      "A quick burst of character magic for families who want a memorable entrance, sweet interaction, and beautiful photos without a longer activity block.",
+      "A sweet, polished first package for birthdays that want real character magic, interactive fun, and beautiful keepsake photos without stretching the schedule too far.",
     highlights: [
-      "Wonderful for smaller celebrations or shorter schedules",
-      "Perfect for cake, singing, hugs, and keepsake photos",
-      "Easy to pair with add-ons or rentals",
+      "Wonderful for smaller celebrations or shorter party windows",
+      "Perfect for themed activities, singing, hugs, and photo moments",
+      "Easy to pair with rentals or additional add-ons",
+    ],
+    characterRates: [
+      { label: "1 character", price: "$200" },
+      { label: "2 characters", price: "$350" },
+      { label: "3 characters", price: "$500" },
+      { label: "4 characters", price: "$650" },
+      { label: "5 characters", price: "$800" },
+    ],
+    includedFeatures: [
+      "Themed activities and interactive games",
+      "Photo opportunities with each character",
+      "Customizable packages tailored to your event",
+      "Travel fees may apply depending on location",
     ],
   },
   {
     slug: "storybook-celebration",
     name: "Storybook Celebration",
-    duration: "60 minutes",
+    duration: "1.5 Hours",
+    priceFrom: "$250",
+    pricingNote: "Starts at 1 character",
     description:
-      "Our most popular pace: enough time for a warm arrival, interactive moments, photos, and a celebration that feels complete.",
+      "Our most popular pace: extra time for a warmer arrival, fuller interaction, more photos, and a celebration rhythm that feels complete instead of rushed.",
     highlights: [
       "A balanced choice for most birthday parties",
-      "Great for games, storytelling, or hero missions",
+      "Great for games, storytelling, hero missions, or party flow support",
       "Keeps the energy memorable without feeling rushed",
+    ],
+    characterRates: [
+      { label: "1 character", price: "$250" },
+      { label: "2 characters", price: "$450" },
+      { label: "3 characters", price: "$650" },
+      { label: "4 characters", price: "$850" },
+      { label: "5 characters", price: "$1,050" },
+    ],
+    includedFeatures: [
+      "Themed activities and interactive games",
+      "Photo opportunities with each character",
+      "Customizable packages tailored to your event",
+      "Travel fees may apply depending on location",
     ],
     featured: true,
   },
   {
     slug: "signature-fairytale",
     name: "Signature Fairytale",
-    duration: "90 minutes",
+    duration: "2 Hours",
+    priceFrom: "$300",
+    pricingNote: "Starts at 1 character",
     description:
-      "A fuller premium experience with more time to settle in, create moments, and let the celebration breathe.",
+      "A fuller premium experience with more time to settle in, create moments, and let the celebration breathe from the entrance through the final photos.",
     highlights: [
       "Lovely for larger guest lists or layered experiences",
       "More room for activities, keepsake photos, and a grand arrival",
       "A beautiful fit when you want the party to feel extra special",
     ],
+    characterRates: [
+      { label: "1 character", price: "$300" },
+      { label: "2 characters", price: "$550" },
+      { label: "3 characters", price: "$800" },
+      { label: "4 characters", price: "$1,050" },
+      { label: "5 characters", price: "$1,300" },
+    ],
+    includedFeatures: [
+      "Themed activities and interactive games",
+      "Photo opportunities with each character",
+      "Customizable packages tailored to your event",
+      "Travel fees may apply depending on location",
+    ],
   },
 ];
+
+export const legacyPricingGuide: PricingGuide = {
+  title: "Legacy pricing guide",
+  description:
+    "The archived site used a duration-by-character pricing model. This gives us the clearest baseline until the owner confirms a final updated pricing structure.",
+  includedFeatures: [
+    "Themed activities and interactive games",
+    "Photo opportunities with each character",
+    "Customizable packages tailored to your event",
+    "Travel fees may apply depending on location",
+  ],
+  rows: [
+    {
+      duration: "1 Hour",
+      rates: [
+        { label: "1 character", price: "$200" },
+        { label: "2 characters", price: "$350" },
+        { label: "3 characters", price: "$500" },
+        { label: "4 characters", price: "$650" },
+        { label: "5 characters", price: "$800" },
+      ],
+    },
+    {
+      duration: "1.5 Hours",
+      rates: [
+        { label: "1 character", price: "$250" },
+        { label: "2 characters", price: "$450" },
+        { label: "3 characters", price: "$650" },
+        { label: "4 characters", price: "$850" },
+        { label: "5 characters", price: "$1,050" },
+      ],
+    },
+    {
+      duration: "2 Hours",
+      rates: [
+        { label: "1 character", price: "$300" },
+        { label: "2 characters", price: "$550" },
+        { label: "3 characters", price: "$800" },
+        { label: "4 characters", price: "$1,050" },
+        { label: "5 characters", price: "$1,300" },
+      ],
+    },
+    {
+      duration: "3 Hours",
+      rates: [
+        { label: "1 character", price: "$400" },
+        { label: "2 characters", price: "$750" },
+        { label: "3 characters", price: "$1,100" },
+        { label: "4 characters", price: "$1,450" },
+        { label: "5 characters", price: "$1,800" },
+      ],
+    },
+  ],
+  footnote:
+    "These rates came from the archived pricing graphic. They should be treated as the current baseline until the owner confirms any updated model.",
+};
 
 function resolveCharacter(character: CharacterRecord): ResolvedCharacter {
   return {

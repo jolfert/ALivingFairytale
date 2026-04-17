@@ -6,9 +6,11 @@ import { TrustPillars } from "@/components/home/trust-pillars";
 import { CharacterCard } from "@/components/shared/character-card";
 import { PackageGrid } from "@/components/shared/package-grid";
 import { PageSection } from "@/components/shared/page-section";
+import { PricingGuide } from "@/components/shared/pricing-guide";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
+import { legacyPricingGuide } from "@/data/catalog";
 import { homepageContent } from "@/data/homepage";
 
 export const metadata: Metadata = {
@@ -88,6 +90,7 @@ export default function HomePage() {
             description={homepageContent.sections.packages.description}
           />
           <PackageGrid packages={homepageContent.packages} />
+          <PricingGuide guide={legacyPricingGuide} />
         </PageSection>
 
         <PageSection id="book-preview">

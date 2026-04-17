@@ -55,6 +55,19 @@ export function PackageGrid({
             {pkg.duration}
           </span>
           <h3 className="mt-3 text-3xl font-semibold text-midnight">{pkg.name}</h3>
+          {pkg.priceFrom ? (
+            <div className="mt-4 rounded-[1.4rem] border border-line bg-white/72 p-4">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-copy-soft">
+                Pricing
+              </p>
+              <p className="mt-2 text-4xl font-semibold text-midnight">
+                {pkg.priceFrom}
+              </p>
+              {pkg.pricingNote ? (
+                <p className="section-copy mt-1 text-sm">{pkg.pricingNote}</p>
+              ) : null}
+            </div>
+          ) : null}
           <p className="section-copy mt-4 text-sm">{pkg.description}</p>
 
           <ul className="mt-6 space-y-3">
@@ -70,6 +83,46 @@ export function PackageGrid({
               </li>
             ))}
           </ul>
+
+          {pkg.characterRates && pkg.characterRates.length > 0 ? (
+            <div className="mt-6 rounded-[1.5rem] border border-line bg-white/72 p-4">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-copy-soft">
+                By character count
+              </p>
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {pkg.characterRates.map((rate) => (
+                  <div
+                    key={`${pkg.slug}-${rate.label}`}
+                    className="flex items-center justify-between rounded-2xl bg-white/84 px-3 py-2 text-sm"
+                  >
+                    <span className="font-medium text-copy-soft">{rate.label}</span>
+                    <span className="font-semibold text-midnight">{rate.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {pkg.includedFeatures && pkg.includedFeatures.length > 0 ? (
+            <div className="mt-6 border-t border-line pt-6">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-copy-soft">
+                Included
+              </p>
+              <ul className="mt-3 space-y-2">
+                {pkg.includedFeatures.map((feature) => (
+                  <li
+                    key={`${pkg.slug}-${feature}`}
+                    className="flex items-start gap-3 text-sm font-medium text-copy-soft"
+                  >
+                    <span className={`mt-1 ${featured.bullet}`} aria-hidden>
+                      {"\u2726"}
+                    </span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </article>
       ))}
     </div>

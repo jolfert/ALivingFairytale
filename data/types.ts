@@ -49,9 +49,30 @@ export type PackageRecord = {
   slug: string;
   name: string;
   duration: string;
+  priceFrom?: string;
+  pricingNote?: string;
   description: string;
   highlights: ReadonlyArray<string>;
+  characterRates?: ReadonlyArray<{
+    label: string;
+    price: string;
+  }>;
+  includedFeatures?: ReadonlyArray<string>;
   featured?: boolean;
+};
+
+export type PricingGuide = {
+  title: string;
+  description: string;
+  includedFeatures: ReadonlyArray<string>;
+  rows: ReadonlyArray<{
+    duration: string;
+    rates: ReadonlyArray<{
+      label: string;
+      price: string;
+    }>;
+  }>;
+  footnote?: string;
 };
 
 export type InfoCard = {
