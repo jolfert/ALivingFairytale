@@ -34,17 +34,23 @@ export default function BookPage() {
         brandHref="/"
         cta={{ label: "Book", href: "/book" }}
       />
-      <main id="top" className="relative overflow-x-clip pb-24 pt-12 sm:pt-16">
+      <main
+        id="top"
+        className="relative overflow-x-clip pb-20 pt-10 sm:pt-14 lg:pt-16"
+      >
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-[24rem] max-h-[55vh] bg-[radial-gradient(ellipse_at_20%_0%,rgba(245,102,187,0.12),transparent_50%),radial-gradient(ellipse_at_85%_10%,rgba(125,100,255,0.1),transparent_45%)]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] max-h-[60vh] bg-[radial-gradient(ellipse_at_20%_0%,rgba(245,102,187,0.12),transparent_52%),radial-gradient(ellipse_at_85%_10%,rgba(125,100,255,0.1),transparent_48%)]"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-16 xl:items-start">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-16 xl:items-start">
             <BookTrustColumn />
-            <InquiryFormShell packageChoices={packageChoices} characterChoices={characters} />
+            <InquiryFormShell
+              packageChoices={packageChoices}
+              characterChoices={characters}
+            />
           </div>
-          <div className="mt-14">
+          <div className="mt-16">
             <PricingGuide guide={legacyPricingGuide} />
           </div>
         </div>

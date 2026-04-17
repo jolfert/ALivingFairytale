@@ -35,11 +35,11 @@ export default function HeroesPage() {
       />
       <main
         id="top"
-        className="relative overflow-x-clip bg-[linear-gradient(180deg,#eef4ff_0%,#f6f9ff_38%,#ffffff_100%)] pb-20"
+        className="relative overflow-x-clip bg-[linear-gradient(180deg,#f3f7ff_0%,#f8fbff_40%,#ffffff_100%)]"
       >
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-[36rem] max-h-[78vh] bg-[radial-gradient(ellipse_at_72%_0%,rgba(42,98,195,0.24),transparent_58%),radial-gradient(ellipse_at_14%_14%,rgba(56,130,200,0.16),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(15,60,120,0.06),transparent_45%)]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[40rem] max-h-[80vh] bg-[radial-gradient(ellipse_at_72%_0%,rgba(42,98,195,0.18),transparent_58%),radial-gradient(ellipse_at_14%_14%,rgba(56,130,200,0.12),transparent_50%)]"
         />
         <CategoryHero content={heroesPageContent.hero} theme="hero" />
 
@@ -49,7 +49,7 @@ export default function HeroesPage() {
             title={heroesPageContent.sections.characters.title}
             description={heroesPageContent.sections.characters.description}
           />
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {heroesPageContent.characters.map((character) => (
               <CharacterCard
                 key={character.slug}
@@ -61,7 +61,7 @@ export default function HeroesPage() {
           </div>
         </PageSection>
 
-        <PageSection className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(228,238,255,0.55),rgba(244,248,255,0.35))]">
+        <PageSection className="relative rounded-[2rem] bg-[linear-gradient(180deg,rgba(228,238,255,0.5),rgba(244,248,255,0.32))]">
           <SectionHeading
             eyebrow={heroesPageContent.sections.experience.eyebrow}
             title={heroesPageContent.sections.experience.title}
@@ -85,7 +85,7 @@ export default function HeroesPage() {
 
         <PageSection
           id="book-cta"
-          className="relative rounded-[2.5rem] bg-[linear-gradient(165deg,rgba(222,234,255,0.65),rgba(248,251,255,0.5))]"
+          className="relative rounded-[2rem] bg-[linear-gradient(165deg,rgba(222,234,255,0.6),rgba(248,251,255,0.45))]"
         >
           <CtaBanner content={heroesPageContent.cta} tone="hero" />
         </PageSection>

@@ -35,25 +35,24 @@ export default function HomePage() {
     <>
       <Header links={homepageContent.navigation} />
       <main id="top" className="relative overflow-x-clip">
-
         <HomeHero content={homepageContent.hero} />
 
-        {/* Party paths — tight top so it flows naturally from the hero */}
+        {/* Party paths */}
         <PageSection id="paths" spacing="tight">
           <SectionHeading
             eyebrow={homepageContent.sections.paths.eyebrow}
             title={homepageContent.sections.paths.title}
             description={homepageContent.sections.paths.description}
           />
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
             {homepageContent.partyPaths.map((path) => (
               <PartyPathCard key={path.title} path={path} />
             ))}
           </div>
         </PageSection>
 
-        {/* Why families choose us — mist background band, centered heading */}
-        <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(246,241,255,0.55)_6%,rgba(246,241,255,0.55)_94%,transparent_100%)]">
+        {/* Why families — centered, subtle mist band */}
+        <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(246,241,255,0.5)_8%,rgba(246,241,255,0.5)_92%,transparent_100%)]">
           <PageSection id="why-us">
             <SectionHeading
               eyebrow={homepageContent.sections.whyUs.eyebrow}
@@ -72,7 +71,7 @@ export default function HomePage() {
             title={homepageContent.sections.featured.title}
             description={homepageContent.sections.featured.description}
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {homepageContent.featuredCharacters.map((character) => (
               <CharacterCard
                 key={character.slug}
@@ -90,8 +89,8 @@ export default function HomePage() {
           </div>
         </PageSection>
 
-        {/* Packages — blush background band */}
-        <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(255,241,248,0.45)_6%,rgba(255,241,248,0.45)_94%,transparent_100%)]">
+        {/* Packages — blush band */}
+        <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(255,241,248,0.42)_8%,rgba(255,241,248,0.42)_92%,transparent_100%)]">
           <PageSection id="packages">
             <SectionHeading
               eyebrow={homepageContent.sections.packages.eyebrow}
@@ -107,7 +106,6 @@ export default function HomePage() {
         <PageSection id="book-preview" spacing="tight">
           <FinalCta content={homepageContent.finalCta} />
         </PageSection>
-
       </main>
       <Footer links={homepageContent.navigation} />
     </>

@@ -28,7 +28,7 @@ type InquiryFormProps = {
 const initialState: InquiryFormState = { status: "idle" };
 
 const fieldClassName =
-  "w-full rounded-2xl border border-line bg-white/92 px-4 py-3 text-midnight shadow-sm outline-none transition focus:border-violet/35 focus:ring-2 focus:ring-violet/15";
+  "w-full rounded-xl border border-line-strong bg-white/95 px-4 py-3 text-base text-midnight outline-none transition placeholder:text-copy-soft/60 focus:border-violet/50 focus:ring-2 focus:ring-violet/18";
 
 const fieldErrorClassName = "text-sm font-semibold text-rose";
 
@@ -88,23 +88,21 @@ export function InquiryForm({
 
   if (state.status === "success") {
     return (
-      <div className="glass-panel rounded-[2.25rem] p-6 sm:p-10">
+      <div className="glass-panel rounded-[2rem] p-6 sm:p-10">
         <div
-          className="rounded-[1.75rem] border border-[rgba(65,181,111,0.35)] bg-[linear-gradient(165deg,rgba(255,255,255,0.98),rgba(236,252,244,0.98))] p-6 sm:p-8 shadow-magical"
+          className="rounded-[1.5rem] border border-[rgba(65,181,111,0.35)] bg-[linear-gradient(165deg,rgba(255,255,255,0.98),rgba(236,252,244,0.96))] p-6 shadow-soft sm:p-8"
           role="status"
           aria-live="polite"
         >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
             <div
-              className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[linear-gradient(135deg,rgba(255,214,123,0.95),rgba(65,181,111,0.88))] text-2xl text-white shadow-magical"
+              className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[linear-gradient(135deg,rgba(255,214,123,0.95),rgba(65,181,111,0.88))] text-2xl text-white shadow-soft"
               aria-hidden
             >
               {"\u2713"}
             </div>
             <div className="min-w-0 flex-1">
-              <p className="eyebrow border-0 px-0 py-0 shadow-none">
-                {form.sentEyebrow}
-              </p>
+              <p className="eyebrow-plain">{form.sentEyebrow}</p>
               <h2 className="mt-2 text-3xl font-semibold text-midnight sm:text-4xl">
                 {form.successTitle}
               </h2>
@@ -156,19 +154,21 @@ export function InquiryForm({
   );
 
   return (
-    <div className="glass-panel rounded-[2.25rem] p-6 sm:p-8">
+    <div className="glass-panel rounded-[2rem] p-6 sm:p-10">
       <span className="eyebrow sparkle-dot">{form.eyebrow}</span>
-      <h2 className="mt-4 text-3xl font-semibold text-midnight sm:text-4xl">
+      <h2 className="mt-5 text-3xl font-semibold text-midnight sm:text-4xl">
         {form.title}
       </h2>
-      <p className="section-copy mt-4 text-base">{form.description}</p>
+      <p className="section-copy mt-3.5 text-base leading-relaxed">
+        {form.description}
+      </p>
 
       {state.status === "error" && state.message ? (
         <div
           className={`mt-6 rounded-2xl border p-5 text-sm sm:text-base ${
             isValidationError
-              ? "border-[rgba(245,102,187,0.22)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,243,249,0.96))]"
-              : "border-[rgba(125,100,255,0.22)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,241,255,0.96))]"
+              ? "border-[rgba(245,102,187,0.25)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,243,249,0.96))]"
+              : "border-[rgba(125,100,255,0.25)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,241,255,0.96))]"
           }`}
           role="alert"
           aria-live="polite"
@@ -189,7 +189,7 @@ export function InquiryForm({
 
       <form
         action={formAction}
-        className="relative mt-8 flex flex-col gap-5"
+        className="relative mt-7 flex flex-col gap-5"
         aria-busy={isPending}
         noValidate
       >

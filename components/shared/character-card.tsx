@@ -11,31 +11,31 @@ type CharacterCardProps = {
 const themeStyles = {
   princess: {
     frame:
-      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,242,248,0.98))]",
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,242,248,0.96))]",
     media:
-      "bg-[linear-gradient(180deg,rgba(255,247,252,0.98),rgba(245,235,255,0.95))]",
-    tag: "bg-[rgba(245,102,187,0.09)] text-rose",
+      "bg-[linear-gradient(180deg,rgba(255,247,252,0.96),rgba(245,235,255,0.92))]",
+    tag: "bg-[rgba(245,102,187,0.1)] text-rose",
   },
   hero: {
     frame:
-      "border border-[rgba(42,98,195,0.1)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(232,241,255,0.96))]",
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(232,241,255,0.96))]",
     media:
-      "bg-[linear-gradient(180deg,rgba(244,249,255,0.98),rgba(220,234,252,0.94))]",
+      "bg-[linear-gradient(180deg,rgba(244,249,255,0.96),rgba(220,234,252,0.92))]",
     tag: "bg-[rgba(42,98,195,0.1)] text-[color:#2f4f8f]",
   },
   neutral: {
     frame:
       "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(247,241,255,0.94))]",
     media:
-      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,241,255,0.95))]",
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(246,241,255,0.92))]",
     tag: "bg-[rgba(125,100,255,0.08)] text-violet",
   },
   playful: {
     frame:
-      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,252,240,0.98))]",
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,252,240,0.96))]",
     media:
-      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(240,255,246,0.92))]",
-    tag: "bg-[rgba(255,214,123,0.22)] text-[color:#1e4d32]",
+      "bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,255,246,0.9))]",
+    tag: "bg-[rgba(255,214,123,0.24)] text-[color:#1e4d32]",
   },
 } as const;
 
@@ -47,43 +47,45 @@ export function CharacterCard({
   const styles = themeStyles[theme];
   const mediaHeight =
     variant === "compact"
-      ? "min-h-[15rem] sm:min-h-[16rem]"
-      : "min-h-[20rem] sm:min-h-[22rem]";
+      ? "min-h-[14rem] sm:min-h-[15rem]"
+      : "min-h-[18rem] sm:min-h-[20rem]";
   const mainImageFit = character.mainMedia.objectFit ?? "cover";
   const insetImageFit = character.insetMedia?.objectFit ?? "cover";
 
   return (
     <article
-      className={`glass-panel overflow-hidden rounded-[2rem] ${styles.frame}`}
+      className={`group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-line shadow-soft transition-shadow duration-300 hover:shadow-magical ${styles.frame}`}
     >
       <div
-        className={`relative border-b border-line p-5 sm:p-6 ${styles.media} ${mediaHeight}`}
+        className={`relative border-b border-line p-4 sm:p-5 ${styles.media} ${mediaHeight}`}
       >
-        <span className="eyebrow border-0 px-0 py-0 shadow-none">
-          {character.category}
-        </span>
-        <div className="mt-5 overflow-hidden rounded-[1.8rem] border border-white/60 bg-white/75">
+        <span className="eyebrow-plain">{character.category}</span>
+        <div className="mt-4 overflow-hidden rounded-[1.25rem] border border-white/60 bg-white/75">
           <Image
             src={character.mainMedia.src}
             alt={character.mainMedia.alt}
             width={character.mainMedia.width}
             height={character.mainMedia.height}
-            className={`h-full w-full ${
-              mainImageFit === "contain" ? "bg-white p-3 object-contain" : "object-cover"
+            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.02] ${
+              mainImageFit === "contain"
+                ? "bg-white p-3 object-contain"
+                : "object-cover"
             }`}
             style={{ objectPosition: character.mainMedia.objectPosition }}
           />
         </div>
 
         {character.insetMedia ? (
-          <div className="absolute bottom-4 right-4 w-24 overflow-hidden rounded-[1.4rem] border border-white/90 bg-white shadow-magical sm:w-28">
+          <div className="absolute bottom-4 right-4 w-20 overflow-hidden rounded-2xl border border-white/90 bg-white shadow-magical sm:w-24">
             <Image
               src={character.insetMedia.src}
               alt={character.insetMedia.alt}
               width={character.insetMedia.width}
               height={character.insetMedia.height}
               className={`h-full w-full ${
-                insetImageFit === "contain" ? "bg-white p-2 object-contain" : "object-cover"
+                insetImageFit === "contain"
+                  ? "bg-white p-2 object-contain"
+                  : "object-cover"
               }`}
               style={{ objectPosition: character.insetMedia.objectPosition }}
             />
@@ -91,21 +93,21 @@ export function CharacterCard({
         ) : null}
       </div>
 
-      <div className="p-6">
-        <h3 className="text-[1.8rem] font-semibold leading-tight text-midnight">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="text-2xl font-semibold leading-tight text-midnight sm:text-[1.7rem]">
           {character.name}
         </h3>
-        <p className="section-copy mt-3 text-sm sm:text-base">
+        <p className="section-copy mt-2.5 text-sm sm:text-base">
           {variant === "showcase" && character.longDescription
             ? character.longDescription
             : character.shortDescription}
         </p>
 
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <ul className="mt-4 flex flex-wrap gap-1.5">
           {character.tags.map((tag) => (
             <li
               key={tag}
-              className={`rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] ${styles.tag}`}
+              className={`rounded-full px-2.5 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.14em] ${styles.tag}`}
             >
               {tag}
             </li>
@@ -113,8 +115,11 @@ export function CharacterCard({
         </ul>
 
         {character.detailHref ? (
-          <div className="mt-6">
-            <Link href={character.detailHref} className="button-secondary text-sm">
+          <div className="mt-auto pt-5">
+            <Link
+              href={character.detailHref}
+              className="button-secondary text-sm"
+            >
               See {character.name}
             </Link>
           </div>

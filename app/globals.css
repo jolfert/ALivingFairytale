@@ -12,10 +12,21 @@
   --color-skywash: #e5efff;
   --color-mintwash: #e6fbf1;
   --color-line: rgba(97, 62, 129, 0.12);
+  --color-line-strong: rgba(97, 62, 129, 0.18);
   --color-copy-soft: #7b678f;
   --font-sans: var(--font-sans-family);
   --font-display: var(--font-display-family);
-  --shadow-magical: 0 24px 60px rgba(122, 84, 161, 0.18);
+
+  /* Two-tier shadow system: soft for regular cards, magical for hero/featured */
+  --shadow-soft: 0 10px 28px rgba(122, 84, 161, 0.08);
+  --shadow-magical: 0 24px 56px rgba(122, 84, 161, 0.16);
+  --shadow-button: 0 14px 28px rgba(130, 81, 211, 0.22);
+
+  /* Spacing + radii tokens (documentary; used inline as rounded-[var(--r-lg)]) */
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
 }
 
 :root {
@@ -35,6 +46,9 @@ body {
 
 html {
   scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -42,24 +56,30 @@ body {
   font-family: var(--font-sans-family);
   color: var(--color-midnight);
   background:
-    radial-gradient(circle at 8% 12%, rgba(245, 102, 187, 0.18), transparent 22%),
-    radial-gradient(circle at 90% 10%, rgba(125, 100, 255, 0.16), transparent 18%),
-    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.92), transparent 42%),
-    linear-gradient(180deg, #fff9fc 0%, #fff6fb 42%, #ffffff 100%);
+    radial-gradient(ellipse 60% 40% at 12% 6%, rgba(245, 102, 187, 0.12), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 92% 8%, rgba(125, 100, 255, 0.1), transparent 60%),
+    linear-gradient(180deg, #fffcfe 0%, #fff9fd 55%, #ffffff 100%);
+  background-attachment: fixed;
 }
 
+/* Subtle grain texture — much lighter than before */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.4;
+  z-index: 0;
+  opacity: 0.22;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.92) 1px, transparent 1.8px),
-    radial-gradient(circle, rgba(245, 102, 187, 0.28) 1px, transparent 2.1px),
-    radial-gradient(circle, rgba(125, 100, 255, 0.16) 1px, transparent 1.8px);
-  background-position: 0 0, 72px 84px, 118px 46px;
-  background-size: 170px 170px, 240px 240px, 320px 320px;
+    radial-gradient(circle, rgba(245, 102, 187, 0.22) 0.8px, transparent 1.4px),
+    radial-gradient(circle, rgba(125, 100, 255, 0.14) 0.8px, transparent 1.4px);
+  background-position: 0 0, 96px 72px;
+  background-size: 220px 220px, 280px 280px;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -77,95 +97,173 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display-family);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
+  font-feature-settings: "ss01", "ss02";
 }
 
+h1 {
+  letter-spacing: -0.035em;
+}
+
+::selection {
+  background: rgba(245, 102, 187, 0.22);
+  color: var(--color-midnight);
+}
+
+/* ============================================================
+   Panel system — three tiers, consistent shadows
+   ============================================================ */
 .glass-panel {
   border: 1px solid var(--color-line);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.86);
   box-shadow: var(--shadow-magical);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .soft-panel {
   border: 1px solid var(--color-line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 245, 250, 0.96));
-  box-shadow: var(--shadow-magical);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 247, 251, 0.94));
+  box-shadow: var(--shadow-soft);
 }
 
+.plain-panel {
+  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ============================================================
+   Buttons — refined hover, tighter shadows
+   ============================================================ */
 .button-primary,
 .button-secondary {
   display: inline-flex;
-  min-height: 3.25rem;
+  min-height: 3.1rem;
   align-items: center;
   justify-content: center;
+  gap: 0.4rem;
   border-radius: 999px;
-  padding: 0.875rem 1.35rem;
+  padding: 0.85rem 1.35rem;
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
+  letter-spacing: 0.01em;
   transition:
-    transform 160ms ease,
-    box-shadow 160ms ease,
-    background-color 160ms ease;
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--color-rose), var(--color-violet));
+  background: linear-gradient(135deg, var(--color-rose) 0%, var(--color-violet) 100%);
   color: white;
-  box-shadow: 0 18px 34px rgba(130, 81, 211, 0.24);
+  box-shadow: var(--shadow-button);
+}
+
+.button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px rgba(130, 81, 211, 0.28);
 }
 
 .button-secondary {
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--color-line-strong);
   background: rgba(255, 255, 255, 0.94);
   color: var(--color-midnight);
+  box-shadow: var(--shadow-soft);
 }
 
-.button-primary:hover,
 .button-secondary:hover {
   transform: translateY(-1px);
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(97, 62, 129, 0.24);
 }
 
+.button-primary:focus-visible,
+.button-secondary:focus-visible {
+  outline: 2px solid rgba(125, 100, 255, 0.55);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   Eyebrow — two variants: pill (hero-level) and plain (in-card)
+   ============================================================ */
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(245, 102, 187, 0.12);
-  background: rgba(255, 255, 255, 0.88);
-  padding: 0.625rem 0.95rem;
-  font-size: 0.76rem;
+  border: 1px solid rgba(245, 102, 187, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.55rem 0.9rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-copy-soft);
-  box-shadow: var(--shadow-magical);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Use .eyebrow-plain for eyebrows inside cards / on colored backgrounds */
+.eyebrow-plain {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-copy-soft);
 }
 
 .section-copy {
   color: var(--color-copy-soft);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
+/* ============================================================
+   Brand shell — backdrop decoration for hero imagery
+   ============================================================ */
 .brand-shell {
   position: relative;
-  overflow: hidden;
 }
 
-.brand-shell::after {
-  content: "";
-  position: absolute;
-  inset: auto auto -3rem -2rem;
-  height: 7rem;
-  width: 7rem;
-  border-radius: 999px;
-  background: rgba(245, 102, 187, 0.18);
-  filter: blur(18px);
-}
-
+/* ============================================================
+   Sparkle — cleaner accent
+   ============================================================ */
 .sparkle-dot::before {
   content: "\2726";
   display: inline-block;
   color: var(--color-sunrise);
+  font-size: 0.82em;
+  margin-right: 0.1rem;
+}
+
+/* ============================================================
+   Link — consistent underline treatment for inline links
+   ============================================================ */
+.inline-link {
+  position: relative;
+  font-weight: 700;
+  color: var(--color-midnight);
+  background-image: linear-gradient(90deg, var(--color-rose), var(--color-violet));
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+  transition: background-size 180ms ease;
+}
+
+.inline-link:hover {
+  background-size: 100% 3px;
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

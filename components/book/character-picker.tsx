@@ -32,7 +32,9 @@ export function CharacterPicker({
       <span className="block text-sm font-bold text-midnight">
         {label}
         {required ? (
-          <span className="font-semibold text-copy-soft">&nbsp;(required)</span>
+          <span className="font-semibold text-copy-soft">
+            &nbsp;(required)
+          </span>
         ) : null}
       </span>
 
@@ -40,8 +42,10 @@ export function CharacterPicker({
       <input type="hidden" name={name} value={selected} />
 
       <div
-        className={`max-h-56 overflow-y-auto overscroll-contain rounded-2xl border bg-white/92 p-3 shadow-sm transition ${
-          err ? "border-rose/40" : "border-line"
+        className={`max-h-[22rem] overflow-y-auto overscroll-contain rounded-xl border bg-white/95 p-3 transition sm:p-4 ${
+          err
+            ? "border-rose/45 ring-2 ring-rose/15"
+            : "border-line-strong"
         }`}
         role="radiogroup"
         aria-label="Choose your character"
@@ -49,7 +53,7 @@ export function CharacterPicker({
         aria-invalid={err ? true : undefined}
         aria-describedby={err ? errId : undefined}
       >
-        <div className="grid grid-cols-4 gap-2 sm:grid-cols-5">
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-5">
           {characters.map((character) => {
             const media = character.insetMedia ?? character.mainMedia;
             const isSelected = selected === character.name;
@@ -61,36 +65,42 @@ export function CharacterPicker({
                 role="radio"
                 aria-checked={isSelected}
                 onClick={() => toggle(character.name)}
-                className={`flex flex-col items-center gap-1.5 rounded-xl p-1.5 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet/40 ${
+                className={`group flex flex-col items-center gap-1.5 rounded-xl p-1.5 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet/50 ${
                   isSelected
-                    ? "bg-violet/5 ring-2 ring-violet/45"
-                    : "ring-1 ring-transparent hover:bg-slate-50"
+                    ? "bg-violet/8 ring-2 ring-violet/55"
+                    : "ring-1 ring-transparent hover:bg-mist/45 hover:ring-violet/15"
                 }`}
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-[#f6f1ff]">
+                <div
+                  className={`relative aspect-[3/4] w-full overflow-hidden rounded-lg transition ${
+                    isSelected
+                      ? "bg-[#f6f1ff]"
+                      : "bg-mist/55 group-hover:bg-mist"
+                  }`}
+                >
                   <Image
                     src={media.src}
                     alt={media.alt}
                     fill
-                    className={`transition duration-200 ${
+                    className={`transition duration-300 group-hover:scale-[1.03] ${
                       media.objectFit === "contain"
                         ? "object-contain p-1"
                         : "object-cover object-top"
                     }`}
-                    sizes="(max-width: 640px) 22vw, 14vw"
+                    sizes="(max-width: 640px) 30vw, 16vw"
                   />
                   {isSelected ? (
                     <div
-                      className="absolute inset-0 flex items-end justify-end p-1"
+                      className="absolute inset-0 flex items-end justify-end p-1.5"
                       aria-hidden
                     >
-                      <div className="grid h-5 w-5 place-items-center rounded-full bg-violet text-[11px] font-bold text-white shadow">
+                      <div className="grid h-6 w-6 place-items-center rounded-full bg-[linear-gradient(135deg,#f566bb,#7d64ff)] text-[11px] font-black text-white shadow-soft">
                         ✓
                       </div>
                     </div>
                   ) : null}
                 </div>
-                <span className="line-clamp-2 text-center text-[10px] font-semibold leading-tight text-midnight">
+                <span className="line-clamp-2 text-center text-[0.7rem] font-semibold leading-tight text-midnight">
                   {character.name}
                 </span>
               </button>
@@ -100,7 +110,11 @@ export function CharacterPicker({
       </div>
 
       {err ? (
-        <p id={errId} className="text-sm font-semibold text-rose" role="status">
+        <p
+          id={errId}
+          className="text-sm font-semibold text-rose"
+          role="status"
+        >
           {err}
         </p>
       ) : null}

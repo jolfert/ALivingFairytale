@@ -23,20 +23,18 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
 
   return (
     <article
-      className={`group overflow-hidden rounded-[2rem] border border-line shadow-magical ${path.accentClassName}`}
+      className={`group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-line shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-magical ${path.accentClassName}`}
     >
-      <div className="flex items-start justify-between gap-4 border-b border-white/60 p-6">
+      <div className="flex items-start justify-between gap-4 border-b border-white/60 p-5 sm:p-6">
         <div>
-          <span className="text-[0.7rem] font-black uppercase tracking-[0.18em] text-copy-soft">
-            {path.eyebrow}
-          </span>
-          <h3 className="mt-2 text-2xl font-semibold leading-snug text-midnight sm:text-3xl">
+          <span className="eyebrow-plain">{path.eyebrow}</span>
+          <h3 className="mt-2 text-xl font-semibold leading-snug text-midnight sm:text-2xl lg:text-[1.7rem]">
             {path.title}
           </h3>
         </div>
         <div
-          className={`shrink-0 overflow-hidden border border-white/80 bg-white/85 shadow-magical ${
-            usesPhotography ? "h-20 w-20 rounded-[1.35rem]" : "rounded-2xl p-2"
+          className={`shrink-0 overflow-hidden border border-white/80 bg-white/88 shadow-soft ${
+            usesPhotography ? "h-20 w-20 rounded-2xl" : "rounded-2xl p-2"
           }`}
         >
           <Image
@@ -59,27 +57,36 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
         </div>
       </div>
 
-      <div className="p-6">
-        <p className="section-copy text-base">{path.description}</p>
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <p className="section-copy text-sm leading-relaxed sm:text-base">
+          {path.description}
+        </p>
 
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <ul className="mt-5 flex flex-wrap gap-1.5">
           {path.tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-full bg-white/72 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-copy-soft"
+              className="rounded-full bg-white/72 px-2.5 py-1.5 text-[0.66rem] font-bold uppercase tracking-[0.16em] text-copy-soft"
             >
               {tag}
             </li>
           ))}
         </ul>
 
-        <Link
-          href={path.href}
-          className="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-midnight transition group-hover:gap-3"
-        >
-          {path.ctaLabel}
-          <span aria-hidden>{"\u2192"}</span>
-        </Link>
+        <div className="mt-auto pt-6">
+          <Link
+            href={path.href}
+            className="inline-flex items-center gap-2 text-sm font-extrabold text-midnight transition group-hover:gap-3"
+          >
+            {path.ctaLabel}
+            <span
+              aria-hidden
+              className="transition-transform group-hover:translate-x-0.5"
+            >
+              {"\u2192"}
+            </span>
+          </Link>
+        </div>
       </div>
     </article>
   );

@@ -6,9 +6,9 @@ type PageSectionProps = {
 };
 
 const spacingClasses = {
-  tight: "py-12 sm:py-16",
+  tight: "py-12 sm:py-14",
   default: "py-16 sm:py-20",
-  wide: "py-24 sm:py-28",
+  wide: "py-20 sm:py-28",
 } as const;
 
 export function PageSection({
