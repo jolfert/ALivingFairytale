@@ -37,8 +37,8 @@ export function CategoryHero({
   const insetImageFit = content.insetMedia?.objectFit ?? "cover";
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 lg:px-8 lg:pb-24 lg:pt-18">
-      <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_.98fr]">
+    <section className="mx-auto max-w-7xl px-4 pb-16 pt-6 sm:px-6 sm:pt-8 lg:px-8 lg:pb-24 lg:pt-10">
+      <div className="grid items-start gap-12 lg:grid-cols-[1.02fr_.98fr]">
         <div>
           <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
           <h1

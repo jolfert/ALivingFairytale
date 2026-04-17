@@ -10,6 +10,8 @@ import {
 } from "@/data/book-inquiry";
 import { bookPageContent } from "@/data/book-page";
 import { BOOKING_HONEYPOT_FIELD } from "@/lib/booking/inquiry-guards";
+import { CharacterPicker } from "@/components/book/character-picker";
+import type { ResolvedCharacter } from "@/data/types";
 
 export type PackageChoice = {
   slug: string;
@@ -19,6 +21,7 @@ export type PackageChoice = {
 
 type InquiryFormProps = {
   packageChoices: ReadonlyArray<PackageChoice>;
+  characterChoices: ReadonlyArray<ResolvedCharacter>;
   onRequestNew?: () => void;
 };
 
@@ -31,6 +34,7 @@ const fieldErrorClassName = "text-sm font-semibold text-rose";
 
 export function InquiryForm({
   packageChoices,
+  characterChoices,
   onRequestNew,
 }: InquiryFormProps) {
   const [state, formAction, isPending] = useActionState(
@@ -44,6 +48,27 @@ export function InquiryForm({
   let index = 0;
   while (index < inquiryFormFields.length) {
     const field = inquiryFormFields[index];
+
+    // Character picker replaces the plain text field for preferredCharacter
+    if (field.name === "preferredCharacter") {
+      const err = state.fieldErrors?.preferredCharacter;
+      const errId = "preferredCharacter-error";
+      rows.push(
+        <div key="preferredCharacter">
+          <CharacterPicker
+            characters={characterChoices}
+            name="preferredCharacter"
+            label={field.label}
+            required={field.required}
+            err={err}
+            errId={errId}
+          />
+        </div>,
+      );
+      index += 1;
+      continue;
+    }
+
     const next = inquiryFormFields[index + 1];
     if (field.width === "half" && next?.width === "half") {
       rows.push(

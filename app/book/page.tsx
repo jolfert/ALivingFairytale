@@ -4,7 +4,7 @@ import { InquiryFormShell } from "@/components/book/inquiry-form-shell";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
 import { PricingGuide } from "@/components/shared/pricing-guide";
-import { legacyPricingGuide, packages } from "@/data/catalog";
+import { characters, legacyPricingGuide, packages } from "@/data/catalog";
 import { bookPageContent } from "@/data/book-page";
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default function BookPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-16 xl:items-start">
             <BookTrustColumn />
-            <InquiryFormShell packageChoices={packageChoices} />
+            <InquiryFormShell packageChoices={packageChoices} characterChoices={characters} />
           </div>
           <div className="mt-14">
             <PricingGuide guide={legacyPricingGuide} />
