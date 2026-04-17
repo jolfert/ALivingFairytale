@@ -6,91 +6,89 @@ export const princessPageContent = {
   navigation: primaryNavigation,
   hero: {
     eyebrow: "Princess Parties",
-    title:
-      "Choose from a full cast of princess favorites, now with the real photos families already know.",
+    title: "A real-life princess at her birthday party.",
     description:
-      "From Ariel and Belle to Cinderella, Ice Queen, Rapunzel, and more, our princess parties are designed to feel magical for children and reassuringly polished for parents from the first wave to the final photo.",
+      "Ariel, Belle, Cinderella, the Ice Queen, Rapunzel, Jasmine, Moana, Sleeping Beauty and more — in authentic ball gowns that are breath-taking in person and stunning in photos.",
     highlights: [
-      "Real action photos paired with costume portraits",
-      "Each princess now has her own detail page",
-      "Warm arrivals, guided pacing, and beautiful party memories",
+      "Authentic, breath-taking ball gowns",
+      "Trained in acting, singing and modelling",
+      "The largest princess roster in Manitoba",
     ],
     primaryCta: {
-      label: "Choose your princess",
-      href: "#characters",
+      label: "Book a princess party",
+      href: "/book",
     },
     secondaryCta: {
-      label: "See package options",
+      label: "See packages",
       href: "#packages",
     },
     mainMedia: getMediaAsset("princessLandingMain"),
     insetMedia: getMediaAsset("cinderellaBluePortrait"),
-    panelEyebrow: "Princess path tone",
-    panelTitle: "Soft sparkle, graceful pacing, and a princess roster deep enough to fit her real favorite.",
+    panelEyebrow: "What makes a Living Fairytale princess",
+    panelTitle: "Deeply in character from the first hug to the final photo.",
     panelDescription:
-      "This path keeps the same premium brand feel while giving families a fuller lineup of recognizable princesses, real photos, and an easy way to click into each character for more detail.",
+      "Every performer is highly knowledgeable about the character she's portraying. The voice, the grace, the storytelling — it all has to match the children's expectations of their favourite princess.",
     supportingCards: [
       {
-        eyebrow: "Arrival feel",
-        title: "Elegant entrances",
+        eyebrow: "Entrance",
+        title: "A dramatic arrival",
         description:
-          "The magic starts strong without ever feeling rushed or overwhelming.",
+          "Every princess walks in fully in character. No breaking, no awkward pause — just the magic the birthday child has been picturing all week.",
       },
       {
-        eyebrow: "Parent Comfort",
-        title: "Beautifully guided flow",
+        eyebrow: "Interaction",
+        title: "Storytelling, singing, games",
         description:
-          "Activities are paced to feel easy for families and special for the birthday child.",
+          "Every party includes storytelling and activities picked for the age group. Silver and Gold add face painting, gift opening and temporary tattoos.",
       },
       {
-        eyebrow: "Keepsake moments",
-        title: "Picture-worthy magic",
+        eyebrow: "Keepsakes",
+        title: "Photos the family will frame",
         description:
-          "The celebration is shaped around smiles, wonder, and the kind of moments parents love to capture.",
+          "Beautiful ball gowns photograph beautifully. We pace the party so there's always time for pictures with every child.",
       },
     ],
   },
   sections: {
     characters: {
-      eyebrow: "Featured princesses",
-      title:
-        "Choose the princess who feels closest to her favorite kind of magic, then click through for her full page.",
+      eyebrow: "Meet the princesses",
+      title: "Our full roster of princess favourites.",
       description:
-        "Every card pairs an action photo with a costume portrait so families can see the party feeling and the exact look at a glance.",
+        "Classic fairytale princesses, frozen favourites, Moana, Jasmine, Fancy Nancy, Barbie and more. Click any card for her full detail page.",
     },
     experience: {
-      eyebrow: "What families can expect",
-      title: "Princess parties should feel enchanting, not disorganized.",
+      eyebrow: "What's included",
+      title: "What happens during a princess party.",
       description:
-        "We shape this path around the details parents care about most: smooth pacing, lovely photos, and a birthday child who truly feels seen.",
+        "Every package includes the core moments children remember most. Silver and Gold unlock more time for activities, face painting and a fuller celebration.",
     },
     packages: {
-      eyebrow: "Princess package overview",
-      title: "Choose the pacing that fits the celebration you're planning.",
+      eyebrow: "Packages",
+      title: "Bronze, Silver, Gold.",
       description:
-        "Whether you want a sweet royal visit or a fuller fairytale experience, each package keeps the choice clear and the next step easy.",
+        "One hour, one and a half hours, or two full hours. Same quality, same trained performers — just how much time you want her to stay.",
     },
   },
   experienceCards: [
     {
-      eyebrow: "For the birthday child",
-      title: "She feels like the star of the story",
+      eyebrow: "Core moment",
+      title: "Dramatic entrance",
       description:
-        "The structure creates real character connection, not just a quick appearance and photo line.",
+        "The birthday child sees her favourite princess walk through the door, fully in character. The reaction is priceless every single time.",
       icon: "\u2726",
     },
     {
-      eyebrow: "For the room",
-      title: "A celebration that looks every bit as lovely as it feels",
+      eyebrow: "Core moment",
+      title: "Storytelling & singing",
       description:
-        "From the entrance to the keepsake photos, the atmosphere stays sweet, polished, and full of wonder.",
+        "An interactive fairytale, songs the children already know, and plenty of time for every child to feel seen and included.",
       icon: "\u2661",
     },
     {
-      eyebrow: "For the grown-ups",
-      title: "A parent-friendly flow that stays easy to follow",
+      eyebrow: "Core moment",
+      title: "Keepsake photos",
       description:
-        "Clear package choices, thoughtful timing, and warm communication make it easy to relax and enjoy the day.",
+        "Pictures with the birthday child, pictures with every guest, and a dramatic exit that leaves the magic intact.",
       icon: "\u263C",
     },
   ],
@@ -101,21 +99,21 @@ export const princessPageContent = {
     "signature-fairytale",
   ]),
   cta: {
-    eyebrow: "Ready for a royal booking?",
-    title: "Let's create the princess party they keep talking about after the candles are blown out.",
+    eyebrow: "Let's make it magical",
+    title: "Book her favourite princess for the big day.",
     description:
-      "If this feels like the right fit, the next step is simple. Send us the date, the party details, and the princess you have in mind, and we'll guide the rest.",
+      "Send us the date, the princess she's been asking for, and a few details about your party. A real person will follow up — usually within a day.",
     notes: [
-      "A lovely fit for birthdays that want beautiful character-led moments",
-      "Easy to pair with add-ons, travel notes, and special requests",
-      "Designed to feel magical for children and calm for parents",
+      "Weekend dates book fast during spring and fall",
+      "Multiple princesses can arrive together for larger parties",
+      "Mention any theme requests, allergies or timing notes up front",
     ],
     primaryCta: {
-      label: "Start a princess request",
+      label: "Book a princess party",
       href: "/book",
     },
     secondaryCta: {
-      label: "Back to homepage",
+      label: "Back to home",
       href: "/",
     },
   },

@@ -5,138 +5,130 @@ import { primaryNavigation } from "@/data/site-shell";
 export const homepageContent = {
   navigation: primaryNavigation,
   hero: {
-    eyebrow: "Magical party entertainment for unforgettable celebrations",
-    title: "Make their special day feel like pure magic.",
+    eyebrow: "Manitoba's premier children's entertainers",
+    title: "Let us make magic happen.",
     description:
-      "From princess arrivals and superhero entrances to playful mascots and party-ready rentals, A Living Fairytale creates celebrations that feel exciting for children and beautifully easy for parents to book.",
+      "A Living Fairytale has been Manitoba's home for theme-park quality princesses, superheroes, mascots and party rentals since 2011. When your child meets their favourite character, it's truly unforgettable.",
     highlights: [
-      "Performers who arrive ready, in character, and on time",
-      "Warm, human follow-up from inquiry to celebration day",
-      "Princess, superhero, mascot, and rental options under one trusted brand",
+      "In business since 2011",
+      "2,000+ events and counting",
+      "100% money-back guarantee",
     ],
     primaryCta: {
-      label: "Book the magic",
+      label: "Book a Party",
       href: "/book",
     },
     secondaryCta: {
-      label: "Explore party types",
+      label: "Meet the characters",
       href: "#paths",
     },
     stats: [
       {
-        value: "3 paths",
-        label: "Princess, superhero, and mascot or rental celebrations under one polished brand.",
+        value: "Since 2011",
+        label: "Locally owned family business, born in Winnipeg and trusted across Manitoba.",
       },
       {
-        value: "Fast follow-up",
-        label: "Parents get a clear reply from a real person, not a maze of automated confusion.",
+        value: "2,000+ events",
+        label: "Birthdays, daycare parties, mall shows, holidays, charity and corporate events.",
       },
       {
-        value: "Picture-ready",
-        label: "Every experience is shaped to feel memorable in the room and beautiful in photos.",
+        value: "0 cancellations",
+        label: "We have never cancelled an event on a family. When we say we'll be there, we are.",
       },
     ],
     brandMedia: getMediaAsset("siteLogo"),
     showcase: {
-      eyebrow: "A peek at the feeling",
+      eyebrow: "Real parties, real photos",
       mainMedia: getMediaAsset("cinderellaMain"),
-      storyCardEyebrow: "Party magic in real life",
-      storyCardTitle:
-        "Action shots for the big moment. Costume portraits for the finishing touch.",
+      storyCardEyebrow: "Performance photography",
+      storyCardTitle: "Authentic ball gowns. Trained performers. Real character magic.",
       storyCardText:
-        "The experience is built to feel magical in the room and look beautiful when the photos start rolling.",
+        "Our entertainers are trained in acting, singing and modelling, and they stay fully in character from the first hug to the final photo.",
       princessLabel: "Princess",
       princessDescription:
-        "Graceful arrivals, storybook smiles, and sweet interactive magic.",
+        "A full roster of recognizable princesses in authentic, breath-taking ball gowns.",
       heroLabel: "Superhero",
       heroDescription:
-        "Batman, Spiderman, and superhero-style party energy with bold entrances and big reactions.",
-      planningEyebrow: "Easy from the first click",
-      planningTitle: "Choose your path, choose your package, tell us your date.",
-      planningDescription:
-        "We keep the first step simple so you can move from 'What should we do?' to 'Yes, let's book it' without a maze of follow-up questions.",
-      reassuranceEyebrow: "What families feel",
-      reassuranceTitle:
-        "Whimsical for children. Clear, warm, and polished for grown-ups.",
-      supportCards: [
-        {
-          title: "Moments worth photographing",
-          description:
-            "From the entrance to the hugs, the experience is designed to look as lovely as it feels.",
-        },
-        {
-          title: "Guidance without pressure",
-          description:
-            "If you are choosing between packages, themes, or characters, we help you find the right fit with confidence.",
-        },
-      ],
+        "Batman, Spiderman, Wonder Woman and more — bold arrivals for the birthday hero.",
+      planningEyebrow: "Unused (kept for type compatibility)",
+      planningTitle: "",
+      planningDescription: "",
+      reassuranceEyebrow: "",
+      reassuranceTitle: "",
+      supportCards: [],
     },
   },
   sections: {
     whyUs: {
-      eyebrow: "Why families choose us",
-      title: "A party experience that feels magical for kids and easy for parents.",
+      eyebrow: "What you can expect",
+      title: "Theme-park quality, every single booking.",
       description:
-        "We know this is more than just a booking. It's your child's big day. That's why we focus on creating celebrations that feel warm, polished, memorable, and simple to plan.",
+        "Reputation is everything for a family-owned business. We spare no expense on costumes, wigs and makeup, and every performer is trained, background-checked and insured.",
     },
     paths: {
-      eyebrow: "Choose your party experience",
-      title: "Start with the party path that fits your child best.",
+      eyebrow: "Choose your party",
+      title: "Princess, superhero, or mascot & rental.",
       description:
-        "Whether your child dreams of a royal celebration, a superhero surprise, or cheerful mascot fun with rentals, we'll help you shape a party that feels polished, memorable, and easy to plan.",
+        "Birthday parties, daycare parties, mall shows, holiday parties, charity events, corporate events — the possibilities are endless. Start by choosing the path that fits your celebration.",
     },
     featured: {
-      eyebrow: "Start with the favorites",
-      title: "A quick look at the party types families ask about most.",
+      eyebrow: "Meet the characters",
+      title: "A few of the favourites families ask about most.",
       description:
-        "Just enough to compare the feeling of each path before you head deeper into princesses, heroes, mascots, or rentals.",
+        "From Ariel and Belle to Batman and Olaf, our roster covers the characters children actually recognize. Click through to see the full cast on each party page.",
     },
     packages: {
-      eyebrow: "Packages made simple",
-      title: "Simple packages. Beautiful memories.",
+      eyebrow: "Pricing",
+      title: "Princess party pricing.",
       description:
-        "Whether you want a sweet character visit or a fuller interactive experience, we'll help you choose the package that fits your celebration best.",
+        "Bronze, Silver and Gold packages for every party path. Includes up to 10 children; additional children $5 per child. Travel outside Winnipeg is $0.68/km from the nearest perimeter exit.",
+    },
+    testimonials: {
+      eyebrow: "From real families",
+      title: "The kind of party they'll still be talking about next year.",
+      description:
+        "A few kind words from parents, event organizers and the children whose birthdays we've been lucky enough to be part of.",
     },
     trust: {
-      eyebrow: "Why parents feel comfortable booking",
-      title: "Warm communication, beautiful presentation, and a process that stays easy to follow.",
+      eyebrow: "Why parents book with us",
+      title: "Experience. Quality. Reliability.",
       description:
-        "Thoughtful performers, photo-aware pacing, and one clear booking path help families move forward without second-guessing the next step.",
+        "Background-checked entertainers, fully insured services, and industry-standard handling of your payment information. The details matter — to us, and to you.",
     },
   },
   partyPaths: [
     {
       eyebrow: "Princess Parties",
-      title: "Graceful arrivals, storybook magic, and moments families love to relive.",
+      title: "Authentic ball gowns and a full princess roster.",
       description:
-        "Graceful entrances, storybook moments, songs, smiles, and beautiful photo opportunities for children who want to feel like royalty.",
+        "Ariel, Belle, Cinderella, the Ice Queen, Rapunzel, Sleeping Beauty, Jasmine, Moana and more — graceful arrivals, interactive storytelling, and beautiful keepsake photos.",
       href: "/princess",
-      ctaLabel: "Choose a princess party",
-      tags: ["Elegant arrivals", "Dreamy activities", "Soft sparkle"],
+      ctaLabel: "See all princesses",
+      tags: ["Authentic gowns", "Trained performers", "Photo-ready"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,241,248,0.98))]",
       image: getMediaAsset("cinderellaBluePortrait"),
     },
     {
       eyebrow: "Superhero Parties",
-      title: "Big arrivals, hero energy, and birthday excitement that lands right away.",
+      title: "Big entrances for the birthday hero.",
       description:
-        "Batman, Spiderman, and superhero-style visits with big entrances, bold photos, and birthday energy kids instantly respond to.",
+        "Batman, Spiderman, Wonder Woman and Star Wars favourites with dramatic arrivals, hero missions, and photos kids will want to show off at school.",
       href: "/heroes",
-      ctaLabel: "Choose a superhero party",
-      tags: ["Batman", "Spiderman", "Action energy"],
+      ctaLabel: "See all superheroes",
+      tags: ["Batman", "Spiderman", "Wonder Woman"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(251,253,255,0.98),rgba(234,242,255,0.98))]",
       image: getMediaAsset("batmanPortrait"),
     },
     {
       eyebrow: "Mascots & Rentals",
-      title: "Cheerful mascot moments and easy add-ons for any celebration.",
+      title: "Olaf, Minion, Mickey and a bright pink bounce house.",
       description:
-        "Olaf mascot fun, pink bounce-house rentals, and cheerful add-ons that make birthdays, school events, and family celebrations feel fuller.",
+        "Mascot suit rentals ($100) for Lego Man, Olaf, Elmo, Hello Kitty, Minion, Buzz Lightyear, Mickey, Minnie, Ninja Turtles and more — plus our pink castle bounce house ($50).",
       href: "/mascots",
       ctaLabel: "See mascots & rentals",
-      tags: ["Olaf", "Pink bounce house", "Easy add-ons"],
+      tags: ["Mascot suits", "Bounce house", "No entertainer"],
       accentClassName:
         "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,255,247,0.98))]",
       image: getMediaAsset("olafPortrait"),
@@ -144,22 +136,34 @@ export const homepageContent = {
   ],
   trustPillars: [
     {
-      title: "Beautiful first impressions",
+      title: "Experience",
       description:
-        "From the moment your character arrives, the experience is designed to feel exciting, polished, and photo-worthy.",
-      icon: "\u2661",
-    },
-    {
-      title: "Warm, child-friendly interaction",
-      description:
-        "We shape each experience around the birthday child and their guests so the celebration feels personal, engaging, and joyful.",
+        "In business since 2011, our entertainers have attended 2,000+ events — birthdays, daycares, mall shows, holidays, corporate and charity events.",
       icon: "\u2726",
     },
     {
-      title: "Simple booking, clear next steps",
+      title: "Quality",
       description:
-        "Clear package options, an easy inquiry process, and friendly follow-up make planning feel much less stressful.",
+        "Price reflects quality. We spare no expense on authentic costumes, wigs, makeup and accessories, and we hire the most trained entertainers in the industry.",
+      icon: "\u2661",
+    },
+    {
+      title: "Reliability",
+      description:
+        "We have never cancelled an event. If Prince Charming is unreachable and we somehow can't deliver, we offer a 100% money-back guarantee.",
       icon: "\u263C",
+    },
+    {
+      title: "Safety",
+      description:
+        "Every entertainer is background-checked. We carry full insurance — rare in this industry — and use industry-standard practices to keep your payment information safe.",
+      icon: "\u2605",
+    },
+    {
+      title: "Customer Service",
+      description:
+        "We answer every request, every question, every concern. Every event is customized to your child's favourite character, theme and party flow.",
+      icon: "\u2665",
     },
   ],
   featuredCharacters: pickCharacters([
@@ -171,43 +175,42 @@ export const homepageContent = {
   packages,
   finalCta: {
     eyebrow: "Ready to book?",
-    title: "Let's create the party they keep talking about after the day is over.",
+    title: "Let's make their big day unforgettable.",
     description:
-      "Tell us a little about your celebration, and we'll help you choose the right party type, package, character, mascot, or rental for a day that feels truly special.",
+      "Send us your party date, the character you have in mind, and a few details about your celebration. A real person will reply — usually within a day.",
     steps: [
       {
         step: "1",
-        title: "Choose your party style",
-        description:
-          "Princess, superhero, mascot, rental, or a mix that fits your day.",
+        title: "Choose your party",
+        description: "Princess, superhero, mascot, rental — or a combination.",
       },
       {
         step: "2",
-        title: "Share the date and details",
-        description: "Tell us the basics, plus anything special you want us to know.",
+        title: "Share the details",
+        description: "Date, start time, address, age, and anything special you'd like us to know.",
       },
       {
         step: "3",
-        title: "Watch for our reply",
-        description: "We follow up with a warm, focused response and the next clear step.",
+        title: "Hear back from us",
+        description: "A real person reviews every inquiry and replies with the next step.",
       },
     ],
-    previewEyebrow: "Booking made simple",
-    previewTitle: "Clear expectations, thoughtful questions, and a calm next step.",
+    previewEyebrow: "What families say",
+    previewTitle: "\"So much fun. Absolutely unforgettable.\"",
     previewDescription:
-      "The booking page pairs helpful reassurance with a structured inquiry form so families can send what matters without feeling buried in fields.",
+      "Repeat bookings are the foundation of our business. Read what parents have to say on our Reviews page — or on Facebook, where we've been collecting reviews for years.",
     notes: [
       "A real person reviews every inquiry",
-      "One form covers princess, hero, mascot, and rental requests",
-      "Special requests, timing notes, and location details can all be included up front",
+      "One form covers princesses, heroes, mascots and rentals",
+      "Weekend dates book fast during busy seasons — send early",
     ],
     primaryCta: {
       label: "Start your booking",
       href: "/book",
     },
     secondaryCta: {
-      label: "Compare party paths",
-      href: "#paths",
+      label: "Read reviews",
+      href: "/reviews",
     },
   },
 } as const;

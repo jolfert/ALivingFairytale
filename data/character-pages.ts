@@ -27,197 +27,186 @@ const pageThemes: Record<CharacterCategory, CharacterPageContent["theme"]> = {
 
 const categoryCopy = {
   Princess: {
-    sectionTitle:
-      "She should feel magical in the room and beautiful in the photos.",
-    compareTitle:
-      "Still comparing favorites? Here are a few more beautiful character options.",
-    packageTitle: "Choose the pace that fits the celebration you are planning.",
-    panelEyebrow: "Why families choose her",
+    sectionTitle: "What happens when she arrives.",
+    compareTitle: "Other princesses families book.",
+    packageTitle: "Bronze, Silver or Gold.",
+    panelEyebrow: "Why families book her",
     support: [
       {
-        eyebrow: "Party feel",
-        title: "Dreamy, warm, and photo-friendly",
+        eyebrow: "Entrance",
+        title: "Dramatic arrival, fully in character",
         description:
-          "The focus stays on child connection, sweet pacing, and the kind of keepsake moments families hope for.",
+          "She walks in as the princess. No breaking character, no awkward pause — just the magic the birthday child has been picturing all week.",
       },
       {
-        eyebrow: "Booking ease",
-        title: "Simple to compare and easy to request",
+        eyebrow: "Interaction",
+        title: "Storytelling, songs and games",
         description:
-          "Every character page keeps the same structure so parents can move from maybe to yes without getting lost.",
+          "An interactive fairytale, songs the children already know, and activities scaled to the age group in the room.",
       },
       {
-        eyebrow: "Best fit",
-        title: "Built for real favorite-character birthdays",
+        eyebrow: "Photos",
+        title: "Keepsake pictures with every child",
         description:
-          "The page is shaped to help families picture the actual celebration, not just the costume on its own.",
+          "We pace the party so every guest gets their moment, and the birthday child gets plenty of framed-on-the-wall pictures.",
       },
     ] as ReadonlyArray<InfoCard>,
     highlights: [
       {
         eyebrow: "For the birthday child",
-        title: "She feels like the star of the story",
+        title: "She feels like the star of the day",
         description:
-          "The experience is paced to create real wonder, not just a quick photo stop.",
+          "Her favourite princess walks through the door and recognizes her first. The reaction is priceless every single time.",
       },
       {
         eyebrow: "For the room",
-        title: "The celebration looks every bit as lovely as it feels",
+        title: "Authentic ball gowns, trained performers",
         description:
-          "From arrival photos to close-up moments, the visual side stays polished and premium.",
+          "The gowns are authentic and breath-taking in person. The performers are trained in acting, singing and modelling — and fully in character from start to finish.",
       },
       {
-        eyebrow: "For parents",
-        title: "The path stays easy to follow",
+        eyebrow: "For the grown-ups",
+        title: "Zero stress for the parents",
         description:
-          "Clear packages, warm communication, and a familiar page structure keep decision-making simple.",
+          "The princess runs the party. You get to enjoy the day, take photos, and watch your child's face light up.",
       },
     ] as ReadonlyArray<InfoCard>,
   },
   Hero: {
-    sectionTitle:
-      "The party should feel bold, exciting, and still easy for parents to follow.",
-    compareTitle:
-      "Need to compare heroes? These are the other action-forward favorites families look at next.",
-    packageTitle:
-      "Choose the amount of time and energy that fits the kind of entrance you want.",
+    sectionTitle: "What happens when he walks through the door.",
+    compareTitle: "Other heroes families book.",
+    packageTitle: "Hero, Super or Power.",
     panelEyebrow: "Why families book this hero",
     support: [
       {
-        eyebrow: "Party feel",
-        title: "Big reactions without chaotic pacing",
+        eyebrow: "Entrance",
+        title: "Big entrance, fully in character",
         description:
-          "The energy is high, but the structure stays thoughtful so the room still feels manageable.",
+          "A full-volume hero arrival that turns the room into a moment. The birthday child gets recognized first.",
       },
       {
-        eyebrow: "Photo moments",
-        title: "Action-ready from the first minute",
+        eyebrow: "Interaction",
+        title: "Hero missions and action games",
         description:
-          "Strong entrances and recognizable costumes help the big reaction moments happen quickly.",
+          "Age-appropriate missions, team games, and plenty of pose-for-the-camera moments.",
       },
       {
-        eyebrow: "Best fit",
-        title: "Built for kids who want real hero energy",
+        eyebrow: "Gold extras",
+        title: "Masks for the whole crew",
         description:
-          "These pages keep the premium brand feel while shifting into bolder, more action-forward storytelling.",
+          "The Gold Power Package includes superhero masks for every guest — instant group photos, instant takeaway keepsakes.",
       },
     ] as ReadonlyArray<InfoCard>,
     highlights: [
       {
         eyebrow: "For the birthday child",
-        title: "The entrance lands right away",
+        title: "The hero recognizes them first",
         description:
-          "The first few minutes are built to create that unmistakable superhero-party wow moment.",
+          "A big entrance straight to the birthday hero. The entire room reacts — and the birthday child is at the centre of it.",
       },
       {
-        eyebrow: "For the guest list",
-        title: "The room feels energized, not messy",
+        eyebrow: "For the squad",
+        title: "Energy that stays organized",
         description:
-          "The pace stays lively and interactive without making the whole celebration feel scattered.",
+          "Big action, structured pacing. The party feels exciting without spinning out — even with a room full of hyped-up kids.",
       },
       {
-        eyebrow: "For parents",
-        title: "The booking still feels clear and premium",
+        eyebrow: "For the grown-ups",
+        title: "Photos worth framing",
         description:
-          "Families get the same thoughtful process and polished presentation as every other path on the site.",
+          "Action shots, team shots, and the one-on-one birthday photo with the hero. Show-and-tell is handled.",
       },
     ] as ReadonlyArray<InfoCard>,
   },
   Mascot: {
-    sectionTitle:
-      "Mascot visits should feel cheerful, low-friction, and easy to build into the day.",
-    compareTitle:
-      "If you are still deciding, here are the other playful options families look at next.",
-    packageTitle:
-      "Choose the length that fits the event and how you want to use the character moment.",
-    panelEyebrow: "Why this option works",
+    sectionTitle: "How a mascot visit works.",
+    compareTitle: "Other mascots and playful options.",
+    packageTitle: "Or add a mascot on top of a princess or hero booking.",
+    panelEyebrow: "Why families book this",
     support: [
       {
-        eyebrow: "Party feel",
-        title: "Bright, simple, and crowd-friendly",
+        eyebrow: "Arrival",
+        title: "Instant recognition",
         description:
-          "This path works well when families want instant smiles without a lot of extra explaining.",
+          "A mascot walks in and children light up. It's the fastest way to make the room feel like a party.",
       },
       {
-        eyebrow: "Planning ease",
-        title: "Easy to pair with the rest of the event",
+        eyebrow: "Works for",
+        title: "Any age, any size of group",
         description:
-          "Mascot visits slide naturally into birthdays, school events, and mixed-age celebrations.",
+          "Mascots work beautifully at birthdays, daycare parties, school events, mall shows, and community gatherings.",
       },
       {
-        eyebrow: "Best fit",
-        title: "A good choice when speed and clarity matter",
+        eyebrow: "Pair it",
+        title: "Layer with a character package",
         description:
-          "The focus stays on recognizable fun and easy planning instead of a long activity-heavy structure.",
+          "Want Olaf to actually interact? Book a princess or superhero package and add a mascot — we'll coordinate it all.",
       },
     ] as ReadonlyArray<InfoCard>,
     highlights: [
       {
         eyebrow: "For the kids",
-        title: "The smiles happen fast",
+        title: "Smiles happen the second the door opens",
         description:
-          "Recognizable mascot characters help children react right away, especially in mixed-age rooms.",
+          "Recognizable mascots get an immediate reaction, especially from younger guests and mixed-age rooms.",
       },
       {
-        eyebrow: "For the schedule",
-        title: "Simple to add without overcomplicating the day",
+        eyebrow: "For the event",
+        title: "Easy to slot into the schedule",
         description:
-          "This keeps the event moving while still adding a memorable visual moment.",
+          "A mascot visit doesn't need a 90-minute activity block. 15–30 minutes is enough to make it the highlight of the day.",
       },
       {
-        eyebrow: "For parents",
-        title: "Clear expectations and an easy next step",
+        eyebrow: "For the grown-ups",
+        title: "A warm, professional character presence",
         description:
-          "The page keeps the details straightforward so you can ask the right questions quickly.",
+          "Trained performers who know how to engage every age in the room without overwhelming the shy ones.",
       },
     ] as ReadonlyArray<InfoCard>,
   },
   Rental: {
-    sectionTitle:
-      "Rental add-ons should make the day feel bigger without making the planning harder.",
-    compareTitle:
-      "Here are the other cheerful event extras families often compare with this one.",
-    packageTitle:
-      "Choose the setup that works best for your event and how full you want the celebration to feel.",
-    panelEyebrow: "Why families add this",
+    sectionTitle: "How this rental works.",
+    compareTitle: "Other rentals and party add-ons.",
+    packageTitle: "Pair it with a character package.",
+    panelEyebrow: "Why families rent this",
     support: [
       {
-        eyebrow: "Visual payoff",
-        title: "It makes the setup feel complete right away",
+        eyebrow: "Pickup rental",
+        title: "You run the show",
         description:
-          "A strong rental piece helps the event look festive before the first guest even walks in.",
+          "Rentals are pickup-based. You collect the item, set it up, and return it after the party. No entertainer included.",
       },
       {
-        eyebrow: "Planning ease",
-        title: "Simple to ask about alongside character visits",
+        eyebrow: "Pair it",
+        title: "Stack with a character package",
         description:
-          "Families can keep everything in one booking conversation instead of piecing it together from different vendors.",
+          "A rental on its own is fun. A rental plus a princess or superhero visit is a proper party. We'll coordinate the timing.",
       },
       {
-        eyebrow: "Best fit",
-        title: "A great add-on when you want the party to feel fuller",
+        eyebrow: "Setup",
+        title: "Flat outdoor space, power outlet",
         description:
-          "Rentals help give children extra movement and give the event a clear visual anchor.",
+          "The bounce house needs flat ground and an outlet. Mascot suits need one adult volunteer (staff, parent or older sibling).",
       },
     ] as ReadonlyArray<InfoCard>,
     highlights: [
       {
         eyebrow: "For the event",
-        title: "It adds instant visual excitement",
+        title: "Instant visual payoff",
         description:
-          "The setup reads as fun and intentional before the party even gets moving.",
+          "A bounce house or mascot suit makes a backyard, classroom or community hall feel like a proper event.",
       },
       {
         eyebrow: "For the kids",
-        title: "There is more room for movement and play",
+        title: "Room to burn off energy",
         description:
-          "That helps keep the celebration feeling active between the main party moments.",
+          "Especially helpful at longer parties — the rental gives kids somewhere to go between the scheduled moments.",
       },
       {
-        eyebrow: "For parents",
-        title: "It stays easy to bundle into the same request",
+        eyebrow: "For the budget",
+        title: "Big impact, low cost",
         description:
-          "The next step is still one simple inquiry instead of another planning headache.",
+          "Mascot suit rentals are $100. The bounce house is $50. The visual upgrade per dollar is hard to beat.",
       },
     ] as ReadonlyArray<InfoCard>,
   },
@@ -255,30 +244,17 @@ const relatedOverrides: Partial<Record<string, ReadonlyArray<string>>> = {
   "pink-party-tent": ["pink-castle-bounce-house", "olaf"],
 };
 
-function getCategoryLabel(character: ResolvedCharacter) {
-  if (character.category === "Rental") {
-    return "party add-on";
-  }
-  if (character.category === "Mascot") {
-    return "mascot visit";
-  }
-  if (character.category === "Hero") {
-    return "hero party";
-  }
-  return "princess party";
-}
-
 function buildHeroTitle(character: ResolvedCharacter) {
   if (character.category === "Hero") {
-    return `${character.name} parties with a bold entrance, strong photo moments, and the kind of birthday energy kids react to instantly.`;
+    return `Book ${character.name} for the big day.`;
   }
   if (character.category === "Mascot") {
-    return `${character.name} visits that feel playful, recognizable, and easy to fold into the celebration.`;
+    return `${character.name}, on your schedule.`;
   }
   if (character.category === "Rental") {
-    return `${character.name} setups that make the celebration feel fuller, brighter, and more exciting right away.`;
+    return `${character.name} — a party-ready rental.`;
   }
-  return `${character.name} parties full of storybook charm, beautiful photos, and real favorite-character magic.`;
+  return `A visit from ${character.name}.`;
 }
 
 function buildHeroDescription(character: ResolvedCharacter) {
@@ -287,9 +263,61 @@ function buildHeroDescription(character: ResolvedCharacter) {
 
 function buildHeroHighlights(character: ResolvedCharacter) {
   return [
-    character.tags[0] ?? "Photo-ready favorite",
-    character.tags[1] ?? "Warm party moments",
-    character.tags[2] ?? "Easy to book",
+    character.tags[0] ?? "Photo-ready",
+    character.tags[1] ?? "Trained performer",
+    character.tags[2] ?? "Locally owned",
+  ];
+}
+
+function buildPanelTitle(character: ResolvedCharacter) {
+  if (character.category === "Princess") {
+    return `${character.name} in an authentic ball gown, fully in character, for the full length of the party.`;
+  }
+  if (character.category === "Hero") {
+    return `${character.name} arrives big, commits to the role, and makes the birthday hero the centre of the day.`;
+  }
+  if (character.category === "Mascot") {
+    return `${character.name} is a mascot visit — the fastest way to make a room of children light up.`;
+  }
+  return `${character.name} is a pickup rental — the easy way to make your event look and feel bigger.`;
+}
+
+function buildPanelDescription(character: ResolvedCharacter) {
+  if (character.category === "Princess" || character.category === "Hero") {
+    return "Every party includes a dramatic entrance, interactive storytelling, singing and keepsake photos. Silver adds face painting, gift opening and temporary tattoos. Gold gives you two full hours to use it all.";
+  }
+  if (character.category === "Mascot") {
+    return "Mascots are perfect when you want instant recognition without booking a full character package. Pair with a princess or superhero visit if you'd like the mascot to actually interact with the kids.";
+  }
+  return "Rentals are pickup-based — $100 for a mascot suit, $50 for the pink castle bounce house. You supervise; we supply. Easy to bundle with a character package.";
+}
+
+function buildCtaTitle(character: ResolvedCharacter) {
+  if (character.category === "Rental") {
+    return `Want to reserve ${character.name}?`;
+  }
+  return `Book ${character.name} for the big day.`;
+}
+
+function buildCtaNotes(character: ResolvedCharacter) {
+  if (character.category === "Rental") {
+    return [
+      "Rentals are pickup-based — no entertainer included",
+      "Pair with a princess or superhero visit for the full experience",
+      "Availability depends on the date and setup needs",
+    ];
+  }
+  if (character.category === "Mascot") {
+    return [
+      "Mascot visits work for birthdays, schools, mall shows and community events",
+      "Pair with a character package if you'd like a performer, not a costume rental",
+      "Weekend dates book early during busy seasons",
+    ];
+  }
+  return [
+    "Weekend dates fill fast in the spring and fall",
+    "Multiple characters can arrive together — just let us know",
+    "Mention any theme, allergies or scheduling notes up front",
   ];
 }
 
@@ -323,7 +351,6 @@ export function getCharacterPageContent(
   const categoryTheme = pageThemes[character.category];
   const copy = categoryCopy[character.category];
   const relatedCharacters = getRelatedCharacters(character);
-  const categoryLabel = getCategoryLabel(character);
 
   return {
     slug,
@@ -337,7 +364,7 @@ export function getCharacterPageContent(
       primaryCta: {
         label:
           character.category === "Rental"
-            ? `Ask about ${character.name}`
+            ? `Reserve ${character.name}`
             : `Book ${character.name}`,
         href: "/book",
       },
@@ -358,53 +385,48 @@ export function getCharacterPageContent(
       mainMedia: character.mainMedia,
       insetMedia: character.insetMedia,
       panelEyebrow: copy.panelEyebrow,
-      panelTitle: `${character.name} is a ${categoryLabel} that helps families picture the real celebration, not just the costume.`,
-      panelDescription:
-        "This page uses the same premium booking system as the rest of the site, so you can compare favorites, look at the real imagery, and move forward without losing momentum.",
+      panelTitle: buildPanelTitle(character),
+      panelDescription: buildPanelDescription(character),
       supportingCards: copy.support,
     },
     sections: {
       highlights: {
-        eyebrow: "What families can expect",
+        eyebrow: "What's included",
         title: copy.sectionTitle,
         description:
-          "These are the details families usually care about most when they are deciding which character best fits the day.",
+          "The details that tend to matter most when families are choosing a character for their day.",
       },
       related: {
-        eyebrow: "Compare favorites",
+        eyebrow: "Also popular",
         title: copy.compareTitle,
         description:
-          "Every character page stays inside the same booking flow, so it is easy to compare a few favorites before you submit your request.",
+          "A few other favourites you might want to have a look at before you send your request.",
       },
       packages: {
-        eyebrow: "Package options",
+        eyebrow: "Packages",
         title: copy.packageTitle,
         description:
-          "The package structure stays consistent across the site so families can compare time, pace, and party feel quickly.",
+          "All party paths follow the same duration-by-character pricing. Longer parties include more activities, photos and time with the character.",
       },
     },
     highlightCards: copy.highlights,
     relatedCharacters,
     packageSlugs: sharedPackageSlugs,
     cta: {
-      eyebrow: "Ready to book this one?",
-      title: `Tell us about your ${character.name} ${categoryLabel} and we will help you plan the right fit.`,
+      eyebrow: "Ready to book?",
+      title: buildCtaTitle(character),
       description:
-        "Share the date, the party details, and any special notes. We will follow up with availability and the clearest next step.",
-      notes: [
-        `A strong fit for families already leaning toward ${character.name}`,
-        "Easy to pair with travel notes, add-ons, and special requests",
-        "One calm booking form covers the full character lineup",
-      ],
+        "Send us the date, a start time, the venue, and any special notes. A real person will reply — usually within a day.",
+      notes: buildCtaNotes(character),
       primaryCta: {
         label:
           character.category === "Rental"
-            ? `Ask about ${character.name}`
-            : `Start a ${character.name} request`,
+            ? `Reserve ${character.name}`
+            : `Book ${character.name}`,
         href: "/book",
       },
       secondaryCta: {
-        label: "Back to booking paths",
+        label: "Back to home",
         href: "/",
       },
     },

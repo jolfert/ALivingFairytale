@@ -40,13 +40,22 @@ export function Footer({ links }: FooterProps) {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/book"
+              className="rounded-full px-3.5 py-2 text-sm font-semibold text-copy-soft transition hover:bg-white hover:text-midnight"
+            >
+              Book
+            </Link>
           </nav>
         </div>
 
-        <div className="mt-8 border-t border-line pt-5 text-xs text-copy-soft">
+        <div className="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-copy-soft sm:flex-row sm:items-center sm:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} A Living Fairytale. Magical party
-            experiences crafted with care.
+            &copy; {new Date().getFullYear()} A Living Fairytale. Manitoba's
+            premier children's entertainers since 2011.
+          </p>
+          <p className="max-w-md leading-relaxed sm:text-right">
+            {siteShellContent.footerDisclaimer}
           </p>
         </div>
       </div>

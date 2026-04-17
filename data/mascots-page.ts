@@ -6,70 +6,67 @@ export const mascotsPageContent = {
   navigation: primaryNavigation,
   hero: {
     eyebrow: "Mascots & Rentals",
-    title:
-      "Playful mascot visits and bright rental extras that make celebrations feel bigger, easier, and more fun.",
+    title: "Mascot suits and party rentals — easy add-ons for any celebration.",
     description:
-      "From Olaf mascot fun to pink bounce-house and tent rentals, this path is perfect for families, schools, and community events that want something cheerful, easy, and memorable.",
+      "Mascot suit rentals ($100) and our bright pink castle bounce house ($50, 9' × 12' × 16'). A low-effort way to make a birthday, school event or community party feel bigger.",
     highlights: [
-      "Real rental photos from the original site",
-      "Great for mixed ages",
-      "Easy to pair with character visits",
+      "Mascot suits $100",
+      "Bounce house $50",
+      "No entertainer included — it's a costume rental",
     ],
     primaryCta: {
-      label: "Ask about mascots & rentals",
-      href: "#showcase",
+      label: "Ask about a rental",
+      href: "/book",
     },
     secondaryCta: {
-      label: "Book your party",
-      href: "/book",
+      label: "See what's available",
+      href: "#showcase",
     },
     mainMedia: getMediaAsset("rentalBouncePhoto"),
     insetMedia: getMediaAsset("olafPortrait"),
-    panelEyebrow: "Mascot path tone",
-    panelTitle:
-      "Brighter visuals, simpler storytelling, and party add-ons that still feel polished.",
+    panelEyebrow: "How rentals work",
+    panelTitle: "You pick it up, you run the show, you return it.",
     panelDescription:
-      "You get the same warm communication and polished planning as every other path, just tuned for playful arrivals, cheerful rentals, and easy add-ons that help the party look fuller right away.",
+      "Mascot suits and the bounce house are costume and equipment rentals. There's no entertainer included — you (or a family member) wear the suit, or supervise the bounce house. It's the easy, affordable way to add visual fun to your event.",
     supportingCards: [
       {
-        eyebrow: "For the room",
-        title: "Approachable energy",
+        eyebrow: "Rental",
+        title: "Mascot suits — $100",
         description:
-          "The celebration stays joyful and crowd-friendly without turning the volume up for no reason.",
+          "Lego Man, Olaf, Elmo, Cookie Monster, Hello Kitty, Minion, Buzz Lightyear, Mickey, Minnie, Ninja Turtles and more. No entertainer included.",
       },
       {
-        eyebrow: "For parents",
-        title: "Clear, low-friction planning",
+        eyebrow: "Rental",
+        title: "Bouncy house — $50",
         description:
-          "Straightforward choices and easy language keep the decision-making light.",
+          "Our bright pink castle bounce house, 9' × 12' × 16'. A favourite for outdoor birthdays, backyard parties and community events.",
       },
       {
-        eyebrow: "For the party",
-        title: "Simple ways to make the day feel bigger",
+        eyebrow: "Add-on",
+        title: "Pair with a character",
         description:
-          "A mascot visit, a rental, or a cheerful combination can add instant visual fun without complicating the plan.",
+          "Want Olaf to actually interact with the kids? Book a princess or superhero package and add a mascot on top — we'll make sure it all fits together.",
       },
     ],
   },
   sections: {
     showcase: {
-      eyebrow: "Mascots and extras",
-      title:
-        "Fun options for celebrations that want a little more movement, color, and instant visual payoff.",
+      eyebrow: "Mascots & rentals available",
+      title: "A look at the inventory.",
       description:
-        "This page is designed for playful add-ons, simple smiles, and event extras that make the day feel fuller without making it harder to plan.",
+        "The mascot roster grows with demand. If you don't see what you're looking for, just ask — we'll let you know what's available for your date.",
     },
     greatFor: {
       eyebrow: "Great for",
-      title: "A strong fit for all kinds of family-friendly events.",
+      title: "When a rental is the right call.",
       description:
-        "This path tends to shine for younger guests, mixed ages, and families who want quick clarity with a lot of cheerful payoff.",
+        "Mascot suits and the bounce house are perfect for events that want a visual moment without the full character-entertainer booking.",
     },
     packages: {
-      eyebrow: "Booking note",
-      title: "Simple to ask about. Easy to build into your event.",
+      eyebrow: "Book a full party instead?",
+      title: "Pairing a rental with a character package.",
       description:
-        "Mascot and rental availability can vary depending on the date, event type, and setup needs. Send us your event details and we'll help you understand what fits best.",
+        "You can always add a mascot suit or bounce house to a princess or superhero booking. We'll coordinate the timing so everything lands right.",
     },
   },
   greatForCards: [
@@ -77,28 +74,28 @@ export const mascotsPageContent = {
       eyebrow: "Birthdays",
       title: "Birthday parties",
       description:
-        "Add a cheerful surprise that keeps children smiling and gives the celebration a fun extra moment without overcomplicating the schedule.",
+        "A bounce house makes the backyard feel like a rental hall. A mascot suit adds a surprise guest without a full booking.",
       icon: "\u2665",
     },
     {
-      eyebrow: "Schools",
-      title: "School and daycare events",
+      eyebrow: "Schools & daycares",
+      title: "School & daycare events",
       description:
-        "Perfect for group settings that want a playful visual moment children instantly recognize.",
+        "Bring Olaf or Mickey to story time, spirit days, graduation events or fundraisers. Staff wear the suit.",
       icon: "\u2600",
     },
     {
-      eyebrow: "Communities",
+      eyebrow: "Community",
       title: "Community celebrations",
       description:
-        "A simple way to bring more color, character, and energy to public or neighborhood events.",
+        "Neighbourhood block parties, charity fun days, grand openings — mascot rentals make the event feel instantly more festive.",
       icon: "\u2713",
     },
     {
-      eyebrow: "Gatherings",
-      title: "Seasonal and family gatherings",
+      eyebrow: "Seasonal",
+      title: "Seasonal & family gatherings",
       description:
-        "A fun option for celebrations that want an easy crowd-pleaser without overcomplicating the day.",
+        "Santa visits, Halloween meet-and-greets, Easter events, family reunions. A rental is a low-effort way to make the day feel bigger.",
       icon: "\u2726",
     },
   ],
@@ -109,23 +106,23 @@ export const mascotsPageContent = {
     "signature-fairytale",
   ]),
   bookingNote:
-    "Mascot and rental availability can vary depending on the date, setup needs, and how you want to pair them with character appearances. Tell us the basics and we'll help you narrow it down quickly.",
+    "Mascot suit rental: $100. Full list includes Lego Man, Despicable Me Minion, Olaf, Elmo, Cookie Monster, Hello Kitty, Buzz Lightyear, Mickey Mouse, Minnie Mouse, Ninja Turtles and more. Pink Castle Bounce House rental: $50 (9' × 12' × 16'). No entertainer is provided with rentals — availability depends on date and setup needs.",
   cta: {
-    eyebrow: "Need help choosing?",
-    title: "Tell us about your event and we'll help you find the best fit.",
+    eyebrow: "Interested in a rental?",
+    title: "Tell us the date, we'll tell you what's available.",
     description:
-      "If you're not sure whether you need a mascot, a bounce house, a tent, or a mix of options, send us the details and we'll point you in the right direction.",
+      "Send us the event date, what you're interested in, and whether you'd also like a character appearance. We'll reply with availability and pickup details.",
     notes: [
-      "One form for princess, superhero, mascot, and rental combinations",
-      "Easy space to mention timing, setup questions, and special requests",
-      "A real person follows up with the next clear step",
+      "Rentals are pickup-based — no entertainer included",
+      "Bounce house requires flat outdoor space and an outlet",
+      "Happy to pair rentals with princess or superhero packages",
     ],
     primaryCta: {
-      label: "Inquire now",
+      label: "Ask about a rental",
       href: "/book",
     },
     secondaryCta: {
-      label: "Back to homepage",
+      label: "Back to home",
       href: "/",
     },
   },

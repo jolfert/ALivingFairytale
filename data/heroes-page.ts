@@ -6,117 +6,120 @@ export const heroesPageContent = {
   navigation: primaryNavigation,
   hero: {
     eyebrow: "Superhero Parties",
-    title:
-      "Bold character parties with heroes, action favorites, and real photos families can actually book from.",
+    title: "Batman walks through the door. The room loses its mind.",
     description:
-      "For children who want the day to feel brave, exciting, and larger than life, this path brings Batman, Spiderman, and adventure-forward favorites into the same polished booking flow parents can actually feel good about.",
+      "Batman, Spiderman, Wonder Woman, Star Wars favourites and more — dramatic arrivals, hero missions, and the kind of birthday photos kids bring to show-and-tell.",
     highlights: [
-      "Legacy photos from real past celebrations",
-      "Big entrance energy kids instantly react to",
-      "Confident, photo-friendly moments parents love too",
+      "Big entrance, fully in character",
+      "Hero missions and action games",
+      "Gold package includes superhero masks",
     ],
     primaryCta: {
-      label: "Choose your character",
-      href: "#characters",
+      label: "Book a superhero party",
+      href: "/book",
     },
     secondaryCta: {
-      label: "See package options",
+      label: "See packages",
       href: "#packages",
     },
     mainMedia: getMediaAsset("spidermanMain"),
-    panelEyebrow: "Hero path tone",
-    panelTitle:
-      "Bold pacing, real superhero visuals, and birthday energy that lands right away.",
+    panelEyebrow: "What a Living Fairytale superhero brings",
+    panelTitle: "Dramatic arrivals, action-packed missions, and a celebration kids won't stop talking about.",
     panelDescription:
-      "This experience keeps the same polished planning and warm communication as the rest of the site, while shifting the mood toward action, confidence, and the superhero characters children recognize first.",
+      "Same trained performers, same commitment to staying in character — just a different energy. Big, bold, and tuned to the age group in the room.",
     supportingCards: [
       {
-        eyebrow: "Arrival Feel",
-        title: "Epic entrance",
+        eyebrow: "Entrance",
+        title: "A hero arrives",
         description:
-          "The first minute is designed to feel exciting, intentional, and instantly memorable.",
+          "A full-volume entrance that turns the room into a moment. The birthday hero gets recognized first — every single time.",
       },
       {
-        eyebrow: "Parent Comfort",
-        title: "Clear, easy pacing",
+        eyebrow: "Interaction",
+        title: "Hero missions",
         description:
-          "Big movement stays structured so the room feels fun, not frantic, for every age in attendance.",
+          "Age-appropriate missions, storytelling, games and photos. Silver and Gold add face painting and temporary tattoos.",
       },
       {
-        eyebrow: "Keepsake Moments",
-        title: "Big reaction photos",
+        eyebrow: "Keepsakes",
+        title: "Show-and-tell photos",
         description:
-          "Victory beats, team cheers, and celebration peaks that feel earned and exciting.",
+          "The kind of birthday pictures kids will still be talking about at school on Monday morning.",
       },
     ],
   },
   sections: {
     characters: {
-      eyebrow: "Featured superheroes",
-      title:
-        "Choose the character energy that feels closest to what they are already imagining.",
+      eyebrow: "Meet the heroes",
+      title: "Our superhero and action-character roster.",
       description:
-        "These featured cards use real photos from the legacy site so families can see the tone, costume look, and birthday energy before they ever submit the form.",
+        "Batman, Spiderman, Wonder Woman, Maui, Star Wars favourites, Monster High — click any card for the full character page.",
     },
     experience: {
-      eyebrow: "What families can expect",
-      title: "Superhero parties should feel exciting without feeling chaotic.",
+      eyebrow: "What's included",
+      title: "What happens during a superhero party.",
       description:
-        "We keep this path bold and energetic while still making sure the structure feels clear, comfortable, and parent-friendly.",
+        "The same core moments as every Living Fairytale party — just turned up. The Gold Power Package adds superhero masks for every guest.",
     },
     packages: {
-      eyebrow: "Superhero package overview",
-      title: "Choose the party pace that fits the kind of excitement you want.",
+      eyebrow: "Packages",
+      title: "Hero, Super, Power.",
       description:
-        "From a shorter superhero visit to a fuller action-packed celebration, each package keeps the experience easy to understand and easy to book.",
+        "Bronze / Silver / Gold at superhero pricing: $200 for a one-hour visit, $250 for the Super Package, $300 for the deluxe two-hour Power Package with masks.",
     },
   },
   experienceCards: [
     {
-      eyebrow: "For the birthday child",
-      title: "A birthday entrance kids actually react to",
+      eyebrow: "Core moment",
+      title: "Dramatic entrance",
       description:
-        "The arrival moment is built to create that instant 'wow' feeling children remember, with the kind of superhero recognition that hits fast.",
+        "A hero walks through the door and the whole room shifts. The birthday child is the first one recognized.",
       icon: "\u2605",
     },
     {
-      eyebrow: "For the guest list",
-      title: "A celebration that feels lively and organized",
+      eyebrow: "Core moment",
+      title: "Hero missions & games",
       description:
-        "The pacing keeps the energy up without making the whole party feel rushed or messy, even when the room is full of excited little superheroes.",
+        "Action-forward activities scaled to the age group. Storytelling, team missions, and plenty of pose-for-the-camera moments.",
       icon: "\u2694",
     },
     {
-      eyebrow: "For the grown-ups",
-      title: "Memorable moments parents will want to capture",
+      eyebrow: "Core moment",
+      title: "Gold adds masks for the squad",
       description:
-        "Strong character visuals and interactive moments help create photos and reactions worth keeping, not just a quick walk-through appearance.",
+        "Every child gets a superhero mask in the Gold Power Package — instant group photos and takeaway keepsakes.",
       icon: "\u2726",
     },
   ],
-  characters: pickCharacters(["batman", "spiderman", "monster-high"]),
+  characters: pickCharacters([
+    "batman",
+    "spiderman",
+    "wonder-woman",
+    "star-wars",
+    "maui",
+    "monster-high",
+  ]),
   packages: pickPackages([
     "mini-visit",
     "storybook-celebration",
     "signature-fairytale",
   ]),
   cta: {
-    eyebrow: "Ready for an epic booking?",
-    title:
-      "Let's build the kind of superhero party they'll remember long after the gifts are opened.",
+    eyebrow: "Let's assemble the team",
+    title: "Book his favourite hero for the big day.",
     description:
-      "Tell us the date, your party details, and whether they are hoping for Batman, Spiderman, or one of the bolder character options, and we'll help you take it from there.",
+      "Send us the date, the hero, and a few details about your party. A real person will reply — usually within a day.",
     notes: [
-      "Great for birthdays that want motion-forward fun with a premium host feel",
-      "Easy to tailor with add-ons, travel notes, and celebration details",
-      "Built to keep the excitement high and the planning clear",
+      "Multiple heroes can team up for bigger parties",
+      "Weekend dates book fast — send early during busy seasons",
+      "Mention the venue, age group and any party theme notes up front",
     ],
     primaryCta: {
-      label: "Start a superhero request",
+      label: "Book a superhero party",
       href: "/book",
     },
     secondaryCta: {
-      label: "Back to homepage",
+      label: "Back to home",
       href: "/",
     },
   },
