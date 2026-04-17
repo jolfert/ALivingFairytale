@@ -4,6 +4,7 @@ import { CategoryHero } from "@/components/shared/category-hero";
 import { CharacterCard } from "@/components/shared/character-card";
 import { FeatureCardGrid } from "@/components/shared/feature-card-grid";
 import { PackageGrid } from "@/components/shared/package-grid";
+import { PageSection } from "@/components/shared/page-section";
 import { PricingGuide } from "@/components/shared/pricing-guide";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
@@ -32,17 +33,17 @@ export default function MascotsPage() {
         brandHref="/"
         cta={{ label: "Book", href: "/book" }}
       />
-      <main id="top" className="relative overflow-x-clip pb-20">
+      <main
+        id="top"
+        className="relative overflow-x-clip bg-[linear-gradient(180deg,#f6fff9_0%,#fbfff8_38%,#ffffff_100%)]"
+      >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] max-h-[65vh] bg-[radial-gradient(ellipse_at_30%_0%,rgba(255,214,123,0.22),transparent_52%),radial-gradient(ellipse_at_80%_8%,rgba(65,181,111,0.12),transparent_48%)]"
         />
         <CategoryHero content={mascotsPageContent.hero} theme="playful" />
 
-        <section
-          id="showcase"
-          className="relative mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8"
-        >
+        <PageSection id="showcase" className="relative">
           <SectionHeading
             eyebrow={mascotsPageContent.sections.showcase.eyebrow}
             title={mascotsPageContent.sections.showcase.title}
@@ -58,9 +59,9 @@ export default function MascotsPage() {
               />
             ))}
           </div>
-        </section>
+        </PageSection>
 
-        <section className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <PageSection className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(240,255,245,0.6),rgba(255,253,235,0.4))]">
           <SectionHeading
             eyebrow={mascotsPageContent.sections.greatFor.eyebrow}
             title={mascotsPageContent.sections.greatFor.title}
@@ -70,12 +71,9 @@ export default function MascotsPage() {
             items={mascotsPageContent.greatForCards}
             tone="playful"
           />
-        </section>
+        </PageSection>
 
-        <section
-          id="packages"
-          className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"
-        >
+        <PageSection id="packages" className="relative">
           <SectionHeading
             eyebrow={mascotsPageContent.sections.packages.eyebrow}
             title={mascotsPageContent.sections.packages.title}
@@ -89,14 +87,14 @@ export default function MascotsPage() {
           <p className="section-copy mx-auto mt-10 max-w-3xl text-center text-base">
             {mascotsPageContent.bookingNote}
           </p>
-        </section>
+        </PageSection>
 
-        <section
+        <PageSection
           id="book-cta"
-          className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"
+          className="relative rounded-[2.5rem] bg-[linear-gradient(165deg,rgba(232,255,242,0.65),rgba(255,253,235,0.5))]"
         >
           <CtaBanner content={mascotsPageContent.cta} tone="playful" />
-        </section>
+        </PageSection>
       </main>
       <Footer links={mascotsPageContent.navigation} />
     </>

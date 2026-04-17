@@ -107,7 +107,7 @@ export const homepageContent = {
   partyPaths: [
     {
       eyebrow: "Princess Parties",
-      title: "Princess Parties",
+      title: "Graceful arrivals, storybook magic, and moments families love to relive.",
       description:
         "Graceful entrances, storybook moments, songs, smiles, and beautiful photo opportunities for children who want to feel like royalty.",
       href: "/princess",
@@ -119,7 +119,7 @@ export const homepageContent = {
     },
     {
       eyebrow: "Superhero Parties",
-      title: "Superhero Parties",
+      title: "Big arrivals, hero energy, and birthday excitement that lands right away.",
       description:
         "Batman, Spiderman, and superhero-style visits with big entrances, bold photos, and birthday energy kids instantly respond to.",
       href: "/heroes",
@@ -131,7 +131,7 @@ export const homepageContent = {
     },
     {
       eyebrow: "Mascots & Rentals",
-      title: "Mascots & Rentals",
+      title: "Cheerful mascot moments and easy add-ons for any celebration.",
       description:
         "Olaf mascot fun, pink bounce-house rentals, and cheerful add-ons that make birthdays, school events, and family celebrations feel fuller.",
       href: "/mascots",

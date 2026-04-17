@@ -34,10 +34,12 @@ export default function HomePage() {
   return (
     <>
       <Header links={homepageContent.navigation} />
-      <main id="top" className="relative overflow-x-clip pb-20">
+      <main id="top" className="relative overflow-x-clip">
+
         <HomeHero content={homepageContent.hero} />
 
-        <PageSection id="paths">
+        {/* Party paths — tight top so it flows naturally from the hero */}
+        <PageSection id="paths" spacing="tight">
           <SectionHeading
             eyebrow={homepageContent.sections.paths.eyebrow}
             title={homepageContent.sections.paths.title}
@@ -50,22 +52,27 @@ export default function HomePage() {
           </div>
         </PageSection>
 
-        <PageSection id="why-us">
-          <SectionHeading
-            eyebrow={homepageContent.sections.whyUs.eyebrow}
-            title={homepageContent.sections.whyUs.title}
-            description={homepageContent.sections.whyUs.description}
-          />
-          <TrustPillars pillars={homepageContent.trustPillars} />
-        </PageSection>
+        {/* Why families choose us — mist background band, centered heading */}
+        <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(246,241,255,0.55)_6%,rgba(246,241,255,0.55)_94%,transparent_100%)]">
+          <PageSection id="why-us">
+            <SectionHeading
+              eyebrow={homepageContent.sections.whyUs.eyebrow}
+              title={homepageContent.sections.whyUs.title}
+              description={homepageContent.sections.whyUs.description}
+              centered
+            />
+            <TrustPillars pillars={homepageContent.trustPillars} />
+          </PageSection>
+        </div>
 
+        {/* Featured characters */}
         <PageSection id="featured-experiences">
           <SectionHeading
             eyebrow={homepageContent.sections.featured.eyebrow}
             title={homepageContent.sections.featured.title}
             description={homepageContent.sections.featured.description}
           />
-          <div className="grid gap-6 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {homepageContent.featuredCharacters.map((character) => (
               <CharacterCard
                 key={character.slug}
@@ -83,19 +90,24 @@ export default function HomePage() {
           </div>
         </PageSection>
 
-        <PageSection id="packages">
-          <SectionHeading
-            eyebrow={homepageContent.sections.packages.eyebrow}
-            title={homepageContent.sections.packages.title}
-            description={homepageContent.sections.packages.description}
-          />
-          <PackageGrid packages={homepageContent.packages} />
-          <PricingGuide guide={legacyPricingGuide} />
-        </PageSection>
+        {/* Packages — blush background band */}
+        <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(255,241,248,0.45)_6%,rgba(255,241,248,0.45)_94%,transparent_100%)]">
+          <PageSection id="packages">
+            <SectionHeading
+              eyebrow={homepageContent.sections.packages.eyebrow}
+              title={homepageContent.sections.packages.title}
+              description={homepageContent.sections.packages.description}
+            />
+            <PackageGrid packages={homepageContent.packages} />
+            <PricingGuide guide={legacyPricingGuide} />
+          </PageSection>
+        </div>
 
-        <PageSection id="book-preview">
+        {/* Final CTA */}
+        <PageSection id="book-preview" spacing="tight">
           <FinalCta content={homepageContent.finalCta} />
         </PageSection>
+
       </main>
       <Footer links={homepageContent.navigation} />
     </>

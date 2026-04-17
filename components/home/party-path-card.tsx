@@ -27,15 +27,15 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
     >
       <div className="flex items-start justify-between gap-4 border-b border-white/60 p-6">
         <div>
-          <span className="eyebrow border-0 px-0 py-0 shadow-none">
+          <span className="text-[0.7rem] font-black uppercase tracking-[0.18em] text-copy-soft">
             {path.eyebrow}
           </span>
-          <h3 className="mt-3 text-3xl font-semibold text-midnight">
+          <h3 className="mt-2 text-2xl font-semibold leading-snug text-midnight sm:text-3xl">
             {path.title}
           </h3>
         </div>
         <div
-          className={`overflow-hidden border border-white/80 bg-white/85 shadow-magical ${
+          className={`shrink-0 overflow-hidden border border-white/80 bg-white/85 shadow-magical ${
             usesPhotography ? "h-20 w-20 rounded-[1.35rem]" : "rounded-2xl p-2"
           }`}
         >

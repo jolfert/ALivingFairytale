@@ -2,13 +2,25 @@ type PageSectionProps = {
   id?: string;
   children: React.ReactNode;
   className?: string;
+  spacing?: "tight" | "default" | "wide";
 };
 
-export function PageSection({ id, children, className }: PageSectionProps) {
+const spacingClasses = {
+  tight: "py-12 sm:py-16",
+  default: "py-16 sm:py-20",
+  wide: "py-24 sm:py-28",
+} as const;
+
+export function PageSection({
+  id,
+  children,
+  className,
+  spacing = "default",
+}: PageSectionProps) {
   return (
     <section
       id={id}
-      className={`mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8${className ? ` ${className}` : ""}`}
+      className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${spacingClasses[spacing]}${className ? ` ${className}` : ""}`}
     >
       {children}
     </section>

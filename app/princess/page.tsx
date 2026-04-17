@@ -33,10 +33,17 @@ export default function PrincessPage() {
         brandHref="/"
         cta={{ label: "Book a princess party", href: "/book" }}
       />
-      <main id="top" className="relative overflow-x-clip pb-20">
+      <main
+        id="top"
+        className="relative overflow-x-clip bg-[linear-gradient(180deg,#fff5fb_0%,#fdf8ff_38%,#ffffff_100%)]"
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-[36rem] max-h-[78vh] bg-[radial-gradient(ellipse_at_28%_0%,rgba(245,102,187,0.18),transparent_55%),radial-gradient(ellipse_at_78%_12%,rgba(186,130,220,0.14),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(220,120,180,0.05),transparent_45%)]"
+        />
         <CategoryHero content={princessPageContent.hero} theme="princess" />
 
-        <PageSection id="characters">
+        <PageSection id="characters" className="relative">
           <SectionHeading
             eyebrow={princessPageContent.sections.characters.eyebrow}
             title={princessPageContent.sections.characters.title}
@@ -54,7 +61,7 @@ export default function PrincessPage() {
           </div>
         </PageSection>
 
-        <PageSection>
+        <PageSection className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(255,241,248,0.6),rgba(248,239,255,0.4))]">
           <SectionHeading
             eyebrow={princessPageContent.sections.experience.eyebrow}
             title={princessPageContent.sections.experience.title}
@@ -63,7 +70,7 @@ export default function PrincessPage() {
           <FeatureCardGrid items={princessPageContent.experienceCards} />
         </PageSection>
 
-        <PageSection id="packages">
+        <PageSection id="packages" className="relative">
           <SectionHeading
             eyebrow={princessPageContent.sections.packages.eyebrow}
             title={princessPageContent.sections.packages.title}
@@ -73,7 +80,10 @@ export default function PrincessPage() {
           <PricingGuide guide={legacyPricingGuide} />
         </PageSection>
 
-        <PageSection id="book-cta">
+        <PageSection
+          id="book-cta"
+          className="relative rounded-[2.5rem] bg-[linear-gradient(165deg,rgba(255,234,248,0.65),rgba(252,248,255,0.5))]"
+        >
           <CtaBanner content={princessPageContent.cta} />
         </PageSection>
       </main>

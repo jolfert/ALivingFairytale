@@ -29,26 +29,28 @@ type FinalCtaProps = {
 
 export function FinalCta({ content }: FinalCtaProps) {
   return (
-    <div className="glass-panel grid gap-8 rounded-[2.4rem] p-6 sm:p-8 xl:grid-cols-[1.1fr_.9fr]">
+    <div className="glass-panel grid gap-8 rounded-[2.4rem] p-6 sm:p-8 xl:grid-cols-[1.15fr_.85fr]">
       <div>
         <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
         <h2 className="mt-5 max-w-3xl text-4xl font-semibold text-midnight sm:text-5xl">
           {content.title}
         </h2>
-        <p className="section-copy mt-5 max-w-2xl text-base sm:text-lg">
+        <p className="section-copy mt-4 max-w-2xl text-base sm:text-lg">
           {content.description}
         </p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {content.steps.map((item) => (
             <div key={item.step} className="soft-panel rounded-[1.6rem] p-5">
-              <span className="text-sm font-black uppercase tracking-[0.18em] text-copy-soft">
-                Step {item.step}
-              </span>
-              <h3 className="mt-2 text-2xl font-semibold text-midnight">
+              <div className="grid h-8 w-8 place-items-center rounded-full bg-[linear-gradient(135deg,#ffd67b,#f566bb)] text-sm font-black text-white shadow">
+                {item.step}
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-midnight">
                 {item.title}
               </h3>
-              <p className="section-copy mt-3 text-sm">{item.description}</p>
+              <p className="section-copy mt-2 text-sm leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
@@ -58,25 +60,25 @@ export function FinalCta({ content }: FinalCtaProps) {
         <span className="eyebrow border-0 px-0 py-0 shadow-none">
           {content.previewEyebrow}
         </span>
-        <h3 className="mt-4 text-3xl font-semibold text-midnight">
+        <h3 className="mt-4 text-2xl font-semibold text-midnight sm:text-3xl">
           {content.previewTitle}
         </h3>
-        <p className="section-copy mt-4 text-sm">
+        <p className="section-copy mt-3 text-sm leading-relaxed">
           {content.previewDescription}
         </p>
 
-        <ul className="mt-6 space-y-4">
+        <ul className="mt-6 space-y-3 border-t border-line pt-6">
           {content.notes.map((note) => (
             <li key={note} className="flex items-start gap-3 text-sm text-copy-soft">
-              <span className="mt-1 text-rose" aria-hidden>
-                {"\u25CF"}
+              <span className="mt-0.5 shrink-0 text-rose" aria-hidden>
+                {"\u2726"}
               </span>
               <span>{note}</span>
             </li>
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap gap-3">
           <Link href={content.primaryCta.href} className="button-primary">
             {content.primaryCta.label}
           </Link>
