@@ -40,7 +40,6 @@ export const homepageContent = {
     showcase: {
       eyebrow: "A peek at the feeling",
       mainMedia: getMediaAsset("cinderellaMain"),
-      insetMedia: getMediaAsset("iceQueenPortrait"),
       storyCardEyebrow: "Party magic in real life",
       storyCardTitle:
         "Action shots for the big moment. Costume portraits for the finishing touch.",
