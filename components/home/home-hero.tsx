@@ -52,7 +52,7 @@ export function HomeHero({ content }: HomeHeroProps) {
   const insetImageFit = content.showcase.insetMedia?.objectFit ?? "cover";
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 lg:px-8 lg:pb-24 lg:pt-20">
+    <section className="mx-auto max-w-7xl px-4 pb-16 pt-4 sm:px-6 sm:pt-6 lg:px-8 lg:pb-24 lg:pt-8">
       <div className="grid items-center gap-12 lg:grid-cols-[1.03fr_.97fr]">
         <div className="relative z-10">
           <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
