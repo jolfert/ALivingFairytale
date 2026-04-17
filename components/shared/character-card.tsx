@@ -18,10 +18,10 @@ const themeStyles = {
   },
   hero: {
     frame:
-      "bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,244,255,0.98))]",
+      "border border-[rgba(42,98,195,0.1)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(232,241,255,0.96))]",
     media:
-      "bg-[linear-gradient(180deg,rgba(248,251,255,0.98),rgba(233,241,255,0.95))]",
-    tag: "bg-[rgba(73,101,201,0.09)] text-[color:#4665c9]",
+      "bg-[linear-gradient(180deg,rgba(244,249,255,0.98),rgba(220,234,252,0.94))]",
+    tag: "bg-[rgba(42,98,195,0.1)] text-[color:#2f4f8f]",
   },
   neutral: {
     frame:

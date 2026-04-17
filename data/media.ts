@@ -410,16 +410,18 @@ const mediaRegistry = {
   batmanMain: {
     id: "batmanMain",
     src: "/media/heroes/batman-action.jpg",
-    alt: "Batman kneeling to talk with children at an outdoor event",
-    width: 960,
-    height: 720,
+    alt: "Batman in full costume standing in a heroic pose against a clean studio backdrop",
+    width: 633,
+    height: 960,
+    objectFit: "contain",
     objectPosition: "center top",
     status: "approved",
-    adminLabel: "Batman action photo",
+    adminLabel: "Batman main photo",
     replaceHint:
-      "Replace only if a cleaner approved Batman interaction shot is selected.",
-    aiTags: ["batman", "superhero", "party", "action"],
-    mappingNote: "Imported from the legacy site export for the superhero path.",
+      "Replace with a kneeling or outdoor Batman interaction shot when an approved action photo is delivered.",
+    aiTags: ["batman", "superhero", "portrait", "costume"],
+    mappingNote:
+      "Uses the approved Batman studio portrait mapped to batman-action.jpg after a mislabeled legacy file was corrected.",
   },
   batmanPortrait: {
     id: "batmanPortrait",
@@ -438,17 +440,18 @@ const mediaRegistry = {
   },
   spidermanMain: {
     id: "spidermanMain",
-    src: "/media/heroes/spiderman-action.jpg",
-    alt: "Spider-Man and a child striking superhero poses at a birthday party",
-    width: 432,
-    height: 768,
+    src: "/media/heroes/spiderman-action-alt.jpg",
+    alt: "Spider-Man leading a backyard birthday game with excited children on a sunny day",
+    width: 540,
+    height: 960,
     objectPosition: "center top",
     status: "approved",
     adminLabel: "Spider-Man action photo",
     replaceHint:
-      "Replace only if a newer approved Spider-Man action photo is selected.",
+      "Replace only if a newer approved Spider-Man outdoor action photo is selected.",
     aiTags: ["spider-man", "superhero", "birthday", "action"],
-    mappingNote: "Imported from the legacy site export for the superhero path.",
+    mappingNote:
+      "Outdoor party action shot (spiderman-action-alt.jpg) used as the primary Spider-Man hero visual.",
   },
   spidermanPortrait: {
     id: "spidermanPortrait",

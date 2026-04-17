@@ -15,10 +15,10 @@ const themeClasses = {
       "bg-[linear-gradient(180deg,rgba(255,250,252,0.98),rgba(248,239,255,0.96))]",
   },
   hero: {
-    glowA: "bg-[rgba(77,104,204,0.18)]",
-    glowB: "bg-violet/14",
+    glowA: "bg-[rgba(42,98,195,0.24)]",
+    glowB: "bg-[rgba(25,80,150,0.14)]",
     shell:
-      "bg-[linear-gradient(180deg,rgba(248,251,255,0.98),rgba(238,244,255,0.96))]",
+      "border border-[rgba(42,98,195,0.12)] bg-[linear-gradient(165deg,rgba(240,246,255,0.99),rgba(220,234,252,0.94))]",
   },
   playful: {
     glowA: "bg-[rgba(65,181,111,0.16)]",

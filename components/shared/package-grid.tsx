@@ -13,10 +13,10 @@ const featuredToneClasses = {
     bullet: "text-sunrise",
   },
   hero: {
-    card: "border-[rgba(59,92,200,0.22)] bg-[linear-gradient(180deg,rgba(248,251,255,0.98),rgba(236,244,255,0.98))]",
+    card: "border-[rgba(42,98,195,0.26)] bg-[linear-gradient(180deg,rgba(248,251,255,0.99),rgba(224,236,255,0.96))]",
     badge:
-      "bg-[linear-gradient(135deg,#ffd67b,#dbe6ff)] text-[color:#1e2a55]",
-    bullet: "text-[color:#4665c9]",
+      "bg-[linear-gradient(135deg,#ffd67b,#cfe0ff)] text-[color:#1a2744]",
+    bullet: "text-[color:#2f4f8f]",
   },
   playful: {
     card: "border-[rgba(65,181,111,0.22)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,255,248,0.98))]",

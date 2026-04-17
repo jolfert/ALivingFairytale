@@ -9,14 +9,14 @@ type CtaBannerProps = {
 const tonePanelClasses = {
   fairytale:
     "border-line bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,243,249,0.96))]",
-  hero: "border-[rgba(59,92,200,0.14)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(236,244,255,0.96))]",
+  hero: "border-[rgba(42,98,195,0.2)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(228,238,255,0.96))]",
   playful:
     "border-[rgba(255,214,123,0.35)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,255,248,0.96))]",
 } as const;
 
 const toneBulletClasses = {
   fairytale: "text-rose",
-  hero: "text-[color:#4665c9]",
+  hero: "text-[color:#2f4f8f]",
   playful: "text-[color:#2fa066]",
 } as const;
 

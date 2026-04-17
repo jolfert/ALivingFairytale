@@ -31,10 +31,13 @@ export default function HeroesPage() {
         brandHref="/"
         cta={{ label: "Book a superhero party", href: "/book" }}
       />
-      <main id="top" className="relative overflow-x-clip pb-20">
+      <main
+        id="top"
+        className="relative overflow-x-clip bg-[linear-gradient(180deg,#eef4ff_0%,#f6f9ff_38%,#ffffff_100%)] pb-20"
+      >
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-[32rem] max-h-[70vh] bg-[radial-gradient(ellipse_at_70%_0%,rgba(77,104,204,0.14),transparent_55%),radial-gradient(ellipse_at_20%_10%,rgba(125,100,255,0.12),transparent_50%)]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[36rem] max-h-[78vh] bg-[radial-gradient(ellipse_at_72%_0%,rgba(42,98,195,0.24),transparent_58%),radial-gradient(ellipse_at_14%_14%,rgba(56,130,200,0.16),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(15,60,120,0.06),transparent_45%)]"
         />
         <CategoryHero content={heroesPageContent.hero} theme="hero" />
 
@@ -56,7 +59,7 @@ export default function HeroesPage() {
           </div>
         </PageSection>
 
-        <PageSection className="relative">
+        <PageSection className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(228,238,255,0.55),rgba(244,248,255,0.35))]">
           <SectionHeading
             eyebrow={heroesPageContent.sections.experience.eyebrow}
             title={heroesPageContent.sections.experience.title}
@@ -77,7 +80,10 @@ export default function HeroesPage() {
           <PackageGrid packages={heroesPageContent.packages} tone="hero" />
         </PageSection>
 
-        <PageSection id="book-cta" className="relative">
+        <PageSection
+          id="book-cta"
+          className="relative rounded-[2.5rem] bg-[linear-gradient(165deg,rgba(222,234,255,0.65),rgba(248,251,255,0.5))]"
+        >
           <CtaBanner content={heroesPageContent.cta} tone="hero" />
         </PageSection>
       </main>

@@ -23,8 +23,7 @@ export const heroesPageContent = {
       label: "See package options",
       href: "#packages",
     },
-    mainMedia: getMediaAsset("batmanMain"),
-    insetMedia: getMediaAsset("spidermanPortrait"),
+    mainMedia: getMediaAsset("spidermanMain"),
     panelEyebrow: "Hero path tone",
     panelTitle:
       "Bold pacing, real superhero visuals, and birthday energy that lands right away.",

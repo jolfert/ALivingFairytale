@@ -285,7 +285,6 @@ const characterCatalog: ReadonlyArray<CharacterRecord> = [
       "Perfect for children who want their party to feel brave, exciting, and larger than life, with a hero they recognize the second he walks in.",
     tags: ["Big entrance", "Hero favorite", "Action photos"],
     mainMediaId: "batmanMain",
-    insetMediaId: "batmanPortrait",
     detailHref: "/batman",
     featured: true,
   },
