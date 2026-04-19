@@ -22,13 +22,10 @@ const pills: ReadonlyArray<Pill> = [
 export function MobileSubNav() {
   const pathname = usePathname() ?? "/";
 
-  // Hide on the booking form page so the form stays focused.
-  if (pathname === "/book") return null;
-
   return (
     <div
       aria-label="Party types"
-      className="border-b border-line bg-white/70 backdrop-blur-xl"
+      className="border-b border-line bg-white/80"
     >
       <div className="mx-auto max-w-7xl overflow-x-auto px-3 py-2 sm:px-6 lg:px-8">
         <nav
