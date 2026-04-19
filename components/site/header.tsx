@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { LinkConfig } from "@/data/types";
@@ -14,12 +14,11 @@ type NavLink = {
 
 type NavGroup = {
   label: string;
-  href?: string;
   items: ReadonlyArray<NavLink>;
 };
 
 type HeaderProps = {
-  // Kept for backwards compatibility — new nav comes from siteShellContent.
+  // Kept for backwards compatibility. Nav content lives in this file.
   links?: ReadonlyArray<NavLink>;
   brandHref?: string;
   cta?: LinkConfig;
@@ -34,7 +33,7 @@ const partiesGroup: NavGroup = {
   ],
 };
 
-const flatLinks: ReadonlyArray<NavLink> = [
+const infoLinks: ReadonlyArray<NavLink> = [
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Reviews", href: "/reviews" },
@@ -44,42 +43,26 @@ export function Header({
   brandHref = "/",
   cta = siteShellContent.headerDefaultCta,
 }: HeaderProps) {
-  const [partiesOpen, setPartiesOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const partiesRef = useRef<HTMLDivElement | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Close the parties dropdown on outside click
+  // Close on Escape; lock body scroll while the menu panel is open.
   useEffect(() => {
-    if (!partiesOpen) return;
-    function onClick(event: MouseEvent) {
-      if (
-        partiesRef.current &&
-        !partiesRef.current.contains(event.target as Node)
-      ) {
-        setPartiesOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", onClick);
-    return () => document.removeEventListener("mousedown", onClick);
-  }, [partiesOpen]);
-
-  // Close the mobile menu on Esc, disable body scroll while open
-  useEffect(() => {
-    if (!mobileOpen) return;
+    if (!menuOpen) return;
     function onKey(event: KeyboardEvent) {
-      if (event.key === "Escape") setMobileOpen(false);
+      if (event.key === "Escape") setMenuOpen(false);
     }
     document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = prevOverflow;
     };
-  }, [mobileOpen]);
+  }, [menuOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 border-b border-line px-4 py-3.5 sm:px-6 sm:py-4 lg:px-8 lg:border-b">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 border-b border-line px-4 py-3.5 sm:px-6 sm:py-4 lg:px-8">
         <Link
           href={brandHref}
           className="flex items-center gap-3 transition-opacity hover:opacity-85"
@@ -89,66 +72,12 @@ export function Header({
             alt={siteShellContent.brandLogo.alt}
             width={siteShellContent.brandLogo.width}
             height={siteShellContent.brandLogo.height}
-            className="h-auto w-[8.5rem] sm:w-[10rem] lg:w-[11rem]"
+            className="h-auto w-[9rem] sm:w-[10.5rem] lg:w-[11.5rem]"
             priority
           />
         </Link>
 
-        {/* Desktop nav */}
-        <nav
-          aria-label="Primary"
-          className="hidden items-center gap-1 lg:flex"
-        >
-          <div ref={partiesRef} className="relative">
-            <button
-              type="button"
-              aria-haspopup="menu"
-              aria-expanded={partiesOpen}
-              onClick={() => setPartiesOpen((prev) => !prev)}
-              className="flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-semibold text-copy-soft transition hover:bg-white hover:text-midnight"
-            >
-              {partiesGroup.label}
-              <span
-                aria-hidden
-                className={`text-[0.7rem] transition-transform ${
-                  partiesOpen ? "rotate-180" : ""
-                }`}
-              >
-                ▼
-              </span>
-            </button>
-            {partiesOpen ? (
-              <div
-                role="menu"
-                className="absolute left-0 top-full mt-2 min-w-[14rem] overflow-hidden rounded-2xl border border-line bg-white shadow-magical"
-              >
-                {partiesGroup.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    role="menuitem"
-                    href={item.href}
-                    onClick={() => setPartiesOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold text-midnight transition hover:bg-mist"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            ) : null}
-          </div>
-
-          {flatLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="rounded-full px-3.5 py-2 text-sm font-semibold text-copy-soft transition hover:bg-white hover:text-midnight"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href={cta.href}
             className="button-primary hidden text-sm sm:inline-flex"
@@ -156,120 +85,149 @@ export function Header({
             {cta.label}
           </Link>
 
-          {/* Mobile menu trigger */}
           <button
             type="button"
-            aria-label="Open menu"
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setMobileOpen(true)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white/92 text-midnight transition hover:bg-white lg:hidden"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="site-menu"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white/94 text-midnight shadow-soft transition hover:bg-white"
           >
-            <span className="sr-only">Open menu</span>
-            <svg
-              aria-hidden
-              viewBox="0 0 24 24"
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <path d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
+            <span className="sr-only">{menuOpen ? "Close menu" : "Menu"}</span>
+            {menuOpen ? (
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              >
+                <path d="M6 6l12 12M6 18L18 6" />
+              </svg>
+            ) : (
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              >
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu panel */}
-      {mobileOpen ? (
+      {/* Full-panel menu — renders at every breakpoint */}
+      {menuOpen ? (
         <div
-          id="mobile-menu"
+          id="site-menu"
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className="fixed inset-0 z-[60] lg:hidden"
+          className="fixed inset-0 z-[60]"
         >
           <button
             type="button"
             aria-label="Close menu"
-            onClick={() => setMobileOpen(false)}
+            onClick={() => setMenuOpen(false)}
             className="absolute inset-0 bg-midnight/40 backdrop-blur-sm"
           />
-          <div className="absolute inset-x-0 top-0 max-h-[90vh] overflow-y-auto rounded-b-[1.75rem] border-b border-line bg-white/98 shadow-magical backdrop-blur-xl">
-            <div className="flex items-center justify-between px-5 py-4">
-              <Image
-                src={siteShellContent.brandLogo.src}
-                alt={siteShellContent.brandLogo.alt}
-                width={siteShellContent.brandLogo.width}
-                height={siteShellContent.brandLogo.height}
-                className="h-auto w-[8.5rem]"
-              />
-              <button
-                type="button"
-                aria-label="Close menu"
-                onClick={() => setMobileOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-midnight"
-              >
-                <svg
-                  aria-hidden
-                  viewBox="0 0 24 24"
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
+          <div className="absolute inset-x-0 top-0 max-h-[92vh] overflow-y-auto rounded-b-[1.75rem] border-b border-line bg-white/98 shadow-magical backdrop-blur-xl">
+            <div className="mx-auto max-w-7xl px-5 pt-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between py-2">
+                <Image
+                  src={siteShellContent.brandLogo.src}
+                  alt={siteShellContent.brandLogo.alt}
+                  width={siteShellContent.brandLogo.width}
+                  height={siteShellContent.brandLogo.height}
+                  className="h-auto w-[9rem]"
+                />
+                <button
+                  type="button"
+                  aria-label="Close menu"
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-midnight shadow-soft"
                 >
-                  <path d="M6 6l12 12M6 18L18 6" />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 24 24"
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                  >
+                    <path d="M6 6l12 12M6 18L18 6" />
+                  </svg>
+                </button>
+              </div>
+
+              <nav
+                aria-label="Site"
+                className="grid gap-8 pb-8 pt-4 sm:grid-cols-2 sm:gap-10 sm:pt-6"
+              >
+                {/* Parties group */}
+                <section>
+                  <h2 className="text-[0.7rem] font-black uppercase tracking-[0.2em] text-copy-soft">
+                    {partiesGroup.label}
+                  </h2>
+                  <ul className="mt-3 flex flex-col gap-1">
+                    {partiesGroup.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block rounded-xl px-3 py-3 text-lg font-semibold text-midnight transition hover:bg-mist"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+
+                {/* Info group */}
+                <section>
+                  <h2 className="text-[0.7rem] font-black uppercase tracking-[0.2em] text-copy-soft">
+                    Info
+                  </h2>
+                  <ul className="mt-3 flex flex-col gap-1">
+                    {infoLinks.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block rounded-xl px-3 py-3 text-lg font-semibold text-midnight transition hover:bg-mist"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </nav>
+
+              <div className="border-t border-line py-6">
+                <Link
+                  href={cta.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="button-primary w-full justify-center sm:w-auto"
+                >
+                  {cta.label}
+                </Link>
+              </div>
             </div>
-
-            <nav
-              aria-label="Mobile"
-              className="flex flex-col gap-1 px-3 pb-6"
-            >
-              <div className="px-3 pb-2 pt-3 text-[0.68rem] font-black uppercase tracking-[0.18em] text-copy-soft">
-                Parties
-              </div>
-              {partiesGroup.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-xl px-3 py-3 text-base font-semibold text-midnight transition hover:bg-mist"
-                >
-                  {item.label}
-                </Link>
-              ))}
-
-              <div className="mt-4 px-3 pb-2 pt-3 text-[0.68rem] font-black uppercase tracking-[0.18em] text-copy-soft">
-                Info
-              </div>
-              {flatLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-xl px-3 py-3 text-base font-semibold text-midnight transition hover:bg-mist"
-                >
-                  {link.label}
-                </Link>
-              ))}
-
-              <Link
-                href={cta.href}
-                onClick={() => setMobileOpen(false)}
-                className="button-primary mt-5 justify-center"
-              >
-                {cta.label}
-              </Link>
-            </nav>
           </div>
         </div>
       ) : null}
 
-      {/* Mobile + tablet party-type quick nav */}
+      {/* Party-type quick nav — always visible below the header */}
       <MobileSubNav />
     </header>
   );
