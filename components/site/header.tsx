@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { LinkConfig } from "@/data/types";
 import { siteShellContent } from "@/data/site-shell";
+import { MobileSubNav } from "@/components/site/mobile-sub-nav";
 
 type NavLink = {
   label: string;
@@ -77,8 +78,8 @@ export function Header({
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 sm:py-4 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 border-b border-line px-4 py-3.5 sm:px-6 sm:py-4 lg:px-8 lg:border-b">
         <Link
           href={brandHref}
           className="flex items-center gap-3 transition-opacity hover:opacity-85"
@@ -267,6 +268,9 @@ export function Header({
           </div>
         </div>
       ) : null}
+
+      {/* Mobile + tablet party-type quick nav */}
+      <MobileSubNav />
     </header>
   );
 }

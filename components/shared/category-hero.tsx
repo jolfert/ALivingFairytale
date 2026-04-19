@@ -140,32 +140,12 @@ export function CategoryHero({
             {/* Panel strip — key sub-pitch */}
             <div className="mt-4 rounded-2xl border border-line bg-white/88 p-5">
               <p className="eyebrow-plain">{content.panelEyebrow}</p>
-              <h2 className="mt-2 text-2xl font-semibold text-midnight sm:text-3xl">
+              <h2 className="mt-2 text-xl font-semibold text-midnight sm:text-2xl">
                 {content.panelTitle}
               </h2>
               <p className="section-copy mt-2.5 text-sm leading-relaxed">
                 {content.panelDescription}
               </p>
-            </div>
-
-            {/* Supporting cards — compact row */}
-            <div className="mt-3 grid gap-3 sm:grid-cols-3">
-              {content.supportingCards.map((card) => (
-                <article
-                  key={card.title}
-                  className="rounded-2xl border border-line bg-white/82 p-4"
-                >
-                  {card.eyebrow ? (
-                    <p className="eyebrow-plain">{card.eyebrow}</p>
-                  ) : null}
-                  <h3 className="mt-1.5 text-base font-semibold leading-snug text-midnight">
-                    {card.title}
-                  </h3>
-                  <p className="section-copy mt-1.5 text-xs leading-relaxed">
-                    {card.description}
-                  </p>
-                </article>
-              ))}
             </div>
           </div>
         </div>
