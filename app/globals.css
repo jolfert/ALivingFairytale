@@ -68,18 +68,13 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   opacity: 0.22;
   background-image:
     radial-gradient(circle, rgba(245, 102, 187, 0.22) 0.8px, transparent 1.4px),
     radial-gradient(circle, rgba(125, 100, 255, 0.14) 0.8px, transparent 1.4px);
   background-position: 0 0, 96px 72px;
   background-size: 220px 220px, 280px 280px;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
 }
 
 a {
