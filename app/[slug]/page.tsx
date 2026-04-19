@@ -4,7 +4,7 @@ import { CtaBanner } from "@/components/shared/cta-banner";
 import { CategoryHero } from "@/components/shared/category-hero";
 import { CharacterCard } from "@/components/shared/character-card";
 import { FeatureCardGrid } from "@/components/shared/feature-card-grid";
-import { PackageGrid } from "@/components/shared/package-grid";
+import { PackageTabs } from "@/components/shared/package-tabs";
 import { PageSection } from "@/components/shared/page-section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Footer } from "@/components/site/footer";
@@ -98,14 +98,10 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
   return (
     <>
       <Header
-        links={content.navigation}
         brandHref="/"
         cta={{ label: `Book ${content.hero.eyebrow}`, href: "/book" }}
       />
-      <main
-        id="top"
-        className={`relative overflow-x-clip ${bg.page}`}
-      >
+      <main id="top" className={`relative overflow-x-clip ${bg.page}`}>
         <div
           aria-hidden
           className={`pointer-events-none absolute inset-x-0 top-0 h-[40rem] max-h-[80vh] ${bg.glow}`}
@@ -115,22 +111,33 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
         <PageSection
           id="highlights"
           className={`relative rounded-[2rem] ${bg.experienceBand}`}
+          spacing="tight"
         >
           <SectionHeading
             eyebrow={content.sections.highlights.eyebrow}
             title={content.sections.highlights.title}
-            description={content.sections.highlights.description}
+            centered
           />
           <FeatureCardGrid items={content.highlightCards} tone={tone} />
         </PageSection>
 
-        <PageSection id="related" className="relative">
+        <PageSection id="packages" className="relative" spacing="tight">
+          <SectionHeading
+            eyebrow={content.sections.packages.eyebrow}
+            title={content.sections.packages.title}
+            centered
+          />
+          <div className="mx-auto max-w-3xl">
+            <PackageTabs packages={packages} tone={tone} />
+          </div>
+        </PageSection>
+
+        <PageSection id="related" className="relative" spacing="tight">
           <SectionHeading
             eyebrow={content.sections.related.eyebrow}
             title={content.sections.related.title}
-            description={content.sections.related.description}
           />
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {relatedCharacters.map((character) => (
               <CharacterCard
                 key={character.slug}
@@ -140,15 +147,6 @@ export default async function CharacterPage({ params }: CharacterPageProps) {
               />
             ))}
           </div>
-        </PageSection>
-
-        <PageSection id="packages" className="relative">
-          <SectionHeading
-            eyebrow={content.sections.packages.eyebrow}
-            title={content.sections.packages.title}
-            description={content.sections.packages.description}
-          />
-          <PackageGrid packages={packages} tone={tone} />
         </PageSection>
 
         <PageSection

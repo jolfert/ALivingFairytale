@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
 import { BookTrustColumn } from "@/components/book/book-trust-column";
 import { InquiryFormShell } from "@/components/book/inquiry-form-shell";
+import { Accordion, AccordionItem } from "@/components/shared/accordion";
+import { PageSection } from "@/components/shared/page-section";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
-import { PricingGuide } from "@/components/shared/pricing-guide";
-import { characters, legacyPricingGuide, packages } from "@/data/catalog";
+import { characters, packages } from "@/data/catalog";
 import { bookPageContent } from "@/data/book-page";
+import { bookingFaqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
   title: "Book a Party",
   description:
-    "Share your party details for a princess, hero, mascot, or rental celebration and receive a warm, clear follow-up from A Living Fairytale.",
+    "Book a princess, superhero, mascot or rental party. Send your date and details — a real person replies within a day.",
   alternates: { canonical: "/book" },
   openGraph: {
     title: "Book a Party | A Living Fairytale",
     description:
-      "A calm booking flow with helpful trust details and a clear inquiry form for your celebration.",
+      "Send your party date and details. A real person replies within a day.",
     url: "/book",
   },
 };
@@ -29,11 +31,7 @@ export default function BookPage() {
 
   return (
     <>
-      <Header
-        links={bookPageContent.navigation}
-        brandHref="/"
-        cta={{ label: "Book", href: "/book" }}
-      />
+      <Header brandHref="/" cta={{ label: "Book", href: "/book" }} />
       <main
         id="top"
         className="relative overflow-x-clip pb-20 pt-10 sm:pt-14 lg:pt-16"
@@ -50,10 +48,32 @@ export default function BookPage() {
               characterChoices={characters}
             />
           </div>
-          <div className="mt-16">
-            <PricingGuide guide={legacyPricingGuide} />
-          </div>
         </div>
+
+        {/* FAQs */}
+        <PageSection id="faqs" className="relative" spacing="default">
+          <div className="mx-auto max-w-3xl">
+            <div className="text-center">
+              <span className="eyebrow-plain">FAQ</span>
+              <h2 className="mt-3 text-3xl font-semibold text-midnight sm:text-4xl">
+                Common questions.
+              </h2>
+            </div>
+            <div className="mt-8">
+              <Accordion>
+                {bookingFaqs.map((faq, index) => (
+                  <AccordionItem
+                    key={faq.question}
+                    title={faq.question}
+                    defaultOpen={index === 0}
+                  >
+                    <p>{faq.answer}</p>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </PageSection>
       </main>
       <Footer links={bookPageContent.navigation} />
     </>

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { FinalCta } from "@/components/home/final-cta";
 import { HomeHero } from "@/components/home/home-hero";
 import { PartyPathCard } from "@/components/home/party-path-card";
 import { TestimonialsPreview } from "@/components/home/testimonials-preview";
 import { TrustPillars } from "@/components/home/trust-pillars";
+import { Accordion, AccordionItem } from "@/components/shared/accordion";
 import { CharacterCard } from "@/components/shared/character-card";
-import { PackageGrid } from "@/components/shared/package-grid";
+import { PackageTabs } from "@/components/shared/package-tabs";
 import { PageSection } from "@/components/shared/page-section";
 import { PricingGuide } from "@/components/shared/pricing-guide";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     absolute: "A Living Fairytale | Manitoba's Premier Children's Entertainers",
   },
   description:
-    "Manitoba's premier children's character entertainers since 2011. Princess parties, superhero parties, mascot suits and party rentals. Theme-park quality, locally owned.",
+    "Manitoba's premier children's character entertainment since 2011. Princess parties, superhero parties, mascot suits and party rentals.",
   alternates: {
     canonical: "/",
   },
@@ -37,7 +39,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Header links={homepageContent.navigation} />
+      <Header />
       <main id="top" className="relative overflow-x-clip">
         <HomeHero content={homepageContent.hero} />
 
@@ -46,7 +48,6 @@ export default function HomePage() {
           <SectionHeading
             eyebrow={homepageContent.sections.paths.eyebrow}
             title={homepageContent.sections.paths.title}
-            description={homepageContent.sections.paths.description}
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {homepageContent.partyPaths.map((path) => (
@@ -55,13 +56,12 @@ export default function HomePage() {
           </div>
         </PageSection>
 
-        {/* What you can expect — trust pillars band */}
+        {/* Trust pillars — compact 5-tile strip on desktop, stacked on mobile */}
         <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(246,241,255,0.5)_8%,rgba(246,241,255,0.5)_92%,transparent_100%)]">
-          <PageSection id="why-us">
+          <PageSection id="why-us" spacing="tight">
             <SectionHeading
               eyebrow={homepageContent.sections.whyUs.eyebrow}
               title={homepageContent.sections.whyUs.title}
-              description={homepageContent.sections.whyUs.description}
               centered
             />
             <TrustPillars pillars={homepageContent.trustPillars} />
@@ -69,11 +69,10 @@ export default function HomePage() {
         </div>
 
         {/* Featured characters */}
-        <PageSection id="featured-experiences">
+        <PageSection id="featured-experiences" spacing="tight">
           <SectionHeading
             eyebrow={homepageContent.sections.featured.eyebrow}
             title={homepageContent.sections.featured.title}
-            description={homepageContent.sections.featured.description}
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {homepageContent.featuredCharacters.map((character) => (
@@ -93,28 +92,41 @@ export default function HomePage() {
           </div>
         </PageSection>
 
-        {/* Testimonials preview */}
+        {/* Testimonials */}
         <div className="bg-[linear-gradient(180deg,transparent_0%,rgba(255,241,248,0.42)_8%,rgba(255,241,248,0.42)_92%,transparent_100%)]">
-          <PageSection id="testimonials">
+          <PageSection id="testimonials" spacing="tight">
             <SectionHeading
               eyebrow={homepageContent.sections.testimonials.eyebrow}
               title={homepageContent.sections.testimonials.title}
-              description={homepageContent.sections.testimonials.description}
               centered
             />
             <TestimonialsPreview testimonials={featuredTestimonials} />
           </PageSection>
         </div>
 
-        {/* Packages */}
-        <PageSection id="packages">
+        {/* Packages — compact tabs, full rate card behind an accordion */}
+        <PageSection id="packages" spacing="tight">
           <SectionHeading
             eyebrow={homepageContent.sections.packages.eyebrow}
             title={homepageContent.sections.packages.title}
             description={homepageContent.sections.packages.description}
+            centered
           />
-          <PackageGrid packages={homepageContent.packages} />
-          <PricingGuide guide={legacyPricingGuide} />
+          <div className="mx-auto max-w-3xl">
+            <PackageTabs packages={homepageContent.packages} />
+          </div>
+          <div className="mx-auto mt-6 max-w-3xl">
+            <Accordion>
+              <AccordionItem title="See the full rate card">
+                <PricingGuide guide={legacyPricingGuide} />
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <p className="mt-6 text-center">
+            <Link href="/pricing" className="inline-link text-sm font-semibold">
+              Open full pricing page
+            </Link>
+          </p>
         </PageSection>
 
         {/* Final CTA */}

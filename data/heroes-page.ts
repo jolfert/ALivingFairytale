@@ -6,88 +6,73 @@ export const heroesPageContent = {
   navigation: primaryNavigation,
   hero: {
     eyebrow: "Superhero Parties",
-    title: "Batman walks through the door. The room loses its mind.",
+    title: "Batman walks in. The room loses its mind.",
     description:
-      "Batman, Spiderman, Wonder Woman, Star Wars favourites and more — dramatic arrivals, hero missions, and the kind of birthday photos kids bring to show-and-tell.",
+      "Batman, Spiderman, Wonder Woman, Star Wars and more. Dramatic arrivals, hero missions, photos worth show-and-tell.",
     highlights: [
-      "Big entrance, fully in character",
-      "Hero missions and action games",
-      "Gold package includes superhero masks",
+      "Big entrance",
+      "Hero missions",
+      "Gold adds masks for everyone",
     ],
-    primaryCta: {
-      label: "Book a superhero party",
-      href: "/book",
-    },
-    secondaryCta: {
-      label: "See packages",
-      href: "#packages",
-    },
+    primaryCta: { label: "Book a superhero party", href: "/book" },
+    secondaryCta: { label: "See pricing", href: "/pricing" },
     mainMedia: getMediaAsset("spidermanMain"),
-    panelEyebrow: "What a Living Fairytale superhero brings",
-    panelTitle: "Dramatic arrivals, action-packed missions, and a celebration kids won't stop talking about.",
+    panelEyebrow: "What he brings",
+    panelTitle: "Big, bold, and fully in character.",
     panelDescription:
-      "Same trained performers, same commitment to staying in character — just a different energy. Big, bold, and tuned to the age group in the room.",
+      "Dramatic entrance, action missions, interactive games, keepsake photos. Gold Power Package adds superhero masks for every guest.",
     supportingCards: [
       {
-        eyebrow: "Entrance",
-        title: "A hero arrives",
-        description:
-          "A full-volume entrance that turns the room into a moment. The birthday hero gets recognized first — every single time.",
+        eyebrow: "Arrival",
+        title: "Full-volume entrance",
+        description: "Walks straight to the birthday hero. Room erupts.",
       },
       {
-        eyebrow: "Interaction",
+        eyebrow: "Activities",
         title: "Hero missions",
-        description:
-          "Age-appropriate missions, storytelling, games and photos. Silver and Gold add face painting and temporary tattoos.",
+        description: "Team games, action stories, pose-for-the-camera moments.",
       },
       {
-        eyebrow: "Keepsakes",
-        title: "Show-and-tell photos",
-        description:
-          "The kind of birthday pictures kids will still be talking about at school on Monday morning.",
+        eyebrow: "Gold extra",
+        title: "Masks for everyone",
+        description: "Gold Power Package comes with masks for the whole crew.",
       },
     ],
   },
   sections: {
     characters: {
       eyebrow: "Meet the heroes",
-      title: "Our superhero and action-character roster.",
-      description:
-        "Batman, Spiderman, Wonder Woman, Maui, Star Wars favourites, Monster High — click any card for the full character page.",
+      title: "The superhero roster.",
+      description: "",
     },
     experience: {
       eyebrow: "What's included",
-      title: "What happens during a superhero party.",
-      description:
-        "The same core moments as every Living Fairytale party — just turned up. The Gold Power Package adds superhero masks for every guest.",
+      title: "What happens at a superhero party.",
+      description: "",
     },
     packages: {
       eyebrow: "Packages",
       title: "Hero, Super, Power.",
-      description:
-        "Bronze / Silver / Gold at superhero pricing: $200 for a one-hour visit, $250 for the Super Package, $300 for the deluxe two-hour Power Package with masks.",
+      description: "One hour, one and a half, or two.",
     },
   },
   experienceCards: [
     {
-      eyebrow: "Core moment",
+      eyebrow: "Core",
       title: "Dramatic entrance",
-      description:
-        "A hero walks through the door and the whole room shifts. The birthday child is the first one recognized.",
+      description: "A hero walks through the door and the room shifts. Birthday child recognized first.",
       icon: "\u2605",
     },
     {
-      eyebrow: "Core moment",
-      title: "Hero missions & games",
-      description:
-        "Action-forward activities scaled to the age group. Storytelling, team missions, and plenty of pose-for-the-camera moments.",
+      eyebrow: "Core",
+      title: "Missions & games",
+      description: "Action-forward activities scaled to the age group.",
       icon: "\u2694",
     },
     {
-      eyebrow: "Core moment",
-      title: "Gold adds masks for the squad",
-      description:
-        "Every child gets a superhero mask in the Gold Power Package — instant group photos and takeaway keepsakes.",
+      eyebrow: "Gold extra",
+      title: "Masks for the squad",
+      description: "Every child gets a superhero mask. Instant group photos.",
       icon: "\u2726",
     },
   ],
@@ -105,22 +90,16 @@ export const heroesPageContent = {
     "signature-fairytale",
   ]),
   cta: {
-    eyebrow: "Let's assemble the team",
-    title: "Book his favourite hero for the big day.",
+    eyebrow: "Ready?",
+    title: "Book his favourite hero.",
     description:
-      "Send us the date, the hero, and a few details about your party. A real person will reply — usually within a day.",
+      "Send us the date and the character. We'll reply within a day.",
     notes: [
       "Multiple heroes can team up for bigger parties",
-      "Weekend dates book fast — send early during busy seasons",
-      "Mention the venue, age group and any party theme notes up front",
+      "Weekend dates book fast",
+      "Mention the venue, age group and any notes up front",
     ],
-    primaryCta: {
-      label: "Book a superhero party",
-      href: "/book",
-    },
-    secondaryCta: {
-      label: "Back to home",
-      href: "/",
-    },
+    primaryCta: { label: "Book a superhero party", href: "/book" },
+    secondaryCta: { label: "Back to home", href: "/" },
   },
 } as const;
