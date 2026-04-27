@@ -47,20 +47,28 @@ export function CharacterCard({
   const styles = themeStyles[theme];
   const mediaHeight =
     variant === "compact"
-      ? "min-h-[14rem] sm:min-h-[15rem]"
-      : "min-h-[18rem] sm:min-h-[20rem]";
+      ? "h-[9.75rem] sm:h-[16.5rem]"
+      : "h-[12rem] sm:h-[20rem]";
   const mainImageFit = character.mainMedia.objectFit ?? "cover";
   const insetImageFit = character.insetMedia?.objectFit ?? "cover";
+  const description =
+    variant === "showcase" && character.longDescription
+      ? character.longDescription
+      : character.shortDescription;
 
   return (
     <article
-      className={`group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-line shadow-soft transition-shadow duration-300 hover:shadow-magical ${styles.frame}`}
+      className={`group flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-line shadow-soft transition-shadow duration-300 hover:shadow-magical sm:rounded-[1.75rem] ${styles.frame}`}
     >
       <div
-        className={`relative border-b border-line p-4 sm:p-5 ${styles.media} ${mediaHeight}`}
+        className={`relative border-b border-line p-3 sm:p-5 ${styles.media}`}
       >
-        <span className="eyebrow-plain">{character.category}</span>
-        <div className="mt-4 overflow-hidden rounded-[1.25rem] border border-white/60 bg-white/75">
+        <span className="eyebrow-plain text-[0.62rem] sm:text-[0.72rem]">
+          {character.category}
+        </span>
+        <div
+          className={`mt-3 overflow-hidden rounded-[1rem] border border-white/60 bg-white/75 sm:mt-4 sm:rounded-[1.25rem] ${mediaHeight}`}
+        >
           <Image
             src={character.mainMedia.src}
             alt={character.mainMedia.alt}
@@ -76,7 +84,7 @@ export function CharacterCard({
         </div>
 
         {character.insetMedia ? (
-          <div className="absolute bottom-4 right-4 w-20 overflow-hidden rounded-2xl border border-white/90 bg-white shadow-magical sm:w-24">
+          <div className="absolute bottom-3 right-3 w-16 overflow-hidden rounded-xl border border-white/90 bg-white shadow-magical sm:bottom-4 sm:right-4 sm:w-24 sm:rounded-2xl">
             <Image
               src={character.insetMedia.src}
               alt={character.insetMedia.alt}
@@ -93,17 +101,15 @@ export function CharacterCard({
         ) : null}
       </div>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <h3 className="text-2xl font-semibold leading-tight text-midnight sm:text-[1.7rem]">
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
+        <h3 className="text-base font-semibold leading-tight text-midnight sm:text-[1.7rem]">
           {character.name}
         </h3>
-        <p className="section-copy mt-2.5 text-sm sm:text-base">
-          {variant === "showcase" && character.longDescription
-            ? character.longDescription
-            : character.shortDescription}
+        <p className="section-copy mobile-clamp-2 mt-2 text-xs leading-relaxed sm:mt-2.5 sm:text-base">
+          {description}
         </p>
 
-        <ul className="mt-4 flex flex-wrap gap-1.5">
+        <ul className="mt-3 hidden flex-wrap gap-1.5 sm:flex">
           {character.tags.map((tag) => (
             <li
               key={tag}
@@ -115,12 +121,13 @@ export function CharacterCard({
         </ul>
 
         {character.detailHref ? (
-          <div className="mt-auto pt-5">
+          <div className="mt-auto pt-4 sm:pt-5">
             <Link
               href={character.detailHref}
-              className="button-secondary text-sm"
+              className="button-secondary min-h-0 px-3.5 py-2.5 text-xs sm:min-h-[3.1rem] sm:px-5 sm:py-3 sm:text-sm"
             >
-              See {character.name}
+              <span className="sm:hidden">View</span>
+              <span className="hidden sm:inline">See {character.name}</span>
             </Link>
           </div>
         ) : null}

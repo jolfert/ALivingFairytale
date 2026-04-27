@@ -47,7 +47,7 @@ export default function PrincessPage() {
             eyebrow={princessPageContent.sections.characters.eyebrow}
             title={princessPageContent.sections.characters.title}
           />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {princessPageContent.characters.map((character) => (
               <CharacterCard
                 key={character.slug}

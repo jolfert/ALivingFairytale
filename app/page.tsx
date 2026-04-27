@@ -74,7 +74,7 @@ export default function HomePage() {
             eyebrow={homepageContent.sections.featured.eyebrow}
             title={homepageContent.sections.featured.title}
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
             {homepageContent.featuredCharacters.map((character) => (
               <CharacterCard
                 key={character.slug}

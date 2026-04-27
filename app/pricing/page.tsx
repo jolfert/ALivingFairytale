@@ -72,7 +72,7 @@ export default function PricingPage() {
             </h2>
             <p className="section-copy max-w-lg text-base">
               Weekend dates book fast. Send us the date, the character, and a
-              few details — we'll reply within a day.
+              few details - we&apos;ll reply within a day.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/book" className="button-primary">

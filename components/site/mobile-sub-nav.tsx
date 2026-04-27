@@ -25,7 +25,7 @@ export function MobileSubNav() {
   return (
     <div
       aria-label="Party types"
-      className="border-b border-line bg-white/80"
+      className="hidden border-b border-line bg-white/80 md:block"
     >
       <div className="mx-auto max-w-7xl overflow-x-auto px-3 py-2 sm:px-6 lg:px-8">
         <nav

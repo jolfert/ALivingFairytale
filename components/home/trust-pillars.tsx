@@ -9,7 +9,7 @@ type TrustPillarsProps = {
 };
 
 export function TrustPillars({ pillars }: TrustPillarsProps) {
-  // Pick grid columns based on count — 3 → 3-col, 5 → 5-col at xl.
+  // Pick grid columns based on count - 3 to 3-col, 5 to 5-col at xl.
   const isFive = pillars.length === 5;
   const gridCols = isFive
     ? "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"

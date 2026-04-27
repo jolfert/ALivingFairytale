@@ -47,45 +47,36 @@ export function CategoryHero({
   const isPlayful = theme === "playful";
 
   return (
-    <section className="relative mx-auto max-w-7xl px-4 pb-16 pt-6 sm:px-6 sm:pt-10 lg:px-8 lg:pb-24 lg:pt-14">
-      <div
-        aria-hidden
-        className={`pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full blur-3xl ${tokens.glowA}`}
-      />
-      <div
-        aria-hidden
-        className={`pointer-events-none absolute right-0 top-24 h-60 w-60 rounded-full blur-3xl ${tokens.glowB}`}
-      />
-
-      <div className="relative grid items-start gap-10 lg:grid-cols-[1.02fr_1fr] lg:gap-14">
+    <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-4 sm:px-6 sm:pt-10 lg:px-8 lg:pb-24 lg:pt-14">
+      <div className="relative grid items-start gap-7 lg:grid-cols-[1.02fr_1fr] lg:gap-14">
         {/* LEFT: Headline + intent */}
-        <div className="relative z-10">
+        <div className="relative z-10 order-2 lg:order-1">
           <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
           <h1
-            className={`mt-6 max-w-3xl font-semibold leading-[0.96] text-midnight ${
+            className={`mt-4 max-w-3xl font-semibold leading-[0.98] text-midnight sm:mt-6 ${
               isPlayful
                 ? "text-4xl text-balance sm:text-5xl xl:text-6xl"
-                : "text-5xl sm:text-6xl xl:text-7xl"
+                : "text-4xl sm:text-6xl xl:text-7xl"
             }`}
           >
             {content.title}
           </h1>
-          <p className="section-copy mt-6 max-w-xl text-lg">
+          <p className="section-copy mt-4 max-w-xl text-base sm:mt-6 sm:text-lg">
             {content.description}
           </p>
 
-          <ul className="mt-8 flex flex-wrap gap-2.5">
+          <ul className="mt-5 flex flex-wrap gap-2 sm:mt-8 sm:gap-2.5">
             {content.highlights.map((highlight) => (
               <li
                 key={highlight}
-                className={`rounded-full border px-4 py-2.5 text-sm font-semibold text-midnight backdrop-blur ${tokens.highlight}`}
+                className={`rounded-full border px-3 py-2 text-xs font-semibold text-midnight backdrop-blur sm:px-4 sm:py-2.5 sm:text-sm ${tokens.highlight}`}
               >
                 {highlight}
               </li>
             ))}
           </ul>
 
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3 sm:mt-9">
             <Link href={content.primaryCta.href} className="button-primary">
               {content.primaryCta.label}
             </Link>
@@ -101,17 +92,18 @@ export function CategoryHero({
         </div>
 
         {/* RIGHT: Single focused showcase */}
-        <div className="brand-shell relative">
-          <div className="glass-panel relative overflow-hidden rounded-[2rem] p-4 sm:p-5">
+        <div className="brand-shell relative order-1 lg:order-2">
+          <div className="relative overflow-hidden rounded-[1.35rem] border border-line bg-white/88 p-3 shadow-soft sm:rounded-[2rem] sm:p-5 sm:shadow-magical">
             <div
-              className={`relative overflow-hidden rounded-[1.5rem] border border-white/60 ${tokens.mediaFrame}`}
+              className={`relative overflow-hidden rounded-[1.05rem] border border-white/60 sm:rounded-[1.5rem] ${tokens.mediaFrame}`}
             >
               <Image
                 src={content.mainMedia.src}
                 alt={content.mainMedia.alt}
                 width={content.mainMedia.width}
                 height={content.mainMedia.height}
-                className={`h-[22rem] w-full sm:h-[26rem] ${
+                priority
+                className={`h-[18rem] w-full sm:h-[26rem] ${
                   mainImageFit === "contain"
                     ? "bg-white p-4 object-contain"
                     : "object-cover"
@@ -137,13 +129,13 @@ export function CategoryHero({
               ) : null}
             </div>
 
-            {/* Panel strip — key sub-pitch */}
-            <div className="mt-4 rounded-2xl border border-line bg-white/88 p-5">
+            {/* Panel strip - key sub-pitch */}
+            <div className="mt-3 rounded-2xl border border-line bg-white/88 p-4 sm:mt-4 sm:p-5">
               <p className="eyebrow-plain">{content.panelEyebrow}</p>
-              <h2 className="mt-2 text-xl font-semibold text-midnight sm:text-2xl">
+              <h2 className="mt-2 text-lg font-semibold text-midnight sm:text-2xl">
                 {content.panelTitle}
               </h2>
-              <p className="section-copy mt-2.5 text-sm leading-relaxed">
+              <p className="section-copy mt-2.5 hidden text-sm leading-relaxed sm:block">
                 {content.panelDescription}
               </p>
             </div>

@@ -149,7 +149,7 @@ export function PackageTabs({
         {pkg.includedFeatures && pkg.includedFeatures.length > 0 ? (
           <ul className="mt-5 space-y-1.5 border-t border-line pt-5 text-xs text-copy-soft sm:text-sm">
             {pkg.includedFeatures.map((feature) => (
-              <li key={`${pkg.slug}-${feature}`}>• {feature}</li>
+              <li key={`${pkg.slug}-${feature}`}>{"\u2022"} {feature}</li>
             ))}
           </ul>
         ) : null}

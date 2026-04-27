@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageSection } from "@/components/shared/page-section";
-import { SectionHeading } from "@/components/shared/section-heading";
 import { TestimonialCard } from "@/components/shared/testimonial-card";
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
@@ -42,7 +41,7 @@ export default function ReviewsPage() {
             </h1>
             <p className="section-copy mx-auto mt-6 max-w-2xl text-base sm:text-lg">
               A small collection of notes from parents, event organizers and
-              families who've welcomed our princesses, superheroes and mascots
+              families who&apos;ve welcomed our princesses, superheroes and mascots
               into their celebrations. For the full list, head to our{" "}
               <Link
                 href="https://www.facebook.com/alivingfairytale"
@@ -76,11 +75,11 @@ export default function ReviewsPage() {
           <div className="glass-panel mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-[2rem] p-8 text-center sm:p-12">
             <span className="eyebrow sparkle-dot">Ready to book?</span>
             <h2 className="max-w-2xl text-3xl font-semibold text-midnight sm:text-4xl lg:text-5xl">
-              Let's make your celebration the next story they tell.
+              Let&apos;s make your celebration the next story they tell.
             </h2>
             <p className="section-copy max-w-xl text-base sm:text-lg">
               Send us your party date, the character you have in mind, and a
-              few details — a real person will get back to you.
+              few details - a real person will get back to you.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/book" className="button-primary">

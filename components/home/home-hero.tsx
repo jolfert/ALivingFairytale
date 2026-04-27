@@ -53,7 +53,7 @@ export function HomeHero({ content }: HomeHeroProps) {
 
   return (
     <section className="relative mx-auto max-w-7xl px-4 pb-16 pt-6 sm:px-6 sm:pt-10 lg:px-8 lg:pb-24 lg:pt-14">
-      {/* Ambient glows — softer, further from the content */}
+      {/* Ambient glows - softer, further from the content */}
       <div
         aria-hidden
         className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-rose/10 blur-3xl"
@@ -111,10 +111,10 @@ export function HomeHero({ content }: HomeHeroProps) {
           </div>
         </div>
 
-        {/* RIGHT: Single focused showcase — one shell, clean stacking */}
+        {/* RIGHT: Single focused showcase - one shell, clean stacking */}
         <div className="brand-shell relative">
           <div className="glass-panel relative overflow-hidden rounded-[2rem] p-4 sm:p-5">
-            {/* Brand logo chip — floating, subtle */}
+            {/* Brand logo chip - floating, subtle */}
             <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-line bg-white/94 px-4 py-2">
               <Image
                 src={content.brandMedia.src}

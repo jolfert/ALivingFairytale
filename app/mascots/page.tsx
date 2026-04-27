@@ -40,7 +40,7 @@ export default function MascotsPage() {
             eyebrow={mascotsPageContent.sections.showcase.eyebrow}
             title={mascotsPageContent.sections.showcase.title}
           />
-          <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2">
+          <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-2">
             {mascotsPageContent.showcaseCharacters.map((character) => (
               <CharacterCard
                 key={character.slug}

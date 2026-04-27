@@ -214,6 +214,20 @@ h1 {
   line-height: 1.7;
 }
 
+.mobile-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .mobile-clamp-2 {
+    display: block;
+    overflow: visible;
+  }
+}
+
 /* ============================================================
    Brand shell — backdrop decoration for hero imagery
    ============================================================ */
