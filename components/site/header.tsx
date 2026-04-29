@@ -67,7 +67,7 @@ export function Header({
 
   return (
     <header className="relative z-50 bg-white/92 md:sticky md:top-0">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 border-b border-line px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 lg:py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 border-b border-line px-4 py-1.5 sm:px-6 lg:px-8">
         <Link
           href={brandHref}
           className="flex items-center gap-3 transition-opacity hover:opacity-85"
@@ -77,7 +77,7 @@ export function Header({
             alt={siteShellContent.brandLogo.alt}
             width={siteShellContent.brandLogo.width}
             height={siteShellContent.brandLogo.height}
-            className="h-auto w-[11rem] sm:w-[13.5rem] lg:w-[15rem]"
+            className="h-auto w-[7.75rem] sm:w-[9.25rem] lg:w-[10.5rem]"
             priority
           />
         </Link>
@@ -98,7 +98,7 @@ export function Header({
             aria-expanded={menuOpen}
             aria-controls="site-menu"
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-midnight shadow-soft transition hover:bg-white"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-midnight shadow-soft transition hover:bg-white sm:h-11 sm:w-11"
           >
             <span className="sr-only">{menuOpen ? "Close menu" : "Menu"}</span>
             <svg
