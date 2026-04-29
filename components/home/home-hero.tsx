@@ -29,8 +29,13 @@ type HeroContent = {
     storyCardText: string;
     princessLabel: string;
     princessDescription: string;
+    princessHref: string;
     heroLabel: string;
     heroDescription: string;
+    heroHref: string;
+    mascotLabel: string;
+    mascotDescription: string;
+    mascotHref: string;
     planningEyebrow: string;
     planningTitle: string;
     planningDescription: string;
@@ -176,25 +181,57 @@ export function HomeHero({ content }: HomeHeroProps) {
               </div>
             </div>
 
-            {/* Two category chips below the photo */}
+            {/* Quick path cards below the photo */}
             <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4 sm:gap-3">
-              <div className="rounded-2xl border border-line bg-[linear-gradient(180deg,rgba(255,247,252,0.98),rgba(255,235,246,0.92))] p-3 sm:p-4">
+              <Link
+                href={content.showcase.princessHref}
+                className="group rounded-2xl border border-line bg-[linear-gradient(180deg,rgba(255,247,252,0.98),rgba(255,235,246,0.92))] p-3 transition hover:-translate-y-0.5 hover:shadow-soft sm:p-4"
+              >
                 <p className="text-[0.7rem] font-black uppercase tracking-[0.2em] text-rose">
                   {content.showcase.princessLabel}
                 </p>
                 <p className="mt-1.5 text-sm font-semibold leading-snug text-midnight sm:mt-2 sm:text-base">
                   {content.showcase.princessDescription}
                 </p>
-              </div>
-              <div className="rounded-2xl border border-[rgba(66,86,184,0.14)] bg-[linear-gradient(180deg,rgba(247,250,255,0.98),rgba(228,238,255,0.94))] p-3 sm:p-4">
+                <span className="mt-2 inline-flex text-xs font-bold text-midnight opacity-70 transition group-hover:opacity-100">
+                  See princesses
+                </span>
+              </Link>
+              <Link
+                href={content.showcase.heroHref}
+                className="group rounded-2xl border border-[rgba(66,86,184,0.14)] bg-[linear-gradient(180deg,rgba(247,250,255,0.98),rgba(228,238,255,0.94))] p-3 transition hover:-translate-y-0.5 hover:shadow-soft sm:p-4"
+              >
                 <p className="text-[0.7rem] font-black uppercase tracking-[0.2em] text-[color:#4665c9]">
                   {content.showcase.heroLabel}
                 </p>
                 <p className="mt-1.5 text-sm font-semibold leading-snug text-midnight sm:mt-2 sm:text-base">
                   {content.showcase.heroDescription}
                 </p>
-              </div>
+                <span className="mt-2 inline-flex text-xs font-bold text-midnight opacity-70 transition group-hover:opacity-100">
+                  See superheroes
+                </span>
+              </Link>
             </div>
+
+            <Link
+              href={content.showcase.mascotHref}
+              className="group mt-2 flex items-center justify-between gap-3 rounded-2xl border border-[rgba(34,139,98,0.14)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(236,255,247,0.96))] p-3 transition hover:-translate-y-0.5 hover:shadow-soft sm:mt-3 sm:p-4"
+            >
+              <div>
+                <p className="text-[0.7rem] font-black uppercase tracking-[0.2em] text-[color:#267b55]">
+                  {content.showcase.mascotLabel}
+                </p>
+                <p className="mt-1 text-sm font-semibold leading-snug text-midnight sm:text-base">
+                  {content.showcase.mascotDescription}
+                </p>
+              </div>
+              <span
+                aria-hidden
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white text-lg font-black text-midnight shadow-soft transition group-hover:translate-x-0.5"
+            >
+              {"->"}
+            </span>
+          </Link>
           </div>
         </div>
       </div>
