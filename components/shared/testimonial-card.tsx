@@ -13,7 +13,7 @@ export function TestimonialCard({
 
   return (
     <figure
-      className={`soft-panel relative flex h-full flex-col rounded-[1.5rem] p-6 sm:p-7 ${
+      className={`soft-panel relative flex h-full flex-col rounded-[1.5rem] p-5 sm:p-6 ${
         variant === "featured"
           ? "border-[rgba(245,102,187,0.22)]"
           : ""
@@ -25,10 +25,10 @@ export function TestimonialCard({
       >
         &ldquo;
       </div>
-      <blockquote className="relative pt-4 text-sm leading-relaxed text-midnight sm:text-base">
-        {testimonial.quote}
+      <blockquote className="relative mb-4 mt-4 text-sm leading-relaxed text-midnight sm:text-base">
+        <span className="mobile-clamp-8">{testimonial.quote}</span>
       </blockquote>
-      <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
+      <figcaption className="mt-auto flex items-center gap-3 border-t border-line pt-4">
         <div
           aria-hidden
           className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[linear-gradient(135deg,#ffd67b,#f566bb)] text-lg font-black text-white shadow-soft"

@@ -47,25 +47,25 @@ export function CategoryHero({
   const isPlayful = theme === "playful";
 
   return (
-    <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-4 sm:px-6 sm:pt-10 lg:px-8 lg:pb-24 lg:pt-14">
-      <div className="relative grid items-start gap-7 lg:grid-cols-[1.02fr_1fr] lg:gap-14">
-        {/* LEFT: Headline + intent */}
-        <div className="relative z-10 order-2 lg:order-1">
+    <section className="relative mx-auto max-w-7xl px-4 pb-8 pt-4 sm:px-6 sm:pt-8 lg:px-8 lg:pb-16 lg:pt-10">
+      <div className="relative grid items-start gap-5 lg:grid-cols-[1.02fr_1fr] lg:gap-12">
+        {/* LEFT: Headline + intent — first on every breakpoint so the pitch is above the fold */}
+        <div className="relative z-10">
           <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
           <h1
-            className={`mt-4 max-w-3xl font-semibold leading-[0.98] text-midnight sm:mt-6 ${
+            className={`mt-3 max-w-3xl font-semibold leading-[0.98] text-midnight sm:mt-5 ${
               isPlayful
-                ? "text-4xl text-balance sm:text-5xl xl:text-6xl"
-                : "text-4xl sm:text-6xl xl:text-7xl"
+                ? "text-3xl text-balance sm:text-4xl xl:text-5xl"
+                : "text-3xl sm:text-5xl xl:text-6xl"
             }`}
           >
             {content.title}
           </h1>
-          <p className="section-copy mt-4 max-w-xl text-base sm:mt-6 sm:text-lg">
+          <p className="section-copy mt-3 max-w-xl text-base sm:mt-4 sm:text-lg">
             {content.description}
           </p>
 
-          <ul className="mt-5 flex flex-wrap gap-2 sm:mt-8 sm:gap-2.5">
+          <ul className="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-2.5">
             {content.highlights.map((highlight) => (
               <li
                 key={highlight}
@@ -76,7 +76,7 @@ export function CategoryHero({
             ))}
           </ul>
 
-          <div className="mt-6 flex flex-wrap gap-3 sm:mt-9">
+          <div className="mt-5 flex flex-wrap gap-3 sm:mt-6">
             <Link href={content.primaryCta.href} className="button-primary">
               {content.primaryCta.label}
             </Link>
@@ -92,7 +92,7 @@ export function CategoryHero({
         </div>
 
         {/* RIGHT: Single focused showcase */}
-        <div className="brand-shell relative order-1 lg:order-2">
+        <div className="brand-shell relative">
           <div className="relative overflow-hidden rounded-[1.35rem] border border-line bg-white/88 p-3 shadow-soft sm:rounded-[2rem] sm:p-5 sm:shadow-magical">
             <div
               className={`relative overflow-hidden rounded-[1.05rem] border border-white/60 sm:rounded-[1.5rem] ${tokens.mediaFrame}`}
@@ -102,8 +102,8 @@ export function CategoryHero({
                 alt={content.mainMedia.alt}
                 width={content.mainMedia.width}
                 height={content.mainMedia.height}
-                priority
-                className={`h-[18rem] w-full sm:h-[26rem] ${
+                preload
+                className={`h-[13.5rem] w-full sm:h-[24rem] ${
                   mainImageFit === "contain"
                     ? "bg-white p-4 object-contain"
                     : "object-cover"
@@ -112,7 +112,7 @@ export function CategoryHero({
               />
 
               {content.insetMedia ? (
-                <div className="absolute bottom-4 right-4 w-24 overflow-hidden rounded-2xl border border-white/90 bg-white shadow-magical sm:bottom-5 sm:right-5 sm:w-28">
+                <div className="absolute bottom-3 right-3 w-16 overflow-hidden rounded-2xl border border-white/90 bg-white shadow-magical sm:bottom-5 sm:right-5 sm:w-28">
                   <Image
                     src={content.insetMedia.src}
                     alt={content.insetMedia.alt}

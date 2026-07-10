@@ -25,16 +25,16 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
     <article
       className={`group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-line shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-magical ${path.accentClassName}`}
     >
-      <div className="flex items-start justify-between gap-4 border-b border-white/60 p-5 sm:p-6">
+      <div className="flex items-start justify-between gap-4 border-b border-white/60 p-4 sm:p-5">
         <div>
           <span className="eyebrow-plain">{path.eyebrow}</span>
-          <h3 className="mt-2 text-xl font-semibold leading-snug text-midnight sm:text-2xl lg:text-[1.7rem]">
+          <h3 className="mt-1.5 text-lg font-semibold leading-snug text-midnight sm:text-2xl lg:text-[1.7rem]">
             {path.title}
           </h3>
         </div>
         <div
           className={`shrink-0 overflow-hidden border border-white/80 bg-white/88 shadow-soft ${
-            usesPhotography ? "h-20 w-20 rounded-2xl" : "rounded-2xl p-2"
+            usesPhotography ? "h-14 w-14 rounded-xl sm:h-20 sm:w-20 sm:rounded-2xl" : "rounded-2xl p-2"
           }`}
         >
           <Image
@@ -57,12 +57,12 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <p className="section-copy text-sm leading-relaxed sm:text-base">
           {path.description}
         </p>
 
-        <ul className="mt-5 flex flex-wrap gap-1.5">
+        <ul className="mt-3 hidden flex-wrap gap-1.5 sm:flex">
           {path.tags.map((tag) => (
             <li
               key={tag}
@@ -73,7 +73,7 @@ export function PartyPathCard({ path }: PartyPathCardProps) {
           ))}
         </ul>
 
-        <div className="mt-auto pt-6">
+        <div className="mt-auto pt-3 sm:pt-4">
           <Link
             href={path.href}
             className="inline-flex items-center gap-2 text-sm font-extrabold text-midnight transition group-hover:gap-3"

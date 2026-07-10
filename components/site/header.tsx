@@ -78,18 +78,19 @@ export function Header({
             width={siteShellContent.brandLogo.width}
             height={siteShellContent.brandLogo.height}
             className="h-auto w-[7.75rem] sm:w-[9.25rem] lg:w-[10.5rem]"
-            priority
+            preload
           />
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-3">
           {!hideCta ? (
-            <Link
-              href={cta.href}
-              className="button-primary hidden text-sm sm:inline-flex"
-            >
-              {cta.label}
-            </Link>
+            // Wrapper div hides the CTA on mobile: `hidden` on the Link itself
+            // loses to .button-primary's unlayered `display: inline-flex`.
+            <div className="hidden sm:block">
+              <Link href={cta.href} className="button-primary text-sm">
+                {cta.label}
+              </Link>
+            </div>
           ) : null}
 
           <button

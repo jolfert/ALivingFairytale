@@ -57,7 +57,7 @@ export function HomeHero({ content }: HomeHeroProps) {
   const insetImageFit = content.showcase.insetMedia?.objectFit ?? "cover";
 
   return (
-    <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-4 sm:px-6 sm:pt-7 lg:px-8 lg:pb-20 lg:pt-10">
+    <section className="relative mx-auto max-w-7xl px-4 pb-8 pt-4 sm:px-6 sm:pt-6 lg:px-8 lg:pb-14 lg:pt-8">
       {/* Ambient glows - softer, further from the content */}
       <div
         aria-hidden
@@ -69,17 +69,17 @@ export function HomeHero({ content }: HomeHeroProps) {
       />
 
       <div className="relative grid items-start gap-6 lg:grid-cols-[0.96fr_1fr] lg:gap-12">
-        {/* LEFT: Headline + intent */}
-        <div className="relative z-10 order-2 lg:order-1 lg:pt-10">
+        {/* LEFT: Headline + intent — first on every breakpoint so the pitch is above the fold */}
+        <div className="relative z-10 lg:pt-10">
           <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-[0.95] text-midnight sm:mt-5 sm:text-6xl xl:text-7xl">
+          <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[0.95] text-midnight sm:mt-5 sm:text-5xl xl:text-6xl">
             {content.title}
           </h1>
-          <p className="section-copy mt-4 max-w-xl text-base sm:mt-5 sm:text-lg">
+          <p className="section-copy mt-3 max-w-xl text-base sm:mt-4 sm:text-lg">
             {content.description}
           </p>
 
-          <ul className="mt-5 flex flex-wrap gap-2 sm:mt-7 sm:gap-2.5">
+          <ul className="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-2.5">
             {content.highlights.map((highlight) => (
               <li
                 key={highlight}
@@ -90,7 +90,7 @@ export function HomeHero({ content }: HomeHeroProps) {
             ))}
           </ul>
 
-          <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
+          <div className="mt-5 flex flex-wrap gap-3 sm:mt-6">
             <Link href={content.primaryCta.href} className="button-primary">
               {content.primaryCta.label}
             </Link>
@@ -99,7 +99,7 @@ export function HomeHero({ content }: HomeHeroProps) {
             </Link>
           </div>
 
-          <div className="mt-7 grid grid-cols-3 gap-2 sm:mt-9 sm:gap-3">
+          <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-7 sm:gap-3">
             {content.stats.map((stat) => (
               <div
                 key={stat.label}
@@ -117,7 +117,7 @@ export function HomeHero({ content }: HomeHeroProps) {
         </div>
 
         {/* RIGHT: Single focused showcase - one shell, clean stacking */}
-        <div className="brand-shell relative order-1 lg:order-2">
+        <div className="brand-shell relative">
           <div className="glass-panel relative overflow-hidden rounded-[1.5rem] p-3 sm:rounded-[2rem] sm:p-5">
             {/* Brand logo chip - floating, subtle */}
             <div className="mb-3 hidden items-center gap-3 rounded-full border border-line bg-white/94 px-4 py-2 sm:mb-4 sm:inline-flex">
@@ -137,7 +137,7 @@ export function HomeHero({ content }: HomeHeroProps) {
                 alt={content.showcase.mainMedia.alt}
                 width={content.showcase.mainMedia.width}
                 height={content.showcase.mainMedia.height}
-                className={`h-[16.5rem] w-full sm:h-[26rem] lg:h-[31rem] ${
+                className={`h-[14rem] w-full sm:h-[24rem] lg:h-[28rem] ${
                   mainImageFit === "contain"
                     ? "bg-white p-4 object-contain"
                     : "object-cover"
@@ -181,8 +181,9 @@ export function HomeHero({ content }: HomeHeroProps) {
               </div>
             </div>
 
-            {/* Quick path cards below the photo */}
-            <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4 sm:gap-3">
+            {/* Quick path cards below the photo — desktop/tablet only; the paths
+                section immediately below covers this on mobile */}
+            <div className="mt-3 hidden grid-cols-2 gap-2 sm:mt-4 sm:grid sm:gap-3">
               <Link
                 href={content.showcase.princessHref}
                 className="group rounded-2xl border border-line bg-[linear-gradient(180deg,rgba(255,247,252,0.98),rgba(255,235,246,0.92))] p-3 transition hover:-translate-y-0.5 hover:shadow-soft sm:p-4"
@@ -215,7 +216,7 @@ export function HomeHero({ content }: HomeHeroProps) {
 
             <Link
               href={content.showcase.mascotHref}
-              className="group mt-2 flex items-center justify-between gap-3 rounded-2xl border border-[rgba(34,139,98,0.14)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(236,255,247,0.96))] p-3 transition hover:-translate-y-0.5 hover:shadow-soft sm:mt-3 sm:p-4"
+              className="group mt-2 hidden items-center justify-between gap-3 rounded-2xl border border-[rgba(34,139,98,0.14)] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(236,255,247,0.96))] p-3 transition hover:-translate-y-0.5 hover:shadow-soft sm:mt-3 sm:flex sm:p-4"
             >
               <div>
                 <p className="text-[0.7rem] font-black uppercase tracking-[0.2em] text-[color:#267b55]">

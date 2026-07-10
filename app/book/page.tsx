@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { BookTrustColumn } from "@/components/book/book-trust-column";
+import {
+  BookTrustDetails,
+  BookTrustIntro,
+} from "@/components/book/book-trust-column";
 import { InquiryFormShell } from "@/components/book/inquiry-form-shell";
 import { Accordion, AccordionItem } from "@/components/shared/accordion";
 import { PageSection } from "@/components/shared/page-section";
@@ -34,19 +37,24 @@ export default function BookPage() {
       <Header brandHref="/" cta={{ label: "Book", href: "/book" }} />
       <main
         id="top"
-        className="relative overflow-x-clip pb-20 pt-10 sm:pt-14 lg:pt-16"
+        className="relative overflow-x-clip pb-12 pt-6 sm:pb-16 sm:pt-10 lg:pt-12"
       >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] max-h-[60vh] bg-[radial-gradient(ellipse_at_20%_0%,rgba(245,102,187,0.12),transparent_52%),radial-gradient(ellipse_at_85%_10%,rgba(125,100,255,0.1),transparent_48%)]"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-16 xl:items-start">
-            <BookTrustColumn />
-            <InquiryFormShell
-              packageChoices={packageChoices}
-              characterChoices={characters}
-            />
+          {/* Mobile order: headline, form, trust details. Desktop: intro +
+              details stack in the left column, form spans the right. */}
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-x-16 lg:gap-y-10">
+            <BookTrustIntro />
+            <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+              <InquiryFormShell
+                packageChoices={packageChoices}
+                characterChoices={characters}
+              />
+            </div>
+            <BookTrustDetails />
           </div>
         </div>
 

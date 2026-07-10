@@ -11,9 +11,9 @@ type FooterProps = {
 
 export function Footer({ links }: FooterProps) {
   return (
-    <footer className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-      <div className="glass-panel rounded-[2rem] px-6 py-8 sm:px-10">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+    <footer className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8 lg:pb-12">
+      <div className="glass-panel rounded-[2rem] px-5 py-6 sm:px-10 sm:py-8">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-xl">
             <Image
               src={siteShellContent.brandLogo.src}
@@ -49,7 +49,7 @@ export function Footer({ links }: FooterProps) {
           </nav>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-line pt-5 text-xs text-copy-soft sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col gap-3 border-t border-line pt-4 text-xs text-copy-soft sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} A Living Fairytale. Manitoba&apos;s
             premier children&apos;s entertainers since 2011.

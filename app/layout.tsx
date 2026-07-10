@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BottomNav } from "@/components/site/bottom-nav";
 import { siteShellContent } from "@/data/site-shell";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
@@ -36,7 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth antialiased">
-      <body>{children}</body>
+      <body className="pb-[calc(3.6rem+env(safe-area-inset-bottom))] md:pb-0">
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }

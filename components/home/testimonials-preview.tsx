@@ -9,16 +9,18 @@ type TestimonialsPreviewProps = {
 export function TestimonialsPreview({ testimonials }: TestimonialsPreviewProps) {
   return (
     <>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {/* Mobile: swipeable row so three quotes cost one screen, not three */}
+      <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 lg:grid-cols-3">
         {testimonials.map((testimonial) => (
-          <TestimonialCard
+          <div
             key={testimonial.slug}
-            testimonial={testimonial}
-            variant="featured"
-          />
+            className="w-[85%] shrink-0 snap-center md:w-auto md:shrink"
+          >
+            <TestimonialCard testimonial={testimonial} variant="featured" />
+          </div>
         ))}
       </div>
-      <div className="mt-8 flex justify-center">
+      <div className="mt-5 flex justify-center sm:mt-7">
         <Link href="/reviews" className="button-secondary">
           Read more reviews
         </Link>

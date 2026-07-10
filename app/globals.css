@@ -221,8 +221,16 @@ h1 {
   overflow: hidden;
 }
 
+.mobile-clamp-8 {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media (min-width: 640px) {
-  .mobile-clamp-2 {
+  .mobile-clamp-2,
+  .mobile-clamp-8 {
     display: block;
     overflow: visible;
   }
