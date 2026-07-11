@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { LinkConfig } from "@/data/types";
 import { siteShellContent } from "@/data/site-shell";
-import { MobileSubNav } from "@/components/site/mobile-sub-nav";
 
 type NavLink = {
   label: string;
@@ -17,6 +16,20 @@ type NavGroup = {
   label: string;
   items: ReadonlyArray<NavLink>;
 };
+
+// Flat, compact labels for the single-row desktop nav.
+const desktopLinks: ReadonlyArray<NavLink> = [
+  { label: "Princess", href: "/princess" },
+  { label: "Heroes", href: "/heroes" },
+  { label: "Mascots", href: "/mascots" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
+  { label: "Reviews", href: "/reviews" },
+];
+
+function isActivePath(pathname: string, href: string): boolean {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 type HeaderProps = {
   // Kept for backwards compatibility. Nav content lives in this file.
@@ -67,20 +80,44 @@ export function Header({
 
   return (
     <header className="relative z-50 bg-white/92 md:sticky md:top-0">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 border-b border-line px-4 py-1.5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 border-b border-line px-4 py-2 sm:px-6 lg:px-8">
         <Link
           href={brandHref}
-          className="flex items-center gap-3 transition-opacity hover:opacity-85"
+          className="flex shrink-0 items-center transition-opacity hover:opacity-85"
         >
           <Image
             src={siteShellContent.brandLogo.src}
             alt={siteShellContent.brandLogo.alt}
             width={siteShellContent.brandLogo.width}
             height={siteShellContent.brandLogo.height}
-            className="h-auto w-[7.75rem] sm:w-[9.25rem] lg:w-[10.5rem]"
+            className="h-auto w-[7.75rem] sm:w-[8.25rem] md:h-[3.4rem] md:w-auto lg:h-[3.75rem]"
             preload
           />
         </Link>
+
+        {/* Desktop: inline nav in the same row as the logo and CTA */}
+        <nav
+          aria-label="Primary"
+          className="hidden flex-1 items-center justify-center gap-1 md:flex"
+        >
+          {desktopLinks.map((link) => {
+            const active = isActivePath(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`rounded-full px-3 py-1.5 text-sm font-semibold transition ${
+                  active
+                    ? "bg-mist text-midnight"
+                    : "text-copy-soft hover:bg-mist/60 hover:text-midnight"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
           {!hideCta ? (
@@ -93,13 +130,14 @@ export function Header({
             </div>
           ) : null}
 
+          {/* Hamburger is mobile-only; desktop uses the inline nav above */}
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="site-menu"
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-midnight shadow-soft transition hover:bg-white sm:h-11 sm:w-11"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-midnight shadow-soft transition hover:bg-white md:hidden"
           >
             <span className="sr-only">{menuOpen ? "Close menu" : "Menu"}</span>
             <svg
@@ -116,8 +154,6 @@ export function Header({
           </button>
         </div>
       </div>
-
-      <MobileSubNav />
 
       {/* Full-panel menu - renders inside the header's stacking context */}
       {menuOpen ? (

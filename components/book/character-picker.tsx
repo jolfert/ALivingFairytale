@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import type { ResolvedCharacter } from "@/data/types";
 
@@ -11,6 +10,9 @@ type CharacterPickerProps = {
   required?: boolean;
   err?: string;
   errId?: string;
+  /** Selected character slugs (controlled by the parent form). */
+  selected: ReadonlyArray<string>;
+  onToggle: (slug: string) => void;
 };
 
 export function CharacterPicker({
@@ -20,35 +22,49 @@ export function CharacterPicker({
   required,
   err,
   errId,
+  selected,
+  onToggle,
 }: CharacterPickerProps) {
-  const [selected, setSelected] = useState<string>("");
+  const selectedSet = new Set(selected);
 
-  function toggle(characterName: string) {
-    setSelected((prev) => (prev === characterName ? "" : characterName));
-  }
+  // Submit the human-readable names, comma-joined, so the inquiry email reads
+  // "Cinderella, Batman" with no change to the server payload shape.
+  const selectedNames = characters
+    .filter((c) => selectedSet.has(c.slug))
+    .map((c) => c.name)
+    .join(", ");
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="block text-sm font-bold text-midnight">
-        {label}
-        {required ? (
-          <span className="font-semibold text-copy-soft">
-            &nbsp;(required)
+      <span className="flex items-center justify-between gap-3 text-sm font-bold text-midnight">
+        <span>
+          {label}
+          {required ? (
+            <span className="font-semibold text-copy-soft">
+              &nbsp;(required)
+            </span>
+          ) : null}
+        </span>
+        {selected.length > 0 ? (
+          <span className="rounded-full bg-violet/10 px-2.5 py-0.5 text-xs font-bold text-violet">
+            {selected.length} selected
           </span>
-        ) : null}
+        ) : (
+          <span className="text-xs font-semibold text-copy-soft">
+            Add one or more
+          </span>
+        )}
       </span>
 
-      {/* Hidden input carries the selected character name into the FormData on submit */}
-      <input type="hidden" name={name} value={selected} />
+      {/* Hidden input carries the joined names into FormData on submit */}
+      <input type="hidden" name={name} value={selectedNames} />
 
       <div
         className={`max-h-[22rem] overflow-y-auto overscroll-contain rounded-xl border bg-white/95 p-3 transition sm:p-4 ${
-          err
-            ? "border-rose/45 ring-2 ring-rose/15"
-            : "border-line-strong"
+          err ? "border-rose/45 ring-2 ring-rose/15" : "border-line-strong"
         }`}
-        role="radiogroup"
-        aria-label="Choose your character"
+        role="group"
+        aria-label="Choose one or more characters"
         aria-required={required}
         aria-invalid={err ? true : undefined}
         aria-describedby={err ? errId : undefined}
@@ -56,15 +72,15 @@ export function CharacterPicker({
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-5">
           {characters.map((character) => {
             const media = character.insetMedia ?? character.mainMedia;
-            const isSelected = selected === character.name;
+            const isSelected = selectedSet.has(character.slug);
 
             return (
               <button
                 key={character.slug}
                 type="button"
-                role="radio"
+                role="checkbox"
                 aria-checked={isSelected}
-                onClick={() => toggle(character.name)}
+                onClick={() => onToggle(character.slug)}
                 className={`group flex flex-col items-center gap-1.5 rounded-xl p-1.5 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet/50 ${
                   isSelected
                     ? "bg-violet/8 ring-2 ring-violet/55"
@@ -110,11 +126,7 @@ export function CharacterPicker({
       </div>
 
       {err ? (
-        <p
-          id={errId}
-          className="text-sm font-semibold text-rose"
-          role="status"
-        >
+        <p id={errId} className="text-sm font-semibold text-rose" role="status">
           {err}
         </p>
       ) : null}

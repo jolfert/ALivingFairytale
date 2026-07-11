@@ -32,35 +32,37 @@ export const metadata: Metadata = {
 };
 
 export default function BookPage() {
-  const packageChoices = packages.map((pkg) => ({
-    slug: pkg.slug,
-    name: pkg.name,
-    duration: pkg.duration,
-  }));
-
   return (
     <>
       <Header brandHref="/" cta={{ label: "Book", href: "/book" }} />
       <main
         id="top"
-        className="relative overflow-x-clip pb-12 pt-6 sm:pb-16 sm:pt-10 lg:pt-12"
+        className="relative overflow-x-clip pb-12 pt-6 sm:pb-16 sm:pt-9 lg:pt-10"
       >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] max-h-[60vh] bg-[radial-gradient(ellipse_at_20%_0%,rgba(245,102,187,0.12),transparent_52%),radial-gradient(ellipse_at_85%_10%,rgba(125,100,255,0.1),transparent_48%)]"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Mobile order: headline, form, trust details. Desktop: intro +
-              details stack in the left column, form spans the right. */}
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-x-16 lg:gap-y-10">
-            <BookTrustIntro />
-            <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          {/* On mobile this is a flex column ordered headline → form → trust
+              details. On desktop the wrapper collapses (display:contents) so
+              intro + details stack flush at the top of the left grid column
+              (no stretched mid-column gap) while the form fills the right. */}
+          <div className="flex flex-col gap-7 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-x-14">
+            <div className="contents lg:flex lg:flex-col lg:gap-6">
+              <div className="order-1">
+                <BookTrustIntro />
+              </div>
+              <div className="order-3">
+                <BookTrustDetails />
+              </div>
+            </div>
+            <div className="order-2">
               <InquiryFormShell
-                packageChoices={packageChoices}
+                packages={packages}
                 characterChoices={characters}
               />
             </div>
-            <BookTrustDetails />
           </div>
         </div>
 

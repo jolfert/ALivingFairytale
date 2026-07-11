@@ -2,16 +2,15 @@
 
 import { useState } from "react";
 import { InquiryForm } from "@/components/book/inquiry-form";
-import type { PackageChoice } from "@/components/book/inquiry-form";
-import type { ResolvedCharacter } from "@/data/types";
+import type { PackageRecord, ResolvedCharacter } from "@/data/types";
 
 type InquiryFormShellProps = {
-  packageChoices: ReadonlyArray<PackageChoice>;
+  packages: ReadonlyArray<PackageRecord>;
   characterChoices: ReadonlyArray<ResolvedCharacter>;
 };
 
 export function InquiryFormShell({
-  packageChoices,
+  packages,
   characterChoices,
 }: InquiryFormShellProps) {
   const [instance, setInstance] = useState(0);
@@ -19,7 +18,7 @@ export function InquiryFormShell({
   return (
     <InquiryForm
       key={instance}
-      packageChoices={packageChoices}
+      packages={packages}
       characterChoices={characterChoices}
       onRequestNew={() => setInstance((n) => n + 1)}
     />

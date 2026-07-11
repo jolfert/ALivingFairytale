@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { useActionState } from "react";
+import { useActionState, useMemo, useState } from "react";
 import { submitPartyInquiry, type InquiryFormState } from "@/app/book/actions";
 import {
   inquiryFormFields,
@@ -11,18 +11,18 @@ import {
 import { bookPageContent } from "@/data/book-page";
 import { BOOKING_HONEYPOT_FIELD } from "@/lib/booking/inquiry-guards";
 import { CharacterPicker } from "@/components/book/character-picker";
-import type { ResolvedCharacter } from "@/data/types";
-
-export type PackageChoice = {
-  slug: string;
-  name: string;
-  duration: string;
-};
+import { PriceSummary } from "@/components/book/price-summary";
+import type { PackageRecord, ResolvedCharacter } from "@/data/types";
 
 type InquiryFormProps = {
-  packageChoices: ReadonlyArray<PackageChoice>;
+  packages: ReadonlyArray<PackageRecord>;
   characterChoices: ReadonlyArray<ResolvedCharacter>;
   onRequestNew?: () => void;
+};
+
+type PackageOption = {
+  value: string;
+  label: string;
 };
 
 const initialState: InquiryFormState = { status: "idle" };
@@ -33,7 +33,7 @@ const fieldClassName =
 const fieldErrorClassName = "text-sm font-semibold text-rose";
 
 export function InquiryForm({
-  packageChoices,
+  packages,
   characterChoices,
   onRequestNew,
 }: InquiryFormProps) {
@@ -42,7 +42,33 @@ export function InquiryForm({
     initialState,
   );
 
+  const [packageSlug, setPackageSlug] = useState("");
+  const [selectedSlugs, setSelectedSlugs] = useState<ReadonlyArray<string>>([]);
+
   const { form } = bookPageContent;
+
+  const packageOptions: PackageOption[] = useMemo(
+    () =>
+      packages.map((pkg) => ({
+        value: pkg.slug,
+        label: `${pkg.name} (${pkg.duration})`,
+      })),
+    [packages],
+  );
+
+  const selectedPackage = packages.find((pkg) => pkg.slug === packageSlug);
+  const selectedCharacters = useMemo(() => {
+    const set = new Set(selectedSlugs);
+    return characterChoices.filter((c) => set.has(c.slug));
+  }, [characterChoices, selectedSlugs]);
+
+  function toggleCharacter(slug: string) {
+    setSelectedSlugs((prev) =>
+      prev.includes(slug)
+        ? prev.filter((s) => s !== slug)
+        : [...prev, slug],
+    );
+  }
 
   const rows: ReactNode[] = [];
   let index = 0;
@@ -62,6 +88,8 @@ export function InquiryForm({
             required={field.required}
             err={err}
             errId={errId}
+            selected={selectedSlugs}
+            onToggle={toggleCharacter}
           />
         </div>,
       );
@@ -72,15 +100,17 @@ export function InquiryForm({
     const next = inquiryFormFields[index + 1];
     if (field.width === "half" && next?.width === "half") {
       rows.push(
-        <div key={field.name} className="grid gap-5 sm:grid-cols-2">
-          {renderField(field, state, packageChoices)}
-          {renderField(next, state, packageChoices)}
+        <div key={field.name} className="grid gap-4 sm:grid-cols-2">
+          {renderField(field, state, packageOptions, packageSlug, setPackageSlug)}
+          {renderField(next, state, packageOptions, packageSlug, setPackageSlug)}
         </div>,
       );
       index += 2;
     } else {
       rows.push(
-        <div key={field.name}>{renderField(field, state, packageChoices)}</div>,
+        <div key={field.name}>
+          {renderField(field, state, packageOptions, packageSlug, setPackageSlug)}
+        </div>,
       );
       index += 1;
     }
@@ -99,7 +129,7 @@ export function InquiryForm({
               className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[linear-gradient(135deg,rgba(255,214,123,0.95),rgba(65,181,111,0.88))] text-2xl text-white shadow-soft"
               aria-hidden
             >
-              {"\u2713"}
+              {"✓"}
             </div>
             <div className="min-w-0 flex-1">
               <p className="eyebrow-plain">{form.sentEyebrow}</p>
@@ -119,7 +149,7 @@ export function InquiryForm({
                   {state.successBullets.map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-0.5 shrink-0 text-sunrise" aria-hidden>
-                        {"\u2726"}
+                        {"✦"}
                       </span>
                       <span>{item}</span>
                     </li>
@@ -154,18 +184,18 @@ export function InquiryForm({
   );
 
   return (
-    <div className="glass-panel rounded-[2rem] p-6 sm:p-10">
+    <div className="glass-panel rounded-[2rem] p-5 sm:p-8">
       <span className="eyebrow sparkle-dot">{form.eyebrow}</span>
-      <h2 className="mt-5 text-3xl font-semibold text-midnight sm:text-4xl">
+      <h2 className="mt-3 text-2xl font-semibold text-midnight sm:mt-4 sm:text-3xl">
         {form.title}
       </h2>
-      <p className="section-copy mt-3.5 text-base leading-relaxed">
+      <p className="section-copy mt-2.5 text-base leading-relaxed">
         {form.description}
       </p>
 
       {state.status === "error" && state.message ? (
         <div
-          className={`mt-6 rounded-2xl border p-5 text-sm sm:text-base ${
+          className={`mt-5 rounded-2xl border p-5 text-sm sm:text-base ${
             isValidationError
               ? "border-[rgba(245,102,187,0.25)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,243,249,0.96))]"
               : "border-[rgba(125,100,255,0.25)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,241,255,0.96))]"
@@ -189,7 +219,7 @@ export function InquiryForm({
 
       <form
         action={formAction}
-        className="relative mt-7 flex flex-col gap-5"
+        className="relative mt-6 flex flex-col gap-4"
         aria-busy={isPending}
         noValidate
       >
@@ -211,15 +241,21 @@ export function InquiryForm({
         <fieldset
           aria-label="Party details"
           disabled={isPending}
-          className="m-0 flex min-w-0 flex-col gap-5 border-0 p-0 disabled:opacity-85"
+          className="m-0 flex min-w-0 flex-col gap-4 border-0 p-0 disabled:opacity-85"
         >
           {rows}
 
-          <div className="pt-2">
+          <PriceSummary
+            pkg={selectedPackage}
+            selectedCharacters={selectedCharacters}
+          />
+
+          <div className="pt-1">
             <button
               type="submit"
               disabled={isPending}
               aria-busy={isPending}
+              data-confetti
               className={`button-primary min-w-[12rem] disabled:pointer-events-none disabled:opacity-65 ${
                 isPending ? "cursor-wait" : "cursor-pointer"
               }`}
@@ -236,7 +272,9 @@ export function InquiryForm({
 function renderField(
   field: (typeof inquiryFormFields)[number],
   state: InquiryFormState,
-  packageChoices: ReadonlyArray<PackageChoice>,
+  packageOptions: ReadonlyArray<PackageOption>,
+  packageSlug: string,
+  onPackageChange: (value: string) => void,
 ) {
   const err = state.fieldErrors?.[field.name];
   const id = field.name;
@@ -248,7 +286,7 @@ function renderField(
     <label htmlFor={id} className="block text-sm font-bold text-midnight">
       {field.label}
       {field.required ? (
-        <span className="font-semibold text-copy-soft"> {"\u00A0"}(required)</span>
+        <span className="font-semibold text-copy-soft"> {" "}(required)</span>
       ) : null}
     </label>
   );
@@ -279,13 +317,17 @@ function renderField(
   }
 
   if (field.kind === "select") {
+    const isPackage = field.name === "packageSlug";
     const options =
       field.optionSource === "partyTypes"
-        ? partyTypeOptions
-        : packageChoices.map((pkg) => ({
-            value: pkg.slug,
-            label: `${pkg.name} (${pkg.duration})`,
-          }));
+        ? partyTypeOptions.map((opt) => ({ value: opt.value, label: opt.label }))
+        : packageOptions;
+
+    // The package select is controlled so the live price estimate can react to
+    // it; party type stays uncontrolled with a defaultValue.
+    const controlledProps = isPackage
+      ? { value: packageSlug, onChange: (e: React.ChangeEvent<HTMLSelectElement>) => onPackageChange(e.target.value) }
+      : { defaultValue: "" };
 
     return (
       <div key={field.name} className="flex flex-col gap-2">
@@ -294,7 +336,6 @@ function renderField(
           id={id}
           name={field.name}
           required={field.required}
-          defaultValue=""
           autoComplete={"autoComplete" in field ? field.autoComplete : "off"}
           aria-invalid={Boolean(err)}
           aria-describedby={describedBy}
@@ -302,6 +343,7 @@ function renderField(
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%237b678f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.6' d='m4 6 4 4 4-4'/%3E%3C/svg%3E")`,
           }}
+          {...controlledProps}
         >
           <option value="" disabled>
             {form.selectPlaceholder}
