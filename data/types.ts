@@ -89,6 +89,8 @@ export type CategoryHeroContent = {
   highlights: ReadonlyArray<string>;
   primaryCta: LinkConfig;
   secondaryCta?: LinkConfig;
+  /** Spoken line rendered as a speech bubble over the hero photo. */
+  greeting?: string;
   mainMedia: MediaAsset;
   insetMedia?: MediaAsset;
   panelEyebrow: string;

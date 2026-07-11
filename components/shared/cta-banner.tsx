@@ -28,19 +28,19 @@ export function CtaBanner({
   const bulletClass = toneBullet[tone];
 
   return (
-    <div className="glass-panel grid gap-8 rounded-[2rem] p-6 sm:p-10 xl:grid-cols-[1.15fr_.85fr]">
+    <div className="glass-panel grid gap-6 rounded-[2rem] p-5 sm:p-8 xl:grid-cols-[1.15fr_.85fr]">
       <div>
         <span className="eyebrow sparkle-dot">{content.eyebrow}</span>
-        <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-midnight sm:text-4xl lg:text-5xl">
+        <h2 className="mt-3 max-w-3xl text-2xl font-semibold text-midnight sm:mt-4 sm:text-3xl lg:text-4xl">
           {content.title}
         </h2>
-        <p className="section-copy mt-5 max-w-xl text-base sm:text-lg">
+        <p className="section-copy mt-3 max-w-xl text-base sm:text-lg">
           {content.description}
         </p>
       </div>
 
-      <div className={`rounded-[1.5rem] border p-6 sm:p-7 ${panelClass}`}>
-        <ul className="space-y-3.5">
+      <div className={`rounded-[1.5rem] border p-5 sm:p-6 ${panelClass}`}>
+        <ul className="space-y-3">
           {content.notes.map((note) => (
             <li
               key={note}
@@ -54,8 +54,12 @@ export function CtaBanner({
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link href={content.primaryCta.href} className="button-primary">
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link
+            href={content.primaryCta.href}
+            className="button-primary"
+            data-confetti
+          >
             {content.primaryCta.label}
           </Link>
           {content.secondaryCta ? (

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SparkleField } from "@/components/magic/sparkle-field";
 import type { CategoryHeroContent } from "@/data/types";
 
 type CategoryHeroProps = {
@@ -48,6 +49,8 @@ export function CategoryHero({
 
   return (
     <section className="relative mx-auto max-w-7xl px-4 pb-8 pt-4 sm:px-6 sm:pt-8 lg:px-8 lg:pb-16 lg:pt-10">
+      <SparkleField />
+
       <div className="relative grid items-start gap-5 lg:grid-cols-[1.02fr_1fr] lg:gap-12">
         {/* LEFT: Headline + intent — first on every breakpoint so the pitch is above the fold */}
         <div className="relative z-10">
@@ -77,7 +80,11 @@ export function CategoryHero({
           </ul>
 
           <div className="mt-5 flex flex-wrap gap-3 sm:mt-6">
-            <Link href={content.primaryCta.href} className="button-primary">
+            <Link
+              href={content.primaryCta.href}
+              className="button-primary"
+              data-confetti
+            >
               {content.primaryCta.label}
             </Link>
             {content.secondaryCta ? (
@@ -110,6 +117,14 @@ export function CategoryHero({
                 }`}
                 style={{ objectPosition: content.mainMedia.objectPosition }}
               />
+
+              {content.greeting ? (
+                <div className="pointer-events-none absolute left-3 top-3 z-10 max-w-[78%] rounded-2xl rounded-bl-md border border-white/85 bg-white/94 px-3.5 py-2 shadow-magical backdrop-blur sm:left-4 sm:top-4 sm:max-w-[70%] sm:px-4 sm:py-2.5">
+                  <p className="font-display text-sm italic leading-snug text-midnight sm:text-base">
+                    &ldquo;{content.greeting}&rdquo;
+                  </p>
+                </div>
+              ) : null}
 
               {content.insetMedia ? (
                 <div className="absolute bottom-3 right-3 w-16 overflow-hidden rounded-2xl border border-white/90 bg-white shadow-magical sm:bottom-5 sm:right-5 sm:w-28">

@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     title: "Princess Parties | A Living Fairytale",
     description: "Authentic ball gowns and trained performers for princess birthdays in Manitoba.",
     url: "/princess",
+    images: [
+      {
+        url: "/media/princess/princess-landing-main.jpg",
+        alt: "Two princess performers arriving at the door to greet excited children",
+      },
+    ],
   },
 };
 

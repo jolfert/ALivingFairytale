@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     description:
       "Send your party date and details. A real person replies within a day.",
     url: "/book",
+    images: [
+      {
+        url: "/media/princess/princess-group-gallery.jpg",
+        alt: "Three princess performers with a child on a grand staircase",
+      },
+    ],
   },
 };
 

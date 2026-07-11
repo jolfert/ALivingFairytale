@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     description:
       "Meet the team behind Manitoba's premier children's character entertainment — family owned, locally operated, and trusted since 2011.",
     url: "/about",
+    images: [
+      {
+        url: "/media/princess/princess-group-gallery.jpg",
+        alt: "Three princess performers with a child on a grand staircase",
+      },
+    ],
   },
 };
 

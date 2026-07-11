@@ -98,6 +98,7 @@ export function BottomNav() {
               key={item.href}
               href={item.href}
               aria-current={isActive ? "page" : undefined}
+              data-confetti={item.emphasis ? "" : undefined}
               className="flex flex-col items-center gap-0.5 pb-1.5 pt-2"
             >
               <span

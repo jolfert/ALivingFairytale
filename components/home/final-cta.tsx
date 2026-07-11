@@ -85,7 +85,11 @@ export function FinalCta({ content }: FinalCtaProps) {
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link href={content.primaryCta.href} className="button-primary">
+          <Link
+            href={content.primaryCta.href}
+            className="button-primary"
+            data-confetti
+          >
             {content.primaryCta.label}
           </Link>
           <Link href={content.secondaryCta.href} className="button-secondary">

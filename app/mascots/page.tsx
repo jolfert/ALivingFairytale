@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     title: "Mascots & Rentals | A Living Fairytale",
     description: "Mascot suits and party rental add-ons in Winnipeg.",
     url: "/mascots",
+    images: [
+      {
+        url: "/media/mascots/olaf-mascot.jpg",
+        alt: "Olaf mascot standing indoors in costume",
+      },
+    ],
   },
 };
 

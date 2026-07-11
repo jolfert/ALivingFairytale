@@ -10,8 +10,8 @@ export const homepageContent = {
     description:
       "Theme-park quality princesses, superheroes, mascots and rentals for Manitoba families since 2011.",
     highlights: [
-      "Since 2011",
-      "2,000+ events",
+      "Parties from $200",
+      "2,000+ events since 2011",
       "100% money-back guarantee",
     ],
     primaryCta: {
@@ -21,6 +21,12 @@ export const homepageContent = {
     secondaryCta: {
       label: "See pricing",
       href: "/pricing",
+    },
+    socialProof: {
+      quote: "You all looked and acted like the real deal.",
+      attribution: "Lyela, birthday mom",
+      linkLabel: "Read reviews",
+      href: "/reviews",
     },
     stats: [
       {
@@ -74,6 +80,11 @@ export const homepageContent = {
     featured: {
       eyebrow: "Favourites",
       title: "A few characters families ask about most.",
+      description: "",
+    },
+    moments: {
+      eyebrow: "Real Winnipeg parties",
+      title: "Magic moments.",
       description: "",
     },
     packages: {
@@ -156,6 +167,16 @@ export const homepageContent = {
       description: "A real person reads every inquiry.",
       icon: "\u2665",
     },
+  ],
+  magicMoments: [
+    getMediaAsset("jasmineMain"),
+    getMediaAsset("elsaMain"),
+    getMediaAsset("spidermanMain"),
+    getMediaAsset("arielMain"),
+    getMediaAsset("sleepingBeautyMain"),
+    getMediaAsset("icePrincessMain"),
+    getMediaAsset("sofiaMain"),
+    getMediaAsset("princessGroupGallery"),
   ],
   featuredCharacters: pickCharacters([
     "ice-queen",

@@ -25,6 +25,15 @@ const pageThemes: Record<CharacterCategory, CharacterPageContent["theme"]> = {
   Rental: "playful",
 };
 
+// Spoken line shown as a speech bubble over the hero photo — written for the
+// birthday child, not the parent.
+const categoryGreetings: Record<CharacterCategory, string> = {
+  Princess: "You're invited to the royal ball — save me a dance!",
+  Hero: "Suit up — this party needs a hero!",
+  Mascot: "Big laughs and even bigger hugs — let's play!",
+  Rental: "Ready, set... bounce!",
+};
+
 const categoryCopy = {
   Princess: {
     sectionTitle: "What happens when she arrives.",
@@ -382,6 +391,7 @@ export function getCharacterPageContent(
               ? "/mascots#showcase"
               : "/princess#characters",
       },
+      greeting: categoryGreetings[character.category],
       mainMedia: character.mainMedia,
       insetMedia: character.insetMedia,
       panelEyebrow: copy.panelEyebrow,

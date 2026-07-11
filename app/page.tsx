@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FinalCta } from "@/components/home/final-cta";
 import { HomeHero } from "@/components/home/home-hero";
+import { MagicMoments } from "@/components/home/magic-moments";
 import { PartyPathCard } from "@/components/home/party-path-card";
 import { TestimonialsPreview } from "@/components/home/testimonials-preview";
 import { TrustPillars } from "@/components/home/trust-pillars";
@@ -31,6 +32,16 @@ export const metadata: Metadata = {
     description:
       "Theme-park quality princess parties, superhero parties, mascots and rentals across Manitoba since 2011.",
     url: "/",
+    // Page-level openGraph replaces the root layout's wholesale, so the
+    // share image must be repeated here or the homepage loses it.
+    images: [
+      {
+        url: "/media/princess/princess-group-gallery.jpg",
+        width: 1438,
+        height: 960,
+        alt: "Three princess performers with a child on a grand staircase",
+      },
+    ],
   },
 };
 
@@ -67,6 +78,15 @@ export default function HomePage() {
             <TrustPillars pillars={homepageContent.trustPillars} />
           </PageSection>
         </div>
+
+        {/* Magic moments — real party photos, the proof behind the pillars */}
+        <PageSection id="magic-moments" spacing="tight">
+          <SectionHeading
+            eyebrow={homepageContent.sections.moments.eyebrow}
+            title={homepageContent.sections.moments.title}
+          />
+          <MagicMoments photos={homepageContent.magicMoments} />
+        </PageSection>
 
         {/* Featured characters */}
         <PageSection id="featured-experiences" spacing="tight">

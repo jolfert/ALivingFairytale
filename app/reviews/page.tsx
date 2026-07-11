@@ -17,6 +17,12 @@ export const metadata: Metadata = {
     description:
       "Real reviews from Manitoba families who've booked A Living Fairytale since 2011.",
     url: "/reviews",
+    images: [
+      {
+        url: "/media/princess/princess-group-gallery.jpg",
+        alt: "Three princess performers with a child on a grand staircase",
+      },
+    ],
   },
 };
 

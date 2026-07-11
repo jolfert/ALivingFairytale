@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     title: "Superhero Parties | A Living Fairytale",
     description: "Superhero birthday parties with dramatic arrivals and hero missions.",
     url: "/heroes",
+    images: [
+      {
+        url: "/media/heroes/spiderman-action-alt.jpg",
+        alt: "Spider-Man leading a backyard birthday game with excited children",
+      },
+    ],
   },
 };
 

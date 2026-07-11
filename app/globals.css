@@ -244,6 +244,32 @@ h1 {
 }
 
 /* ============================================================
+   Sparkle field — pointer-trail stars spawned by SparkleField
+   ============================================================ */
+.sparkle-bit {
+  position: absolute;
+  pointer-events: none;
+  line-height: 1;
+  will-change: transform, opacity;
+  animation: sparkle-pop 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-pop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.15) rotate(90deg) translateY(-14px);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
    Sparkle — cleaner accent
    ============================================================ */
 .sparkle-dot::before {

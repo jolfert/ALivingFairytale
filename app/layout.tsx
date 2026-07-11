@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ConfettiBursts } from "@/components/magic/confetti-bursts";
 import { BottomNav } from "@/components/site/bottom-nav";
 import { siteShellContent } from "@/data/site-shell";
 import { getSiteUrl } from "@/lib/site";
@@ -19,14 +20,16 @@ export const metadata: Metadata = {
     siteName: "A Living Fairytale",
     images: [
       {
-        url: "/A%20living%20fairytale%20logo.png",
-        alt: siteShellContent.brandLogo.alt,
+        url: "/media/princess/princess-group-gallery.jpg",
+        width: 1438,
+        height: 960,
+        alt: "Three princess performers with a child on a grand staircase",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/A%20living%20fairytale%20logo.png"],
+    images: ["/media/princess/princess-group-gallery.jpg"],
   },
 };
 
@@ -40,6 +43,7 @@ export default function RootLayout({
       <body className="pb-[calc(3.6rem+env(safe-area-inset-bottom))] md:pb-0">
         {children}
         <BottomNav />
+        <ConfettiBursts />
       </body>
     </html>
   );

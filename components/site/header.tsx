@@ -87,7 +87,7 @@ export function Header({
             // Wrapper div hides the CTA on mobile: `hidden` on the Link itself
             // loses to .button-primary's unlayered `display: inline-flex`.
             <div className="hidden sm:block">
-              <Link href={cta.href} className="button-primary text-sm">
+              <Link href={cta.href} className="button-primary text-sm" data-confetti>
                 {cta.label}
               </Link>
             </div>

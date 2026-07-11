@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SparkleField } from "@/components/magic/sparkle-field";
 import type { MediaAsset } from "@/data/types";
 
 type HeroContent = {
@@ -13,6 +14,12 @@ type HeroContent = {
   };
   secondaryCta: {
     label: string;
+    href: string;
+  };
+  socialProof?: {
+    quote: string;
+    attribution: string;
+    linkLabel: string;
     href: string;
   };
   stats: ReadonlyArray<{
@@ -68,6 +75,8 @@ export function HomeHero({ content }: HomeHeroProps) {
         className="pointer-events-none absolute right-0 top-24 h-60 w-60 rounded-full bg-violet/10 blur-3xl"
       />
 
+      <SparkleField />
+
       <div className="relative grid items-start gap-6 lg:grid-cols-[0.96fr_1fr] lg:gap-12">
         {/* LEFT: Headline + intent — first on every breakpoint so the pitch is above the fold */}
         <div className="relative z-10 lg:pt-10">
@@ -91,13 +100,41 @@ export function HomeHero({ content }: HomeHeroProps) {
           </ul>
 
           <div className="mt-5 flex flex-wrap gap-3 sm:mt-6">
-            <Link href={content.primaryCta.href} className="button-primary">
+            <Link
+              href={content.primaryCta.href}
+              className="button-primary"
+              data-confetti
+            >
               {content.primaryCta.label}
             </Link>
             <Link href={content.secondaryCta.href} className="button-secondary">
               {content.secondaryCta.label}
             </Link>
           </div>
+
+          {content.socialProof ? (
+            <Link
+              href={content.socialProof.href}
+              className="group mt-4 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm"
+            >
+              <span
+                aria-hidden
+                className="tracking-[0.16em] text-[color:#f2a93b]"
+              >
+                ★★★★★
+              </span>
+              <span className="sr-only">Five-star reviews.</span>
+              <span className="font-semibold text-midnight">
+                &ldquo;{content.socialProof.quote}&rdquo;
+              </span>
+              <span className="text-copy-soft">
+                — {content.socialProof.attribution} ·{" "}
+                <span className="inline-link">
+                  {content.socialProof.linkLabel}
+                </span>
+              </span>
+            </Link>
+          ) : null}
 
           <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-7 sm:gap-3">
             {content.stats.map((stat) => (

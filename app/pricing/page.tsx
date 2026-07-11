@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     description:
       "Bronze, Silver and Gold party packages. Full rate card by duration and character count. Includes up to 10 children.",
     url: "/pricing",
+    images: [
+      {
+        url: "/media/princess/princess-group-gallery.jpg",
+        alt: "Three princess performers with a child on a grand staircase",
+      },
+    ],
   },
 };
 
