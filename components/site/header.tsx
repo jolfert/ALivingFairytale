@@ -90,7 +90,7 @@ export function Header({
             alt={siteShellContent.brandLogo.alt}
             width={siteShellContent.brandLogo.width}
             height={siteShellContent.brandLogo.height}
-            className="h-auto w-[7.75rem] sm:w-[8.25rem] md:h-[3.4rem] md:w-auto lg:h-[3.75rem]"
+            className="h-auto w-[7.75rem] sm:w-[8.25rem] md:h-[4.5rem] md:w-auto lg:h-[5rem]"
             preload
           />
         </Link>
