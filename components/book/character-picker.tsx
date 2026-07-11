@@ -1,7 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import type { ResolvedCharacter } from "@/data/types";
+
+// How many characters to show before the "Show all" expander. Nine reads as
+// three tidy rows on mobile (3 cols) and keeps the booking form short so the
+// page scrolls naturally past it — no nested scroll region to get caught in.
+const COLLAPSED_COUNT = 9;
 
 type CharacterPickerProps = {
   characters: ReadonlyArray<ResolvedCharacter>;
@@ -25,6 +31,7 @@ export function CharacterPicker({
   selected,
   onToggle,
 }: CharacterPickerProps) {
+  const [expanded, setExpanded] = useState(false);
   const selectedSet = new Set(selected);
 
   // Submit the human-readable names, comma-joined, so the inquiry email reads
@@ -33,6 +40,16 @@ export function CharacterPicker({
     .filter((c) => selectedSet.has(c.slug))
     .map((c) => c.name)
     .join(", ");
+
+  const canCollapse = characters.length > COLLAPSED_COUNT;
+  // When collapsed, always keep already-selected characters visible so a
+  // selection made further down the list can still be toggled off.
+  const visibleCharacters =
+    expanded || !canCollapse
+      ? characters
+      : characters.filter(
+          (c, i) => i < COLLAPSED_COUNT || selectedSet.has(c.slug),
+        );
 
   return (
     <div className="flex flex-col gap-2">
@@ -60,7 +77,7 @@ export function CharacterPicker({
       <input type="hidden" name={name} value={selectedNames} />
 
       <div
-        className={`max-h-[22rem] overflow-y-auto overscroll-contain rounded-xl border bg-white/95 p-3 transition sm:p-4 ${
+        className={`rounded-xl border bg-white/95 p-3 transition sm:p-4 ${
           err ? "border-rose/45 ring-2 ring-rose/15" : "border-line-strong"
         }`}
         role="group"
@@ -70,7 +87,7 @@ export function CharacterPicker({
         aria-describedby={err ? errId : undefined}
       >
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-5">
-          {characters.map((character) => {
+          {visibleCharacters.map((character) => {
             const media = character.insetMedia ?? character.mainMedia;
             const isSelected = selectedSet.has(character.slug);
 
@@ -123,6 +140,25 @@ export function CharacterPicker({
             );
           })}
         </div>
+
+        {canCollapse ? (
+          <button
+            type="button"
+            onClick={() => setExpanded((prev) => !prev)}
+            aria-expanded={expanded}
+            className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg border border-line-strong bg-white/80 py-2.5 text-sm font-bold text-midnight transition hover:bg-mist/50"
+          >
+            {expanded
+              ? "Show fewer"
+              : `Show all ${characters.length} characters`}
+            <span
+              aria-hidden
+              className={`transition-transform ${expanded ? "rotate-180" : ""}`}
+            >
+              {"↓"}
+            </span>
+          </button>
+        ) : null}
       </div>
 
       {err ? (
